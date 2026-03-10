@@ -425,6 +425,34 @@
       "state": {
         "nextRunAtMs": 1773230400000
       }
+    },
+    {
+      "id": "7a2e1aec-f82a-4788-8b85-72f3538e1dc3",
+      "agentId": "main",
+      "sessionKey": "agent:main:main",
+      "name": "daily-reconcile-backup-2330",
+      "enabled": true,
+      "createdAtMs": 1773156068433,
+      "updatedAtMs": 1773156068433,
+      "schedule": {
+        "kind": "cron",
+        "expr": "30 23 * * *",
+        "tz": "America/Chicago"
+      },
+      "sessionTarget": "isolated",
+      "wakeMode": "now",
+      "payload": {
+        "kind": "agentTurn",
+        "message": "Run end-of-day reconciliation and backup check. Validate backup manifest freshness, report unresolved gaps, and output a next-morning kickoff checklist.",
+        "thinking": "low",
+        "timeoutSeconds": 600
+      },
+      "delivery": {
+        "mode": "announce"
+      },
+      "state": {
+        "nextRunAtMs": 1773203400000
+      }
     }
   ]
 }
