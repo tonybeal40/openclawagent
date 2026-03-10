@@ -1,0 +1,37 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>OpenClaw Mission Control</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <h1>Mission Control</h1>
+    <p id="mission"></p>
+  </header>
+
+  <nav>
+    <button data-view="task">Task Board</button>
+    <button data-view="calendar">Calendar</button>
+    <button data-view="projects">Projects</button>
+    <button data-view="memories">Memories</button>
+    <button data-view="docs">Docs</button>
+    <button data-view="team">Team</button>
+    <button data-view="office">Office</button>
+  </nav>
+
+  <main>
+    <section id="task" class="view"></section>
+    <section id="calendar" class="view hidden"></section>
+    <section id="projects" class="view hidden"></section>
+    <section id="memories" class="view hidden"></section>
+    <section id="docs" class="view hidden"></section>
+    <section id="team" class="view hidden"></section>
+    <section id="office" class="view hidden"></section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
