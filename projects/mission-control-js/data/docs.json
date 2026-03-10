@@ -1,0 +1,127 @@
+[
+    {
+        "title":  "BACKUP_AND_RETENTION",
+        "category":  "runbooks",
+        "path":  "C:\\Users\\tonyb\\.openclaw\\workspace\\runbooks\\BACKUP_AND_RETENTION.md"
+    },
+    {
+        "title":  "CHEATSHEET_COMMANDS",
+        "category":  "runbooks",
+        "path":  "C:\\Users\\tonyb\\.openclaw\\workspace\\runbooks\\CHEATSHEET_COMMANDS.md"
+    },
+    {
+        "title":  "DAILY_OPS",
+        "category":  "runbooks",
+        "path":  "C:\\Users\\tonyb\\.openclaw\\workspace\\runbooks\\DAILY_OPS.md"
+    },
+    {
+        "title":  "HANDOFF_TEMPLATE",
+        "category":  "runbooks",
+        "path":  "C:\\Users\\tonyb\\.openclaw\\workspace\\runbooks\\HANDOFF_TEMPLATE.md"
+    },
+    {
+        "title":  "OPENCLAW_MASTER_RUNBOOK",
+        "category":  "runbooks",
+        "path":  "C:\\Users\\tonyb\\.openclaw\\workspace\\runbooks\\OPENCLAW_MASTER_RUNBOOK.md"
+    },
+    {
+        "title":  "SCHEDULE",
+        "category":  "runbooks",
+        "path":  "C:\\Users\\tonyb\\.openclaw\\workspace\\runbooks\\SCHEDULE.md"
+    },
+    {
+        "title":  "WORKER_RECOVERY_PLAN",
+        "category":  "runbooks",
+        "path":  "C:\\Users\\tonyb\\.openclaw\\workspace\\runbooks\\WORKER_RECOVERY_PLAN.md"
+    },
+    {
+        "title":  "WORKFLOW_BLUEPRINT_V1",
+        "category":  "runbooks",
+        "path":  "C:\\Users\\tonyb\\.openclaw\\workspace\\runbooks\\WORKFLOW_BLUEPRINT_V1.md"
+    },
+    {
+        "title":  "daily_job_pipeline_summary",
+        "category":  "jobs",
+        "path":  "C:\\Users\\tonyb\\.openclaw\\workspace\\outputs\\jobs\\daily_job_pipeline_summary.json"
+    },
+    {
+        "title":  "high_value_targets_summary",
+        "category":  "leads",
+        "path":  "C:\\Users\\tonyb\\.openclaw\\workspace\\outputs\\leads\\high_value_targets_summary.json"
+    },
+    {
+        "title":  "reconciliation_feb12_22",
+        "category":  "memory",
+        "path":  "C:\\Users\\tonyb\\.openclaw\\workspace\\outputs\\memory\\reconciliation_feb12_22.md"
+    },
+    {
+        "title":  "tony_memory_pull",
+        "category":  "memory",
+        "path":  "C:\\Users\\tonyb\\.openclaw\\workspace\\outputs\\memory\\tony_memory_pull.md"
+    },
+    {
+        "title":  "ai_money_trends",
+        "category":  "research",
+        "path":  "C:\\Users\\tonyb\\.openclaw\\workspace\\outputs\\research\\ai_money_trends.md"
+    },
+    {
+        "title":  "project_package_paths",
+        "category":  "outputs",
+        "path":  "C:\\Users\\tonyb\\.openclaw\\workspace\\outputs\\project_package_paths.txt"
+    },
+    {
+        "title":  "2026-03-05",
+        "category":  "memory",
+        "path":  "C:\\Users\\tonyb\\.openclaw\\workspace\\memory\\2026-03-05.md"
+    },
+    {
+        "title":  "2026-03-09",
+        "category":  "memory",
+        "path":  "C:\\Users\\tonyb\\.openclaw\\workspace\\memory\\2026-03-09.md"
+    },
+    {
+        "title":  "2026-03-10",
+        "category":  "memory",
+        "path":  "C:\\Users\\tonyb\\.openclaw\\workspace\\memory\\2026-03-10.md"
+    },
+    {
+        "title":  "automation-ideas",
+        "category":  "memory",
+        "path":  "C:\\Users\\tonyb\\.openclaw\\workspace\\memory\\automation-ideas.md"
+    },
+    {
+        "title":  "full-history-dump",
+        "category":  "memory",
+        "path":  "C:\\Users\\tonyb\\.openclaw\\workspace\\memory\\full-history-dump.md"
+    },
+    {
+        "title":  "job-pipeline",
+        "category":  "memory",
+        "path":  "C:\\Users\\tonyb\\.openclaw\\workspace\\memory\\job-pipeline.md"
+    },
+    {
+        "title":  "recovered-timeline",
+        "category":  "memory",
+        "path":  "C:\\Users\\tonyb\\.openclaw\\workspace\\memory\\recovered-timeline.md"
+    },
+    {
+        "title":  "tonight-state-summary",
+        "category":  "memory",
+        "path":  "C:\\Users\\tonyb\\.openclaw\\workspace\\memory\\tonight-state-summary.md"
+    },
+    {
+        "title":  "tony-patterns",
+        "category":  "memory",
+        "path":  "C:\\Users\\tonyb\\.openclaw\\workspace\\memory\\tony-patterns.json"
+    },
+    {
+        "title":  "weekly-lessons",
+        "category":  "memory",
+        "path":  "C:\\Users\\tonyb\\.openclaw\\workspace\\memory\\weekly-lessons.md"
+    },
+    {
+        "title":  "workflow-memory",
+        "category":  "memory",
+        "path":  "C:\\Users\\tonyb\\.openclaw\\workspace\\memory\\workflow-memory.md"
+    }
+]
