@@ -7,7 +7,13 @@
     "revops_maturity_gap": "Complex revenue motion likely benefits from pipeline visibility and sales systems support",
     "notes": "Strong industrial and leadership fit",
     "source": "Local Seed Companies | Approved Company Targets",
-    "score": 65
+    "page_fetch_status": "blocked_or_unavailable",
+    "score": 65,
+    "company_size_band": "enterprise",
+    "growth_stage": "scaled public enterprise",
+    "headquarters_region": "US industrial / enterprise",
+    "source_type": "official company careers",
+    "priority_band": "tier-1"
   },
   {
     "company": "HubSpot",
@@ -17,7 +23,13 @@
     "revops_maturity_gap": "Good fit for systems, CRM, and sales visibility language",
     "notes": "Strong software and systems fit",
     "source": "Local Seed Companies | Approved Company Targets",
-    "score": 65
+    "page_fetch_status": "blocked_or_unavailable",
+    "score": 65,
+    "company_size_band": "growth",
+    "growth_stage": "scaled growth company",
+    "headquarters_region": "US SaaS / GTM",
+    "source_type": "official company careers",
+    "priority_band": "tier-1"
   },
   {
     "company": "Apollo.io",
@@ -27,7 +39,13 @@
     "revops_maturity_gap": "High relevance for prospecting systems and outbound intelligence",
     "notes": "Very high fit for Sales Navigator and Apollo positioning",
     "source": "Local Seed Companies | Approved Company Targets",
-    "score": 65
+    "page_fetch_status": "blocked_or_unavailable",
+    "score": 65,
+    "company_size_band": "growth",
+    "growth_stage": "scaled growth company",
+    "headquarters_region": "US SaaS / GTM",
+    "source_type": "official company careers",
+    "priority_band": "tier-1"
   },
   {
     "company": "3M",
@@ -37,7 +55,13 @@
     "revops_maturity_gap": "Good fit for sales systems and account strategy narrative",
     "notes": "Tier-1 industrial target",
     "source": "Approved Company Targets",
-    "score": 65
+    "page_fetch_status": "blocked_or_unavailable",
+    "score": 65,
+    "company_size_band": "enterprise",
+    "growth_stage": "scaled public enterprise",
+    "headquarters_region": "US industrial / enterprise",
+    "source_type": "official company careers",
+    "priority_band": "tier-1"
   },
   {
     "company": "Siemens",
@@ -47,7 +71,13 @@
     "revops_maturity_gap": "Commercial systems maturity opportunity",
     "notes": "Tier-1 industrial target",
     "source": "Approved Company Targets",
-    "score": 65
+    "page_fetch_status": "blocked_or_unavailable",
+    "score": 65,
+    "company_size_band": "enterprise",
+    "growth_stage": "scaled public enterprise",
+    "headquarters_region": "US industrial / enterprise",
+    "source_type": "official company careers",
+    "priority_band": "tier-1"
   },
   {
     "company": "Monday.com",
@@ -57,7 +87,13 @@
     "revops_maturity_gap": "Good fit for workflow and systems story",
     "notes": "Tier-1 SaaS target",
     "source": "Approved Company Targets",
-    "score": 65
+    "page_fetch_status": "blocked_or_unavailable",
+    "score": 65,
+    "company_size_band": "growth",
+    "growth_stage": "scaled growth company",
+    "headquarters_region": "US SaaS / GTM",
+    "source_type": "official company careers",
+    "priority_band": "tier-1"
   },
   {
     "company": "Thermo Fisher Scientific",
@@ -67,7 +103,13 @@
     "revops_maturity_gap": "Cross-functional complexity creates strong systems need",
     "notes": "Good fit for regulated-market operations and process discipline",
     "source": "Local Seed Companies | Approved Company Targets",
-    "score": 50
+    "page_fetch_status": "blocked_or_unavailable",
+    "score": 50,
+    "company_size_band": "enterprise",
+    "growth_stage": "scaled public enterprise",
+    "headquarters_region": "US industrial / enterprise",
+    "source_type": "official company careers",
+    "priority_band": "tier-1"
   },
   {
     "company": "Emerson Electric",
@@ -77,7 +119,13 @@
     "revops_maturity_gap": "Strong need for commercial visibility in complex B2B motions",
     "notes": "St. Louis-region relevance",
     "source": "Approved Company Targets",
-    "score": 50
+    "page_fetch_status": "blocked_or_unavailable",
+    "score": 50,
+    "company_size_band": "enterprise",
+    "growth_stage": "scaled public enterprise",
+    "headquarters_region": "US industrial / enterprise",
+    "source_type": "official company careers",
+    "priority_band": "tier-1"
   },
   {
     "company": "Parker Hannifin",
@@ -87,7 +135,13 @@
     "revops_maturity_gap": "Potential whitespace for strategic account and systems execution",
     "notes": "Tier-1 industrial target",
     "source": "Approved Company Targets",
-    "score": 50
+    "page_fetch_status": "blocked_or_unavailable",
+    "score": 50,
+    "company_size_band": "enterprise",
+    "growth_stage": "scaled public enterprise",
+    "headquarters_region": "US industrial / enterprise",
+    "source_type": "official company careers",
+    "priority_band": "tier-1"
   },
   {
     "company": "Honeywell",
@@ -97,7 +151,13 @@
     "revops_maturity_gap": "Strong enterprise systems context",
     "notes": "Tier-1 industrial target",
     "source": "Approved Company Targets",
-    "score": 50
+    "page_fetch_status": "blocked_or_unavailable",
+    "score": 50,
+    "company_size_band": "enterprise",
+    "growth_stage": "scaled public enterprise",
+    "headquarters_region": "US industrial / enterprise",
+    "source_type": "official company careers",
+    "priority_band": "tier-1"
   },
   {
     "company": "GE Healthcare",
@@ -107,7 +167,13 @@
     "revops_maturity_gap": "Good fit for process and visibility narrative",
     "notes": "Tier-1 regulated-market target",
     "source": "Approved Company Targets",
-    "score": 50
+    "page_fetch_status": "blocked_or_unavailable",
+    "score": 50,
+    "company_size_band": "enterprise",
+    "growth_stage": "scaled public enterprise",
+    "headquarters_region": "US industrial / enterprise",
+    "source_type": "official company careers",
+    "priority_band": "tier-1"
   },
   {
     "company": "ZoomInfo",
@@ -117,7 +183,13 @@
     "revops_maturity_gap": "Strong fit for prospect intelligence positioning",
     "notes": "Tier-1 SaaS target",
     "source": "Approved Company Targets",
-    "score": 50
+    "page_fetch_status": "blocked_or_unavailable",
+    "score": 50,
+    "company_size_band": "enterprise",
+    "growth_stage": "scaled public enterprise",
+    "headquarters_region": "US SaaS / GTM",
+    "source_type": "official company careers",
+    "priority_band": "tier-1"
   },
   {
     "company": "Ramp",
@@ -127,7 +199,13 @@
     "revops_maturity_gap": "Likely strong systems and process demand",
     "notes": "Tier-1 growth SaaS target",
     "source": "Approved Company Targets",
-    "score": 50
+    "page_fetch_status": "blocked_or_unavailable",
+    "score": 50,
+    "company_size_band": "growth",
+    "growth_stage": "scaled growth company",
+    "headquarters_region": "US SaaS / GTM",
+    "source_type": "official company careers",
+    "priority_band": "tier-1"
   },
   {
     "company": "Rippling",
@@ -137,6 +215,12 @@
     "revops_maturity_gap": "Potential strong fit for systems-builder story",
     "notes": "Tier-1 growth SaaS target",
     "source": "Approved Company Targets",
-    "score": 50
+    "page_fetch_status": "blocked_or_unavailable",
+    "score": 50,
+    "company_size_band": "growth",
+    "growth_stage": "scaled growth company",
+    "headquarters_region": "US SaaS / GTM",
+    "source_type": "official company careers",
+    "priority_band": "tier-1"
   }
 ]

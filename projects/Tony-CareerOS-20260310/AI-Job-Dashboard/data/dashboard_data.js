@@ -8,7 +8,13 @@
     "revops_maturity_gap": "Complex revenue motion likely benefits from pipeline visibility and sales systems support",
     "notes": "Strong industrial and leadership fit",
     "source": "Local Seed Companies | Approved Company Targets",
-    "score": 65
+    "page_fetch_status": "blocked_or_unavailable",
+    "score": 65,
+    "company_size_band": "enterprise",
+    "growth_stage": "scaled public enterprise",
+    "headquarters_region": "US industrial / enterprise",
+    "source_type": "official company careers",
+    "priority_band": "tier-1"
   },
   {
     "company": "HubSpot",
@@ -18,7 +24,13 @@
     "revops_maturity_gap": "Good fit for systems, CRM, and sales visibility language",
     "notes": "Strong software and systems fit",
     "source": "Local Seed Companies | Approved Company Targets",
-    "score": 65
+    "page_fetch_status": "blocked_or_unavailable",
+    "score": 65,
+    "company_size_band": "growth",
+    "growth_stage": "scaled growth company",
+    "headquarters_region": "US SaaS / GTM",
+    "source_type": "official company careers",
+    "priority_band": "tier-1"
   },
   {
     "company": "Apollo.io",
@@ -28,7 +40,13 @@
     "revops_maturity_gap": "High relevance for prospecting systems and outbound intelligence",
     "notes": "Very high fit for Sales Navigator and Apollo positioning",
     "source": "Local Seed Companies | Approved Company Targets",
-    "score": 65
+    "page_fetch_status": "blocked_or_unavailable",
+    "score": 65,
+    "company_size_band": "growth",
+    "growth_stage": "scaled growth company",
+    "headquarters_region": "US SaaS / GTM",
+    "source_type": "official company careers",
+    "priority_band": "tier-1"
   },
   {
     "company": "3M",
@@ -38,7 +56,13 @@
     "revops_maturity_gap": "Good fit for sales systems and account strategy narrative",
     "notes": "Tier-1 industrial target",
     "source": "Approved Company Targets",
-    "score": 65
+    "page_fetch_status": "blocked_or_unavailable",
+    "score": 65,
+    "company_size_band": "enterprise",
+    "growth_stage": "scaled public enterprise",
+    "headquarters_region": "US industrial / enterprise",
+    "source_type": "official company careers",
+    "priority_band": "tier-1"
   },
   {
     "company": "Siemens",
@@ -48,7 +72,13 @@
     "revops_maturity_gap": "Commercial systems maturity opportunity",
     "notes": "Tier-1 industrial target",
     "source": "Approved Company Targets",
-    "score": 65
+    "page_fetch_status": "blocked_or_unavailable",
+    "score": 65,
+    "company_size_band": "enterprise",
+    "growth_stage": "scaled public enterprise",
+    "headquarters_region": "US industrial / enterprise",
+    "source_type": "official company careers",
+    "priority_band": "tier-1"
   },
   {
     "company": "Monday.com",
@@ -58,7 +88,13 @@
     "revops_maturity_gap": "Good fit for workflow and systems story",
     "notes": "Tier-1 SaaS target",
     "source": "Approved Company Targets",
-    "score": 65
+    "page_fetch_status": "blocked_or_unavailable",
+    "score": 65,
+    "company_size_band": "growth",
+    "growth_stage": "scaled growth company",
+    "headquarters_region": "US SaaS / GTM",
+    "source_type": "official company careers",
+    "priority_band": "tier-1"
   },
   {
     "company": "Thermo Fisher Scientific",
@@ -68,7 +104,13 @@
     "revops_maturity_gap": "Cross-functional complexity creates strong systems need",
     "notes": "Good fit for regulated-market operations and process discipline",
     "source": "Local Seed Companies | Approved Company Targets",
-    "score": 50
+    "page_fetch_status": "blocked_or_unavailable",
+    "score": 50,
+    "company_size_band": "enterprise",
+    "growth_stage": "scaled public enterprise",
+    "headquarters_region": "US industrial / enterprise",
+    "source_type": "official company careers",
+    "priority_band": "tier-1"
   },
   {
     "company": "Emerson Electric",
@@ -78,7 +120,13 @@
     "revops_maturity_gap": "Strong need for commercial visibility in complex B2B motions",
     "notes": "St. Louis-region relevance",
     "source": "Approved Company Targets",
-    "score": 50
+    "page_fetch_status": "blocked_or_unavailable",
+    "score": 50,
+    "company_size_band": "enterprise",
+    "growth_stage": "scaled public enterprise",
+    "headquarters_region": "US industrial / enterprise",
+    "source_type": "official company careers",
+    "priority_band": "tier-1"
   },
   {
     "company": "Parker Hannifin",
@@ -88,7 +136,13 @@
     "revops_maturity_gap": "Potential whitespace for strategic account and systems execution",
     "notes": "Tier-1 industrial target",
     "source": "Approved Company Targets",
-    "score": 50
+    "page_fetch_status": "blocked_or_unavailable",
+    "score": 50,
+    "company_size_band": "enterprise",
+    "growth_stage": "scaled public enterprise",
+    "headquarters_region": "US industrial / enterprise",
+    "source_type": "official company careers",
+    "priority_band": "tier-1"
   },
   {
     "company": "Honeywell",
@@ -98,7 +152,13 @@
     "revops_maturity_gap": "Strong enterprise systems context",
     "notes": "Tier-1 industrial target",
     "source": "Approved Company Targets",
-    "score": 50
+    "page_fetch_status": "blocked_or_unavailable",
+    "score": 50,
+    "company_size_band": "enterprise",
+    "growth_stage": "scaled public enterprise",
+    "headquarters_region": "US industrial / enterprise",
+    "source_type": "official company careers",
+    "priority_band": "tier-1"
   },
   {
     "company": "GE Healthcare",
@@ -108,7 +168,13 @@
     "revops_maturity_gap": "Good fit for process and visibility narrative",
     "notes": "Tier-1 regulated-market target",
     "source": "Approved Company Targets",
-    "score": 50
+    "page_fetch_status": "blocked_or_unavailable",
+    "score": 50,
+    "company_size_band": "enterprise",
+    "growth_stage": "scaled public enterprise",
+    "headquarters_region": "US industrial / enterprise",
+    "source_type": "official company careers",
+    "priority_band": "tier-1"
   },
   {
     "company": "ZoomInfo",
@@ -118,7 +184,13 @@
     "revops_maturity_gap": "Strong fit for prospect intelligence positioning",
     "notes": "Tier-1 SaaS target",
     "source": "Approved Company Targets",
-    "score": 50
+    "page_fetch_status": "blocked_or_unavailable",
+    "score": 50,
+    "company_size_band": "enterprise",
+    "growth_stage": "scaled public enterprise",
+    "headquarters_region": "US SaaS / GTM",
+    "source_type": "official company careers",
+    "priority_band": "tier-1"
   },
   {
     "company": "Ramp",
@@ -128,7 +200,13 @@
     "revops_maturity_gap": "Likely strong systems and process demand",
     "notes": "Tier-1 growth SaaS target",
     "source": "Approved Company Targets",
-    "score": 50
+    "page_fetch_status": "blocked_or_unavailable",
+    "score": 50,
+    "company_size_band": "growth",
+    "growth_stage": "scaled growth company",
+    "headquarters_region": "US SaaS / GTM",
+    "source_type": "official company careers",
+    "priority_band": "tier-1"
   },
   {
     "company": "Rippling",
@@ -138,71 +216,168 @@
     "revops_maturity_gap": "Potential strong fit for systems-builder story",
     "notes": "Tier-1 growth SaaS target",
     "source": "Approved Company Targets",
-    "score": 50
+    "page_fetch_status": "blocked_or_unavailable",
+    "score": 50,
+    "company_size_band": "growth",
+    "growth_stage": "scaled growth company",
+    "headquarters_region": "US SaaS / GTM",
+    "source_type": "official company careers",
+    "priority_band": "tier-1"
   }
 ],
   "topTargets": {
-  "generatedAt": "2026-03-10T11:01:43.905625",
+  "generatedAt": "2026-03-10T15:39:52.610917",
   "topJobs": [
     {
       "company": "HubSpot",
       "title": "Revenue Operations Manager",
       "score": 115,
       "url": "https://example.com/hubspot-revops",
+      "location": "Remote",
+      "industry": "Sales Technology",
+      "salary_text": "$135,000+",
+      "source_label": "Company Careers",
+      "source_confidence": "high",
+      "posted_at": "",
+      "recency_label": "Unknown",
+      "first_seen": "2026-03-10T20:28:40.739702+00:00",
+      "last_seen": "2026-03-10T20:38:52.835708+00:00",
+      "freshness": "tracked",
+      "trend_label": "Seen 3x",
+      "keyword_matches": [
+        "Revenue Operations",
+        "Pipeline",
+        "CRM",
+        "Automation",
+        "Gtm"
+      ],
       "resume_angle_key": "revops_salesops",
       "resume_angle": [
         "Frame yourself as the operator who installs visibility, targeting logic, funnel discipline, and workflow clarity.",
         "Use wins tied to pipeline creation, dashboards, forecasting support, and CRM process design."
       ],
-      "top_win": "Built more than $6M in outbound pipeline through targeted prospecting and outbound systems design."
+      "top_win": "Built more than $6M in outbound pipeline through targeted prospecting and outbound systems design.",
+      "company_size_band": "growth",
+      "growth_stage": "scaled growth company",
+      "priority_band": "tier-1"
     },
     {
       "company": "Apollo.io",
       "title": "Sales Operations Manager",
       "score": 115,
       "url": "https://example.com/apollo-sales-ops",
+      "location": "Remote",
+      "industry": "Sales Technology",
+      "salary_text": "$140,000+",
+      "source_label": "Greenhouse",
+      "source_confidence": "high",
+      "posted_at": "",
+      "recency_label": "Unknown",
+      "first_seen": "2026-03-10T20:28:40.739702+00:00",
+      "last_seen": "2026-03-10T20:38:52.835708+00:00",
+      "freshness": "tracked",
+      "trend_label": "Seen 3x",
+      "keyword_matches": [
+        "Sales Operations",
+        "Outbound",
+        "Gtm"
+      ],
       "resume_angle_key": "revops_salesops",
       "resume_angle": [
         "Frame yourself as the operator who installs visibility, targeting logic, funnel discipline, and workflow clarity.",
         "Use wins tied to pipeline creation, dashboards, forecasting support, and CRM process design."
       ],
-      "top_win": "Built more than $6M in outbound pipeline through targeted prospecting and outbound systems design."
+      "top_win": "Built more than $6M in outbound pipeline through targeted prospecting and outbound systems design.",
+      "company_size_band": "growth",
+      "growth_stage": "scaled growth company",
+      "priority_band": "tier-1"
     },
     {
       "company": "Madison Logic",
       "title": "Revenue Operations Manager (Sales & Customer Experience)",
       "score": 95,
       "url": "",
+      "location": "United States (Remote)",
+      "industry": "Sales Technology",
+      "salary_text": "$130,000+",
+      "source_label": "LinkedIn Manual",
+      "source_confidence": "medium",
+      "posted_at": "",
+      "recency_label": "Unknown",
+      "first_seen": "2026-03-10T20:28:40.739702+00:00",
+      "last_seen": "2026-03-10T20:38:52.835708+00:00",
+      "freshness": "tracked",
+      "trend_label": "Seen 3x",
+      "keyword_matches": [
+        "Revenue Operations"
+      ],
       "resume_angle_key": "revops_salesops",
       "resume_angle": [
         "Frame yourself as the operator who installs visibility, targeting logic, funnel discipline, and workflow clarity.",
         "Use wins tied to pipeline creation, dashboards, forecasting support, and CRM process design."
       ],
-      "top_win": "Built more than $6M in outbound pipeline through targeted prospecting and outbound systems design."
+      "top_win": "Built more than $6M in outbound pipeline through targeted prospecting and outbound systems design.",
+      "company_size_band": "",
+      "growth_stage": "",
+      "priority_band": ""
     },
     {
       "company": "Mediafly",
       "title": "Revenue Operations Manager",
       "score": 95,
       "url": "",
+      "location": "United States (Remote)",
+      "industry": "Sales Technology",
+      "salary_text": "$100,000+",
+      "source_label": "LinkedIn Manual",
+      "source_confidence": "medium",
+      "posted_at": "",
+      "recency_label": "Unknown",
+      "first_seen": "2026-03-10T20:28:40.739702+00:00",
+      "last_seen": "2026-03-10T20:38:52.835708+00:00",
+      "freshness": "tracked",
+      "trend_label": "Seen 3x",
+      "keyword_matches": [
+        "Revenue Operations"
+      ],
       "resume_angle_key": "revops_salesops",
       "resume_angle": [
         "Frame yourself as the operator who installs visibility, targeting logic, funnel discipline, and workflow clarity.",
         "Use wins tied to pipeline creation, dashboards, forecasting support, and CRM process design."
       ],
-      "top_win": "Built more than $6M in outbound pipeline through targeted prospecting and outbound systems design."
+      "top_win": "Built more than $6M in outbound pipeline through targeted prospecting and outbound systems design.",
+      "company_size_band": "",
+      "growth_stage": "",
+      "priority_band": ""
     },
     {
       "company": "PandaDoc",
       "title": "Senior Post-Sales Operations Manager",
       "score": 95,
       "url": "",
+      "location": "United States (Remote)",
+      "industry": "Sales Technology",
+      "salary_text": "$120,000+",
+      "source_label": "LinkedIn Manual",
+      "source_confidence": "medium",
+      "posted_at": "",
+      "recency_label": "Unknown",
+      "first_seen": "2026-03-10T20:28:40.739702+00:00",
+      "last_seen": "2026-03-10T20:38:52.835708+00:00",
+      "freshness": "tracked",
+      "trend_label": "Seen 3x",
+      "keyword_matches": [
+        "Sales Operations"
+      ],
       "resume_angle_key": "revops_salesops",
       "resume_angle": [
         "Frame yourself as the operator who installs visibility, targeting logic, funnel discipline, and workflow clarity.",
         "Use wins tied to pipeline creation, dashboards, forecasting support, and CRM process design."
       ],
-      "top_win": "Built more than $6M in outbound pipeline through targeted prospecting and outbound systems design."
+      "top_win": "Built more than $6M in outbound pipeline through targeted prospecting and outbound systems design.",
+      "company_size_band": "",
+      "growth_stage": "",
+      "priority_band": ""
     }
   ],
   "topCompanies": [
@@ -214,6 +389,12 @@
       "hiring_signal": "Large commercial organization and recurring hiring activity",
       "revops_maturity_gap": "Complex revenue motion likely benefits from pipeline visibility and sales systems support",
       "notes": "Strong industrial and leadership fit",
+      "company_size_band": "enterprise",
+      "growth_stage": "scaled public enterprise",
+      "headquarters_region": "US industrial / enterprise",
+      "source_type": "official company careers",
+      "priority_band": "tier-1",
+      "page_fetch_status": "blocked_or_unavailable",
       "source": "Local Seed Companies | Approved Company Targets"
     },
     {
@@ -224,6 +405,12 @@
       "hiring_signal": "Strong GTM and sales operations footprint",
       "revops_maturity_gap": "Good fit for systems, CRM, and sales visibility language",
       "notes": "Strong software and systems fit",
+      "company_size_band": "growth",
+      "growth_stage": "scaled growth company",
+      "headquarters_region": "US SaaS / GTM",
+      "source_type": "official company careers",
+      "priority_band": "tier-1",
+      "page_fetch_status": "blocked_or_unavailable",
       "source": "Local Seed Companies | Approved Company Targets"
     },
     {
@@ -234,6 +421,12 @@
       "hiring_signal": "Prospecting, outbound, and sales hiring relevance",
       "revops_maturity_gap": "High relevance for prospecting systems and outbound intelligence",
       "notes": "Very high fit for Sales Navigator and Apollo positioning",
+      "company_size_band": "growth",
+      "growth_stage": "scaled growth company",
+      "headquarters_region": "US SaaS / GTM",
+      "source_type": "official company careers",
+      "priority_band": "tier-1",
+      "page_fetch_status": "blocked_or_unavailable",
       "source": "Local Seed Companies | Approved Company Targets"
     },
     {
@@ -244,6 +437,12 @@
       "hiring_signal": "Large commercial and technical organization",
       "revops_maturity_gap": "Good fit for sales systems and account strategy narrative",
       "notes": "Tier-1 industrial target",
+      "company_size_band": "enterprise",
+      "growth_stage": "scaled public enterprise",
+      "headquarters_region": "US industrial / enterprise",
+      "source_type": "official company careers",
+      "priority_band": "tier-1",
+      "page_fetch_status": "blocked_or_unavailable",
       "source": "Approved Company Targets"
     },
     {
@@ -254,6 +453,12 @@
       "hiring_signal": "Scaled global sales and technical teams",
       "revops_maturity_gap": "Commercial systems maturity opportunity",
       "notes": "Tier-1 industrial target",
+      "company_size_band": "enterprise",
+      "growth_stage": "scaled public enterprise",
+      "headquarters_region": "US industrial / enterprise",
+      "source_type": "official company careers",
+      "priority_band": "tier-1",
+      "page_fetch_status": "blocked_or_unavailable",
       "source": "Approved Company Targets"
     }
   ],
@@ -269,7 +474,12 @@
       "probable_hiring_manager": "VP Revenue Operations",
       "recommended_outreach_target": "VP Sales",
       "confidence": "medium",
-      "recommended_action": "outreach"
+      "recommended_action": "outreach",
+      "signal_breakdown": {
+        "sales team": 2,
+        "growing sales team": 2,
+        "tier_one_company": 1
+      }
     },
     {
       "company": "Apollo.io",
@@ -282,7 +492,12 @@
       "probable_hiring_manager": "VP Revenue Operations",
       "recommended_outreach_target": "VP Sales",
       "confidence": "medium",
-      "recommended_action": "outreach"
+      "recommended_action": "outreach",
+      "signal_breakdown": {
+        "sales team": 2,
+        "growing sales team": 2,
+        "tier_one_company": 1
+      }
     },
     {
       "company": "Danaher",
@@ -292,7 +507,10 @@
       "probable_hiring_manager": "VP Revenue Operations",
       "recommended_outreach_target": "VP Sales",
       "confidence": "low",
-      "recommended_action": "monitor"
+      "recommended_action": "monitor",
+      "signal_breakdown": {
+        "tier_one_company": 1
+      }
     },
     {
       "company": "3M",
@@ -302,7 +520,10 @@
       "probable_hiring_manager": "VP Revenue Operations",
       "recommended_outreach_target": "VP Sales",
       "confidence": "low",
-      "recommended_action": "monitor"
+      "recommended_action": "monitor",
+      "signal_breakdown": {
+        "tier_one_company": 1
+      }
     },
     {
       "company": "Siemens",
@@ -312,7 +533,10 @@
       "probable_hiring_manager": "VP Revenue Operations",
       "recommended_outreach_target": "VP Sales",
       "confidence": "low",
-      "recommended_action": "monitor"
+      "recommended_action": "monitor",
+      "signal_breakdown": {
+        "tier_one_company": 1
+      }
     }
   ],
   "outreachTargets": [
@@ -390,7 +614,12 @@
     "probable_hiring_manager": "VP Revenue Operations",
     "recommended_outreach_target": "VP Sales",
     "confidence": "medium",
-    "recommended_action": "outreach"
+    "recommended_action": "outreach",
+    "signal_breakdown": {
+      "sales team": 2,
+      "growing sales team": 2,
+      "tier_one_company": 1
+    }
   },
   {
     "company": "Apollo.io",
@@ -403,7 +632,12 @@
     "probable_hiring_manager": "VP Revenue Operations",
     "recommended_outreach_target": "VP Sales",
     "confidence": "medium",
-    "recommended_action": "outreach"
+    "recommended_action": "outreach",
+    "signal_breakdown": {
+      "sales team": 2,
+      "growing sales team": 2,
+      "tier_one_company": 1
+    }
   },
   {
     "company": "Danaher",
@@ -413,7 +647,10 @@
     "probable_hiring_manager": "VP Revenue Operations",
     "recommended_outreach_target": "VP Sales",
     "confidence": "low",
-    "recommended_action": "monitor"
+    "recommended_action": "monitor",
+    "signal_breakdown": {
+      "tier_one_company": 1
+    }
   },
   {
     "company": "3M",
@@ -423,7 +660,10 @@
     "probable_hiring_manager": "VP Revenue Operations",
     "recommended_outreach_target": "VP Sales",
     "confidence": "low",
-    "recommended_action": "monitor"
+    "recommended_action": "monitor",
+    "signal_breakdown": {
+      "tier_one_company": 1
+    }
   },
   {
     "company": "Siemens",
@@ -433,7 +673,10 @@
     "probable_hiring_manager": "VP Revenue Operations",
     "recommended_outreach_target": "VP Sales",
     "confidence": "low",
-    "recommended_action": "monitor"
+    "recommended_action": "monitor",
+    "signal_breakdown": {
+      "tier_one_company": 1
+    }
   },
   {
     "company": "Monday.com",
@@ -443,7 +686,10 @@
     "probable_hiring_manager": "VP Revenue Operations",
     "recommended_outreach_target": "VP Sales",
     "confidence": "low",
-    "recommended_action": "monitor"
+    "recommended_action": "monitor",
+    "signal_breakdown": {
+      "tier_one_company": 1
+    }
   },
   {
     "company": "Thermo Fisher Scientific",
@@ -453,7 +699,10 @@
     "probable_hiring_manager": "VP Revenue Operations",
     "recommended_outreach_target": "VP Sales",
     "confidence": "low",
-    "recommended_action": "monitor"
+    "recommended_action": "monitor",
+    "signal_breakdown": {
+      "tier_one_company": 1
+    }
   },
   {
     "company": "Emerson Electric",
@@ -463,7 +712,10 @@
     "probable_hiring_manager": "VP Revenue Operations",
     "recommended_outreach_target": "VP Sales",
     "confidence": "low",
-    "recommended_action": "monitor"
+    "recommended_action": "monitor",
+    "signal_breakdown": {
+      "tier_one_company": 1
+    }
   },
   {
     "company": "Parker Hannifin",
@@ -473,7 +725,10 @@
     "probable_hiring_manager": "VP Revenue Operations",
     "recommended_outreach_target": "VP Sales",
     "confidence": "low",
-    "recommended_action": "monitor"
+    "recommended_action": "monitor",
+    "signal_breakdown": {
+      "tier_one_company": 1
+    }
   },
   {
     "company": "Honeywell",
@@ -483,7 +738,10 @@
     "probable_hiring_manager": "VP Revenue Operations",
     "recommended_outreach_target": "VP Sales",
     "confidence": "low",
-    "recommended_action": "monitor"
+    "recommended_action": "monitor",
+    "signal_breakdown": {
+      "tier_one_company": 1
+    }
   },
   {
     "company": "GE Healthcare",
@@ -493,7 +751,10 @@
     "probable_hiring_manager": "VP Revenue Operations",
     "recommended_outreach_target": "VP Sales",
     "confidence": "low",
-    "recommended_action": "monitor"
+    "recommended_action": "monitor",
+    "signal_breakdown": {
+      "tier_one_company": 1
+    }
   },
   {
     "company": "ZoomInfo",
@@ -503,7 +764,10 @@
     "probable_hiring_manager": "VP Revenue Operations",
     "recommended_outreach_target": "VP Sales",
     "confidence": "low",
-    "recommended_action": "monitor"
+    "recommended_action": "monitor",
+    "signal_breakdown": {
+      "tier_one_company": 1
+    }
   },
   {
     "company": "Ramp",
@@ -513,7 +777,10 @@
     "probable_hiring_manager": "VP Revenue Operations",
     "recommended_outreach_target": "VP Sales",
     "confidence": "low",
-    "recommended_action": "monitor"
+    "recommended_action": "monitor",
+    "signal_breakdown": {
+      "tier_one_company": 1
+    }
   },
   {
     "company": "Rippling",
@@ -523,7 +790,10 @@
     "probable_hiring_manager": "VP Revenue Operations",
     "recommended_outreach_target": "VP Sales",
     "confidence": "low",
-    "recommended_action": "monitor"
+    "recommended_action": "monitor",
+    "signal_breakdown": {
+      "tier_one_company": 1
+    }
   }
 ],
   "outreachTargets": [

@@ -10,7 +10,12 @@
     "probable_hiring_manager": "VP Revenue Operations",
     "recommended_outreach_target": "VP Sales",
     "confidence": "medium",
-    "recommended_action": "outreach"
+    "recommended_action": "outreach",
+    "signal_breakdown": {
+      "sales team": 2,
+      "growing sales team": 2,
+      "tier_one_company": 1
+    }
   },
   {
     "company": "Apollo.io",
@@ -23,7 +28,12 @@
     "probable_hiring_manager": "VP Revenue Operations",
     "recommended_outreach_target": "VP Sales",
     "confidence": "medium",
-    "recommended_action": "outreach"
+    "recommended_action": "outreach",
+    "signal_breakdown": {
+      "sales team": 2,
+      "growing sales team": 2,
+      "tier_one_company": 1
+    }
   },
   {
     "company": "Danaher",
@@ -33,7 +43,10 @@
     "probable_hiring_manager": "VP Revenue Operations",
     "recommended_outreach_target": "VP Sales",
     "confidence": "low",
-    "recommended_action": "monitor"
+    "recommended_action": "monitor",
+    "signal_breakdown": {
+      "tier_one_company": 1
+    }
   },
   {
     "company": "3M",
@@ -43,7 +56,10 @@
     "probable_hiring_manager": "VP Revenue Operations",
     "recommended_outreach_target": "VP Sales",
     "confidence": "low",
-    "recommended_action": "monitor"
+    "recommended_action": "monitor",
+    "signal_breakdown": {
+      "tier_one_company": 1
+    }
   },
   {
     "company": "Siemens",
@@ -53,7 +69,10 @@
     "probable_hiring_manager": "VP Revenue Operations",
     "recommended_outreach_target": "VP Sales",
     "confidence": "low",
-    "recommended_action": "monitor"
+    "recommended_action": "monitor",
+    "signal_breakdown": {
+      "tier_one_company": 1
+    }
   },
   {
     "company": "Monday.com",
@@ -63,7 +82,10 @@
     "probable_hiring_manager": "VP Revenue Operations",
     "recommended_outreach_target": "VP Sales",
     "confidence": "low",
-    "recommended_action": "monitor"
+    "recommended_action": "monitor",
+    "signal_breakdown": {
+      "tier_one_company": 1
+    }
   },
   {
     "company": "Thermo Fisher Scientific",
@@ -73,7 +95,10 @@
     "probable_hiring_manager": "VP Revenue Operations",
     "recommended_outreach_target": "VP Sales",
     "confidence": "low",
-    "recommended_action": "monitor"
+    "recommended_action": "monitor",
+    "signal_breakdown": {
+      "tier_one_company": 1
+    }
   },
   {
     "company": "Emerson Electric",
@@ -83,7 +108,10 @@
     "probable_hiring_manager": "VP Revenue Operations",
     "recommended_outreach_target": "VP Sales",
     "confidence": "low",
-    "recommended_action": "monitor"
+    "recommended_action": "monitor",
+    "signal_breakdown": {
+      "tier_one_company": 1
+    }
   },
   {
     "company": "Parker Hannifin",
@@ -93,7 +121,10 @@
     "probable_hiring_manager": "VP Revenue Operations",
     "recommended_outreach_target": "VP Sales",
     "confidence": "low",
-    "recommended_action": "monitor"
+    "recommended_action": "monitor",
+    "signal_breakdown": {
+      "tier_one_company": 1
+    }
   },
   {
     "company": "Honeywell",
@@ -103,7 +134,10 @@
     "probable_hiring_manager": "VP Revenue Operations",
     "recommended_outreach_target": "VP Sales",
     "confidence": "low",
-    "recommended_action": "monitor"
+    "recommended_action": "monitor",
+    "signal_breakdown": {
+      "tier_one_company": 1
+    }
   },
   {
     "company": "GE Healthcare",
@@ -113,7 +147,10 @@
     "probable_hiring_manager": "VP Revenue Operations",
     "recommended_outreach_target": "VP Sales",
     "confidence": "low",
-    "recommended_action": "monitor"
+    "recommended_action": "monitor",
+    "signal_breakdown": {
+      "tier_one_company": 1
+    }
   },
   {
     "company": "ZoomInfo",
@@ -123,7 +160,10 @@
     "probable_hiring_manager": "VP Revenue Operations",
     "recommended_outreach_target": "VP Sales",
     "confidence": "low",
-    "recommended_action": "monitor"
+    "recommended_action": "monitor",
+    "signal_breakdown": {
+      "tier_one_company": 1
+    }
   },
   {
     "company": "Ramp",
@@ -133,7 +173,10 @@
     "probable_hiring_manager": "VP Revenue Operations",
     "recommended_outreach_target": "VP Sales",
     "confidence": "low",
-    "recommended_action": "monitor"
+    "recommended_action": "monitor",
+    "signal_breakdown": {
+      "tier_one_company": 1
+    }
   },
   {
     "company": "Rippling",
@@ -143,6 +186,9 @@
     "probable_hiring_manager": "VP Revenue Operations",
     "recommended_outreach_target": "VP Sales",
     "confidence": "low",
-    "recommended_action": "monitor"
+    "recommended_action": "monitor",
+    "signal_breakdown": {
+      "tier_one_company": 1
+    }
   }
 ]

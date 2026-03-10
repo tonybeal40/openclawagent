@@ -7,16 +7,31 @@
       "url": "https://example.com/hubspot-revops",
       "location": "Remote",
       "industry": "Sales Technology",
-      "salary_text": "",
-      "source_label": "company-careers",
+      "salary_text": "$135,000+",
+      "source_label": "Company Careers",
+      "source_confidence": "high",
       "posted_at": "",
       "recency_label": "Unknown",
+      "first_seen": "2026-03-10T20:28:40.739702+00:00",
+      "last_seen": "2026-03-10T20:38:52.835708+00:00",
+      "freshness": "tracked",
+      "trend_label": "Seen 3x",
+      "keyword_matches": [
+        "Revenue Operations",
+        "Pipeline",
+        "CRM",
+        "Automation",
+        "Gtm"
+      ],
       "resume_angle_key": "revops_salesops",
       "resume_angle": [
         "Frame yourself as the operator who installs visibility, targeting logic, funnel discipline, and workflow clarity.",
         "Use wins tied to pipeline creation, dashboards, forecasting support, and CRM process design."
       ],
-      "top_win": "Built more than $6M in outbound pipeline through targeted prospecting and outbound systems design."
+      "top_win": "Built more than $6M in outbound pipeline through targeted prospecting and outbound systems design.",
+      "company_size_band": "growth",
+      "growth_stage": "scaled growth company",
+      "priority_band": "tier-1"
     },
     {
       "company": "Apollo.io",
@@ -25,16 +40,29 @@
       "url": "https://example.com/apollo-sales-ops",
       "location": "Remote",
       "industry": "Sales Technology",
-      "salary_text": "",
+      "salary_text": "$140,000+",
       "source_label": "Greenhouse",
+      "source_confidence": "high",
       "posted_at": "",
       "recency_label": "Unknown",
+      "first_seen": "2026-03-10T20:28:40.739702+00:00",
+      "last_seen": "2026-03-10T20:38:52.835708+00:00",
+      "freshness": "tracked",
+      "trend_label": "Seen 3x",
+      "keyword_matches": [
+        "Sales Operations",
+        "Outbound",
+        "Gtm"
+      ],
       "resume_angle_key": "revops_salesops",
       "resume_angle": [
         "Frame yourself as the operator who installs visibility, targeting logic, funnel discipline, and workflow clarity.",
         "Use wins tied to pipeline creation, dashboards, forecasting support, and CRM process design."
       ],
-      "top_win": "Built more than $6M in outbound pipeline through targeted prospecting and outbound systems design."
+      "top_win": "Built more than $6M in outbound pipeline through targeted prospecting and outbound systems design.",
+      "company_size_band": "growth",
+      "growth_stage": "scaled growth company",
+      "priority_band": "tier-1"
     },
     {
       "company": "Madison Logic",
@@ -43,16 +71,27 @@
       "url": "",
       "location": "United States (Remote)",
       "industry": "Sales Technology",
-      "salary_text": "",
-      "source_label": "linkedin-manual-review",
+      "salary_text": "$130,000+",
+      "source_label": "LinkedIn Manual",
+      "source_confidence": "medium",
       "posted_at": "",
       "recency_label": "Unknown",
+      "first_seen": "2026-03-10T20:28:40.739702+00:00",
+      "last_seen": "2026-03-10T20:38:52.835708+00:00",
+      "freshness": "tracked",
+      "trend_label": "Seen 3x",
+      "keyword_matches": [
+        "Revenue Operations"
+      ],
       "resume_angle_key": "revops_salesops",
       "resume_angle": [
         "Frame yourself as the operator who installs visibility, targeting logic, funnel discipline, and workflow clarity.",
         "Use wins tied to pipeline creation, dashboards, forecasting support, and CRM process design."
       ],
-      "top_win": "Built more than $6M in outbound pipeline through targeted prospecting and outbound systems design."
+      "top_win": "Built more than $6M in outbound pipeline through targeted prospecting and outbound systems design.",
+      "company_size_band": "",
+      "growth_stage": "",
+      "priority_band": ""
     },
     {
       "company": "Mediafly",
@@ -61,16 +100,27 @@
       "url": "",
       "location": "United States (Remote)",
       "industry": "Sales Technology",
-      "salary_text": "",
-      "source_label": "linkedin-manual-review",
+      "salary_text": "$100,000+",
+      "source_label": "LinkedIn Manual",
+      "source_confidence": "medium",
       "posted_at": "",
       "recency_label": "Unknown",
+      "first_seen": "2026-03-10T20:28:40.739702+00:00",
+      "last_seen": "2026-03-10T20:38:52.835708+00:00",
+      "freshness": "tracked",
+      "trend_label": "Seen 3x",
+      "keyword_matches": [
+        "Revenue Operations"
+      ],
       "resume_angle_key": "revops_salesops",
       "resume_angle": [
         "Frame yourself as the operator who installs visibility, targeting logic, funnel discipline, and workflow clarity.",
         "Use wins tied to pipeline creation, dashboards, forecasting support, and CRM process design."
       ],
-      "top_win": "Built more than $6M in outbound pipeline through targeted prospecting and outbound systems design."
+      "top_win": "Built more than $6M in outbound pipeline through targeted prospecting and outbound systems design.",
+      "company_size_band": "",
+      "growth_stage": "",
+      "priority_band": ""
     },
     {
       "company": "PandaDoc",
@@ -79,16 +129,27 @@
       "url": "",
       "location": "United States (Remote)",
       "industry": "Sales Technology",
-      "salary_text": "",
-      "source_label": "linkedin-manual-review",
+      "salary_text": "$120,000+",
+      "source_label": "LinkedIn Manual",
+      "source_confidence": "medium",
       "posted_at": "",
       "recency_label": "Unknown",
+      "first_seen": "2026-03-10T20:28:40.739702+00:00",
+      "last_seen": "2026-03-10T20:38:52.835708+00:00",
+      "freshness": "tracked",
+      "trend_label": "Seen 3x",
+      "keyword_matches": [
+        "Sales Operations"
+      ],
       "resume_angle_key": "revops_salesops",
       "resume_angle": [
         "Frame yourself as the operator who installs visibility, targeting logic, funnel discipline, and workflow clarity.",
         "Use wins tied to pipeline creation, dashboards, forecasting support, and CRM process design."
       ],
-      "top_win": "Built more than $6M in outbound pipeline through targeted prospecting and outbound systems design."
+      "top_win": "Built more than $6M in outbound pipeline through targeted prospecting and outbound systems design.",
+      "company_size_band": "",
+      "growth_stage": "",
+      "priority_band": ""
     },
     {
       "company": "Danaher",
@@ -97,16 +158,28 @@
       "url": "https://example.com/danaher-bd",
       "location": "Chicago",
       "industry": "Industrial Manufacturing",
-      "salary_text": "",
-      "source_label": "company-careers",
+      "salary_text": "$145,000+",
+      "source_label": "Company Careers",
+      "source_confidence": "high",
       "posted_at": "",
       "recency_label": "Unknown",
+      "first_seen": "2026-03-10T20:28:40.739702+00:00",
+      "last_seen": "2026-03-10T20:38:52.835708+00:00",
+      "freshness": "tracked",
+      "trend_label": "Seen 3x",
+      "keyword_matches": [
+        "Pipeline",
+        "Business Development"
+      ],
       "resume_angle_key": "industrial_manufacturing",
       "resume_angle": [
         "Lead with industrial credibility, complex sales-cycle experience, and alignment with operations and engineering teams.",
         "Emphasize pipeline visibility, quoting alignment, and account development in technical markets."
       ],
-      "top_win": "Built more than $6M in outbound pipeline through targeted prospecting and outbound systems design."
+      "top_win": "Built more than $6M in outbound pipeline through targeted prospecting and outbound systems design.",
+      "company_size_band": "enterprise",
+      "growth_stage": "scaled public enterprise",
+      "priority_band": "tier-1"
     },
     {
       "company": "Medallion",
@@ -116,15 +189,26 @@
       "location": "United States (Remote)",
       "industry": "AI Software",
       "salary_text": "",
-      "source_label": "linkedin-manual-review",
+      "source_label": "LinkedIn Manual",
+      "source_confidence": "medium",
       "posted_at": "",
       "recency_label": "Unknown",
+      "first_seen": "2026-03-10T20:28:40.739702+00:00",
+      "last_seen": "2026-03-10T20:38:52.835708+00:00",
+      "freshness": "tracked",
+      "trend_label": "Seen 3x",
+      "keyword_matches": [
+        "Revenue Operations"
+      ],
       "resume_angle_key": "revops_salesops",
       "resume_angle": [
         "Frame yourself as the operator who installs visibility, targeting logic, funnel discipline, and workflow clarity.",
         "Use wins tied to pipeline creation, dashboards, forecasting support, and CRM process design."
       ],
-      "top_win": "Built more than $6M in outbound pipeline through targeted prospecting and outbound systems design."
+      "top_win": "Built more than $6M in outbound pipeline through targeted prospecting and outbound systems design.",
+      "company_size_band": "",
+      "growth_stage": "",
+      "priority_band": ""
     },
     {
       "company": "SimplePractice",
@@ -133,16 +217,27 @@
       "url": "",
       "location": "United States (Remote)",
       "industry": "AI Software",
-      "salary_text": "",
-      "source_label": "linkedin-manual-review",
+      "salary_text": "$118,000+",
+      "source_label": "LinkedIn Manual",
+      "source_confidence": "medium",
       "posted_at": "",
       "recency_label": "Unknown",
+      "first_seen": "2026-03-10T20:28:40.739702+00:00",
+      "last_seen": "2026-03-10T20:38:52.835708+00:00",
+      "freshness": "tracked",
+      "trend_label": "Seen 3x",
+      "keyword_matches": [
+        "Sales Operations"
+      ],
       "resume_angle_key": "revops_salesops",
       "resume_angle": [
         "Frame yourself as the operator who installs visibility, targeting logic, funnel discipline, and workflow clarity.",
         "Use wins tied to pipeline creation, dashboards, forecasting support, and CRM process design."
       ],
-      "top_win": "Built more than $6M in outbound pipeline through targeted prospecting and outbound systems design."
+      "top_win": "Built more than $6M in outbound pipeline through targeted prospecting and outbound systems design.",
+      "company_size_band": "",
+      "growth_stage": "",
+      "priority_band": ""
     },
     {
       "company": "Samsara",
@@ -151,16 +246,27 @@
       "url": "",
       "location": "Chicago, IL (Remote)",
       "industry": "AI Software",
-      "salary_text": "",
-      "source_label": "linkedin-manual-review",
+      "salary_text": "$106,800+",
+      "source_label": "LinkedIn Manual",
+      "source_confidence": "medium",
       "posted_at": "",
       "recency_label": "Unknown",
+      "first_seen": "2026-03-10T20:28:40.739702+00:00",
+      "last_seen": "2026-03-10T20:38:52.835708+00:00",
+      "freshness": "tracked",
+      "trend_label": "Seen 3x",
+      "keyword_matches": [
+        "Sales Operations"
+      ],
       "resume_angle_key": "revops_salesops",
       "resume_angle": [
         "Frame yourself as the operator who installs visibility, targeting logic, funnel discipline, and workflow clarity.",
         "Use wins tied to pipeline creation, dashboards, forecasting support, and CRM process design."
       ],
-      "top_win": "Built more than $6M in outbound pipeline through targeted prospecting and outbound systems design."
+      "top_win": "Built more than $6M in outbound pipeline through targeted prospecting and outbound systems design.",
+      "company_size_band": "",
+      "growth_stage": "",
+      "priority_band": ""
     },
     {
       "company": "HALO Branded Solutions",
@@ -170,15 +276,26 @@
       "location": "United States (Remote)",
       "industry": "B2B Services",
       "salary_text": "",
-      "source_label": "linkedin-manual-review",
+      "source_label": "LinkedIn Manual",
+      "source_confidence": "medium",
       "posted_at": "",
       "recency_label": "Unknown",
+      "first_seen": "2026-03-10T20:28:40.739702+00:00",
+      "last_seen": "2026-03-10T20:38:52.835708+00:00",
+      "freshness": "tracked",
+      "trend_label": "Seen 3x",
+      "keyword_matches": [
+        "Sales Operations"
+      ],
       "resume_angle_key": "revops_salesops",
       "resume_angle": [
         "Frame yourself as the operator who installs visibility, targeting logic, funnel discipline, and workflow clarity.",
         "Use wins tied to pipeline creation, dashboards, forecasting support, and CRM process design."
       ],
-      "top_win": "Built more than $6M in outbound pipeline through targeted prospecting and outbound systems design."
+      "top_win": "Built more than $6M in outbound pipeline through targeted prospecting and outbound systems design.",
+      "company_size_band": "",
+      "growth_stage": "",
+      "priority_band": ""
     }
   ],
   "top_companies": [
@@ -190,6 +307,12 @@
       "hiring_signal": "Large commercial organization and recurring hiring activity",
       "revops_maturity_gap": "Complex revenue motion likely benefits from pipeline visibility and sales systems support",
       "notes": "Strong industrial and leadership fit",
+      "company_size_band": "enterprise",
+      "growth_stage": "scaled public enterprise",
+      "headquarters_region": "US industrial / enterprise",
+      "source_type": "official company careers",
+      "priority_band": "tier-1",
+      "page_fetch_status": "blocked_or_unavailable",
       "source": "Local Seed Companies | Approved Company Targets"
     },
     {
@@ -200,6 +323,12 @@
       "hiring_signal": "Strong GTM and sales operations footprint",
       "revops_maturity_gap": "Good fit for systems, CRM, and sales visibility language",
       "notes": "Strong software and systems fit",
+      "company_size_band": "growth",
+      "growth_stage": "scaled growth company",
+      "headquarters_region": "US SaaS / GTM",
+      "source_type": "official company careers",
+      "priority_band": "tier-1",
+      "page_fetch_status": "blocked_or_unavailable",
       "source": "Local Seed Companies | Approved Company Targets"
     },
     {
@@ -210,6 +339,12 @@
       "hiring_signal": "Prospecting, outbound, and sales hiring relevance",
       "revops_maturity_gap": "High relevance for prospecting systems and outbound intelligence",
       "notes": "Very high fit for Sales Navigator and Apollo positioning",
+      "company_size_band": "growth",
+      "growth_stage": "scaled growth company",
+      "headquarters_region": "US SaaS / GTM",
+      "source_type": "official company careers",
+      "priority_band": "tier-1",
+      "page_fetch_status": "blocked_or_unavailable",
       "source": "Local Seed Companies | Approved Company Targets"
     },
     {
@@ -220,6 +355,12 @@
       "hiring_signal": "Large commercial and technical organization",
       "revops_maturity_gap": "Good fit for sales systems and account strategy narrative",
       "notes": "Tier-1 industrial target",
+      "company_size_band": "enterprise",
+      "growth_stage": "scaled public enterprise",
+      "headquarters_region": "US industrial / enterprise",
+      "source_type": "official company careers",
+      "priority_band": "tier-1",
+      "page_fetch_status": "blocked_or_unavailable",
       "source": "Approved Company Targets"
     },
     {
@@ -230,6 +371,12 @@
       "hiring_signal": "Scaled global sales and technical teams",
       "revops_maturity_gap": "Commercial systems maturity opportunity",
       "notes": "Tier-1 industrial target",
+      "company_size_band": "enterprise",
+      "growth_stage": "scaled public enterprise",
+      "headquarters_region": "US industrial / enterprise",
+      "source_type": "official company careers",
+      "priority_band": "tier-1",
+      "page_fetch_status": "blocked_or_unavailable",
       "source": "Approved Company Targets"
     },
     {
@@ -240,6 +387,12 @@
       "hiring_signal": "Sales and platform growth",
       "revops_maturity_gap": "Good fit for workflow and systems story",
       "notes": "Tier-1 SaaS target",
+      "company_size_band": "growth",
+      "growth_stage": "scaled growth company",
+      "headquarters_region": "US SaaS / GTM",
+      "source_type": "official company careers",
+      "priority_band": "tier-1",
+      "page_fetch_status": "blocked_or_unavailable",
       "source": "Approved Company Targets"
     },
     {
@@ -250,6 +403,12 @@
       "hiring_signal": "Large technical and commercial hiring footprint",
       "revops_maturity_gap": "Cross-functional complexity creates strong systems need",
       "notes": "Good fit for regulated-market operations and process discipline",
+      "company_size_band": "enterprise",
+      "growth_stage": "scaled public enterprise",
+      "headquarters_region": "US industrial / enterprise",
+      "source_type": "official company careers",
+      "priority_band": "tier-1",
+      "page_fetch_status": "blocked_or_unavailable",
       "source": "Local Seed Companies | Approved Company Targets"
     },
     {
@@ -260,6 +419,12 @@
       "hiring_signal": "Enterprise industrial sales motion",
       "revops_maturity_gap": "Strong need for commercial visibility in complex B2B motions",
       "notes": "St. Louis-region relevance",
+      "company_size_band": "enterprise",
+      "growth_stage": "scaled public enterprise",
+      "headquarters_region": "US industrial / enterprise",
+      "source_type": "official company careers",
+      "priority_band": "tier-1",
+      "page_fetch_status": "blocked_or_unavailable",
       "source": "Approved Company Targets"
     },
     {
@@ -270,6 +435,12 @@
       "hiring_signal": "Large industrial field and account teams",
       "revops_maturity_gap": "Potential whitespace for strategic account and systems execution",
       "notes": "Tier-1 industrial target",
+      "company_size_band": "enterprise",
+      "growth_stage": "scaled public enterprise",
+      "headquarters_region": "US industrial / enterprise",
+      "source_type": "official company careers",
+      "priority_band": "tier-1",
+      "page_fetch_status": "blocked_or_unavailable",
       "source": "Approved Company Targets"
     },
     {
@@ -280,6 +451,12 @@
       "hiring_signal": "Scaled commercial organization",
       "revops_maturity_gap": "Strong enterprise systems context",
       "notes": "Tier-1 industrial target",
+      "company_size_band": "enterprise",
+      "growth_stage": "scaled public enterprise",
+      "headquarters_region": "US industrial / enterprise",
+      "source_type": "official company careers",
+      "priority_band": "tier-1",
+      "page_fetch_status": "blocked_or_unavailable",
       "source": "Approved Company Targets"
     }
   ]
