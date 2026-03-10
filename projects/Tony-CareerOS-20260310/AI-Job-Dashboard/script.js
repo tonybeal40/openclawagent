@@ -1,4 +1,5 @@
 const STORAGE_KEY = "ai-job-dashboard-state-v3";
+const LINKEDIN_QUEUE_STATE_KEY = "ai-job-dashboard-linkedin-queue-v1";
 
 let companies = [];
 let topTargets = null;
@@ -172,6 +173,41 @@ function renderNotes() {
   });
 }
 
+function queueRowKey(row) {
+  return [row.person || "", row.company || "", row.linkedin_url || ""].join("|").toLowerCase();
+}
+
+function loadLinkedinQueueState() {
+  const raw = localStorage.getItem(LINKEDIN_QUEUE_STATE_KEY);
+  if (!raw) return {};
+  try {
+    return JSON.parse(raw);
+  } catch {
+    return {};
+  }
+}
+
+function persistLinkedinQueueState() {
+  const snapshot = {};
+  linkedinQueue.forEach((row) => {
+    snapshot[queueRowKey(row)] = { status: row.status || "Not Sent" };
+  });
+  localStorage.setItem(LINKEDIN_QUEUE_STATE_KEY, JSON.stringify(snapshot));
+}
+
+function applyLinkedinQueueState() {
+  const saved = loadLinkedinQueueState();
+  linkedinQueue = linkedinQueue.map((row) => {
+    const savedRow = saved[queueRowKey(row)];
+    return savedRow ? { ...row, status: savedRow.status || row.status } : row;
+  });
+}
+
+function copyText(text) {
+  if (!text) return;
+  navigator.clipboard.writeText(String(text)).catch(() => {});
+}
+
 function renderAll() {
   updateSummary();
 
@@ -201,7 +237,21 @@ function renderAll() {
     { label: "Company", render: (row) => safeText(row.company || "") },
     { label: "Priority", render: (row) => `<span class="status-pill priority-${safeText((row.priority || "").toLowerCase())}">${safeText(row.priority || "")}</span>` },
     { label: "LinkedIn", render: (row) => row.linkedin_url ? `<a class="inline-link" href="${safeText(row.linkedin_url)}" target="_blank" rel="noreferrer">Open</a>` : "" },
-    { label: "Suggested Note", render: (row) => `<span class="muted">${safeText(row.note || "")}</span>` }
+    { label: "Suggested Note", render: (row) => `<div class="queue-note-wrap"><span class="muted">${safeText(row.note || "")}</span><button class="secondary-btn queue-copy-btn" data-queue-key="${safeText(queueRowKey(row))}">Copy Note</button></div>` },
+    {
+      label: "Status",
+      render: (row) => {
+        const key = safeText(queueRowKey(row));
+        const current = safeText((row.status || "Not Sent").toLowerCase());
+        return `
+          <div class="queue-status-wrap">
+            <button class="secondary-btn queue-toggle ${current === "sent" ? "is-active" : ""}" data-queue-key="${key}" data-status="Sent">Sent</button>
+            <button class="secondary-btn queue-toggle ${current === "accepted" ? "is-active" : ""}" data-queue-key="${key}" data-status="Accepted">Accepted</button>
+          </div>
+          <div class="muted">Current: ${safeText(row.status || "Not Sent")}</div>
+        `;
+      }
+    }
   ]);
 
   formatTable("sourceHealthTable", sourceHealth, [
@@ -210,6 +260,31 @@ function renderAll() {
     { label: "Status", render: (row) => `<span class="status-pill">${safeText(row.status || "")}</span>` },
     { label: "Details", render: (row) => safeText(row.details || "") }
   ]);
+
+  document.querySelectorAll(".queue-copy-btn").forEach((button) => {
+    button.addEventListener("click", (event) => {
+      const key = event.currentTarget.dataset.queueKey;
+      const row = linkedinQueue.find((item) => queueRowKey(item) === key);
+      if (!row) return;
+      copyText(row.note || "");
+      event.currentTarget.textContent = "Copied";
+      setTimeout(() => {
+        event.currentTarget.textContent = "Copy Note";
+      }, 900);
+    });
+  });
+
+  document.querySelectorAll(".queue-toggle").forEach((button) => {
+    button.addEventListener("click", (event) => {
+      const key = event.currentTarget.dataset.queueKey;
+      const status = event.currentTarget.dataset.status;
+      const row = linkedinQueue.find((item) => queueRowKey(item) === key);
+      if (!row) return;
+      row.status = status;
+      persistLinkedinQueueState();
+      renderAll();
+    });
+  });
 
   formatTable("companiesTable", topTargets?.topCompanies || [], [
     { label: "Company", render: (row) => `<strong>${safeText(row.company || "")}</strong>` },
@@ -256,6 +331,7 @@ async function loadData() {
   linkedinQueue = Array.isArray(linkedinPayload) ? linkedinPayload : (linkedinPayload.items || []);
 
   applySavedNotes();
+  applyLinkedinQueueState();
   renderAll();
 }
 

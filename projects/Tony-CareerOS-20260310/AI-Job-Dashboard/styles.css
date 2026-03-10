@@ -227,6 +227,12 @@ textarea {
 .priority-medium { background: rgba(250,204,21,0.2); color: #fde68a; }
 .priority-low { background: rgba(148,163,184,0.2); color: #cbd5e1; }
 
+.queue-note-wrap { display: grid; gap: 8px; }
+.queue-copy-btn { padding: 4px 8px; font-size: 12px; width: fit-content; }
+.queue-status-wrap { display: flex; gap: 6px; margin-bottom: 6px; }
+.queue-toggle { padding: 4px 8px; font-size: 12px; }
+.queue-toggle.is-active { border-color: #38bdf8; box-shadow: inset 0 0 0 1px #38bdf8; }
+
 .stack-list {
   display: grid;
   gap: 12px;
