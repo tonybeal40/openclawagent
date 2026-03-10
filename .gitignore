@@ -1,0 +1,22 @@
+# logs
+logs/
+*.log
+
+# sessions
+sessions/
+archive/sessions/
+
+# runtime files
+delivery-queue/
+cron/runs/
+
+# database
+*.sqlite
+
+# backups
+*.bak
+*.backup
+
+# local configs
+.env
+tokens/
