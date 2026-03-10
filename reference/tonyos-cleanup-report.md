@@ -1,0 +1,99 @@
+﻿# TonyOS Cleanup Report
+
+Generated: 2026-03-09 12:42:13
+Deleted items count: 295
+
+## Preserved core tools (requested)
+- apollo-server => True
+- revops-dashboard => True
+- static/internal/budget-standalone => True
+- static/internal/tonyrevops-downloads => True
+- templates/crm.html => True
+- templates/crm-code.html => True
+- static/revops-database.html => True
+- static/revops-outreach.html => True
+- StoryBrand => True
+- SmartBrain => True
+- codebench => True
+
+## Sample deleted paths (first 80)
+- C:\Users\tonyb\.openclaw\workspace\projects\TonyOS\attached_assets\Pasted-NATOLI-HQ-RESOURCE-REACHOUT-SYSTEM-Locked-2026-Standard_1769090391089.txt
+- C:\Users\tonyb\.openclaw\workspace\projects\TonyOS\attached_assets\Pasted-Natoli-Engineering-Competitor-OEM-Presence-Analysis-Reg_1768249110117.txt
+- C:\Users\tonyb\.openclaw\workspace\projects\TonyOS\attached_assets\Pasted-export-function-decideNatoliAccount-evidence-const-deci_1766143571876.txt
+- C:\Users\tonyb\.openclaw\workspace\projects\TonyOS\attached_assets\Pasted-Natoli-Sales-Kickoff-Training-Agenda-pptx-Presentation-_1772029284594.txt
+- C:\Users\tonyb\.openclaw\workspace\projects\TonyOS\attached_assets\Pasted-PHASE-3-4-Apollo-Enrichment-Natoli-Scoring-LOCKED-INTO-_1766328416000.txt
+- C:\Users\tonyb\.openclaw\workspace\projects\TonyOS\attached_assets\Pasted-PHASE-3-4-Apollo-Enrichment-Natoli-Scoring-LOCKED-INTO-_1766328311675.txt
+- C:\Users\tonyb\.openclaw\workspace\projects\TonyOS\attached_assets\Pasted-New-Account-Strategic-Brief-Natoli-Engineering-Company-_1771011663569.txt
+- C:\Users\tonyb\.openclaw\workspace\projects\TonyOS\attached_assets\Pasted--natoli-scope-purpose-Identify-real-powder-compaction-c_1768470116727.txt
+- C:\Users\tonyb\.openclaw\workspace\projects\TonyOS\attached_assets\Pasted--REPLIT-FILE-STRUCTURE-natoli-truth-engine-natoli-truth_1768470490769.txt
+- C:\Users\tonyb\.openclaw\workspace\projects\TonyOS\attached_assets\Pasted-3-Python-code-Exclude-current-Natoli-accounts-This-plug_1768837814076.txt
+- C:\Users\tonyb\.openclaw\workspace\projects\TonyOS\attached_assets\Pasted--FINAL-REPLIT-STRUCTURE-natoli-truth-engine-natoli-trut_1768470558272.txt
+- C:\Users\tonyb\.openclaw\workspace\projects\TonyOS\attached_assets\Pasted-ACCOUNTS-What-this-contains-Every-company-Natoli-active_1770142342417.txt
+- C:\Users\tonyb\.openclaw\workspace\projects\TonyOS\attached_assets\Natoli_Tool_System_TM-II_Software_User_Requirements_Specificat_1769699686596.pdf
+- C:\Users\tonyb\.openclaw\workspace\projects\TonyOS\attached_assets\Natoli_Tool_System_TM-II_Software_User_Requirements_Specificat_1769699732966.pdf
+- C:\Users\tonyb\.openclaw\workspace\projects\TonyOS\attached_assets\Pasted-REPLIT-FILE-STRUCTURE-natoli-truth-ranking-natoli-truth_1768470989599.txt
+- C:\Users\tonyb\.openclaw\workspace\projects\TonyOS\attached_assets\Pasted-Tier-1-Engineering-Scientific-Immediate-Natoli-Fit-OSD-_1768505364690.txt
+- C:\Users\tonyb\.openclaw\workspace\projects\TonyOS\attached_assets\Natoli_Tool_System_TM-II_Software_User_Requirements_Specificat_1769698995687.pdf
+- C:\Users\tonyb\.openclaw\workspace\projects\TonyOS\attached_assets\Pasted-REPLIT-FILE-STRUCTURE-natoli-global-discovery-natoli-tr_1768470893052.txt
+- C:\Users\tonyb\.openclaw\workspace\projects\TonyOS\attached_assets\Pasted-REPLIT-FILE-STRUCTURE-natoli-future-demand-scan-natoli-_1768471066591.txt
+- C:\Users\tonyb\.openclaw\workspace\projects\TonyOS\attached_assets\Pasted-REPLIT-FILE-STRUCTURE-natoli-emerging-scan-natoli-truth_1768470761643.txt
+- C:\Users\tonyb\.openclaw\workspace\projects\TonyOS\static\internal\natoli-handover\natoli-truth-engine\future_demand_signals.json
+- C:\Users\tonyb\.openclaw\workspace\projects\TonyOS\attached_assets\1_28_2026_Clean_Natoli_LIst_(AutoRecovered)_1770126246620.csv
+- C:\Users\tonyb\.openclaw\workspace\projects\TonyOS\static\internal\natoli-handover\natoli-truth-engine\global_search_seeds.json
+- C:\Users\tonyb\.openclaw\workspace\projects\TonyOS\static\internal\natoli-handover\natoli-truth-engine\discovery_queries.json
+- C:\Users\tonyb\.openclaw\workspace\projects\TonyOS\static\internal\natoli-handover\natoli-truth-engine\apply_to_territory.js
+- C:\Users\tonyb\.openclaw\workspace\projects\TonyOS\static\internal\natoli-handover\natoli-truth-engine\territory_ranked.json
+- C:\Users\tonyb\.openclaw\workspace\projects\TonyOS\static\internal\natoli-handover\natoli-truth-engine\input_companies.json
+- C:\Users\tonyb\.openclaw\workspace\projects\TonyOS\static\internal\natoli-handover\natoli-revops-pages\message-center.html
+- C:\Users\tonyb\.openclaw\workspace\projects\TonyOS\static\internal\natoli-handover\natoli-truth-engine\deep_future_scan.js
+- C:\Users\tonyb\.openclaw\workspace\projects\TonyOS\static\internal\natoli-handover\natoli-truth-engine\global_discovery.js
+- C:\Users\tonyb\.openclaw\workspace\projects\TonyOS\static\internal\natoli-handover\natoli-scanner\revopsDecisionEngine.js
+- C:\Users\tonyb\.openclaw\workspace\projects\TonyOS\static\internal\natoli-handover\natoli-truth-engine\natoli_truths.json
+- C:\Users\tonyb\.openclaw\workspace\projects\TonyOS\static\internal\natoli-handover\natoli-message-generator-netlify.html
+- C:\Users\tonyb\.openclaw\workspace\projects\TonyOS\static\internal\natoli-handover\natoli-truth-engine\rank_territory.js
+- C:\Users\tonyb\.openclaw\workspace\projects\TonyOS\static\internal\natoli-handover\natoli-truth-engine\site_ingestion.js
+- C:\Users\tonyb\.openclaw\workspace\projects\TonyOS\attached_assets\1111natoli_discovery_2026-02-13_(1)_1771000573455.csv
+- C:\Users\tonyb\.openclaw\workspace\projects\TonyOS\static\internal\natoli-handover\natoli-revops-pages\formal-intro.html
+- C:\Users\tonyb\.openclaw\workspace\projects\TonyOS\attached_assets\2_3_20256_natoli_enriched_contacts_1770125412747.csv
+- C:\Users\tonyb\.openclaw\workspace\projects\TonyOS\attached_assets\2_3_20256_natoli_enriched_contacts_1770125520090.csv
+- C:\Users\tonyb\.openclaw\workspace\projects\TonyOS\static\internal\natoli-handover\natoli-territory-report-netlify.html
+- C:\Users\tonyb\.openclaw\workspace\projects\TonyOS\attached_assets\2_3_20256_natoli_enriched_contacts_1770125283812.csv
+- C:\Users\tonyb\.openclaw\workspace\projects\TonyOS\attached_assets\2_3_20256_natoli_enriched_contacts_1770140171710.csv
+- C:\Users\tonyb\.openclaw\workspace\projects\TonyOS\static\internal\natoli-handover\natoli-engineering-app\accounts.html
+- C:\Users\tonyb\.openclaw\workspace\projects\TonyOS\attached_assets\2_3_20256_natoli_enriched_contacts_1770125781213.csv
+- C:\Users\tonyb\.openclaw\workspace\projects\TonyOS\attached_assets\2_3_20256_natoli_enriched_contacts_1770125881014.csv
+- C:\Users\tonyb\.openclaw\workspace\projects\TonyOS\static\internal\natoli-handover\apollo-server\public\divisions.html
+- C:\Users\tonyb\.openclaw\workspace\projects\TonyOS\static\internal\natoli-handover\natoli-scanner\evidenceExtractor.js
+- C:\Users\tonyb\.openclaw\workspace\projects\TonyOS\static\internal\natoli-handover\natoli-truth-engine\truth_engine.js
+- C:\Users\tonyb\.openclaw\workspace\projects\TonyOS\static\internal\natoli-handover\natoli-intro-templates-netlify.html
+- C:\Users\tonyb\.openclaw\workspace\projects\TonyOS\static\internal\natoli-handover\apollo-server\public\dashboard.html
+- C:\Users\tonyb\.openclaw\workspace\projects\TonyOS\attached_assets\feb2_2natoli_discovery_2026-02-02_1770126019159.csv
+- C:\Users\tonyb\.openclaw\workspace\projects\TonyOS\static\internal\natoli-handover\natoli-message-center-netlify.html
+- C:\Users\tonyb\.openclaw\workspace\projects\TonyOS\static\internal\natoli-handover\apollo-server\public\pipeline.html
+- C:\Users\tonyb\.openclaw\workspace\projects\TonyOS\attached_assets\Randy_natoli_lapsed_enriched_(1)_1769043490165.csv
+- C:\Users\tonyb\.openclaw\workspace\projects\TonyOS\static\internal\natoli-handover\natoli-engineering-app\accounts.js
+- C:\Users\tonyb\.openclaw\workspace\projects\TonyOS\static\internal\natoli-handover\compaction-intelligence\index.html
+- C:\Users\tonyb\.openclaw\workspace\projects\TonyOS\static\internal\natoli-handover\natoli-revops-pages\downloads.html
+- C:\Users\tonyb\.openclaw\workspace\projects\TonyOS\static\internal\natoli-handover\sales-command-universal\index.html
+- C:\Users\tonyb\.openclaw\workspace\projects\TonyOS\static\internal\natoli-handover\natoli-revops-pages\targeting.html
+- C:\Users\tonyb\.openclaw\workspace\projects\TonyOS\static\internal\natoli-handover\territory-rep-portal\accounts.json
+- C:\Users\tonyb\.openclaw\workspace\projects\TonyOS\static\internal\natoli-handover\natoli-truth-engine\rank_engine.js
+- C:\Users\tonyb\.openclaw\workspace\projects\TonyOS\static\internal\natoli-handover\natoli-engineering-app\index.html
+- C:\Users\tonyb\.openclaw\workspace\projects\TonyOS\static\internal\natoli-handover\natoli-engineering-app\letters.js
+- C:\Users\tonyb\.openclaw\workspace\projects\TonyOS\static\internal\natoli-handover\apollo-server\public\account.html
+- C:\Users\tonyb\.openclaw\workspace\projects\TonyOS\attached_assets\natoli-message-center-netlify_1771015364825.html
+- C:\Users\tonyb\.openclaw\workspace\projects\TonyOS\static\internal\natoli-handover\apollo-server\public\tier-a.html
+- C:\Users\tonyb\.openclaw\workspace\projects\TonyOS\static\internal\natoli-handover\strategic-account-brief-all.html
+- C:\Users\tonyb\.openclaw\workspace\projects\TonyOS\static\internal\natoli-handover\natoli-clean-list-dashboard.html
+- C:\Users\tonyb\.openclaw\workspace\projects\TonyOS\static\internal\natoli-handover\natoli-scanner\package-lock.json
+- C:\Users\tonyb\.openclaw\workspace\projects\TonyOS\static\internal\natoli-handover\natoli-revops-pages\persona.html
+- C:\Users\tonyb\.openclaw\workspace\projects\TonyOS\attached_assets\11natoli_enriched_contacts_(1)_1770126057936.csv
+- C:\Users\tonyb\.openclaw\workspace\projects\TonyOS\static\internal\natoli-handover\natoli-revops-pages\results.html
+- C:\Users\tonyb\.openclaw\workspace\projects\TonyOS\static\internal\natoli-handover\natoli-intro-system-netlify.html
+- C:\Users\tonyb\.openclaw\workspace\projects\TonyOS\static\internal\natoli-handover\natoli-engineering-app\style.css
+- C:\Users\tonyb\.openclaw\workspace\projects\TonyOS\static\internal\natoli-handover\natoli-engineering-app\README.md
+- C:\Users\tonyb\.openclaw\workspace\projects\TonyOS\attached_assets\1_19_2026_Clean_Natoli_LIst__1768837820570.xlsx
+- C:\Users\tonyb\.openclaw\workspace\projects\TonyOS\static\internal\natoli-handover\apollo-server\public\index.html
+- C:\Users\tonyb\.openclaw\workspace\projects\TonyOS\static\internal\natoli-handover\territory-rep-portal\index.html
+- C:\Users\tonyb\.openclaw\workspace\projects\TonyOS\static\internal\natoli-handover\natoli-revops-pages\system.html
+- C:\Users\tonyb\.openclaw\workspace\projects\TonyOS\static\internal\natoli-handover\tonyrevops-downloads-index.html

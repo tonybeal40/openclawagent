@@ -1,0 +1,226 @@
+{
+  "top_jobs": [
+    {
+      "company": "HubSpot",
+      "title": "Revenue Operations Manager",
+      "score": 115,
+      "url": "https://example.com/hubspot-revops",
+      "resume_angle_key": "revops_salesops",
+      "resume_angle": [
+        "Frame yourself as the operator who installs visibility, targeting logic, funnel discipline, and workflow clarity.",
+        "Use wins tied to pipeline creation, dashboards, forecasting support, and CRM process design."
+      ],
+      "top_win": "Built more than $6M in outbound pipeline through targeted prospecting and outbound systems design."
+    },
+    {
+      "company": "Apollo.io",
+      "title": "Sales Operations Manager",
+      "score": 115,
+      "url": "https://example.com/apollo-sales-ops",
+      "resume_angle_key": "revops_salesops",
+      "resume_angle": [
+        "Frame yourself as the operator who installs visibility, targeting logic, funnel discipline, and workflow clarity.",
+        "Use wins tied to pipeline creation, dashboards, forecasting support, and CRM process design."
+      ],
+      "top_win": "Built more than $6M in outbound pipeline through targeted prospecting and outbound systems design."
+    },
+    {
+      "company": "Madison Logic",
+      "title": "Revenue Operations Manager (Sales & Customer Experience)",
+      "score": 95,
+      "url": "",
+      "resume_angle_key": "revops_salesops",
+      "resume_angle": [
+        "Frame yourself as the operator who installs visibility, targeting logic, funnel discipline, and workflow clarity.",
+        "Use wins tied to pipeline creation, dashboards, forecasting support, and CRM process design."
+      ],
+      "top_win": "Built more than $6M in outbound pipeline through targeted prospecting and outbound systems design."
+    },
+    {
+      "company": "Mediafly",
+      "title": "Revenue Operations Manager",
+      "score": 95,
+      "url": "",
+      "resume_angle_key": "revops_salesops",
+      "resume_angle": [
+        "Frame yourself as the operator who installs visibility, targeting logic, funnel discipline, and workflow clarity.",
+        "Use wins tied to pipeline creation, dashboards, forecasting support, and CRM process design."
+      ],
+      "top_win": "Built more than $6M in outbound pipeline through targeted prospecting and outbound systems design."
+    },
+    {
+      "company": "PandaDoc",
+      "title": "Senior Post-Sales Operations Manager",
+      "score": 95,
+      "url": "",
+      "resume_angle_key": "revops_salesops",
+      "resume_angle": [
+        "Frame yourself as the operator who installs visibility, targeting logic, funnel discipline, and workflow clarity.",
+        "Use wins tied to pipeline creation, dashboards, forecasting support, and CRM process design."
+      ],
+      "top_win": "Built more than $6M in outbound pipeline through targeted prospecting and outbound systems design."
+    },
+    {
+      "company": "Danaher",
+      "title": "Business Development Director",
+      "score": 90,
+      "url": "https://example.com/danaher-bd",
+      "resume_angle_key": "industrial_manufacturing",
+      "resume_angle": [
+        "Lead with industrial credibility, complex sales-cycle experience, and alignment with operations and engineering teams.",
+        "Emphasize pipeline visibility, quoting alignment, and account development in technical markets."
+      ],
+      "top_win": "Built more than $6M in outbound pipeline through targeted prospecting and outbound systems design."
+    },
+    {
+      "company": "Medallion",
+      "title": "Revenue Operations Manager",
+      "score": 85,
+      "url": "",
+      "resume_angle_key": "revops_salesops",
+      "resume_angle": [
+        "Frame yourself as the operator who installs visibility, targeting logic, funnel discipline, and workflow clarity.",
+        "Use wins tied to pipeline creation, dashboards, forecasting support, and CRM process design."
+      ],
+      "top_win": "Built more than $6M in outbound pipeline through targeted prospecting and outbound systems design."
+    },
+    {
+      "company": "SimplePractice",
+      "title": "Sales Operations, Senior Partner",
+      "score": 65,
+      "url": "",
+      "resume_angle_key": "revops_salesops",
+      "resume_angle": [
+        "Frame yourself as the operator who installs visibility, targeting logic, funnel discipline, and workflow clarity.",
+        "Use wins tied to pipeline creation, dashboards, forecasting support, and CRM process design."
+      ],
+      "top_win": "Built more than $6M in outbound pipeline through targeted prospecting and outbound systems design."
+    },
+    {
+      "company": "Samsara",
+      "title": "Sales Operations and Strategy Manager",
+      "score": 65,
+      "url": "",
+      "resume_angle_key": "revops_salesops",
+      "resume_angle": [
+        "Frame yourself as the operator who installs visibility, targeting logic, funnel discipline, and workflow clarity.",
+        "Use wins tied to pipeline creation, dashboards, forecasting support, and CRM process design."
+      ],
+      "top_win": "Built more than $6M in outbound pipeline through targeted prospecting and outbound systems design."
+    },
+    {
+      "company": "HALO Branded Solutions",
+      "title": "Sales Operations Manager",
+      "score": 60,
+      "url": "",
+      "resume_angle_key": "revops_salesops",
+      "resume_angle": [
+        "Frame yourself as the operator who installs visibility, targeting logic, funnel discipline, and workflow clarity.",
+        "Use wins tied to pipeline creation, dashboards, forecasting support, and CRM process design."
+      ],
+      "top_win": "Built more than $6M in outbound pipeline through targeted prospecting and outbound systems design."
+    }
+  ],
+  "top_companies": [
+    {
+      "company": "Danaher",
+      "website": "https://jobs.danaher.com/global/en",
+      "industry": "Industrial Manufacturing",
+      "score": "65",
+      "hiring_signal": "Large commercial organization and recurring hiring activity",
+      "revops_maturity_gap": "Complex revenue motion likely benefits from pipeline visibility and sales systems support",
+      "notes": "Strong industrial and leadership fit",
+      "source": "Local Seed Companies | Approved Company Targets"
+    },
+    {
+      "company": "HubSpot",
+      "website": "https://www.hubspot.com/careers",
+      "industry": "Sales Technology",
+      "score": "65",
+      "hiring_signal": "Strong GTM and sales operations footprint",
+      "revops_maturity_gap": "Good fit for systems, CRM, and sales visibility language",
+      "notes": "Strong software and systems fit",
+      "source": "Local Seed Companies | Approved Company Targets"
+    },
+    {
+      "company": "Apollo.io",
+      "website": "https://www.apollo.io/careers",
+      "industry": "Sales Technology",
+      "score": "65",
+      "hiring_signal": "Prospecting, outbound, and sales hiring relevance",
+      "revops_maturity_gap": "High relevance for prospecting systems and outbound intelligence",
+      "notes": "Very high fit for Sales Navigator and Apollo positioning",
+      "source": "Local Seed Companies | Approved Company Targets"
+    },
+    {
+      "company": "3M",
+      "website": "https://www.3m.com/3M/en_US/careers-us/",
+      "industry": "Industrial Manufacturing",
+      "score": "65",
+      "hiring_signal": "Large commercial and technical organization",
+      "revops_maturity_gap": "Good fit for sales systems and account strategy narrative",
+      "notes": "Tier-1 industrial target",
+      "source": "Approved Company Targets"
+    },
+    {
+      "company": "Siemens",
+      "website": "https://www.siemens.com/global/en/home/company/jobs.html",
+      "industry": "Industrial Manufacturing",
+      "score": "65",
+      "hiring_signal": "Scaled global sales and technical teams",
+      "revops_maturity_gap": "Commercial systems maturity opportunity",
+      "notes": "Tier-1 industrial target",
+      "source": "Approved Company Targets"
+    },
+    {
+      "company": "Monday.com",
+      "website": "https://monday.com/careers",
+      "industry": "Sales Technology",
+      "score": "65",
+      "hiring_signal": "Sales and platform growth",
+      "revops_maturity_gap": "Good fit for workflow and systems story",
+      "notes": "Tier-1 SaaS target",
+      "source": "Approved Company Targets"
+    },
+    {
+      "company": "Thermo Fisher Scientific",
+      "website": "https://jobs.thermofisher.com",
+      "industry": "Pharmaceutical Manufacturing",
+      "score": "50",
+      "hiring_signal": "Large technical and commercial hiring footprint",
+      "revops_maturity_gap": "Cross-functional complexity creates strong systems need",
+      "notes": "Good fit for regulated-market operations and process discipline",
+      "source": "Local Seed Companies | Approved Company Targets"
+    },
+    {
+      "company": "Emerson Electric",
+      "website": "https://www.emerson.com/en-us/careers",
+      "industry": "Industrial Manufacturing",
+      "score": "50",
+      "hiring_signal": "Enterprise industrial sales motion",
+      "revops_maturity_gap": "Strong need for commercial visibility in complex B2B motions",
+      "notes": "St. Louis-region relevance",
+      "source": "Approved Company Targets"
+    },
+    {
+      "company": "Parker Hannifin",
+      "website": "https://www.parker.com/us/en/careers.html",
+      "industry": "Industrial Equipment",
+      "score": "50",
+      "hiring_signal": "Large industrial field and account teams",
+      "revops_maturity_gap": "Potential whitespace for strategic account and systems execution",
+      "notes": "Tier-1 industrial target",
+      "source": "Approved Company Targets"
+    },
+    {
+      "company": "Honeywell",
+      "website": "https://careers.honeywell.com",
+      "industry": "Industrial Manufacturing",
+      "score": "50",
+      "hiring_signal": "Scaled commercial organization",
+      "revops_maturity_gap": "Strong enterprise systems context",
+      "notes": "Tier-1 industrial target",
+      "source": "Approved Company Targets"
+    }
+  ]
+}

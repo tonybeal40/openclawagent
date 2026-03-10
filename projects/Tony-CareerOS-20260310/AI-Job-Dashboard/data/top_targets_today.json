@@ -1,0 +1,237 @@
+{
+  "generatedAt": "2026-03-10T10:44:58.328038",
+  "topJobs": [
+    {
+      "company": "HubSpot",
+      "title": "Revenue Operations Manager",
+      "score": 115,
+      "url": "https://example.com/hubspot-revops",
+      "resume_angle_key": "revops_salesops",
+      "resume_angle": [
+        "Frame yourself as the operator who installs visibility, targeting logic, funnel discipline, and workflow clarity.",
+        "Use wins tied to pipeline creation, dashboards, forecasting support, and CRM process design."
+      ],
+      "top_win": "Built more than $6M in outbound pipeline through targeted prospecting and outbound systems design."
+    },
+    {
+      "company": "Apollo.io",
+      "title": "Sales Operations Manager",
+      "score": 115,
+      "url": "https://example.com/apollo-sales-ops",
+      "resume_angle_key": "revops_salesops",
+      "resume_angle": [
+        "Frame yourself as the operator who installs visibility, targeting logic, funnel discipline, and workflow clarity.",
+        "Use wins tied to pipeline creation, dashboards, forecasting support, and CRM process design."
+      ],
+      "top_win": "Built more than $6M in outbound pipeline through targeted prospecting and outbound systems design."
+    },
+    {
+      "company": "Madison Logic",
+      "title": "Revenue Operations Manager (Sales & Customer Experience)",
+      "score": 95,
+      "url": "",
+      "resume_angle_key": "revops_salesops",
+      "resume_angle": [
+        "Frame yourself as the operator who installs visibility, targeting logic, funnel discipline, and workflow clarity.",
+        "Use wins tied to pipeline creation, dashboards, forecasting support, and CRM process design."
+      ],
+      "top_win": "Built more than $6M in outbound pipeline through targeted prospecting and outbound systems design."
+    },
+    {
+      "company": "Mediafly",
+      "title": "Revenue Operations Manager",
+      "score": 95,
+      "url": "",
+      "resume_angle_key": "revops_salesops",
+      "resume_angle": [
+        "Frame yourself as the operator who installs visibility, targeting logic, funnel discipline, and workflow clarity.",
+        "Use wins tied to pipeline creation, dashboards, forecasting support, and CRM process design."
+      ],
+      "top_win": "Built more than $6M in outbound pipeline through targeted prospecting and outbound systems design."
+    },
+    {
+      "company": "PandaDoc",
+      "title": "Senior Post-Sales Operations Manager",
+      "score": 95,
+      "url": "",
+      "resume_angle_key": "revops_salesops",
+      "resume_angle": [
+        "Frame yourself as the operator who installs visibility, targeting logic, funnel discipline, and workflow clarity.",
+        "Use wins tied to pipeline creation, dashboards, forecasting support, and CRM process design."
+      ],
+      "top_win": "Built more than $6M in outbound pipeline through targeted prospecting and outbound systems design."
+    }
+  ],
+  "topCompanies": [
+    {
+      "company": "Danaher",
+      "website": "https://jobs.danaher.com/global/en",
+      "industry": "Industrial Manufacturing",
+      "score": "65",
+      "hiring_signal": "Large commercial organization and recurring hiring activity",
+      "revops_maturity_gap": "Complex revenue motion likely benefits from pipeline visibility and sales systems support",
+      "notes": "Strong industrial and leadership fit",
+      "source": "Local Seed Companies | Approved Company Targets"
+    },
+    {
+      "company": "HubSpot",
+      "website": "https://www.hubspot.com/careers",
+      "industry": "Sales Technology",
+      "score": "65",
+      "hiring_signal": "Strong GTM and sales operations footprint",
+      "revops_maturity_gap": "Good fit for systems, CRM, and sales visibility language",
+      "notes": "Strong software and systems fit",
+      "source": "Local Seed Companies | Approved Company Targets"
+    },
+    {
+      "company": "Apollo.io",
+      "website": "https://www.apollo.io/careers",
+      "industry": "Sales Technology",
+      "score": "65",
+      "hiring_signal": "Prospecting, outbound, and sales hiring relevance",
+      "revops_maturity_gap": "High relevance for prospecting systems and outbound intelligence",
+      "notes": "Very high fit for Sales Navigator and Apollo positioning",
+      "source": "Local Seed Companies | Approved Company Targets"
+    },
+    {
+      "company": "3M",
+      "website": "https://www.3m.com/3M/en_US/careers-us/",
+      "industry": "Industrial Manufacturing",
+      "score": "65",
+      "hiring_signal": "Large commercial and technical organization",
+      "revops_maturity_gap": "Good fit for sales systems and account strategy narrative",
+      "notes": "Tier-1 industrial target",
+      "source": "Approved Company Targets"
+    },
+    {
+      "company": "Siemens",
+      "website": "https://www.siemens.com/global/en/home/company/jobs.html",
+      "industry": "Industrial Manufacturing",
+      "score": "65",
+      "hiring_signal": "Scaled global sales and technical teams",
+      "revops_maturity_gap": "Commercial systems maturity opportunity",
+      "notes": "Tier-1 industrial target",
+      "source": "Approved Company Targets"
+    }
+  ],
+  "hiringSignals": [
+    {
+      "company": "HubSpot",
+      "signal_score": 5,
+      "signals": [
+        "sales team",
+        "growing sales team"
+      ],
+      "predicted_need": "Revenue Operations",
+      "probable_hiring_manager": "VP Revenue Operations",
+      "recommended_outreach_target": "VP Sales",
+      "confidence": "medium",
+      "recommended_action": "outreach"
+    },
+    {
+      "company": "Apollo.io",
+      "signal_score": 5,
+      "signals": [
+        "sales team",
+        "growing sales team"
+      ],
+      "predicted_need": "Revenue Operations",
+      "probable_hiring_manager": "VP Revenue Operations",
+      "recommended_outreach_target": "VP Sales",
+      "confidence": "medium",
+      "recommended_action": "outreach"
+    },
+    {
+      "company": "Danaher",
+      "signal_score": 1,
+      "signals": [],
+      "predicted_need": "Revenue Operations",
+      "probable_hiring_manager": "VP Revenue Operations",
+      "recommended_outreach_target": "VP Sales",
+      "confidence": "low",
+      "recommended_action": "monitor"
+    },
+    {
+      "company": "3M",
+      "signal_score": 1,
+      "signals": [],
+      "predicted_need": "Revenue Operations",
+      "probable_hiring_manager": "VP Revenue Operations",
+      "recommended_outreach_target": "VP Sales",
+      "confidence": "low",
+      "recommended_action": "monitor"
+    },
+    {
+      "company": "Siemens",
+      "signal_score": 1,
+      "signals": [],
+      "predicted_need": "Revenue Operations",
+      "probable_hiring_manager": "VP Revenue Operations",
+      "recommended_outreach_target": "VP Sales",
+      "confidence": "low",
+      "recommended_action": "monitor"
+    }
+  ],
+  "outreachTargets": [
+    {
+      "company": "Danaher",
+      "website": "https://www.danaher.com/careers",
+      "industry": "Industrial Manufacturing",
+      "outreach_priority": "high",
+      "score": 65,
+      "reasons": [
+        "Large commercial organization and recurring hiring activity",
+        "Complex revenue motion likely benefits from pipeline visibility and sales systems support"
+      ],
+      "suggested_action": "Research leadership and draft tailored outreach even if no job is posted."
+    },
+    {
+      "company": "HubSpot",
+      "website": "https://www.hubspot.com/careers",
+      "industry": "Sales Technology",
+      "outreach_priority": "high",
+      "score": 65,
+      "reasons": [
+        "Strong GTM and sales operations footprint",
+        "Good fit for systems, CRM, and sales visibility language"
+      ],
+      "suggested_action": "Research leadership and draft tailored outreach even if no job is posted."
+    },
+    {
+      "company": "Apollo.io",
+      "website": "https://www.apollo.io/careers",
+      "industry": "Sales Technology",
+      "outreach_priority": "high",
+      "score": 65,
+      "reasons": [
+        "Prospecting, outbound, and sales hiring relevance",
+        "High relevance for prospecting systems and outbound intelligence"
+      ],
+      "suggested_action": "Research leadership and draft tailored outreach even if no job is posted."
+    },
+    {
+      "company": "3M",
+      "website": "https://careers.3m.com",
+      "industry": "Industrial Manufacturing",
+      "outreach_priority": "high",
+      "score": 65,
+      "reasons": [
+        "Large commercial and technical organization",
+        "Good fit for sales systems and account strategy narrative"
+      ],
+      "suggested_action": "Research leadership and draft tailored outreach even if no job is posted."
+    },
+    {
+      "company": "Siemens",
+      "website": "https://jobs.siemens.com",
+      "industry": "Industrial Manufacturing",
+      "outreach_priority": "high",
+      "score": 65,
+      "reasons": [
+        "Scaled global sales and technical teams",
+        "Commercial systems maturity opportunity"
+      ],
+      "suggested_action": "Research leadership and draft tailored outreach even if no job is posted."
+    }
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Decision Maker Output",
+  "type": "object",
+  "required": ["run_date", "counts", "contacts", "notes"],
+  "properties": {
+    "run_date": { "type": "string", "pattern": "^\\d{4}-\\d{2}-\\d{2}$" },
+    "counts": {
+      "type": "object",
+      "required": ["companies_processed", "contacts_found", "contacts_high_confidence"],
+      "properties": {
+        "companies_processed": { "type": "integer", "minimum": 0 },
+        "contacts_found": { "type": "integer", "minimum": 0 },
+        "contacts_high_confidence": { "type": "integer", "minimum": 0 }
+      },
+      "additionalProperties": false
+    },
+    "contacts": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["company", "contact_name", "title", "linkedin_url", "confidence_score", "priority"],
+        "properties": {
+          "company": { "type": "string", "minLength": 1 },
+          "contact_name": { "type": "string", "minLength": 1 },
+          "title": { "type": "string", "minLength": 1 },
+          "linkedin_url": { "type": "string", "minLength": 1 },
+          "work_email": { "type": ["string", "null"] },
+          "confidence_score": { "type": "integer", "minimum": 0, "maximum": 100 },
+          "priority": { "type": "string", "enum": ["p1", "p2", "p3"] },
+          "fit_reason": { "type": "string", "minLength": 8 },
+          "source": { "type": "string", "minLength": 1 }
+        },
+        "additionalProperties": false
+      }
+    },
+    "notes": {
+      "type": "object",
+      "required": ["blockers", "quality_flags"],
+      "properties": {
+        "blockers": { "type": "array", "items": { "type": "string" } },
+        "quality_flags": { "type": "array", "items": { "type": "string" } }
+      },
+      "additionalProperties": false
+    }
+  },
+  "additionalProperties": false
+}

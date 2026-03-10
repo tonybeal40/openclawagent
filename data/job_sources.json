@@ -1,0 +1,40 @@
+{
+  "sources": [
+    {
+      "name": "Remotive Remote Jobs API",
+      "type": "json",
+      "url": "https://remotive.com/api/remote-jobs"
+    },
+    {
+      "name": "Greenhouse Boards API (sample)",
+      "type": "json",
+      "url": "https://boards-api.greenhouse.io/v1/boards/stripe/jobs"
+    },
+    {
+      "name": "Lever Postings API (sample)",
+      "type": "json",
+      "url": "https://api.lever.co/v0/postings/notion?mode=json"
+    },
+    {
+      "name": "Hacker News Hiring (Algolia)",
+      "type": "json",
+      "url": "https://hn.algolia.com/api/v1/search?query=\"who%20is%20hiring\"&tags=story"
+    },
+    {
+      "name": "TechCrunch Startup News RSS",
+      "type": "rss",
+      "url": "https://techcrunch.com/feed/"
+    }
+  ],
+  "keywords": [
+    "revops",
+    "revenue operations",
+    "sales operations",
+    "business development",
+    "territory manager",
+    "account executive",
+    "manufacturing",
+    "automation",
+    "industrial"
+  ]
+}

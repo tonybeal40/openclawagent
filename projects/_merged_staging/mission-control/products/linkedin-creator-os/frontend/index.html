@@ -1,0 +1,1389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LinkedIn Creator Studio | TonyOS</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+<style>
+:root{--bg:#0a0e17;--bg2:#111827;--bg3:#1e293b;--bg4:#0f172a;--border:#334155;--border2:#475569;--txt:#f3f4f6;--muted:#94a3b8;--blue:#3b82f6;--green:#22c55e;--red:#ef4444;--purple:#8b5cf6;--cyan:#06b6d4;--orange:#f59e0b;--linkedin:#0077b5;--gold:#eab308}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:var(--bg);color:var(--txt);min-height:100vh;display:flex;overflow:hidden}
+.sidebar{width:230px;min-width:230px;background:var(--bg2);border-right:1px solid var(--border);display:flex;flex-direction:column;height:100vh}
+.sidebar-header{padding:20px 16px 16px;border-bottom:1px solid var(--border)}
+.sidebar-header h2{font-size:15px;color:var(--linkedin);display:flex;align-items:center;gap:8px}
+.sidebar-header h2::before{content:'';display:inline-block;width:8px;height:8px;background:var(--linkedin);border-radius:50%}
+.sidebar-header .subtitle{font-size:10px;color:var(--muted);margin-top:4px;letter-spacing:.5px;text-transform:uppercase}
+.nav-section{padding:12px 8px;flex:1;overflow-y:auto}
+.nav-label{font-size:10px;color:var(--muted);letter-spacing:1px;text-transform:uppercase;padding:8px 12px 6px;margin-top:8px}
+.nav-label:first-child{margin-top:0}
+.nav-btn{background:none;border:none;color:var(--muted);padding:9px 12px;border-radius:8px;font-size:13px;cursor:pointer;text-align:left;transition:all .15s;display:flex;align-items:center;gap:10px;width:100%}
+.nav-btn:hover{background:rgba(59,130,246,.08);color:var(--txt)}
+.nav-btn.active{background:rgba(0,119,181,.15);color:var(--linkedin);font-weight:600}
+.nav-btn .icon{font-size:16px;width:22px;text-align:center;flex-shrink:0}
+.sidebar-footer{padding:12px 8px;border-top:1px solid var(--border)}
+.workspace{flex:1;overflow-y:auto;height:100vh}
+.workspace-inner{padding:32px 40px;max-width:1200px;margin:0 auto}
+.panel{display:none}
+.panel.on{display:block}
+h2.page-title{font-size:24px;font-weight:700;margin-bottom:4px}
+.page-sub{color:var(--muted);font-size:13px;margin-bottom:28px;line-height:1.5}
+.card{background:var(--bg2);border:1px solid var(--border);border-radius:14px;padding:24px;margin-bottom:20px;transition:border-color .2s}
+.card:hover{border-color:var(--border2)}
+.card h3{font-size:14px;margin-bottom:14px;color:var(--cyan);font-weight:600;display:flex;align-items:center;gap:8px}
+.card h3 .step{background:var(--linkedin);color:#fff;width:22px;height:22px;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;font-size:11px;font-weight:700}
+.row{display:flex;gap:12px;align-items:center;flex-wrap:wrap;margin-bottom:12px}
+.row:last-child{margin-bottom:0}
+.col{display:flex;flex-direction:column;gap:6px}
+.inp{background:var(--bg3);border:1px solid var(--border);color:var(--txt);padding:9px 14px;border-radius:8px;font-size:13px;transition:border-color .2s}
+.inp:focus{outline:none;border-color:var(--linkedin);box-shadow:0 0 0 3px rgba(0,119,181,.15)}
+select.inp{cursor:pointer}
+textarea.inp{width:100%;min-height:100px;resize:vertical;font-family:inherit;line-height:1.6}
+.btn{padding:10px 22px;border:none;border-radius:8px;font-size:13px;font-weight:600;cursor:pointer;transition:all .15s;display:inline-flex;align-items:center;gap:7px;white-space:nowrap}
+.btn:hover{transform:translateY(-1px);box-shadow:0 4px 12px rgba(0,0,0,.3)}
+.btn:active{transform:translateY(0)}
+.btn-blue{background:var(--blue);color:#fff}
+.btn-green{background:var(--green);color:#fff}
+.btn-purple{background:var(--purple);color:#fff}
+.btn-linkedin{background:var(--linkedin);color:#fff}
+.btn-red{background:var(--red);color:#fff}
+.btn-orange{background:var(--orange);color:#000}
+.btn-outline{background:none;border:1px solid var(--border);color:var(--muted)}.btn-outline:hover{border-color:var(--linkedin);color:var(--linkedin)}
+.btn:disabled{opacity:.4;cursor:not-allowed;transform:none;box-shadow:none}
+.btn-sm{padding:6px 14px;font-size:12px}
+.upload-zone{border:2px dashed var(--border);border-radius:14px;padding:50px 30px;text-align:center;cursor:pointer;transition:all .3s;background:var(--bg4)}
+.upload-zone:hover{border-color:var(--linkedin);background:rgba(0,119,181,.04)}
+.upload-zone.dragover{border-color:var(--green);background:rgba(34,197,94,.06)}
+.upload-zone input{display:none}
+.upload-zone .upload-icon{font-size:48px;margin-bottom:12px;display:block}
+.upload-zone .upload-title{font-size:16px;font-weight:600;margin-bottom:6px}
+.upload-zone .upload-hint{color:var(--muted);font-size:12px}
+.canvas-wrap{position:relative;display:inline-block;overflow:hidden;border-radius:10px;border:2px solid var(--border);cursor:move;background:#000}
+.canvas-wrap canvas{display:block}
+.corner-handle{position:absolute;background:rgba(0,190,255,0.7);border:2px solid #fff;border-radius:3px;z-index:10;transition:background 0.15s}
+.corner-handle:hover{background:rgba(0,190,255,1)}
+.corner-handle.tl{top:-2px;left:-2px;width:20px;height:20px;cursor:nwse-resize;border-radius:6px 0 3px 0}
+.corner-handle.tr{top:-2px;right:-2px;width:20px;height:20px;cursor:nesw-resize;border-radius:0 6px 0 3px}
+.corner-handle.bl{bottom:-2px;left:-2px;width:20px;height:20px;cursor:nesw-resize;border-radius:0 3px 6px 0}
+.corner-handle.br{bottom:-2px;right:-2px;width:20px;height:20px;cursor:nwse-resize;border-radius:3px 0 0 6px}
+.corner-handle.tc{top:-2px;left:50%;transform:translateX(-50%);width:40px;height:14px;cursor:ns-resize;border-radius:3px}
+.corner-handle.bc{bottom:-2px;left:50%;transform:translateX(-50%);width:40px;height:14px;cursor:ns-resize;border-radius:3px}
+.corner-handle.ml{top:50%;left:-2px;transform:translateY(-50%);width:14px;height:40px;cursor:ew-resize;border-radius:3px}
+.corner-handle.mr{top:50%;right:-2px;transform:translateY(-50%);width:14px;height:40px;cursor:ew-resize;border-radius:3px}
+.safe-overlay{position:absolute;top:0;left:0;right:0;bottom:0;pointer-events:none;border:2px dashed rgba(255,200,0,.3);margin:10%}
+.size-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(170px,1fr));gap:10px}
+.size-card{background:var(--bg3);border:1px solid var(--border);border-radius:10px;padding:14px 12px;cursor:pointer;transition:all .2s;text-align:center}
+.size-card:hover{border-color:var(--blue);background:rgba(59,130,246,.05)}
+.size-card.selected{border-color:var(--linkedin);background:rgba(0,119,181,.12);box-shadow:0 0 0 2px rgba(0,119,181,.3)}
+.size-card .dim{font-size:16px;font-weight:700;color:var(--linkedin)}
+.size-card .lbl{font-size:11px;color:var(--muted);margin-top:3px}
+.controls-bar{display:flex;gap:16px;align-items:center;flex-wrap:wrap;padding:14px 0}
+.slider-group{display:flex;align-items:center;gap:8px}
+.slider-group label{font-size:12px;color:var(--muted);white-space:nowrap}
+.slider-group input[type=range]{width:120px;accent-color:var(--linkedin)}
+.safe-info{font-size:11px;color:var(--orange);margin-top:10px;display:flex;align-items:center;gap:6px}
+.pill-row{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:14px}
+.pill{padding:7px 16px;border-radius:20px;font-size:12px;cursor:pointer;border:1px solid var(--border);color:var(--muted);transition:all .15s;font-weight:500}
+.pill:hover{border-color:var(--blue);color:var(--blue)}
+.pill.active{background:var(--linkedin);border-color:var(--linkedin);color:#fff}
+.color-pick{width:36px;height:32px;border:2px solid var(--border);border-radius:6px;cursor:pointer;padding:0;background:none}
+.color-pick::-webkit-color-swatch{border:none;border-radius:4px}
+.color-pick::-webkit-color-swatch-wrapper{padding:2px}
+.slide-preview{display:inline-block;width:180px;height:180px;border:1px solid var(--border);border-radius:10px;margin:6px;overflow:hidden;position:relative;transition:border-color .2s}
+.slide-preview:hover{border-color:var(--linkedin)}
+.slide-preview canvas{width:100%;height:100%}
+.slide-num{position:absolute;top:6px;right:8px;background:rgba(0,0,0,.7);color:#fff;font-size:10px;padding:2px 8px;border-radius:10px;font-weight:600}
+.toolbar{display:flex;gap:3px;flex-wrap:wrap;margin-bottom:10px;background:var(--bg3);padding:6px;border-radius:8px}
+.toolbar button{background:none;border:1px solid transparent;color:var(--muted);padding:6px 10px;border-radius:5px;font-size:12px;cursor:pointer;font-weight:600;transition:all .15s}
+.toolbar button:hover{background:var(--bg);border-color:var(--border);color:var(--txt)}
+.toolbar .sep{width:1px;background:var(--border);margin:0 4px}
+.article-preview{background:#fff;color:#1a202c;padding:36px 40px;border-radius:10px;max-width:700px;font-family:Georgia,'Times New Roman',serif;line-height:1.8}
+.article-preview h1{font-size:28px;margin-bottom:6px;font-family:-apple-system,sans-serif;line-height:1.3}
+.article-preview .art-subtitle{color:#666;font-size:17px;font-style:italic;margin-bottom:20px;padding-bottom:16px;border-bottom:1px solid #e5e7eb}
+.article-preview h2{font-size:21px;margin:24px 0 8px;color:#1a202c;font-family:-apple-system,sans-serif}
+.article-preview h3{font-size:18px;margin:20px 0 6px;color:#374151;font-family:-apple-system,sans-serif}
+.article-preview p{margin-bottom:16px;font-size:17px;color:#374151}
+.article-preview blockquote{border-left:3px solid var(--linkedin);padding:12px 20px;color:#555;font-style:italic;margin:20px 0;background:#f8fafc;border-radius:0 8px 8px 0}
+.article-preview ul,.article-preview ol{margin:10px 0 18px 24px}
+.article-preview li{margin-bottom:8px;font-size:16px;color:#374151}
+.article-preview hr{border:none;border-top:1px solid #e5e7eb;margin:24px 0}
+.article-preview .img-placeholder{background:#f1f5f9;border:2px dashed #cbd5e1;border-radius:8px;padding:30px;text-align:center;color:#94a3b8;margin:20px 0;font-family:-apple-system,sans-serif;font-size:14px}
+.article-preview mark{background:rgba(0,119,181,.15);color:#0077b5;padding:1px 4px;border-radius:3px;font-weight:600}
+.templates-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:10px;margin-bottom:14px}
+.template-card{background:var(--bg3);border:1px solid var(--border);border-radius:10px;overflow:hidden;cursor:pointer;transition:all .2s}
+.template-card:hover{border-color:var(--linkedin);transform:translateY(-2px)}
+.template-card.selected{border-color:var(--linkedin);box-shadow:0 0 0 2px rgba(0,119,181,.3)}
+.template-card .tpl-preview{height:100px;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:14px}
+.template-card .tpl-name{padding:8px;font-size:11px;color:var(--muted);text-align:center;border-top:1px solid var(--border)}
+.img-info{display:flex;gap:16px;flex-wrap:wrap;margin-top:12px}
+.img-info .info-item{font-size:12px;color:var(--muted)}
+.img-info .info-item span{color:var(--txt);font-weight:600}
+.toast{position:fixed;bottom:24px;right:24px;background:var(--green);color:#fff;padding:12px 22px;border-radius:10px;font-size:13px;font-weight:600;z-index:999;opacity:0;transition:all .3s;box-shadow:0 8px 24px rgba(0,0,0,.4);transform:translateY(10px)}
+.toast.show{opacity:1;transform:translateY(0)}
+.table-ref{width:100%;border-collapse:collapse}
+.table-ref th{text-align:left;padding:12px;color:var(--muted);font-size:11px;text-transform:uppercase;letter-spacing:.5px;border-bottom:2px solid var(--border)}
+.table-ref td{padding:12px;border-bottom:1px solid var(--border);font-size:13px}
+.table-ref tr:last-child td{border-bottom:none}
+.table-ref .sz{color:var(--cyan);font-weight:700;font-size:14px}
+.char-count{font-size:11px;color:var(--muted);text-align:right;margin-top:4px}
+.checklist{list-style:none;padding:0}
+.checklist li{padding:8px 12px;border-bottom:1px solid var(--border);font-size:13px;display:flex;align-items:center;gap:10px}
+.checklist li:last-child{border-bottom:none}
+.checklist .pass{color:var(--green)}
+.checklist .warn{color:var(--orange)}
+.checklist .fail{color:var(--red)}
+.score-bar{height:8px;border-radius:4px;background:var(--bg3);overflow:hidden;margin:8px 0}
+.score-bar .fill{height:100%;border-radius:4px;transition:width .5s}
+.tpl-list{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.tpl-item{background:var(--bg3);border:1px solid var(--border);border-radius:10px;padding:14px;cursor:pointer;transition:all .2s}
+.tpl-item:hover{border-color:var(--linkedin);background:rgba(0,119,181,.05)}
+.tpl-item h4{font-size:13px;margin-bottom:6px;color:var(--txt)}
+.tpl-item p{font-size:11px;color:var(--muted);line-height:1.4}
+.modal-overlay{position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,.6);z-index:100;display:none;align-items:center;justify-content:center}
+.modal-overlay.show{display:flex}
+.modal{background:var(--bg2);border:1px solid var(--border);border-radius:16px;padding:32px;max-width:500px;width:90%;max-height:80vh;overflow-y:auto}
+.modal h2{font-size:20px;margin-bottom:16px}
+@media(max-width:900px){
+.sidebar{width:60px;min-width:60px}
+.sidebar-header h2 span,.sidebar-header .subtitle,.nav-label,.nav-btn span:not(.icon){display:none}
+.sidebar-header h2{justify-content:center}.sidebar-header h2::before{margin:0}
+.nav-btn{justify-content:center;padding:12px}
+.workspace-inner{padding:20px 16px}
+.tpl-list{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+
+<div class="sidebar">
+<div class="sidebar-header">
+<h2><span>LinkedIn Creator Studio</span></h2>
+<div class="subtitle">Content Toolkit</div>
+</div>
+<div class="nav-section">
+<div class="nav-label">Design</div>
+<button class="nav-btn active" onclick="go('resize')"><span class="icon">🖼️</span><span>Image Resizer</span></button>
+<button class="nav-btn" onclick="go('carousel')"><span class="icon">📑</span><span>Carousel Builder</span></button>
+<div class="nav-label">Write</div>
+<button class="nav-btn" onclick="go('post')"><span class="icon">✍️</span><span>Post Writer</span></button>
+<button class="nav-btn" onclick="go('article')"><span class="icon">📝</span><span>Article Editor</span></button>
+<div class="nav-label">Optimize</div>
+<button class="nav-btn" onclick="go('analyzer')"><span class="icon">📊</span><span>Post Analyzer</span></button>
+<button class="nav-btn" onclick="go('templates')"><span class="icon">📋</span><span>Templates</span></button>
+<div class="nav-label">Tools</div>
+<button class="nav-btn" onclick="go('ai')"><span class="icon">🤖</span><span>AI Assistant</span></button>
+<button class="nav-btn" onclick="go('library')"><span class="icon">💾</span><span>Content Library</span></button>
+<button class="nav-btn" onclick="go('help')"><span class="icon">📐</span><span>Size Guide</span></button>
+</div>
+<div class="sidebar-footer">
+<a href="/" class="nav-btn" style="text-decoration:none"><span class="icon">←</span><span>TonyOS</span></a>
+</div>
+</div>
+
+<div class="workspace"><div class="workspace-inner">
+
+<!-- ======================== IMAGE RESIZER ======================== -->
+<div class="panel on" id="p-resize">
+<h2 class="page-title">Image Resizer & Cropper</h2>
+<p class="page-sub">Upload any image, pick a LinkedIn format, drag to reposition, zoom to fit, then download at perfect quality.</p>
+
+<div class="card">
+<h3><span class="step">1</span> Choose Format</h3>
+<div class="size-grid" id="sizeGrid">
+<div class="size-card selected" data-w="1200" data-h="644" onclick="pickSize(this)"><div class="dim">1200 × 644</div><div class="lbl">Article Cover</div></div>
+<div class="size-card" data-w="1584" data-h="396" onclick="pickSize(this)"><div class="dim">1584 × 396</div><div class="lbl">Profile Banner</div></div>
+<div class="size-card" data-w="1200" data-h="1200" onclick="pickSize(this)"><div class="dim">1200 × 1200</div><div class="lbl">Post Image</div></div>
+<div class="size-card" data-w="1080" data-h="1080" onclick="pickSize(this)"><div class="dim">1080 × 1080</div><div class="lbl">Carousel Slide</div></div>
+<div class="size-card" data-w="1280" data-h="720" onclick="pickSize(this)"><div class="dim">1280 × 720</div><div class="lbl">Video Thumbnail</div></div>
+<div class="size-card" data-w="400" data-h="400" onclick="pickSize(this)"><div class="dim">400 × 400</div><div class="lbl">Profile Photo</div></div>
+<div class="size-card" data-w="300" data-h="300" onclick="pickSize(this)"><div class="dim">300 × 300</div><div class="lbl">Company Logo</div></div>
+<div class="size-card" data-w="1128" data-h="191" onclick="pickSize(this)"><div class="dim">1128 × 191</div><div class="lbl">Company Cover</div></div>
+</div>
+</div>
+
+<div class="card">
+<h3><span class="step">2</span> Upload Image</h3>
+<div class="upload-zone" id="imgDropZone">
+<span class="upload-icon">📷</span>
+<div class="upload-title">Drop image here or click to upload</div>
+<div class="upload-hint">PNG, JPG, WEBP — any size, we'll make it perfect</div>
+<input type="file" id="imgFileInput" accept="image/*">
+</div>
+<div class="img-info" id="imgInfo" style="display:none">
+<div class="info-item">Original: <span id="origSize"></span></div>
+<div class="info-item">Output: <span id="outSize"></span></div>
+<div class="info-item">File: <span id="fileName"></span></div>
+</div>
+</div>
+
+<div class="card" id="cropCard" style="display:none">
+<h3><span class="step">3</span> Position & Crop</h3>
+<p style="color:var(--muted);font-size:12px;margin-bottom:14px">Your image auto-fits to show everything. Zoom in to crop tighter, drag to reposition. Any gaps blend with your image's edge colors.</p>
+<div class="controls-bar">
+<div class="slider-group"><label>🔍 Zoom</label><input type="range" id="zoomSlider" min="80" max="400" value="100" oninput="updateZoom()"><span id="zoomVal" style="font-size:12px;color:var(--cyan);font-weight:600;width:40px">100%</span></div>
+<label style="font-size:12px;color:var(--muted);display:flex;align-items:center;gap:6px;cursor:pointer"><input type="checkbox" id="safeToggle" onchange="toggleSafe()" style="accent-color:var(--orange)"> Safe Zone</label>
+<button class="btn btn-outline btn-sm" onclick="resetPosition()">Reset</button>
+</div>
+<div class="canvas-wrap" id="canvasWrap"><canvas id="cropCanvas"></canvas><div class="corner-handle tl" data-corner="tl"></div><div class="corner-handle tr" data-corner="tr"></div><div class="corner-handle bl" data-corner="bl"></div><div class="corner-handle br" data-corner="br"></div><div class="corner-handle tc" data-corner="tc"></div><div class="corner-handle bc" data-corner="bc"></div><div class="corner-handle ml" data-corner="ml"></div><div class="corner-handle mr" data-corner="mr"></div><div class="safe-overlay" id="safeOverlay" style="display:none"></div></div>
+<div class="safe-info">LinkedIn may crop edges on mobile. Keep key content centered.</div>
+</div>
+
+<div class="card" id="overlayCard" style="display:none">
+<h3><span class="step">4</span> Text Overlay (Optional)</h3>
+<p style="color:var(--muted);font-size:12px;margin-bottom:12px">Add professional text to your image. Pick a preset or customize everything. Leave blank to skip.</p>
+<div class="row" style="margin-bottom:14px">
+<button class="btn btn-outline btn-sm" onclick="applyOverlayPreset('keynote')">Keynote Speaker</button>
+<button class="btn btn-outline btn-sm" onclick="applyOverlayPreset('article')">Article Cover</button>
+<button class="btn btn-outline btn-sm" onclick="applyOverlayPreset('announcement')">Announcement</button>
+<button class="btn btn-outline btn-sm" onclick="applyOverlayPreset('quote')">Quote Style</button>
+<button class="btn btn-outline btn-sm" onclick="applyOverlayPreset('minimal')">Minimal</button>
+<button class="btn btn-outline btn-sm" onclick="applyOverlayPreset('hiring')">We're Hiring</button>
+<button class="btn btn-outline btn-sm" onclick="applyOverlayPreset('milestone')">Milestone</button>
+<button class="btn btn-outline btn-sm" onclick="applyOverlayPreset('event')">Event Promo</button>
+<button class="btn btn-outline btn-sm" onclick="applyOverlayPreset('testimonial')">Testimonial</button>
+<button class="btn btn-outline btn-sm" onclick="applyOverlayPreset('tip')">Pro Tip</button>
+<button class="btn btn-outline btn-sm" onclick="applyOverlayPreset('cta')">Call to Action</button>
+<button class="btn btn-outline btn-sm" onclick="applyOverlayPreset('storytelling')">Story Time</button>
+<button class="btn btn-sm" style="background:linear-gradient(135deg,#14a800,#0e7a00);color:#fff;border:none" onclick="toggleOpenToWork()">#OpenToWork</button>
+<button class="btn btn-outline btn-sm" onclick="clearOverlay()">Clear</button>
+</div>
+<div id="otwControls" style="display:none;background:rgba(20,168,0,0.08);border:1px solid rgba(20,168,0,0.25);border-radius:10px;padding:14px 16px;margin-bottom:12px">
+<div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:10px">
+<span style="font-size:13px;font-weight:700;color:#14a800">#OpenToWork Banner</span>
+<button class="btn btn-outline btn-sm" onclick="toggleOpenToWork()" style="font-size:11px">Remove</button>
+</div>
+<div class="row">
+<input class="inp" id="otwText" value="#OPENTOWORK" placeholder="Banner text" style="flex:1;font-weight:700" oninput="drawCrop()">
+</div>
+<div class="row">
+<select class="inp" id="otwShape" style="width:auto" onchange="drawCrop()">
+<option value="bar">Full Bar</option>
+<option value="pill">Pill</option>
+<option value="bubble">Bubble</option>
+<option value="ribbon">Ribbon</option>
+<option value="badge">Badge</option>
+<option value="sash">Diagonal Sash</option>
+</select>
+<div class="col"><label style="font-size:10px;color:var(--muted)">Color 1</label><input type="color" class="color-pick" id="otwColor1" value="#14a800" onchange="drawCrop()"></div>
+<div class="col"><label style="font-size:10px;color:var(--muted)">Color 2</label><input type="color" class="color-pick" id="otwColor2" value="#0b8600" onchange="drawCrop()"></div>
+<div class="col"><label style="font-size:10px;color:var(--muted)">Text</label><input type="color" class="color-pick" id="otwTextColor" value="#ffffff" onchange="drawCrop()"></div>
+</div>
+<div class="row">
+<div class="slider-group"><label>Height</label><input type="range" id="otwHeight" min="6" max="25" value="12" oninput="document.getElementById('otwHeightVal').textContent=this.value+'%';drawCrop()"><span id="otwHeightVal" style="font-size:11px;color:var(--cyan);width:32px">12%</span></div>
+<div class="slider-group"><label>Opacity</label><input type="range" id="otwOpacity" min="50" max="100" value="100" oninput="document.getElementById('otwOpVal').textContent=this.value+'%';drawCrop()"><span id="otwOpVal" style="font-size:11px;color:var(--cyan);width:32px">100%</span></div>
+</div>
+<div class="row">
+<div class="slider-group"><label>Font Size</label><input type="range" id="otwFontSize" min="30" max="80" value="55" oninput="document.getElementById('otwFsVal').textContent=this.value+'%';drawCrop()"><span id="otwFsVal" style="font-size:11px;color:var(--cyan);width:32px">55%</span></div>
+</div>
+<div style="text-align:center;padding:4px 0 2px;font-size:11px;color:var(--muted);font-style:italic">Drag the banner on the canvas to reposition it</div>
+</div>
+</div>
+<div class="row">
+<input class="inp" id="overlayHeadline" placeholder="Main headline text" style="flex:1;font-size:15px;font-weight:700" oninput="drawCrop()">
+</div>
+<div class="row">
+<input class="inp" id="overlaySubtitle" placeholder="Subtitle or tagline (optional)" style="flex:1" oninput="drawCrop()">
+</div>
+<div class="row">
+<select class="inp" id="overlayPos" style="width:auto" onchange="onOverlayPosChange()">
+<option value="center">Center</option>
+<option value="bottom-left">Bottom Left</option>
+<option value="bottom-center">Bottom Center</option>
+<option value="top-left">Top Left</option>
+<option value="top-center">Top Center</option>
+<option value="top-right">Top Right</option>
+<option value="bottom-right">Bottom Right</option>
+<option value="custom">Freeform (Drag)</option>
+</select>
+<select class="inp" id="overlayFont" style="width:auto" onchange="drawCrop()">
+<option value="sans">Sans-Serif (Modern)</option>
+<option value="serif">Serif (Editorial)</option>
+<option value="mono">Monospace (Tech)</option>
+</select>
+<select class="inp" id="overlayWeight" style="width:auto" onchange="drawCrop()">
+<option value="bold">Bold</option>
+<option value="800">Extra Bold</option>
+<option value="normal">Regular</option>
+</select>
+</div>
+<div class="row">
+<div class="col"><label style="font-size:10px;color:var(--muted)">Text</label><input type="color" class="color-pick" id="overlayColor" value="#ffffff" onchange="drawCrop()"></div>
+<div class="col"><label style="font-size:10px;color:var(--muted)">Shadow</label><input type="color" class="color-pick" id="overlayShadow" value="#000000" onchange="drawCrop()"></div>
+<div class="col"><label style="font-size:10px;color:var(--muted)">Backdrop</label><input type="color" class="color-pick" id="overlayBgColor" value="#000000" onchange="drawCrop()"></div>
+<label style="font-size:12px;color:var(--muted);display:flex;align-items:center;gap:6px;cursor:pointer"><input type="checkbox" id="overlayBg" onchange="drawCrop()" checked style="accent-color:var(--linkedin)"> Backdrop</label>
+</div>
+<div class="row">
+<div class="slider-group"><label>Size</label><input type="range" id="overlaySize" min="20" max="96" value="42" oninput="document.getElementById('overlaySizeVal').textContent=this.value;drawCrop()"><span id="overlaySizeVal" style="font-size:11px;color:var(--cyan);width:28px">42</span></div>
+<div class="slider-group"><label>Opacity</label><input type="range" id="overlayBgOpacity" min="20" max="90" value="50" oninput="document.getElementById('overlayOpVal').textContent=this.value+'%';drawCrop()"><span id="overlayOpVal" style="font-size:11px;color:var(--cyan);width:28px">50%</span></div>
+</div>
+</div>
+
+<div class="card" id="downloadCard" style="display:none">
+<h3><span class="step">5</span> Download</h3>
+<div class="row">
+<button class="btn btn-green" onclick="downloadCrop('png')">⬇ Download PNG</button>
+<button class="btn btn-blue" onclick="downloadCrop('jpg')">⬇ Download JPG</button>
+<button class="btn btn-outline" onclick="resetImage()">Upload New Image</button>
+</div>
+</div>
+</div>
+
+<!-- ======================== CAROUSEL BUILDER ======================== -->
+<div class="panel" id="p-carousel">
+<h2 class="page-title">Carousel Builder</h2>
+<p class="page-sub">Create professional LinkedIn carousel slides with brand templates and export as ZIP.</p>
+
+<div class="card">
+<h3><span class="step">1</span> Brand Template</h3>
+<div class="templates-grid">
+<div class="template-card selected" data-tpl="dark" onclick="pickTemplate(this)"><div class="tpl-preview" style="background:linear-gradient(135deg,#0a0e17,#1e293b);color:#fff">Dark Pro</div><div class="tpl-name">Dark Professional</div></div>
+<div class="template-card" data-tpl="linkedin" onclick="pickTemplate(this)"><div class="tpl-preview" style="background:linear-gradient(135deg,#0077b5,#00a0dc);color:#fff">LinkedIn</div><div class="tpl-name">LinkedIn Blue</div></div>
+<div class="template-card" data-tpl="light" onclick="pickTemplate(this)"><div class="tpl-preview" style="background:linear-gradient(135deg,#f8fafc,#e2e8f0);color:#1a202c">Clean</div><div class="tpl-name">Light Clean</div></div>
+<div class="template-card" data-tpl="gradient" onclick="pickTemplate(this)"><div class="tpl-preview" style="background:linear-gradient(135deg,#1a1a2e,#16213e,#0f3460);color:#e94560">Bold</div><div class="tpl-name">Bold Gradient</div></div>
+<div class="template-card" data-tpl="minimal" onclick="pickTemplate(this)"><div class="tpl-preview" style="background:#fff;color:#111;border-bottom:4px solid #0077b5">Minimal</div><div class="tpl-name">Minimal White</div></div>
+<div class="template-card" data-tpl="custom" onclick="pickTemplate(this)"><div class="tpl-preview" style="background:var(--bg3);color:var(--muted)">Custom</div><div class="tpl-name">Custom Colors</div></div>
+</div>
+</div>
+
+<div class="card" id="customColorsCard" style="display:none">
+<h3>Custom Colors</h3>
+<div class="row">
+<div class="col"><label style="font-size:11px;color:var(--muted)">Background</label><input type="color" class="color-pick" id="carBg" value="#0a0e17"></div>
+<div class="col"><label style="font-size:11px;color:var(--muted)">Headline</label><input type="color" class="color-pick" id="carHeadColor" value="#ffffff"></div>
+<div class="col"><label style="font-size:11px;color:var(--muted)">Body Text</label><input type="color" class="color-pick" id="carBodyColor" value="#94a3b8"></div>
+<div class="col"><label style="font-size:11px;color:var(--muted)">Accent</label><input type="color" class="color-pick" id="carAccent" value="#0077b5"></div>
+</div>
+</div>
+
+<div class="card">
+<h3><span class="step">2</span> Slide Content</h3>
+<p style="color:var(--muted);font-size:12px;margin-bottom:8px">Separate each slide with a blank line. First line = headline, rest = body.</p>
+<div class="pill-row">
+<div class="pill" onclick="loadCarouselStructure('standard')">Standard (5 slides)</div>
+<div class="pill" onclick="loadCarouselStructure('framework')">Framework (10 slides)</div>
+<div class="pill" onclick="loadCarouselStructure('story')">Story Arc (7 slides)</div>
+<div class="pill" onclick="loadCarouselStructure('listicle')">Listicle (6 slides)</div>
+</div>
+<textarea class="inp" id="carouselText" style="min-height:220px" placeholder="Slide 1 Title (The Hook)
+Your opening statement that grabs attention
+
+Slide 2 Title (The Problem)
+What pain point are you addressing?
+
+Slide 3 Title (The Insight)
+What's the key idea or framework?"></textarea>
+</div>
+
+<div class="card">
+<h3><span class="step">3</span> Style Controls</h3>
+<div class="row">
+<div class="slider-group"><label>Font Size</label><input type="range" id="carFontSize" min="28" max="64" value="44" oninput="document.getElementById('carFontVal').textContent=this.value"><span id="carFontVal" style="font-size:12px;color:var(--cyan);font-weight:600;width:28px">44</span></div>
+<div class="slider-group"><label>Body Size</label><input type="range" id="carBodySize" min="20" max="40" value="28" oninput="document.getElementById('carBodyVal').textContent=this.value"><span id="carBodyVal" style="font-size:12px;color:var(--cyan);font-weight:600;width:28px">28</span></div>
+</div>
+<div class="row">
+<select class="inp" id="carFont" style="width:auto"><option value="system">System (Default)</option><option value="serif">Serif (Georgia)</option><option value="mono">Monospace</option></select>
+<label style="font-size:12px;color:var(--muted);display:flex;align-items:center;gap:6px;cursor:pointer"><input type="checkbox" id="carShowNum" checked style="accent-color:var(--linkedin)"> Slide numbers</label>
+</div>
+<div class="row"><button class="btn btn-linkedin" onclick="generateCarousel()">Generate Slides</button></div>
+</div>
+
+<div class="card" id="carouselBgCard">
+<h3>Background Image (Optional)</h3>
+<div class="row">
+<button class="btn btn-outline btn-sm" onclick="document.getElementById('carBgFile').click()">Upload Background</button>
+<button class="btn btn-outline btn-sm" onclick="carBgImg=null;document.getElementById('carBgName').textContent='No background';toast('Background cleared')">Clear</button>
+<input type="file" id="carBgFile" accept="image/*" style="display:none" onchange="loadCarBg(this)">
+<span id="carBgName" style="font-size:12px;color:var(--muted)">No background</span>
+</div>
+</div>
+
+<div class="card" id="carouselPreviewCard" style="display:none">
+<h3>Preview</h3>
+<div id="carouselPreview" style="display:flex;flex-wrap:wrap;gap:8px"></div>
+<div class="row" style="margin-top:18px">
+<button class="btn btn-green" onclick="downloadCarouselZip()">⬇ Download ZIP</button>
+<button class="btn btn-outline" onclick="downloadCarouselPngs()">⬇ Individual PNGs</button>
+</div>
+</div>
+</div>
+
+<!-- ======================== POST WRITER ======================== -->
+<div class="panel" id="p-post">
+<h2 class="page-title">Post Writer</h2>
+<p class="page-sub">Write LinkedIn posts with character counting, auto-formatting, and publishing checklist.</p>
+
+<div class="card">
+<h3>Write Your Post</h3>
+<div class="toolbar">
+<button onclick="insertPostText('🔹 ')">🔹</button>
+<button onclick="insertPostText('→ ')">→</button>
+<button onclick="insertPostText('\n\n')">¶ Break</button>
+<button onclick="insertPostText('\n\n---\n\n')">— Line</button>
+<div class="sep"></div>
+<button onclick="insertPostText('💡 ')">💡</button>
+<button onclick="insertPostText('🎯 ')">🎯</button>
+<button onclick="insertPostText('📊 ')">📊</button>
+<button onclick="insertPostText('🔑 ')">🔑</button>
+<button onclick="insertPostText('✅ ')">✅</button>
+<button onclick="insertPostText('⬇️ ')">⬇️ CTA</button>
+<div class="sep"></div>
+<button onclick="autoFormatPost()">Auto-Format</button>
+</div>
+<textarea class="inp" id="postBody" style="min-height:250px;font-size:15px;line-height:1.7" oninput="updatePostAnalysis()" placeholder="Write your LinkedIn post here...
+
+Tips:
+- First line is your hook (most important)
+- Use short paragraphs (1-2 sentences)
+- End with a question or CTA
+- Keep it under 3000 characters"></textarea>
+<div class="row" style="margin-top:4px">
+<span class="char-count"><span id="postCharCount">0</span> / 3,000</span>
+<span id="postLenStatus" style="font-size:11px;margin-left:auto"></span>
+</div>
+</div>
+
+<div class="card">
+<h3>Hashtags</h3>
+<div class="pill-row" id="hashtagPills">
+<div class="pill" onclick="toggleHashtag(this)">#Leadership</div>
+<div class="pill" onclick="toggleHashtag(this)">#Sales</div>
+<div class="pill" onclick="toggleHashtag(this)">#RevOps</div>
+<div class="pill" onclick="toggleHashtag(this)">#B2B</div>
+<div class="pill" onclick="toggleHashtag(this)">#Manufacturing</div>
+<div class="pill" onclick="toggleHashtag(this)">#Growth</div>
+<div class="pill" onclick="toggleHashtag(this)">#Marketing</div>
+<div class="pill" onclick="toggleHashtag(this)">#Strategy</div>
+<div class="pill" onclick="toggleHashtag(this)">#Pipeline</div>
+<div class="pill" onclick="toggleHashtag(this)">#DataDriven</div>
+</div>
+<div class="row">
+<input class="inp" id="customHashtag" placeholder="Add custom hashtag" style="flex:1" onkeydown="if(event.key==='Enter'){addCustomHashtag();event.preventDefault()}">
+<button class="btn btn-outline btn-sm" onclick="addCustomHashtag()">Add</button>
+</div>
+</div>
+
+<div class="card" id="postChecklistCard" style="display:none">
+<h3>Publishing Checklist</h3>
+<ul class="checklist" id="postChecklist"></ul>
+<div class="score-bar"><div class="fill" id="postScoreFill"></div></div>
+<div id="postScoreLabel" style="font-size:12px;text-align:center;margin-top:4px"></div>
+</div>
+
+<div class="card">
+<h3>Actions</h3>
+<div class="row">
+<button class="btn btn-green" onclick="copyPost()">📋 Copy Post</button>
+<button class="btn btn-purple" onclick="analyzePostChecklist()">📊 Run Checklist</button>
+<button class="btn btn-outline" onclick="saveToLibrary('post',document.getElementById('postBody').value)">💾 Save to Library</button>
+<button class="btn btn-outline" onclick="clearPost()">Clear</button>
+</div>
+</div>
+</div>
+
+<!-- ======================== ARTICLE EDITOR ======================== -->
+<div class="panel" id="p-article">
+<h2 class="page-title">Article Editor</h2>
+<p class="page-sub">Write and format LinkedIn articles with professional styling. Preview exactly how they'll look.</p>
+
+<div class="card">
+<h3>Article Content</h3>
+<div class="toolbar">
+<button onclick="insertMd('## ')" title="Section heading">H2</button>
+<button onclick="insertMd('### ')" title="Sub-heading">H3</button>
+<div class="sep"></div>
+<button onclick="insertMd('**','**')" title="Bold"><b>B</b></button>
+<button onclick="insertMd('*','*')" title="Italic"><i>I</i></button>
+<button onclick="insertMd('==','==')" title="Highlight keyword">🔑 Key</button>
+<div class="sep"></div>
+<button onclick="insertMd('> ')" title="Block quote">Quote</button>
+<button onclick="insertMd('- ')" title="Bullet point">Bullet</button>
+<button onclick="insertMd('1. ')" title="Numbered list">1. List</button>
+<div class="sep"></div>
+<button onclick="insertMd('---\n')" title="Horizontal divider">— Line</button>
+<button onclick="insertMd('[IMAGE: ',']\n')" title="Image placeholder">🖼️</button>
+</div>
+<input class="inp" id="artTitle" placeholder="Article Title" style="width:100%;margin-bottom:8px;font-size:18px;font-weight:700;padding:12px 14px">
+<input class="inp" id="artSubtitle" placeholder="Subtitle (optional)" style="width:100%;margin-bottom:8px">
+<textarea class="inp" id="artBody" style="min-height:350px;font-family:'SF Mono',Consolas,monospace;font-size:13px;line-height:1.7" placeholder="Write your article using simple formatting:
+
+## Section Heading
+### Sub Heading
+**bold text** and *italic text*
+==keyword== to highlight important terms
+> This is a blockquote
+- Bullet point
+1. Numbered item
+--- (horizontal line)
+[IMAGE: Description of image]"></textarea>
+<div class="row" style="margin-top:10px">
+<button class="btn btn-linkedin" onclick="previewArticle()">👁️ Preview</button>
+<button class="btn btn-green" onclick="copyArticleText()">📋 Copy Text</button>
+<button class="btn btn-purple" onclick="copyArticleHtml()">🔗 Copy HTML</button>
+<button class="btn btn-outline" onclick="exportArticleMd()">📄 Export Markdown</button>
+<button class="btn btn-outline" onclick="saveToLibrary('article',document.getElementById('artTitle').value+'\\n\\n'+document.getElementById('artBody').value)">💾 Save</button>
+<span id="artCopyMsg" style="font-size:12px;color:var(--green);font-weight:600"></span>
+</div>
+</div>
+
+<div class="card" id="artPreviewCard" style="display:none">
+<h3>LinkedIn Article Preview</h3>
+<div class="article-preview" id="artPreview"></div>
+</div>
+</div>
+
+<!-- ======================== POST ANALYZER ======================== -->
+<div class="panel" id="p-analyzer">
+<h2 class="page-title">Post Analyzer</h2>
+<p class="page-sub">Paste any LinkedIn post and get instant feedback on hook strength, formatting, character count, and engagement potential.</p>
+
+<div class="card">
+<h3>Paste Your Post</h3>
+<textarea class="inp" id="analyzerInput" style="min-height:200px;font-size:14px" oninput="runAnalyzer()" placeholder="Paste your LinkedIn post here to analyze it..."></textarea>
+</div>
+
+<div class="card" id="analyzerResults" style="display:none">
+<h3>Analysis Results</h3>
+<div id="analyzerOutput"></div>
+</div>
+
+<div class="card">
+<h3>Quick Fixes</h3>
+<div class="row">
+<button class="btn btn-linkedin" onclick="autoFormatAnalyzer()">Auto-Format Paragraphs</button>
+<button class="btn btn-outline" onclick="copyText(document.getElementById('analyzerInput').value)">📋 Copy Fixed Post</button>
+</div>
+</div>
+</div>
+
+<!-- ======================== CONTENT TEMPLATES ======================== -->
+<div class="panel" id="p-templates">
+<h2 class="page-title">Content Templates</h2>
+<p class="page-sub">Pre-built LinkedIn content frameworks. Click any template to load it into the Post Writer, Article Editor, or Carousel Builder.</p>
+
+<div class="card">
+<h3>Post Templates</h3>
+<div class="tpl-list" id="postTemplates"></div>
+</div>
+
+<div class="card">
+<h3>Article Templates</h3>
+<div class="tpl-list" id="articleTemplates"></div>
+</div>
+
+<div class="card">
+<h3>Carousel Templates</h3>
+<div class="tpl-list" id="carouselTemplates"></div>
+</div>
+</div>
+
+<!-- ======================== AI ASSISTANT ======================== -->
+<div class="panel" id="p-ai">
+<h2 class="page-title">AI Assistant</h2>
+<p class="page-sub">Optional AI helper for content ideas, headlines, and article outlines. Key stays in memory only — never saved.</p>
+
+<div class="card">
+<h3>OpenAI API Key</h3>
+<div class="row">
+<input type="password" class="inp" id="aiKey" placeholder="Paste your OpenAI API key (sk-...)" style="flex:1">
+<button class="btn btn-red btn-sm" onclick="document.getElementById('aiKey').value=''">Clear</button>
+</div>
+<p style="font-size:11px;color:var(--orange);margin-top:8px">Key is never saved. Cleared on page refresh.</p>
+</div>
+
+<div class="card">
+<h3>Quick Actions</h3>
+<div class="pill-row">
+<div class="pill" onclick="setAiPrompt('Write a compelling LinkedIn post about: ')">Post Idea</div>
+<div class="pill" onclick="setAiPrompt('Write 5 LinkedIn article headline options for: ')">Headlines</div>
+<div class="pill" onclick="setAiPrompt('Create a detailed LinkedIn article outline about: ')">Article Outline</div>
+<div class="pill" onclick="setAiPrompt('Write a LinkedIn carousel script (6 slides, headline + body each) about: ')">Carousel Script</div>
+<div class="pill" onclick="setAiPrompt('Rewrite this more professionally for LinkedIn:\n\n')">Rewrite</div>
+<div class="pill" onclick="setAiPrompt('Generate 10 relevant LinkedIn hashtags for: ')">Hashtags</div>
+<div class="pill" onclick="setAiPrompt('Write 3 alternative hook lines for this LinkedIn post:\n\n')">Hook Generator</div>
+<div class="pill" onclick="setAiPrompt('Shorten this LinkedIn post to under 1400 characters while keeping the core message:\n\n')">Shorten Post</div>
+<div class="pill" onclick="setAiPrompt('Add a strong CTA to the end of this LinkedIn post:\n\n')">Add CTA</div>
+<div class="pill" onclick="setAiPrompt('Find recent discussions about LinkedIn algorithm changes and engagement trends. Summarize what is currently performing best.')">Trend Scanner</div>
+</div>
+<textarea class="inp" id="aiPrompt" placeholder="Write your prompt here..." style="min-height:120px"></textarea>
+<div class="row" style="margin-top:10px">
+<button class="btn btn-linkedin" onclick="runAI()" id="aiRunBtn">Generate</button>
+<select class="inp" id="aiModel" style="width:auto"><option value="gpt-4o-mini">GPT-4o Mini (Fast)</option><option value="gpt-4o">GPT-4o (Best)</option></select>
+</div>
+</div>
+
+<div class="card" id="aiResultCard" style="display:none">
+<h3>Result</h3>
+<pre id="aiResult" style="white-space:pre-wrap;font-family:inherit;font-size:14px;line-height:1.7;color:var(--txt)"></pre>
+<div class="row" style="margin-top:10px">
+<button class="btn btn-green btn-sm" onclick="copyText(document.getElementById('aiResult').textContent)">📋 Copy</button>
+<button class="btn btn-outline btn-sm" onclick="sendToPost()">→ Post Writer</button>
+<button class="btn btn-outline btn-sm" onclick="sendToArticle()">→ Article Editor</button>
+<button class="btn btn-outline btn-sm" onclick="sendToCarousel()">→ Carousel</button>
+<button class="btn btn-outline btn-sm" onclick="saveToLibrary('ai',document.getElementById('aiResult').textContent)">💾 Save</button>
+</div>
+</div>
+
+<div class="card">
+<h3>Make This Go Viral</h3>
+<p style="color:var(--muted);font-size:12px;margin-bottom:12px">Paste a draft post and the AI will rewrite the hook, break paragraphs, add curiosity, and suggest a CTA.</p>
+<textarea class="inp" id="viralInput" placeholder="Paste your draft post here..." style="min-height:100px"></textarea>
+<div class="row" style="margin-top:8px">
+<button class="btn btn-orange" onclick="makeViral()" id="viralBtn">🚀 Make It Viral</button>
+</div>
+</div>
+</div>
+
+<!-- ======================== CONTENT LIBRARY ======================== -->
+<div class="panel" id="p-library">
+<h2 class="page-title">Content Library</h2>
+<p class="page-sub">Your saved posts, articles, hooks, and ideas. Stored locally in your browser.</p>
+
+<div class="card">
+<h3>Saved Content</h3>
+<div id="libraryList" style="min-height:100px"><p style="color:var(--muted);font-size:13px">No saved content yet. Save posts, articles, and AI results from other sections.</p></div>
+</div>
+
+<div class="card">
+<h3>Quick Save</h3>
+<div class="row">
+<select class="inp" id="libType" style="width:auto"><option value="hook">Hook</option><option value="post">Post</option><option value="idea">Idea</option><option value="article">Article</option></select>
+<input class="inp" id="libContent" placeholder="Type content to save..." style="flex:1">
+<button class="btn btn-green btn-sm" onclick="quickSave()">Save</button>
+</div>
+</div>
+
+<div class="card">
+<h3>Export / Import</h3>
+<div class="row">
+<button class="btn btn-blue btn-sm" onclick="exportLibrary()">⬇ Export Library (JSON)</button>
+<button class="btn btn-outline btn-sm" onclick="document.getElementById('libImport').click()">⬆ Import Library</button>
+<input type="file" id="libImport" accept=".json" style="display:none" onchange="importLibrary(this)">
+<button class="btn btn-red btn-sm" onclick="if(confirm('Clear all saved content?')){localStorage.removeItem('li_studio_library');loadLibrary();toast('Library cleared')}">Clear All</button>
+</div>
+</div>
+</div>
+
+<!-- ======================== SIZE REFERENCE ======================== -->
+<div class="panel" id="p-help">
+<h2 class="page-title">LinkedIn Size Reference</h2>
+<p class="page-sub">Every official LinkedIn image dimension. Click "Use" to load that size in the Image Resizer.</p>
+
+<div class="card">
+<h3>Official LinkedIn Image Sizes</h3>
+<table class="table-ref">
+<thead><tr><th>Type</th><th>Size (px)</th><th>Ratio</th><th>Notes</th><th></th></tr></thead>
+<tbody>
+<tr><td style="font-weight:700">Article Cover</td><td class="sz">1200 × 644</td><td>1.86:1</td><td style="color:var(--muted);font-size:12px">Top of LinkedIn articles</td><td><button class="btn btn-outline btn-sm" onclick="goResize(1200,644)">Use</button></td></tr>
+<tr><td style="font-weight:700">Profile Banner</td><td class="sz">1584 × 396</td><td>4:1</td><td style="color:var(--muted);font-size:12px">Behind your profile photo</td><td><button class="btn btn-outline btn-sm" onclick="goResize(1584,396)">Use</button></td></tr>
+<tr><td style="font-weight:700">Post Image</td><td class="sz">1200 × 1200</td><td>1:1</td><td style="color:var(--muted);font-size:12px">Square post in feed</td><td><button class="btn btn-outline btn-sm" onclick="goResize(1200,1200)">Use</button></td></tr>
+<tr><td style="font-weight:700">Carousel Slide</td><td class="sz">1080 × 1080</td><td>1:1</td><td style="color:var(--muted);font-size:12px">PDF carousel pages</td><td><button class="btn btn-outline btn-sm" onclick="goResize(1080,1080)">Use</button></td></tr>
+<tr><td style="font-weight:700">Video Thumbnail</td><td class="sz">1280 × 720</td><td>16:9</td><td style="color:var(--muted);font-size:12px">Video cover image</td><td><button class="btn btn-outline btn-sm" onclick="goResize(1280,720)">Use</button></td></tr>
+<tr><td style="font-weight:700">Profile Photo</td><td class="sz">400 × 400</td><td>1:1</td><td style="color:var(--muted);font-size:12px">Your headshot</td><td><button class="btn btn-outline btn-sm" onclick="goResize(400,400)">Use</button></td></tr>
+<tr><td style="font-weight:700">Company Logo</td><td class="sz">300 × 300</td><td>1:1</td><td style="color:var(--muted);font-size:12px">Company page logo</td><td><button class="btn btn-outline btn-sm" onclick="goResize(300,300)">Use</button></td></tr>
+<tr><td style="font-weight:700">Company Cover</td><td class="sz">1128 × 191</td><td>5.9:1</td><td style="color:var(--muted);font-size:12px">Company page banner</td><td><button class="btn btn-outline btn-sm" onclick="goResize(1128,191)">Use</button></td></tr>
+</tbody>
+</table>
+</div>
+
+<div class="card">
+<h3>Pro Tips</h3>
+<ul style="padding-left:20px;color:var(--muted);font-size:13px;line-height:2.2">
+<li>Keep important text in the <strong style="color:var(--txt)">center 80%</strong> — edges get cropped on mobile</li>
+<li>Use <strong style="color:var(--txt)">high contrast text</strong> — LinkedIn's feed has a white background</li>
+<li>Profile banners are partially covered by your photo on the <strong style="color:var(--txt)">bottom-left</strong></li>
+<li>Article covers show a <strong style="color:var(--txt)">gradient overlay</strong> at the bottom where the title appears</li>
+<li>Export as <strong style="color:var(--txt)">PNG</strong> for text-heavy images, <strong style="color:var(--txt)">JPG</strong> for photos</li>
+<li>LinkedIn sweet spot for posts: <strong style="color:var(--txt)">800–1400 characters</strong></li>
+</ul>
+</div>
+
+<div class="card">
+<h3>Selling This Tool (Stripe Setup)</h3>
+<p style="color:var(--muted);font-size:13px;line-height:1.8;margin-bottom:12px">To sell this as a SaaS product, you need these pieces:</p>
+<table class="table-ref">
+<thead><tr><th>#</th><th>Piece</th><th>Status</th></tr></thead>
+<tbody>
+<tr><td>1</td><td style="font-weight:700">Working Product</td><td style="color:var(--green)">Done</td></tr>
+<tr><td>2</td><td style="font-weight:700">Landing Page</td><td style="color:var(--orange)">Need to build</td></tr>
+<tr><td>3</td><td style="font-weight:700">User Login (Auth)</td><td style="color:var(--orange)">Need Supabase or Firebase</td></tr>
+<tr><td>4</td><td style="font-weight:700">Database (User Accounts)</td><td style="color:var(--orange)">Need Supabase or Firebase</td></tr>
+<tr><td>5</td><td style="font-weight:700">Stripe Checkout</td><td style="color:var(--orange)">Need Stripe account + keys</td></tr>
+<tr><td>6</td><td style="font-weight:700">Server-Side AI Key</td><td style="color:var(--orange)">Move API key to backend</td></tr>
+<tr><td>7</td><td style="font-weight:700">Hosting</td><td style="color:var(--green)">Netlify or Vercel (free)</td></tr>
+</tbody>
+</table>
+<p style="color:var(--muted);font-size:12px;margin-top:12px;line-height:1.7"><strong style="color:var(--txt)">Pricing suggestion:</strong> $15/mo basic, $29/mo pro (with AI credits). <strong style="color:var(--txt)">Stripe flow:</strong> User clicks upgrade → Stripe Checkout opens → payment → webhook → account upgraded. <strong style="color:var(--txt)">Next step:</strong> Create a Stripe account at stripe.com, then provide the publishable key and secret key to wire up checkout.</p>
+</div>
+</div>
+
+</div></div>
+
+<div class="toast" id="toast"></div>
+
+<script>
+const PANELS=['resize','carousel','post','article','analyzer','templates','ai','library','help'];
+function go(id){
+  PANELS.forEach(p=>{const el=document.getElementById('p-'+p);if(el)el.classList.remove('on');});
+  document.getElementById('p-'+id).classList.add('on');
+  document.querySelectorAll('.nav-section .nav-btn').forEach(b=>b.classList.remove('active'));
+  const btns=document.querySelectorAll('.nav-section .nav-btn');
+  const map={resize:0,carousel:1,post:2,article:3,analyzer:4,templates:5,ai:6,library:7,help:8};
+  if(map[id]!==undefined&&btns[map[id]])btns[map[id]].classList.add('active');
+}
+function toast(msg){const t=document.getElementById('toast');t.textContent=msg;t.classList.add('show');setTimeout(()=>t.classList.remove('show'),2800);}
+function copyText(t){navigator.clipboard.writeText(t);toast('Copied to clipboard!');}
+function goResize(w,h){targetW=w;targetH=h;document.querySelectorAll('.size-card').forEach(c=>{c.classList.toggle('selected',parseInt(c.dataset.w)===w&&parseInt(c.dataset.h)===h);});if(sourceImg)drawCrop();updateDlInfo();go('resize');}
+
+/* ======================== IMAGE RESIZER ======================== */
+let targetW=1200,targetH=644,sourceImg=null,zoom=1,panX=0,panY=0,dragging=false,dragStartX=0,dragStartY=0,panStartX=0,panStartY=0,cachedEdgeColor=null;
+let overlayCustomPos=false,overlayX=0.5,overlayY=0.5,overlayDragging=false,overlayDragStartX=0,overlayDragStartY=0,overlayStartX=0,overlayStartY=0,overlayHitBox={x:0,y:0,w:0,h:0};
+
+function pickSize(el){document.querySelectorAll('.size-card').forEach(c=>c.classList.remove('selected'));el.classList.add('selected');targetW=parseInt(el.dataset.w);targetH=parseInt(el.dataset.h);if(sourceImg){panX=0;panY=0;zoom=1;document.getElementById('zoomSlider').value=100;document.getElementById('zoomVal').textContent='100%';drawCrop();}updateDlInfo();}
+function updateDlInfo(){document.getElementById('outSize').textContent=targetW+' × '+targetH;}
+function toggleSafe(){document.getElementById('safeOverlay').style.display=document.getElementById('safeToggle').checked?'block':'none';}
+const imgDropZone=document.getElementById('imgDropZone'),imgFileInput=document.getElementById('imgFileInput');
+imgDropZone.addEventListener('click',()=>imgFileInput.click());
+imgDropZone.addEventListener('dragover',e=>{e.preventDefault();imgDropZone.classList.add('dragover');});
+imgDropZone.addEventListener('dragleave',()=>imgDropZone.classList.remove('dragover'));
+imgDropZone.addEventListener('drop',e=>{e.preventDefault();imgDropZone.classList.remove('dragover');if(e.dataTransfer.files.length)loadImage(e.dataTransfer.files[0]);});
+imgFileInput.addEventListener('change',e=>{if(e.target.files.length)loadImage(e.target.files[0]);});
+
+function loadImage(file){
+  if(!file.type.startsWith('image/'))return toast('Please upload an image file');
+  const reader=new FileReader();
+  reader.onload=e=>{const img=new Image();img.onload=()=>{sourceImg=img;zoom=1;panX=0;panY=0;cachedEdgeColor=sampleEdgeColor(img);document.getElementById('zoomSlider').value=100;document.getElementById('zoomVal').textContent='100%';document.getElementById('cropCard').style.display='block';document.getElementById('overlayCard').style.display='block';document.getElementById('downloadCard').style.display='block';document.getElementById('imgInfo').style.display='flex';document.getElementById('origSize').textContent=img.width+' × '+img.height;document.getElementById('fileName').textContent=file.name;updateDlInfo();drawCrop();setupDrag();};img.src=e.target.result;};
+  reader.readAsDataURL(file);
+}
+function getDisplayScale(){const wrap=document.getElementById('canvasWrap');return Math.min(700,wrap.parentElement.clientWidth-52)/targetW;}
+function getOverlayFont(){const f=document.getElementById('overlayFont')?.value;if(f==='serif')return'Georgia,Times New Roman,serif';if(f==='mono')return'SF Mono,Consolas,monospace';return'-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,sans-serif';}
+function getOverlayWeight(){return document.getElementById('overlayWeight')?.value||'bold';}
+function applyOverlayPreset(preset){
+  const h=document.getElementById('overlayHeadline'),s=document.getElementById('overlaySubtitle'),
+    p=document.getElementById('overlayPos'),f=document.getElementById('overlayFont'),w=document.getElementById('overlayWeight'),
+    c=document.getElementById('overlayColor'),sh=document.getElementById('overlayShadow'),bg=document.getElementById('overlayBg'),
+    bc=document.getElementById('overlayBgColor'),sz=document.getElementById('overlaySize'),op=document.getElementById('overlayBgOpacity');
+  if(preset==='keynote'){h.value='Your Name Here';s.value='Title | Company | Topic';p.value='bottom-left';f.value='sans';w.value='800';c.value='#ffffff';sh.value='#000000';bg.checked=true;bc.value='#0a66c2';sz.value=48;op.value=60;}
+  else if(preset==='article'){h.value='Your Article Title';s.value='A compelling subtitle for your readers';p.value='center';f.value='serif';w.value='bold';c.value='#ffffff';sh.value='#1a1a2e';bg.checked=true;bc.value='#1a1a2e';sz.value=52;op.value=65;}
+  else if(preset==='announcement'){h.value='Big News!';s.value='We are excited to share...';p.value='center';f.value='sans';w.value='800';c.value='#ffffff';sh.value='#000000';bg.checked=true;bc.value='#2d1b69';sz.value=56;op.value=55;}
+  else if(preset==='quote'){h.value='"Your quote here"';s.value='— Author Name';p.value='center';f.value='serif';w.value='normal';c.value='#f0e6d2';sh.value='#2d1b12';bg.checked=true;bc.value='#1a1a1a';sz.value=38;op.value=70;}
+  else if(preset==='minimal'){h.value='Clean Title';s.value='';p.value='bottom-left';f.value='sans';w.value='bold';c.value='#ffffff';sh.value='#000000';bg.checked=false;bc.value='#000000';sz.value=36;op.value=50;}
+  else if(preset==='hiring'){h.value="We're Hiring!";s.value='Join our team — Apply now';p.value='center';f.value='sans';w.value='800';c.value='#ffffff';sh.value='#000000';bg.checked=true;bc.value='#0a66c2';sz.value=54;op.value=60;}
+  else if(preset==='milestone'){h.value='10,000 Followers!';s.value='Thank you for being part of this journey';p.value='center';f.value='sans';w.value='800';c.value='#ffd700';sh.value='#1a1a2e';bg.checked=true;bc.value='#1a1a2e';sz.value=50;op.value=65;}
+  else if(preset==='event'){h.value='Join Us Live';s.value='March 15, 2026 | 2:00 PM EST | Register Now';p.value='bottom';f.value='sans';w.value='bold';c.value='#ffffff';sh.value='#000000';bg.checked=true;bc.value='#6b21a8';sz.value=46;op.value=60;}
+  else if(preset==='testimonial'){h.value='"This changed everything for us"';s.value='— Client Name, VP of Operations';p.value='center';f.value='serif';w.value='normal';c.value='#ffffff';sh.value='#0f172a';bg.checked=true;bc.value='#0f172a';sz.value=40;op.value=70;}
+  else if(preset==='tip'){h.value='Pro Tip';s.value='Your actionable insight goes here';p.value='top-left';f.value='sans';w.value='800';c.value='#00ff88';sh.value='#000000';bg.checked=true;bc.value='#0a0e17';sz.value=48;op.value=55;}
+  else if(preset==='cta'){h.value='Ready to Level Up?';s.value='Link in comments | Follow for more';p.value='bottom';f.value='sans';w.value='800';c.value='#ffffff';sh.value='#000000';bg.checked=true;bc.value='#dc2626';sz.value=50;op.value=60;}
+  else if(preset==='storytelling'){h.value='I failed 47 times.';s.value='Here is what I learned...';p.value='center';f.value='serif';w.value='bold';c.value='#e2e8f0';sh.value='#000000';bg.checked=true;bc.value='#111827';sz.value=44;op.value=72;}
+  document.getElementById('overlaySizeVal').textContent=sz.value;
+  document.getElementById('overlayOpVal').textContent=op.value+'%';
+  overlayCustomPos=false;overlayX=0.5;overlayY=0.5;
+  drawCrop();
+}
+function hasOverlayText(){return !!(document.getElementById('overlayHeadline')?.value?.trim()||document.getElementById('overlaySubtitle')?.value?.trim());}
+function onOverlayPosChange(){
+  const v=document.getElementById('overlayPos').value;
+  overlayCustomPos=(v==='custom');
+  if(v==='custom')toast('Drag your text anywhere on the image');
+  drawCrop();
+}
+function clearOverlay(){
+  document.getElementById('overlayHeadline').value='';document.getElementById('overlaySubtitle').value='';
+  document.getElementById('overlayPos').value='center';document.getElementById('overlayFont').value='sans';
+  document.getElementById('overlayWeight').value='bold';document.getElementById('overlayColor').value='#ffffff';
+  document.getElementById('overlayShadow').value='#000000';document.getElementById('overlayBg').checked=true;
+  document.getElementById('overlayBgColor').value='#000000';document.getElementById('overlaySize').value=42;
+  document.getElementById('overlayBgOpacity').value=50;
+  document.getElementById('overlaySizeVal').textContent='42';document.getElementById('overlayOpVal').textContent='50%';
+  openToWorkEnabled=false;overlayCustomPos=false;overlayX=0.5;overlayY=0.5;otwX=0.5;otwY=0.88;
+  document.getElementById('otwControls').style.display='none';
+  drawCrop();
+}
+function drawTextOverlay(ctx,w,h,scaleFactor){
+  const head=(document.getElementById('overlayHeadline')?.value||'').trim();
+  const sub=(document.getElementById('overlaySubtitle')?.value||'').trim();
+  if(!head&&!sub)return;
+  const sz=parseInt(document.getElementById('overlaySize')?.value||42)*scaleFactor;
+  const color=document.getElementById('overlayColor')?.value||'#ffffff';
+  const shadow=document.getElementById('overlayShadow')?.value||'#000000';
+  const pos=document.getElementById('overlayPos')?.value||'center';
+  const font=getOverlayFont();
+  const weight=getOverlayWeight();
+  const useBg=document.getElementById('overlayBg')?.checked;
+  const bgColor=document.getElementById('overlayBgColor')?.value||'#000000';
+  const bgOpacity=parseInt(document.getElementById('overlayBgOpacity')?.value||50)/100;
+  const pad=sz*0.6;const lineH=sz*1.3;const subSz=sz*0.55;
+  const subLineH=subSz*1.4;
+  let totalH=(head?lineH:0)+(sub?subLineH:0);
+  const headOrSubSz=head?sz:subSz;
+  let tx,ty,align;
+  if(pos==='custom'){tx=overlayX*w;ty=overlayY*h;align=overlayX<0.35?'left':overlayX>0.65?'right':'center';}
+  else if(pos==='center'){tx=w/2;ty=(h-totalH)/2+headOrSubSz;align='center';}
+  else if(pos==='bottom-left'){tx=pad;ty=h-pad-(sub&&head?subLineH:0);align='left';}
+  else if(pos==='bottom-center'){tx=w/2;ty=h-pad-(sub&&head?subLineH:0);align='center';}
+  else if(pos==='bottom-right'){tx=w-pad;ty=h-pad-(sub&&head?subLineH:0);align='right';}
+  else if(pos==='top-left'){tx=pad;ty=pad+headOrSubSz;align='left';}
+  else if(pos==='top-right'){tx=w-pad;ty=pad+headOrSubSz;align='right';}
+  else{tx=w/2;ty=pad+headOrSubSz;align='center';}
+  ctx.font=weight+' '+sz+'px '+font;const _hw=head?ctx.measureText(head).width:0;
+  ctx.font=subSz+'px '+font;const _sw=sub?ctx.measureText(sub).width:0;
+  const _maxW=w-pad*2;
+  const _tw=Math.min(Math.max(_hw,_sw)+pad*2,_maxW+pad*2);const _th=totalH+pad*1.8;
+  let _hx;if(align==='center')_hx=tx-_tw/2;else if(align==='right')_hx=tx-_tw+pad*0.5;else _hx=tx-pad*0.5;
+  const _hy=ty-sz-pad*0.4;
+  overlayHitBox={x:_hx/w,y:_hy/h,w:_tw/w,h:_th/h};
+  const cr=parseInt(color.slice(1,3),16),cg=parseInt(color.slice(3,5),16),cb=parseInt(color.slice(5,7),16);
+  const sr=parseInt(shadow.slice(1,3),16),sg=parseInt(shadow.slice(3,5),16),sb=parseInt(shadow.slice(5,7),16);
+  if(useBg){
+    ctx.save();
+    const br=parseInt(bgColor.slice(1,3),16),bg2=parseInt(bgColor.slice(3,5),16),bb=parseInt(bgColor.slice(5,7),16);
+    ctx.font=weight+' '+sz+'px '+font;const headW=head?ctx.measureText(head).width:0;
+    ctx.font=subSz+'px '+font;const subW=sub?ctx.measureText(sub).width:0;
+    const bgW=Math.min(Math.max(headW,subW)+pad*2,w*0.92);const bgH=totalH+pad*1.8;
+    let bgX;if(align==='center')bgX=tx-bgW/2;else if(align==='right')bgX=tx-bgW+pad*0.5;else bgX=tx-pad*0.5;
+    const bgY=ty-sz-pad*0.4;
+    const rr=sz*0.2;
+    ctx.shadowColor='rgba(0,0,0,0.5)';ctx.shadowBlur=sz*0.4;ctx.shadowOffsetX=0;ctx.shadowOffsetY=sz*0.1;
+    ctx.fillStyle='rgba('+br+','+bg2+','+bb+','+bgOpacity+')';
+    ctx.beginPath();ctx.moveTo(bgX+rr,bgY);ctx.lineTo(bgX+bgW-rr,bgY);ctx.quadraticCurveTo(bgX+bgW,bgY,bgX+bgW,bgY+rr);ctx.lineTo(bgX+bgW,bgY+bgH-rr);ctx.quadraticCurveTo(bgX+bgW,bgY+bgH,bgX+bgW-rr,bgY+bgH);ctx.lineTo(bgX+rr,bgY+bgH);ctx.quadraticCurveTo(bgX,bgY+bgH,bgX,bgY+bgH-rr);ctx.lineTo(bgX,bgY+rr);ctx.quadraticCurveTo(bgX,bgY,bgX+rr,bgY);ctx.fill();
+    ctx.shadowBlur=0;ctx.shadowOffsetY=0;
+    const shGrad=ctx.createLinearGradient(bgX,bgY,bgX,bgY+bgH);
+    shGrad.addColorStop(0,'rgba(255,255,255,0.12)');shGrad.addColorStop(0.5,'rgba(255,255,255,0)');shGrad.addColorStop(1,'rgba(0,0,0,0.1)');
+    ctx.fillStyle=shGrad;ctx.beginPath();ctx.moveTo(bgX+rr,bgY);ctx.lineTo(bgX+bgW-rr,bgY);ctx.quadraticCurveTo(bgX+bgW,bgY,bgX+bgW,bgY+rr);ctx.lineTo(bgX+bgW,bgY+bgH-rr);ctx.quadraticCurveTo(bgX+bgW,bgY+bgH,bgX+bgW-rr,bgY+bgH);ctx.lineTo(bgX+rr,bgY+bgH);ctx.quadraticCurveTo(bgX,bgY+bgH,bgX,bgY+bgH-rr);ctx.lineTo(bgX,bgY+rr);ctx.quadraticCurveTo(bgX,bgY,bgX+rr,bgY);ctx.fill();
+    ctx.strokeStyle='rgba(255,255,255,0.08)';ctx.lineWidth=1*scaleFactor;ctx.beginPath();ctx.moveTo(bgX+rr,bgY);ctx.lineTo(bgX+bgW-rr,bgY);ctx.quadraticCurveTo(bgX+bgW,bgY,bgX+bgW,bgY+rr);ctx.lineTo(bgX+bgW,bgY+bgH-rr);ctx.quadraticCurveTo(bgX+bgW,bgY+bgH,bgX+bgW-rr,bgY+bgH);ctx.lineTo(bgX+rr,bgY+bgH);ctx.quadraticCurveTo(bgX,bgY+bgH,bgX,bgY+bgH-rr);ctx.lineTo(bgX,bgY+rr);ctx.quadraticCurveTo(bgX,bgY,bgX+rr,bgY);ctx.stroke();
+    ctx.restore();
+  }
+  ctx.textAlign=align;
+  if(head){
+    ctx.font=weight+' '+sz+'px '+font;
+    const maxW=w-pad*2;
+    ctx.fillStyle='rgba('+sr+','+sg+','+sb+',0.5)';ctx.fillText(head,tx+2*scaleFactor,ty+3*scaleFactor,maxW);
+    ctx.shadowColor='rgba('+cr+','+cg+','+cb+',0.4)';ctx.shadowBlur=sz*0.35;ctx.shadowOffsetX=0;ctx.shadowOffsetY=0;
+    ctx.fillStyle='rgba('+cr+','+cg+','+cb+',0.3)';ctx.fillText(head,tx,ty,maxW);
+    ctx.shadowBlur=0;
+    const tGrad=ctx.createLinearGradient(tx-sz*3,ty-sz,tx+sz*3,ty+sz*0.3);
+    const bright='rgb('+Math.min(cr+60,255)+','+Math.min(cg+60,255)+','+Math.min(cb+60,255)+')';
+    tGrad.addColorStop(0,bright);tGrad.addColorStop(0.45,color);tGrad.addColorStop(0.55,color);tGrad.addColorStop(1,bright);
+    ctx.fillStyle=tGrad;ctx.fillText(head,tx,ty,maxW);
+    ctx.strokeStyle='rgba('+sr+','+sg+','+sb+',0.2)';ctx.lineWidth=Math.max(1,sz*0.02)*scaleFactor;ctx.strokeText(head,tx,ty,maxW);
+    ctx.fillStyle='rgba(255,255,255,0.08)';ctx.fillText(head,tx,ty-1*scaleFactor,maxW);
+  }
+  if(sub){
+    const subY=head?ty+lineH:ty;
+    ctx.font=subSz+'px '+font;
+    const maxW=w-pad*2;
+    ctx.fillStyle='rgba('+sr+','+sg+','+sb+',0.4)';ctx.fillText(sub,tx+1*scaleFactor,subY+2*scaleFactor,maxW);
+    ctx.shadowColor='rgba('+cr+','+cg+','+cb+',0.25)';ctx.shadowBlur=subSz*0.25;ctx.shadowOffsetX=0;ctx.shadowOffsetY=0;
+    ctx.fillStyle='rgba('+cr+','+cg+','+cb+',0.2)';ctx.fillText(sub,tx,subY,maxW);
+    ctx.shadowBlur=0;
+    ctx.globalAlpha=0.9;
+    const sGrad=ctx.createLinearGradient(tx-subSz*3,subY-subSz,tx+subSz*3,subY+subSz*0.3);
+    const subBright='rgb('+Math.min(cr+40,255)+','+Math.min(cg+40,255)+','+Math.min(cb+40,255)+')';
+    sGrad.addColorStop(0,subBright);sGrad.addColorStop(0.5,color);sGrad.addColorStop(1,subBright);
+    ctx.fillStyle=sGrad;ctx.fillText(sub,tx,subY,maxW);
+    ctx.globalAlpha=1;
+    ctx.fillStyle='rgba(255,255,255,0.06)';ctx.fillText(sub,tx,subY-0.5*scaleFactor,maxW);
+  }
+}
+function sampleEdgeColor(img){
+  const c=document.createElement('canvas'),iw=img.width,ih=img.height;c.width=iw;c.height=ih;
+  const x=c.getContext('2d');x.drawImage(img,0,0);
+  const samples=[];
+  for(let i=0;i<10;i++){const fx=Math.round(iw*i/9),fy=Math.round(ih*i/9);
+    [[fx,0],[fx,ih-1],[0,fy],[iw-1,fy]].forEach(([sx,sy])=>{try{const d=x.getImageData(Math.min(sx,iw-1),Math.min(sy,ih-1),1,1).data;samples.push([d[0],d[1],d[2]]);}catch(e){}});
+  }
+  if(!samples.length)return'#1a1a2e';
+  const avg=samples.reduce((a,s)=>[a[0]+s[0],a[1]+s[1],a[2]+s[2]],[0,0,0]).map(v=>Math.round(v/samples.length));
+  return'rgb('+avg[0]+','+avg[1]+','+avg[2]+')';
+}
+function drawResized(ctx,w,h,scale,applyOverlay){
+  const edgeCol=cachedEdgeColor||'#1a1a2e';
+  ctx.fillStyle=edgeCol;ctx.fillRect(0,0,w,h);
+  const containR=Math.min(targetW/sourceImg.width,targetH/sourceImg.height);
+  const coverR=Math.max(targetW/sourceImg.width,targetH/sourceImg.height);
+  const closeness=containR/coverR;
+  const autoRatio=closeness>0.85?coverR:containR;
+  const fitRatio=autoRatio*zoom;
+  const drawW=sourceImg.width*fitRatio*scale,drawH=sourceImg.height*fitRatio*scale;
+  ctx.drawImage(sourceImg,(w-drawW)/2+panX*scale,(h-drawH)/2+panY*scale,drawW,drawH);
+  if(applyOverlay)drawTextOverlay(ctx,w,h,scale);
+}
+function drawCrop(){
+  const canvas=document.getElementById('cropCanvas'),scale=getDisplayScale(),dW=Math.round(targetW*scale),dH=Math.round(targetH*scale);
+  canvas.width=dW;canvas.height=dH;canvas.style.width=dW+'px';canvas.style.height=dH+'px';
+  const ctx=canvas.getContext('2d');ctx.imageSmoothingEnabled=true;ctx.imageSmoothingQuality='high';
+  if(!sourceImg)return;
+  drawResized(ctx,dW,dH,scale,true);
+  drawOpenToWork(ctx,dW,dH,scale);
+}
+function updateZoom(){zoom=parseInt(document.getElementById('zoomSlider').value)/100;document.getElementById('zoomVal').textContent=Math.round(zoom*100)+'%';drawCrop();}
+function resetPosition(){zoom=1;panX=0;panY=0;document.getElementById('zoomSlider').value=100;document.getElementById('zoomVal').textContent='100%';drawCrop();}
+let cornerDragging=false,cornerStartX=0,cornerStartY=0,cornerStartZoom=1,activeCorner='';
+function setupDrag(){
+  const canvas=document.getElementById('cropCanvas');
+  canvas.onmousedown=e=>{if(e.target.classList.contains('corner-handle'))return;
+    if(openToWorkEnabled){const r=canvas.getBoundingClientRect();const mx=(e.clientX-r.left)/r.width;const my=(e.clientY-r.top)/r.height;const hb=otwHitBox;const pad=0.03;if(mx>=hb.x-pad&&mx<=hb.x+hb.w+pad&&my>=hb.y-pad&&my<=hb.y+hb.h+pad){otwDragging=true;otwDragStartX=e.clientX;otwDragStartY=e.clientY;otwStartX=otwX;otwStartY=otwY;e.preventDefault();return;}}
+    if(hasOverlayText()){const r2=canvas.getBoundingClientRect();const mx2=(e.clientX-r2.left)/r2.width;const my2=(e.clientY-r2.top)/r2.height;const hb2=overlayHitBox;const pad2=0.03;if(mx2>=hb2.x-pad2&&mx2<=hb2.x+hb2.w+pad2&&my2>=hb2.y-pad2&&my2<=hb2.y+hb2.h+pad2){if(!overlayCustomPos){overlayCustomPos=true;overlayX=hb2.x+hb2.w/2;overlayY=hb2.y+hb2.h/2;document.getElementById('overlayPos').value='custom';}overlayDragging=true;overlayDragStartX=e.clientX;overlayDragStartY=e.clientY;overlayStartX=overlayX;overlayStartY=overlayY;e.preventDefault();return;}}
+    dragging=true;dragStartX=e.clientX;dragStartY=e.clientY;panStartX=panX;panStartY=panY;e.preventDefault();};
+  window.onmousemove=e=>{
+    if(otwDragging){const s=getDisplayScale();const dw=targetW*s;const dh=targetH*s;otwX=Math.max(0.05,Math.min(0.95,otwStartX+(e.clientX-otwDragStartX)/dw));otwY=Math.max(0.05,Math.min(0.95,otwStartY+(e.clientY-otwDragStartY)/dh));drawCrop();return;}
+    if(overlayDragging){const s=getDisplayScale();const dw=targetW*s;const dh=targetH*s;overlayX=Math.max(0.05,Math.min(0.95,overlayStartX+(e.clientX-overlayDragStartX)/dw));overlayY=Math.max(0.05,Math.min(0.95,overlayStartY+(e.clientY-overlayDragStartY)/dh));drawCrop();return;}
+    if(cornerDragging){const dy=e.clientY-cornerStartY;const dx=e.clientX-cornerStartX;let zoomDelta=0;const s=getDisplayScale();
+      if(activeCorner==='tc'){zoomDelta=dy;panY=panStartY+dy*0.3/s;}
+      else if(activeCorner==='bc'){zoomDelta=-dy;panY=panStartY+dy*0.3/s;}
+      else if(activeCorner==='ml'){zoomDelta=dx;panX=panStartX+dx*0.3/s;}
+      else if(activeCorner==='mr'){zoomDelta=-dx;panX=panStartX+dx*0.3/s;}
+      else{const isTop=activeCorner==='tl'||activeCorner==='tr';const isLeft=activeCorner==='tl'||activeCorner==='bl';zoomDelta=(isLeft?dx:-dx)+(isTop?dy:-dy);panX=panStartX+dx*0.3/s;panY=panStartY+dy*0.3/s;}
+      zoom=Math.max(0.8,Math.min(4,cornerStartZoom-zoomDelta*0.004));document.getElementById('zoomSlider').value=Math.round(zoom*100);document.getElementById('zoomVal').textContent=Math.round(zoom*100)+'%';drawCrop();return;}
+    if(!dragging)return;const s=getDisplayScale();panX=panStartX+(e.clientX-dragStartX)/s;panY=panStartY+(e.clientY-dragStartY)/s;drawCrop();
+  };
+  window.onmouseup=()=>{dragging=false;cornerDragging=false;overlayDragging=false;otwDragging=false;};
+  canvas.ontouchstart=e=>{if(e.target.classList.contains('corner-handle'))return;
+    if(openToWorkEnabled){const r=canvas.getBoundingClientRect();const mx=(e.touches[0].clientX-r.left)/r.width;const my=(e.touches[0].clientY-r.top)/r.height;const hb=otwHitBox;const pad=0.03;if(mx>=hb.x-pad&&mx<=hb.x+hb.w+pad&&my>=hb.y-pad&&my<=hb.y+hb.h+pad){otwDragging=true;otwDragStartX=e.touches[0].clientX;otwDragStartY=e.touches[0].clientY;otwStartX=otwX;otwStartY=otwY;e.preventDefault();return;}}
+    if(hasOverlayText()){const r2=canvas.getBoundingClientRect();const mx2=(e.touches[0].clientX-r2.left)/r2.width;const my2=(e.touches[0].clientY-r2.top)/r2.height;const hb2=overlayHitBox;const pad2=0.03;if(mx2>=hb2.x-pad2&&mx2<=hb2.x+hb2.w+pad2&&my2>=hb2.y-pad2&&my2<=hb2.y+hb2.h+pad2){if(!overlayCustomPos){overlayCustomPos=true;overlayX=hb2.x+hb2.w/2;overlayY=hb2.y+hb2.h/2;document.getElementById('overlayPos').value='custom';}overlayDragging=true;overlayDragStartX=e.touches[0].clientX;overlayDragStartY=e.touches[0].clientY;overlayStartX=overlayX;overlayStartY=overlayY;e.preventDefault();return;}}
+    dragging=true;dragStartX=e.touches[0].clientX;dragStartY=e.touches[0].clientY;panStartX=panX;panStartY=panY;e.preventDefault();};
+  window.ontouchmove=e=>{
+    if(otwDragging){const t=e.touches[0];const s=getDisplayScale();const dw=targetW*s;const dh=targetH*s;otwX=Math.max(0.05,Math.min(0.95,otwStartX+(t.clientX-otwDragStartX)/dw));otwY=Math.max(0.05,Math.min(0.95,otwStartY+(t.clientY-otwDragStartY)/dh));drawCrop();e.preventDefault();return;}
+    if(overlayDragging){const t=e.touches[0];const s=getDisplayScale();const dw=targetW*s;const dh=targetH*s;overlayX=Math.max(0.05,Math.min(0.95,overlayStartX+(t.clientX-overlayDragStartX)/dw));overlayY=Math.max(0.05,Math.min(0.95,overlayStartY+(t.clientY-overlayDragStartY)/dh));drawCrop();e.preventDefault();return;}
+    if(cornerDragging){const t=e.touches[0];const dy=t.clientY-cornerStartY;const dx=t.clientX-cornerStartX;let zoomDelta=0;const s=getDisplayScale();
+      if(activeCorner==='tc'){zoomDelta=dy;panY=panStartY+dy*0.3/s;}
+      else if(activeCorner==='bc'){zoomDelta=-dy;panY=panStartY+dy*0.3/s;}
+      else if(activeCorner==='ml'){zoomDelta=dx;panX=panStartX+dx*0.3/s;}
+      else if(activeCorner==='mr'){zoomDelta=-dx;panX=panStartX+dx*0.3/s;}
+      else{const isTop=activeCorner==='tl'||activeCorner==='tr';const isLeft=activeCorner==='tl'||activeCorner==='bl';zoomDelta=(isLeft?dx:-dx)+(isTop?dy:-dy);panX=panStartX+dx*0.3/s;panY=panStartY+dy*0.3/s;}
+      zoom=Math.max(0.8,Math.min(4,cornerStartZoom-zoomDelta*0.004));document.getElementById('zoomSlider').value=Math.round(zoom*100);document.getElementById('zoomVal').textContent=Math.round(zoom*100)+'%';drawCrop();e.preventDefault();return;}
+    if(!dragging)return;const s=getDisplayScale();panX=panStartX+(e.touches[0].clientX-dragStartX)/s;panY=panStartY+(e.touches[0].clientY-dragStartY)/s;drawCrop();e.preventDefault();
+  };
+  window.ontouchend=()=>{dragging=false;cornerDragging=false;overlayDragging=false;otwDragging=false;};
+  document.querySelectorAll('.corner-handle').forEach(h=>{
+    h.addEventListener('mousedown',e=>{cornerDragging=true;activeCorner=h.dataset.corner;cornerStartX=e.clientX;cornerStartY=e.clientY;cornerStartZoom=zoom;e.preventDefault();e.stopPropagation();});
+    h.addEventListener('touchstart',e=>{cornerDragging=true;activeCorner=h.dataset.corner;cornerStartX=e.touches[0].clientX;cornerStartY=e.touches[0].clientY;cornerStartZoom=zoom;e.preventDefault();e.stopPropagation();});
+  });
+}
+let openToWorkEnabled=false,otwX=0.5,otwY=0.88,otwDragging=false,otwDragStartX=0,otwDragStartY=0,otwStartX=0,otwStartY=0,otwHitBox={x:0,y:0,w:1,h:0.12};
+function toggleOpenToWork(){
+  openToWorkEnabled=!openToWorkEnabled;
+  document.getElementById('otwControls').style.display=openToWorkEnabled?'block':'none';
+  if(openToWorkEnabled){otwX=0.5;otwY=0.88;}
+  drawCrop();toast(openToWorkEnabled?'#OpenToWork banner ON — drag it anywhere!':'#OpenToWork banner removed');
+}
+function otwGrad(ctx,x1,y1,x2,y2,c1,c2){
+  const g=ctx.createLinearGradient(x1,y1,x2,y2);g.addColorStop(0,c1);g.addColorStop(1,c2);return g;
+}
+function otwShine(ctx,x,y,bw,bh){
+  const sg=ctx.createLinearGradient(x,y,x,y+bh*0.5);
+  sg.addColorStop(0,'rgba(255,255,255,0.18)');sg.addColorStop(1,'rgba(255,255,255,0)');return sg;
+}
+function otwRRect(ctx,x,y,rw,rh,r){
+  ctx.beginPath();ctx.moveTo(x+r,y);ctx.lineTo(x+rw-r,y);ctx.quadraticCurveTo(x+rw,y,x+rw,y+r);
+  ctx.lineTo(x+rw,y+rh-r);ctx.quadraticCurveTo(x+rw,y+rh,x+rw-r,y+rh);
+  ctx.lineTo(x+r,y+rh);ctx.quadraticCurveTo(x,y+rh,x,y+rh-r);
+  ctx.lineTo(x,y+r);ctx.quadraticCurveTo(x,y,x+r,y);ctx.closePath();
+}
+function otwText(ctx,text,tx,ty,fontSize,tc,sf){
+  ctx.textAlign='center';ctx.textBaseline='middle';
+  ctx.fillStyle='rgba(0,0,0,0.4)';ctx.fillText(text,tx+1.5*sf,ty+2*sf);
+  ctx.shadowColor='rgba(0,0,0,0.45)';ctx.shadowBlur=fontSize*0.25;ctx.shadowOffsetY=2*sf;
+  ctx.fillStyle=tc;ctx.fillText(text,tx,ty);
+  ctx.shadowBlur=0;ctx.shadowOffsetY=0;
+  ctx.fillStyle='rgba(255,255,255,0.1)';ctx.fillText(text,tx,ty-0.5*sf);
+}
+function drawOpenToWork(ctx,w,h,scaleFactor){
+  if(!openToWorkEnabled)return;
+  ctx.save();
+  const text=document.getElementById('otwText')?.value||'#OPENTOWORK';
+  const shape=document.getElementById('otwShape')?.value||'bar';
+  const c1=document.getElementById('otwColor1')?.value||'#14a800';
+  const c2=document.getElementById('otwColor2')?.value||'#0b8600';
+  const tc=document.getElementById('otwTextColor')?.value||'#ffffff';
+  const hPct=parseInt(document.getElementById('otwHeight')?.value||12)/100;
+  const opac=parseInt(document.getElementById('otwOpacity')?.value||100)/100;
+  const fsPct=parseInt(document.getElementById('otwFontSize')?.value||55)/100;
+  const cx=otwX*w,cy=otwY*h;
+  const bandH=h*hPct;
+  ctx.globalAlpha=opac;
+
+  if(shape==='bar'){
+    const y=cy-bandH/2;
+    ctx.fillStyle=otwGrad(ctx,0,y,w,y+bandH,c1,c2);ctx.fillRect(0,y,w,bandH);
+    ctx.fillStyle=otwShine(ctx,0,y,w,bandH);ctx.fillRect(0,y,w,bandH*0.5);
+    ctx.fillStyle='rgba(0,0,0,0.12)';ctx.fillRect(0,y,w,1.5*scaleFactor);
+    ctx.fillStyle='rgba(255,255,255,0.1)';ctx.fillRect(0,y+bandH-1,w,1*scaleFactor);
+    const fs=bandH*fsPct;ctx.font='900 '+fs+'px -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,sans-serif';
+    otwText(ctx,text,cx,y+bandH/2,fs,tc,scaleFactor);
+    otwHitBox={x:0,y:y/h,w:1,h:bandH/h};
+
+  } else if(shape==='pill'){
+    ctx.font='900 '+(bandH*fsPct)+'px -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,sans-serif';
+    const tw=ctx.measureText(text).width;
+    const pw=tw+bandH*1.6,ph=bandH;
+    const px=cx-pw/2,py=cy-ph/2,pr=ph/2;
+    ctx.shadowColor='rgba(0,0,0,0.5)';ctx.shadowBlur=ph*0.4;ctx.shadowOffsetY=ph*0.08;
+    ctx.fillStyle=otwGrad(ctx,px,py,px+pw,py+ph,c1,c2);
+    otwRRect(ctx,px,py,pw,ph,pr);ctx.fill();
+    ctx.shadowBlur=0;ctx.shadowOffsetY=0;
+    ctx.fillStyle=otwShine(ctx,px,py,pw,ph);otwRRect(ctx,px,py,pw,ph*0.5,pr);ctx.fill();
+    ctx.strokeStyle='rgba(255,255,255,0.15)';ctx.lineWidth=1.5*scaleFactor;otwRRect(ctx,px,py,pw,ph,pr);ctx.stroke();
+    const fs=bandH*fsPct;ctx.font='900 '+fs+'px -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,sans-serif';
+    otwText(ctx,text,cx,cy,fs,tc,scaleFactor);
+    otwHitBox={x:px/w,y:py/h,w:pw/w,h:ph/h};
+
+  } else if(shape==='bubble'){
+    ctx.font='900 '+(bandH*fsPct)+'px -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,sans-serif';
+    const tw=ctx.measureText(text).width;
+    const bw=tw+bandH*1.8,bh=bandH*1.2;
+    const bx=cx-bw/2,by=cy-bh/2;
+    const tail=bh*0.35;
+    ctx.shadowColor='rgba(0,0,0,0.5)';ctx.shadowBlur=bh*0.4;ctx.shadowOffsetY=bh*0.06;
+    ctx.fillStyle=otwGrad(ctx,bx,by,bx+bw,by+bh,c1,c2);
+    otwRRect(ctx,bx,by,bw,bh,bh*0.3);ctx.fill();
+    ctx.beginPath();ctx.moveTo(cx-tail*0.5,by+bh);ctx.lineTo(cx,by+bh+tail);ctx.lineTo(cx+tail*0.5,by+bh);ctx.fill();
+    ctx.shadowBlur=0;ctx.shadowOffsetY=0;
+    ctx.fillStyle=otwShine(ctx,bx,by,bw,bh);otwRRect(ctx,bx,by,bw,bh*0.5,bh*0.3);ctx.fill();
+    ctx.strokeStyle='rgba(255,255,255,0.12)';ctx.lineWidth=1.5*scaleFactor;otwRRect(ctx,bx,by,bw,bh,bh*0.3);ctx.stroke();
+    const fs=bandH*fsPct;ctx.font='900 '+fs+'px -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,sans-serif';
+    otwText(ctx,text,cx,cy,fs,tc,scaleFactor);
+    otwHitBox={x:bx/w,y:by/h,w:bw/w,h:(bh+tail)/h};
+
+  } else if(shape==='ribbon'){
+    ctx.font='900 '+(bandH*fsPct)+'px -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,sans-serif';
+    const tw=ctx.measureText(text).width;
+    const rw=tw+bandH*2.2,rh=bandH;
+    const rx=cx-rw/2,ry=cy-rh/2;
+    const fold=rh*0.35;
+    ctx.shadowColor='rgba(0,0,0,0.4)';ctx.shadowBlur=rh*0.3;ctx.shadowOffsetY=rh*0.06;
+    ctx.fillStyle=otwGrad(ctx,rx,ry,rx+rw,ry+rh,c1,c2);
+    ctx.beginPath();ctx.moveTo(rx+fold,ry);ctx.lineTo(rx+rw-fold,ry);ctx.lineTo(rx+rw,ry+rh/2);ctx.lineTo(rx+rw-fold,ry+rh);ctx.lineTo(rx+fold,ry+rh);ctx.lineTo(rx,ry+rh/2);ctx.closePath();ctx.fill();
+    ctx.shadowBlur=0;ctx.shadowOffsetY=0;
+    ctx.fillStyle='rgba(255,255,255,0.12)';ctx.beginPath();ctx.moveTo(rx+fold,ry);ctx.lineTo(rx+rw-fold,ry);ctx.lineTo(rx+rw,ry+rh/2);ctx.lineTo(rx+rw-fold,ry+rh*0.4);ctx.lineTo(rx+fold,ry+rh*0.4);ctx.lineTo(rx,ry+rh/2);ctx.closePath();ctx.fill();
+    ctx.strokeStyle='rgba(255,255,255,0.1)';ctx.lineWidth=1*scaleFactor;ctx.beginPath();ctx.moveTo(rx+fold,ry);ctx.lineTo(rx+rw-fold,ry);ctx.lineTo(rx+rw,ry+rh/2);ctx.lineTo(rx+rw-fold,ry+rh);ctx.lineTo(rx+fold,ry+rh);ctx.lineTo(rx,ry+rh/2);ctx.closePath();ctx.stroke();
+    const fs=bandH*fsPct;ctx.font='900 '+fs+'px -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,sans-serif';
+    otwText(ctx,text,cx,cy,fs,tc,scaleFactor);
+    otwHitBox={x:rx/w,y:ry/h,w:rw/w,h:rh/h};
+
+  } else if(shape==='badge'){
+    const rad=bandH*0.8;
+    ctx.shadowColor='rgba(0,0,0,0.5)';ctx.shadowBlur=rad*0.5;ctx.shadowOffsetY=rad*0.08;
+    const bg=ctx.createRadialGradient(cx,cy,0,cx,cy,rad);bg.addColorStop(0,c1);bg.addColorStop(1,c2);
+    ctx.fillStyle=bg;ctx.beginPath();ctx.arc(cx,cy,rad,0,Math.PI*2);ctx.fill();
+    ctx.shadowBlur=0;ctx.shadowOffsetY=0;
+    const sg=ctx.createRadialGradient(cx,cy-rad*0.3,0,cx,cy,rad);sg.addColorStop(0,'rgba(255,255,255,0.2)');sg.addColorStop(1,'rgba(255,255,255,0)');
+    ctx.fillStyle=sg;ctx.beginPath();ctx.arc(cx,cy,rad,0,Math.PI*2);ctx.fill();
+    ctx.strokeStyle='rgba(255,255,255,0.15)';ctx.lineWidth=2*scaleFactor;ctx.beginPath();ctx.arc(cx,cy,rad-2*scaleFactor,0,Math.PI*2);ctx.stroke();
+    ctx.strokeStyle='rgba(255,255,255,0.06)';ctx.lineWidth=1*scaleFactor;ctx.beginPath();ctx.arc(cx,cy,rad*0.85,0,Math.PI*2);ctx.stroke();
+    const fs=rad*0.38;ctx.font='900 '+fs+'px -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,sans-serif';
+    otwText(ctx,text,cx,cy,fs,tc,scaleFactor);
+    otwHitBox={x:(cx-rad)/w,y:(cy-rad)/h,w:rad*2/w,h:rad*2/h};
+
+  } else if(shape==='sash'){
+    const sashW=bandH*1.2;
+    ctx.save();ctx.translate(cx,cy);ctx.rotate(-Math.PI/4);
+    const sLen=Math.max(w,h)*1.5;
+    ctx.shadowColor='rgba(0,0,0,0.45)';ctx.shadowBlur=sashW*0.3;ctx.shadowOffsetY=sashW*0.06;
+    ctx.fillStyle=otwGrad(ctx,-sLen/2,-sashW/2,sLen/2,sashW/2,c1,c2);
+    ctx.fillRect(-sLen/2,-sashW/2,sLen,sashW);
+    ctx.shadowBlur=0;ctx.shadowOffsetY=0;
+    ctx.fillStyle=otwShine(ctx,-sLen/2,-sashW/2,sLen,sashW);ctx.fillRect(-sLen/2,-sashW/2,sLen,sashW*0.4);
+    ctx.fillStyle='rgba(0,0,0,0.1)';ctx.fillRect(-sLen/2,-sashW/2,sLen,1.5*scaleFactor);
+    ctx.fillStyle='rgba(255,255,255,0.08)';ctx.fillRect(-sLen/2,sashW/2-1,sLen,1*scaleFactor);
+    const fs=sashW*fsPct;ctx.font='900 '+fs+'px -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,sans-serif';
+    otwText(ctx,text,0,0,fs,tc,scaleFactor);
+    ctx.restore();
+    otwHitBox={x:(cx-sashW)/w,y:(cy-sashW)/h,w:sashW*2/w,h:sashW*2/h};
+  }
+
+  ctx.globalAlpha=1;
+  ctx.restore();
+}
+function downloadCrop(fmt){
+  if(!sourceImg)return toast('Upload an image first');
+  const off=document.createElement('canvas');off.width=targetW;off.height=targetH;
+  const ctx=off.getContext('2d');ctx.imageSmoothingEnabled=true;ctx.imageSmoothingQuality='high';
+  drawResized(ctx,targetW,targetH,1,true);
+  drawOpenToWork(ctx,targetW,targetH,1);
+  const link=document.createElement('a');
+  link.download='linkedin-'+targetW+'x'+targetH+'.'+(fmt==='jpg'?'jpg':'png');
+  link.href=fmt==='jpg'?off.toDataURL('image/jpeg',0.95):off.toDataURL('image/png');
+  link.click();toast('Downloaded '+targetW+'×'+targetH+' '+fmt.toUpperCase());
+}
+function resetImage(){sourceImg=null;cachedEdgeColor=null;openToWorkEnabled=false;otwX=0.5;otwY=0.88;overlayCustomPos=false;overlayX=0.5;overlayY=0.5;document.getElementById('cropCard').style.display='none';document.getElementById('overlayCard').style.display='none';document.getElementById('downloadCard').style.display='none';document.getElementById('imgInfo').style.display='none';document.getElementById('otwControls').style.display='none';imgFileInput.value='';document.getElementById('overlayHeadline').value='';document.getElementById('overlaySubtitle').value='';}
+
+/* ======================== CAROUSEL BUILDER ======================== */
+let carouselSlides=[],carBgImg=null,currentTemplate='dark';
+const TEMPLATES={dark:{bg:'#0a0e17',head:'#ffffff',body:'#94a3b8',accent:'#0077b5'},linkedin:{bg:'#0077b5',head:'#ffffff',body:'#e0f0ff',accent:'#ffffff'},light:{bg:'#f8fafc',head:'#1a202c',body:'#4a5568',accent:'#0077b5'},gradient:{bg:'#1a1a2e',head:'#e94560',body:'#c4c4c4',accent:'#e94560'},minimal:{bg:'#ffffff',head:'#111111',body:'#555555',accent:'#0077b5'},custom:{bg:'#0a0e17',head:'#ffffff',body:'#94a3b8',accent:'#0077b5'}};
+
+const CAROUSEL_STRUCTURES={
+  standard:"The Hook\nOne line that makes them stop scrolling\n\nThe Problem\nWhat most people get wrong about this topic\n\nThe Insight\nThe key idea that changes everything\n\nThe Framework\nStep 1: Do this first\nStep 2: Then do this\nStep 3: Finally this\n\nThe Takeaway\nOne sentence summary\nFollow for more insights like this",
+  framework:"The Hook\nMost people think [X]. They're wrong.\n\nThe Problem\nHere's what actually happens when you do [X]\n\nWhy It Happens\nThe root cause nobody talks about\n\nPillar 1\nFirst principle of the framework\n\nPillar 2\nSecond principle explained\n\nPillar 3\nThird principle with example\n\nThe Process\nStep-by-step implementation\n\nCommon Mistakes\nWhat to avoid when applying this\n\nThe Result\nWhat happens when you get this right\n\nYour CTA\nFollow for more frameworks like this\nDrop a comment if this resonated",
+  story:"The Hook\nI almost gave up on [X] three years ago.\n\nThe Setup\nHere's what was happening at the time\n\nThe Turning Point\nThen one conversation changed everything\n\nThe Lesson\nWhat I learned from that experience\n\nThe Application\nHow I applied it to my work\n\nThe Result\nWhat happened next surprised me\n\nThe Takeaway\nIf you're going through something similar...\nRemember this one thing",
+  listicle:"The Hook\n[Number] things I wish I knew about [topic]\n\nThing 1\nThe first insight with explanation\n\nThing 2\nThe second insight with explanation\n\nThing 3\nThe third insight with explanation\n\nThing 4\nThe fourth insight with explanation\n\nThe Takeaway\nWhich one resonated most?\nSave this for later"
+};
+
+function loadCarouselStructure(key){document.getElementById('carouselText').value=CAROUSEL_STRUCTURES[key];toast('Template loaded');}
+function pickTemplate(el){document.querySelectorAll('.template-card').forEach(c=>c.classList.remove('selected'));el.classList.add('selected');currentTemplate=el.dataset.tpl;const t=TEMPLATES[currentTemplate];document.getElementById('carBg').value=t.bg;document.getElementById('carHeadColor').value=t.head;document.getElementById('carBodyColor').value=t.body;document.getElementById('carAccent').value=t.accent;document.getElementById('customColorsCard').style.display=currentTemplate==='custom'?'block':'none';}
+function loadCarBg(input){if(!input.files.length)return;const reader=new FileReader();reader.onload=e=>{const img=new Image();img.onload=()=>{carBgImg=img;document.getElementById('carBgName').textContent=input.files[0].name;toast('Background loaded');};img.src=e.target.result;};reader.readAsDataURL(input.files[0]);}
+function getCarColors(){if(currentTemplate==='custom')return{bg:document.getElementById('carBg').value,head:document.getElementById('carHeadColor').value,body:document.getElementById('carBodyColor').value,accent:document.getElementById('carAccent').value};return TEMPLATES[currentTemplate];}
+function getFontFamily(){const f=document.getElementById('carFont').value;if(f==='serif')return'Georgia,Times New Roman,serif';if(f==='mono')return'SF Mono,Consolas,monospace';return'-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,sans-serif';}
+
+function generateCarousel(){
+  const text=document.getElementById('carouselText').value.trim();if(!text)return toast('Enter slide content first');
+  const raw=text.split(/\n\s*\n/);
+  carouselSlides=raw.map((s,i)=>{const lines=s.trim().split('\n');return{title:lines[0]||'',body:lines.slice(1).join('\n'),num:i+1,total:raw.length};});
+  const colors=getCarColors(),headSize=parseInt(document.getElementById('carFontSize').value),bodySize=parseInt(document.getElementById('carBodySize').value),showNum=document.getElementById('carShowNum').checked,font=getFontFamily();
+  const preview=document.getElementById('carouselPreview');preview.innerHTML='';
+  carouselSlides.forEach((slide,i)=>{const div=document.createElement('div');div.className='slide-preview';const c=document.createElement('canvas');c.width=1080;c.height=1080;renderSlide(c,slide,colors,headSize,bodySize,showNum,font);div.appendChild(c);const numEl=document.createElement('div');numEl.className='slide-num';numEl.textContent=(i+1)+'/'+carouselSlides.length;div.appendChild(numEl);preview.appendChild(div);});
+  document.getElementById('carouselPreviewCard').style.display='block';toast(carouselSlides.length+' slides generated');
+}
+function renderSlide(canvas,slide,colors,headSize,bodySize,showNum,font){
+  const ctx=canvas.getContext('2d');ctx.imageSmoothingEnabled=true;ctx.imageSmoothingQuality='high';
+  if(carBgImg){const ratio=Math.max(1080/carBgImg.width,1080/carBgImg.height);const w=carBgImg.width*ratio,h=carBgImg.height*ratio;ctx.drawImage(carBgImg,(1080-w)/2,(1080-h)/2,w,h);ctx.fillStyle='rgba(0,0,0,0.55)';ctx.fillRect(0,0,1080,1080);}
+  else{if(currentTemplate==='gradient'){const grd=ctx.createLinearGradient(0,0,1080,1080);grd.addColorStop(0,'#1a1a2e');grd.addColorStop(0.5,'#16213e');grd.addColorStop(1,'#0f3460');ctx.fillStyle=grd;}else{ctx.fillStyle=colors.bg;}ctx.fillRect(0,0,1080,1080);}
+  ctx.fillStyle=colors.accent;ctx.fillRect(0,0,1080,6);ctx.globalAlpha=0.12;ctx.fillRect(64,90,4,900);ctx.globalAlpha=1;
+  ctx.fillStyle=colors.head;ctx.font='bold '+headSize+'px '+font;let y=220;
+  wrapText(ctx,slide.title,90,y,920,headSize+14,ln=>{y=ln;});y+=headSize+20;
+  if(slide.body){ctx.fillStyle=colors.body;ctx.font=bodySize+'px '+font;slide.body.split('\n').forEach(l=>{if(!l.trim()){y+=bodySize*0.5;return;}wrapText(ctx,l,90,y,920,bodySize+10,ln=>{y=ln;});y+=bodySize+10;});}
+  if(showNum){ctx.fillStyle=colors.accent;ctx.globalAlpha=0.5;ctx.font='bold 22px '+font;ctx.fillText(slide.num+' / '+slide.total,90,1030);ctx.globalAlpha=1;}
+}
+function wrapText(ctx,text,x,y,maxW,lineH,cb){const words=text.split(' ');let line='';words.forEach(w=>{const test=line+(line?' ':'')+w;if(ctx.measureText(test).width>maxW&&line){ctx.fillText(line,x,y);y+=lineH;line=w;}else{line=test;}});if(line)ctx.fillText(line,x,y);if(cb)cb(y);}
+
+async function downloadCarouselZip(){
+  if(!carouselSlides.length)return toast('Generate slides first');const colors=getCarColors(),hs=parseInt(document.getElementById('carFontSize').value),bs=parseInt(document.getElementById('carBodySize').value),sn=document.getElementById('carShowNum').checked,f=getFontFamily();const zip=new JSZip();
+  for(let i=0;i<carouselSlides.length;i++){const c=document.createElement('canvas');c.width=1080;c.height=1080;renderSlide(c,carouselSlides[i],colors,hs,bs,sn,f);const blob=await new Promise(r=>c.toBlob(r,'image/png'));zip.file('slide-'+(i+1)+'.png',blob);}
+  const content=await zip.generateAsync({type:'blob'});const link=document.createElement('a');link.download='linkedin-carousel.zip';link.href=URL.createObjectURL(content);link.click();toast(carouselSlides.length+' slides as ZIP');
+}
+function downloadCarouselPngs(){if(!carouselSlides.length)return;const colors=getCarColors(),hs=parseInt(document.getElementById('carFontSize').value),bs=parseInt(document.getElementById('carBodySize').value),sn=document.getElementById('carShowNum').checked,f=getFontFamily();carouselSlides.forEach((slide,i)=>{const c=document.createElement('canvas');c.width=1080;c.height=1080;renderSlide(c,slide,colors,hs,bs,sn,f);const link=document.createElement('a');link.download='slide-'+(i+1)+'.png';link.href=c.toDataURL('image/png');link.click();});}
+
+/* ======================== POST WRITER ======================== */
+function insertPostText(txt){const ta=document.getElementById('postBody');const start=ta.selectionStart;ta.value=ta.value.substring(0,start)+txt+ta.value.substring(ta.selectionEnd);ta.focus();ta.selectionStart=ta.selectionEnd=start+txt.length;updatePostAnalysis();}
+function updatePostAnalysis(){
+  const text=document.getElementById('postBody').value;const count=text.length;
+  const el=document.getElementById('postCharCount');el.textContent=count.toLocaleString();
+  el.style.color=count>3000?'var(--red)':count>2700?'var(--orange)':'var(--muted)';
+  const status=document.getElementById('postLenStatus');
+  if(count===0)status.textContent='';
+  else if(count<200)status.innerHTML='<span style="color:var(--orange)">Very short — add more substance</span>';
+  else if(count<=800)status.innerHTML='<span style="color:var(--cyan)">Good for quick posts</span>';
+  else if(count<=1400)status.innerHTML='<span style="color:var(--green)">Sweet spot for LinkedIn reach</span>';
+  else if(count<=3000)status.innerHTML='<span style="color:var(--cyan)">Long form — still good</span>';
+  else status.innerHTML='<span style="color:var(--red)">Over limit — LinkedIn will truncate</span>';
+}
+function autoFormatPost(){
+  let text=document.getElementById('postBody').value;
+  text=text.replace(/([.!?])\s+/g,'$1\n\n');
+  text=text.replace(/\n{3,}/g,'\n\n');
+  document.getElementById('postBody').value=text.trim();
+  updatePostAnalysis();toast('Post formatted with line breaks');
+}
+function toggleHashtag(el){el.classList.toggle('active');}
+function addCustomHashtag(){const inp=document.getElementById('customHashtag');let tag=inp.value.trim();if(!tag)return;if(!tag.startsWith('#'))tag='#'+tag;const pill=document.createElement('div');pill.className='pill active';pill.textContent=tag;pill.onclick=function(){this.classList.toggle('active');};document.getElementById('hashtagPills').appendChild(pill);inp.value='';}
+function copyPost(){let text=document.getElementById('postBody').value;const tags=[];document.querySelectorAll('#hashtagPills .pill.active').forEach(p=>tags.push(p.textContent));if(tags.length)text+='\n\n'+tags.join(' ');copyText(text);}
+function clearPost(){document.getElementById('postBody').value='';updatePostAnalysis();document.querySelectorAll('#hashtagPills .pill').forEach(p=>p.classList.remove('active'));}
+
+function analyzePostChecklist(){
+  const text=document.getElementById('postBody').value;if(!text.trim())return toast('Write a post first');
+  const lines=text.split('\n').filter(l=>l.trim());
+  const firstLine=lines[0]||'';const chars=text.length;
+  const checks=[];let score=0;const total=7;
+  const weakHooks=['i think','i believe','just wanted','today i','hi everyone','hello','hey'];
+  const hookWeak=weakHooks.some(h=>firstLine.toLowerCase().startsWith(h));
+  if(firstLine.length>20&&!hookWeak){checks.push({pass:true,msg:'Strong hook line'});score++;}
+  else if(hookWeak){checks.push({pass:false,msg:'Weak hook — avoid starting with "'+firstLine.split(' ').slice(0,3).join(' ')+'..."'});}
+  else{checks.push({warn:true,msg:'Hook could be stronger — make first line attention-grabbing'});}
+  const paras=text.split(/\n\s*\n/).length;
+  if(paras>=3){checks.push({pass:true,msg:'Good paragraph spacing ('+paras+' paragraphs)'});score++;}
+  else{checks.push({warn:true,msg:'Add more line breaks — short paragraphs perform better'});}
+  if(chars>=800&&chars<=1400){checks.push({pass:true,msg:'Optimal length ('+chars+' chars — sweet spot)'});score++;}
+  else if(chars<200){checks.push({fail:true,msg:'Too short ('+chars+' chars) — aim for 800-1400'});}
+  else if(chars>3000){checks.push({fail:true,msg:'Over 3000 chars — LinkedIn will truncate'});}
+  else{checks.push({warn:true,msg:'Length: '+chars+' chars (sweet spot is 800-1400)'});score+=0.5;}
+  const lastLine=lines[lines.length-1]||'';
+  const hasCTA=lastLine.includes('?')||/follow|comment|share|agree|thoughts|repost|save this/i.test(lastLine);
+  if(hasCTA){checks.push({pass:true,msg:'CTA detected at end'});score++;}
+  else{checks.push({warn:true,msg:'No CTA found — add a question or call-to-action at the end'});}
+  const tags=[];document.querySelectorAll('#hashtagPills .pill.active').forEach(p=>tags.push(p.textContent));
+  if(tags.length>=3&&tags.length<=5){checks.push({pass:true,msg:'Good hashtag count ('+tags.length+')'});score++;}
+  else if(tags.length===0){checks.push({warn:true,msg:'No hashtags — add 3-5 relevant hashtags'});}
+  else{checks.push({warn:true,msg:tags.length+' hashtags (3-5 is optimal)'});score+=0.5;}
+  const hasEmoji=/[\u{1F300}-\u{1F9FF}]/u.test(text);
+  if(hasEmoji){checks.push({pass:true,msg:'Visual elements (emojis/bullets) detected'});score++;}
+  else{checks.push({warn:true,msg:'Consider adding emojis or bullet points for visual interest'});}
+  const avgLineLen=lines.reduce((a,l)=>a+l.length,0)/lines.length;
+  if(avgLineLen<=120){checks.push({pass:true,msg:'Good line length for readability'});score++;}
+  else{checks.push({warn:true,msg:'Some lines are long — break into shorter paragraphs'});}
+
+  const pct=Math.round((score/total)*100);
+  const ul=document.getElementById('postChecklist');ul.innerHTML='';
+  checks.forEach(c=>{const li=document.createElement('li');const cls=c.pass?'pass':c.fail?'fail':'warn';const sp=document.createElement('span');sp.className=cls;sp.textContent=c.pass?'✓':c.fail?'✗':'⚠';li.appendChild(sp);li.appendChild(document.createTextNode(' '+c.msg));ul.appendChild(li);});
+  const fill=document.getElementById('postScoreFill');fill.style.width=pct+'%';fill.style.background=pct>=80?'var(--green)':pct>=50?'var(--orange)':'var(--red)';
+  document.getElementById('postScoreLabel').innerHTML='<strong style="color:'+(pct>=80?'var(--green)':pct>=50?'var(--orange)':'var(--red)')+'">'+pct+'%</strong> engagement potential';
+  document.getElementById('postChecklistCard').style.display='block';
+}
+
+/* ======================== ARTICLE EDITOR ======================== */
+function insertMd(prefix,suffix){const ta=document.getElementById('artBody');const start=ta.selectionStart,end=ta.selectionEnd,sel=ta.value.substring(start,end);ta.value=ta.value.substring(0,start)+prefix+sel+(suffix||'')+ta.value.substring(end);ta.focus();ta.selectionStart=start+prefix.length;ta.selectionEnd=start+prefix.length+sel.length;}
+function previewArticle(){const title=document.getElementById('artTitle').value,subtitle=document.getElementById('artSubtitle').value,body=document.getElementById('artBody').value;let html='';if(title)html+='<h1>'+esc(title)+'</h1>';if(subtitle)html+='<div class="art-subtitle">'+esc(subtitle)+'</div>';html+=mdToHtml(body);document.getElementById('artPreview').innerHTML=html;document.getElementById('artPreviewCard').style.display='block';}
+function esc(s){return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');}
+function mdToHtml(md){const lines=md.split('\n');let html='',inList=false,inOl=false;function closeLists(){if(inList){html+='</ul>';inList=false;}if(inOl){html+='</ol>';inOl=false;}}lines.forEach(line=>{const t=line.trim();if(!t){closeLists();return;}if(t.startsWith('---')){closeLists();html+='<hr>';return;}if(t.startsWith('### ')){closeLists();html+='<h3>'+fmt(t.slice(4))+'</h3>';return;}if(t.startsWith('## ')){closeLists();html+='<h2>'+fmt(t.slice(3))+'</h2>';return;}if(t.startsWith('> ')){closeLists();html+='<blockquote>'+fmt(t.slice(2))+'</blockquote>';return;}if(t.match(/^\[IMAGE:\s*(.+?)\]$/)){closeLists();html+='<div class="img-placeholder">🖼️ '+esc(t.match(/^\[IMAGE:\s*(.+?)\]$/)[1])+'</div>';return;}if(t.startsWith('- ')||t.startsWith('• ')){if(inOl){html+='</ol>';inOl=false;}if(!inList){html+='<ul>';inList=true;}html+='<li>'+fmt(t.slice(2))+'</li>';return;}if(t.match(/^\d+\.\s/)){if(inList){html+='</ul>';inList=false;}if(!inOl){html+='<ol>';inOl=true;}html+='<li>'+fmt(t.replace(/^\d+\.\s/,''))+'</li>';return;}closeLists();html+='<p>'+fmt(t)+'</p>';});closeLists();return html;}
+function fmt(s){s=esc(s);s=s.replace(/\*\*(.+?)\*\*/g,'<strong>$1</strong>');s=s.replace(/\*(.+?)\*/g,'<em>$1</em>');s=s.replace(/==(.+?)==/g,'<mark>$1</mark>');return s;}
+function copyArticleText(){const t=document.getElementById('artTitle').value,s=document.getElementById('artSubtitle').value,b=document.getElementById('artBody').value;let text='';if(t)text+=t+'\n\n';if(s)text+=s+'\n\n';text+=b.replace(/\*\*/g,'').replace(/\*/g,'').replace(/==/g,'').replace(/^## /gm,'').replace(/^### /gm,'').replace(/^> /gm,'').replace(/^- /gm,'• ').replace(/\[IMAGE: (.+?)\]/g,'[Image: $1]');copyText(text);showArtMsg('Copied plain text!');}
+function copyArticleHtml(){const preview=document.getElementById('artPreview');if(!preview.innerHTML)previewArticle();copyText(preview.innerHTML);showArtMsg('Copied HTML!');}
+function exportArticleMd(){const t=document.getElementById('artTitle').value,s=document.getElementById('artSubtitle').value,b=document.getElementById('artBody').value;let md='# '+t+'\n\n';if(s)md+='*'+s+'*\n\n';md+=b;const blob=new Blob([md],{type:'text/markdown'});const link=document.createElement('a');link.download='article.md';link.href=URL.createObjectURL(blob);link.click();toast('Markdown exported');}
+function showArtMsg(msg){const el=document.getElementById('artCopyMsg');el.textContent=msg;setTimeout(()=>el.textContent='',2500);}
+
+/* ======================== POST ANALYZER ======================== */
+function runAnalyzer(){
+  const text=document.getElementById('analyzerInput').value;if(!text.trim()){document.getElementById('analyzerResults').style.display='none';return;}
+  const chars=text.length,words=text.split(/\s+/).filter(w=>w).length,lines=text.split('\n').filter(l=>l.trim()),paras=text.split(/\n\s*\n/).length;
+  const firstLine=lines[0]||'';
+  const weakHooks=['i think','i believe','just wanted','today i','hi everyone','hello','hey','excited to'];
+  const hookWeak=weakHooks.some(h=>firstLine.toLowerCase().startsWith(h));
+  const strongStarts=['most','nobody','after','the truth','here\'s what','stop','why','how','what if','3 things','5 lessons','i was wrong'];
+  const hookStrong=strongStarts.some(h=>firstLine.toLowerCase().startsWith(h));
+  let hookScore=hookStrong?'Strong':hookWeak?'Weak':'Moderate';
+  let hookColor=hookStrong?'var(--green)':hookWeak?'var(--red)':'var(--orange)';
+  let lenScore=chars>=800&&chars<=1400?'Optimal':chars<200?'Too Short':chars>3000?'Too Long':'Acceptable';
+  let lenColor=chars>=800&&chars<=1400?'var(--green)':chars<200||chars>3000?'var(--red)':'var(--orange)';
+  const lastLine=lines[lines.length-1]||'';
+  const hasCTA=lastLine.includes('?')||/follow|comment|share|agree|thoughts|repost|save/i.test(lastLine);
+  let html='<div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:16px">';
+  html+='<div style="background:var(--bg3);padding:14px;border-radius:8px"><div style="font-size:11px;color:var(--muted);margin-bottom:4px">Characters</div><div style="font-size:20px;font-weight:700;color:'+lenColor+'">'+chars+'</div><div style="font-size:11px;color:'+lenColor+'">'+lenScore+'</div></div>';
+  html+='<div style="background:var(--bg3);padding:14px;border-radius:8px"><div style="font-size:11px;color:var(--muted);margin-bottom:4px">Words</div><div style="font-size:20px;font-weight:700">'+words+'</div><div style="font-size:11px;color:var(--muted)">~'+Math.ceil(words/200)+' min read</div></div>';
+  html+='<div style="background:var(--bg3);padding:14px;border-radius:8px"><div style="font-size:11px;color:var(--muted);margin-bottom:4px">Hook Strength</div><div style="font-size:20px;font-weight:700;color:'+hookColor+'">'+hookScore+'</div></div>';
+  html+='<div style="background:var(--bg3);padding:14px;border-radius:8px"><div style="font-size:11px;color:var(--muted);margin-bottom:4px">CTA Present</div><div style="font-size:20px;font-weight:700;color:'+(hasCTA?'var(--green)':'var(--red)')+'">'+(hasCTA?'Yes':'No')+'</div></div>';
+  html+='<div style="background:var(--bg3);padding:14px;border-radius:8px"><div style="font-size:11px;color:var(--muted);margin-bottom:4px">Paragraphs</div><div style="font-size:20px;font-weight:700">'+paras+'</div><div style="font-size:11px;color:var(--muted)">'+(paras>=3?'Good spacing':'Need more breaks')+'</div></div>';
+  html+='<div style="background:var(--bg3);padding:14px;border-radius:8px"><div style="font-size:11px;color:var(--muted);margin-bottom:4px">Engagement</div><div style="font-size:20px;font-weight:700;color:'+(hookStrong&&hasCTA&&chars>=800?'var(--green)':'var(--orange)')+'">'+(hookStrong&&hasCTA&&chars>=800?'High':'Medium')+'</div></div>';
+  html+='</div>';
+  html+='<h4 style="font-size:13px;margin:16px 0 10px;color:var(--cyan)">Publishing Checklist</h4><ul class="checklist">';
+  const checks=[];let score=0;const total=7;
+  if(hookStrong){checks.push({p:true,m:'Strong hook line'});score++;}else if(hookWeak){checks.push({p:false,m:'Weak hook — rewrite first line'});}else{checks.push({w:true,m:'Hook could be stronger'});score+=0.5;}
+  if(paras>=3){checks.push({p:true,m:'Good paragraph spacing'});score++;}else{checks.push({w:true,m:'Need more line breaks'});}
+  if(chars>=800&&chars<=1400){checks.push({p:true,m:'Optimal length (sweet spot)'});score++;}else if(chars<200||chars>3000){checks.push({p:false,m:'Length needs adjustment'});}else{checks.push({w:true,m:'Length acceptable but not optimal'});score+=0.5;}
+  if(hasCTA){checks.push({p:true,m:'CTA present'});score++;}else{checks.push({w:true,m:'No CTA detected'});}
+  const avgLen=lines.reduce((a,l)=>a+l.length,0)/lines.length;
+  if(avgLen<=120){checks.push({p:true,m:'Good line readability'});score++;}else{checks.push({w:true,m:'Lines too long'});}
+  const hasEmoji=/[\u{1F300}-\u{1F9FF}]/u.test(text)||/[→🔹•✅🎯💡🔑📊⬇️♻️]/u.test(text);
+  if(hasEmoji){checks.push({p:true,m:'Visual elements detected'});score++;}else{checks.push({w:true,m:'Add emojis or bullets'});}
+  const hasHashtag=/#\w/.test(text);
+  if(hasHashtag){checks.push({p:true,m:'Hashtags included'});score++;}else{checks.push({w:true,m:'No hashtags found'});}
+  checks.forEach(c=>{const cls=c.p?'pass':c.w?'warn':'fail';html+='<li><span class="'+cls+'">'+(c.p?'✓':c.w?'⚠':'✗')+'</span> '+c.m+'</li>';});
+  html+='</ul>';
+  const pct=Math.round((score/total)*100);
+  html+='<div class="score-bar"><div class="fill" style="width:'+pct+'%;background:'+(pct>=80?'var(--green)':pct>=50?'var(--orange)':'var(--red)')+'"></div></div>';
+  html+='<div style="font-size:12px;text-align:center;margin-top:4px"><strong style="color:'+(pct>=80?'var(--green)':pct>=50?'var(--orange)':'var(--red)')+'">'+pct+'%</strong> engagement potential</div>';
+  if(hookWeak)html+='<p style="color:var(--orange);font-size:12px;margin-top:12px">Tip: Avoid starting with "'+esc(firstLine.split(' ').slice(0,3).join(' '))+'..." — try hooks like "Most companies...", "Nobody talks about...", or "After 15 years..."</p>';
+  if(!hasCTA)html+='<p style="color:var(--orange);font-size:12px;margin-top:8px">Tip: End with a question or CTA to boost comments and engagement.</p>';
+  document.getElementById('analyzerOutput').innerHTML=html;
+  document.getElementById('analyzerResults').style.display='block';
+}
+function autoFormatAnalyzer(){let text=document.getElementById('analyzerInput').value;text=text.replace(/([.!?])\s+/g,'$1\n\n');text=text.replace(/\n{3,}/g,'\n\n');document.getElementById('analyzerInput').value=text.trim();runAnalyzer();toast('Post formatted');}
+
+/* ======================== CONTENT TEMPLATES ======================== */
+const POST_TEMPLATES=[
+  {name:'Hook → Story → Lesson',desc:'Personal story with takeaway',text:'[Strong opening hook — one line that stops scrolling]\n\nThree years ago, I [what happened].\n\nAt the time, I thought [old belief].\n\nBut then [turning point].\n\nHere\'s what I learned:\n\n🔑 [Key lesson 1]\n🔑 [Key lesson 2]\n🔑 [Key lesson 3]\n\nThe truth is: [core message].\n\nWhat\'s your experience with this?\n\n#Leadership #Growth'},
+  {name:'Framework Post',desc:'Share a framework or system',text:'Most companies think [common belief].\n\nBut the best ones know [contrarian insight].\n\nHere\'s the framework I use:\n\n1️⃣ [Step 1] → [why it matters]\n2️⃣ [Step 2] → [why it matters]\n3️⃣ [Step 3] → [why it matters]\n4️⃣ [Step 4] → [why it matters]\n5️⃣ [Step 5] → [why it matters]\n\nThe result?\n\n→ [Outcome 1]\n→ [Outcome 2]\n→ [Outcome 3]\n\nSave this for later.\n\n#Strategy #B2B'},
+  {name:'Contrarian Take',desc:'Challenge conventional wisdom',text:'Unpopular opinion:\n\n[Bold statement that challenges the status quo]\n\nHere\'s why:\n\n[Reason 1 with evidence]\n\n[Reason 2 with evidence]\n\n[Reason 3 with evidence]\n\nI know this will be controversial.\n\nBut after [X years] in [industry], I\'ve seen this play out hundreds of times.\n\nThe companies that win? They [what they do differently].\n\nAgree or disagree? Drop your take below.\n\n#RevOps #Sales'},
+  {name:'Listicle',desc:'List-based value post',text:'[Number] things I wish I knew when I started in [field]:\n\n1. [Insight] — [brief explanation]\n\n2. [Insight] — [brief explanation]\n\n3. [Insight] — [brief explanation]\n\n4. [Insight] — [brief explanation]\n\n5. [Insight] — [brief explanation]\n\nWhich one resonated most?\n\n♻️ Repost to help someone in your network\n\n#Career #Lessons'},
+  {name:'Results Post',desc:'Share specific results',text:'We went from [before metric] to [after metric] in [time].\n\nHere\'s exactly what we did:\n\n→ [Action 1]\n→ [Action 2]\n→ [Action 3]\n\nThe biggest unlock?\n\n[One key insight that made the difference]\n\nMost people focus on [wrong thing].\n\nBut [right thing] is what actually moves the needle.\n\nIf you\'re trying to [goal], start here.\n\n#Growth #Pipeline'},
+  {name:'Question Post',desc:'Engagement driver',text:'Quick question for [your audience]:\n\n[Thought-provoking question]\n\nI\'ve been thinking about this a lot lately.\n\nIn my experience, [your perspective].\n\nBut I\'m curious what you think.\n\nDrop your answer below 👇\n\n#Discussion #Leadership'}
+];
+
+const ARTICLE_TEMPLATES=[
+  {name:'Thought Leadership',desc:'Deep expertise article',text:'## Introduction\n\n[Opening paragraph that hooks the reader with a bold statement or question]\n\n---\n\n## The Problem\n\n[Describe the industry problem or challenge]\n\n> [Key quote or insight]\n\n## Why This Matters\n\n[Connect the problem to your audience\'s daily reality]\n\n## The Framework\n\n### Step 1: [First Principle]\n\n[Detailed explanation with examples]\n\n### Step 2: [Second Principle]\n\n[Detailed explanation with examples]\n\n### Step 3: [Third Principle]\n\n[Detailed explanation with examples]\n\n## Real-World Application\n\n[Case study or personal example]\n\n## Conclusion\n\n[Summary and call to action]'},
+  {name:'How-To Guide',desc:'Step-by-step tutorial',text:'## What You\'ll Learn\n\n[Brief overview of what the reader will gain]\n\n---\n\n## Prerequisites\n\n- [What you need before starting]\n- [Tools or knowledge required]\n\n## Step 1: [First Step]\n\n[Detailed instructions]\n\n[IMAGE: Screenshot or diagram of step 1]\n\n## Step 2: [Second Step]\n\n[Detailed instructions]\n\n## Step 3: [Third Step]\n\n[Detailed instructions]\n\n## Common Mistakes\n\n- [Mistake 1 and how to avoid it]\n- [Mistake 2 and how to avoid it]\n\n## Summary\n\n[Key takeaways and next steps]'}
+];
+
+const CAROUSEL_TEMPLATES_DATA=[
+  {name:'Standard Framework',desc:'Hook → Problem → Solution → CTA',key:'standard'},
+  {name:'10-Slide Deep Dive',desc:'Full framework breakdown',key:'framework'},
+  {name:'Story Arc',desc:'Personal narrative structure',key:'story'},
+  {name:'Listicle',desc:'Quick tips format',key:'listicle'}
+];
+
+function initTemplates(){
+  const pt=document.getElementById('postTemplates');pt.innerHTML='';
+  POST_TEMPLATES.forEach(t=>{const d=document.createElement('div');d.className='tpl-item';d.innerHTML='<h4>'+t.name+'</h4><p>'+t.desc+'</p>';d.onclick=()=>{document.getElementById('postBody').value=t.text;updatePostAnalysis();go('post');toast('Template loaded');};pt.appendChild(d);});
+  const at=document.getElementById('articleTemplates');at.innerHTML='';
+  ARTICLE_TEMPLATES.forEach(t=>{const d=document.createElement('div');d.className='tpl-item';d.innerHTML='<h4>'+t.name+'</h4><p>'+t.desc+'</p>';d.onclick=()=>{document.getElementById('artBody').value=t.text;go('article');toast('Template loaded');};at.appendChild(d);});
+  const ct=document.getElementById('carouselTemplates');ct.innerHTML='';
+  CAROUSEL_TEMPLATES_DATA.forEach(t=>{const d=document.createElement('div');d.className='tpl-item';d.innerHTML='<h4>'+t.name+'</h4><p>'+t.desc+'</p>';d.onclick=()=>{loadCarouselStructure(t.key);go('carousel');toast('Template loaded');};ct.appendChild(d);});
+}
+
+/* ======================== AI ASSISTANT ======================== */
+function setAiPrompt(p){document.getElementById('aiPrompt').value=p;document.getElementById('aiPrompt').focus();}
+function sendToPost(){document.getElementById('postBody').value=document.getElementById('aiResult').textContent;updatePostAnalysis();go('post');toast('Sent to Post Writer');}
+function sendToArticle(){document.getElementById('artBody').value=document.getElementById('aiResult').textContent;go('article');toast('Sent to Article Editor');}
+function sendToCarousel(){document.getElementById('carouselText').value=document.getElementById('aiResult').textContent;go('carousel');toast('Sent to Carousel Builder');}
+
+async function callAI(prompt,btn){
+  const key=document.getElementById('aiKey').value.trim();if(!key)return toast('Paste your OpenAI API key first');
+  const model=document.getElementById('aiModel').value;
+  if(btn){btn.disabled=true;btn.dataset.origText=btn.textContent;btn.textContent='Generating...';}
+  try{
+    const resp=await fetch('https://api.openai.com/v1/chat/completions',{method:'POST',headers:{'Content-Type':'application/json','Authorization':'Bearer '+key},body:JSON.stringify({model:model,messages:[{role:'system',content:'You are a LinkedIn content expert. Write professional, engaging content optimized for LinkedIn. Be concise, actionable, and use proven LinkedIn formatting patterns. Never use generic filler.'},{role:'user',content:prompt}],max_tokens:2000,temperature:0.7})});
+    if(!resp.ok){const e=await resp.json().catch(()=>({}));throw new Error(e.error?.message||'API error '+resp.status);}
+    const data=await resp.json();return data.choices[0].message.content;
+  }catch(e){toast('Error: '+e.message);return null;}
+  finally{if(btn){btn.disabled=false;btn.textContent=btn.dataset.origText;}}
+}
+
+async function runAI(){
+  const prompt=document.getElementById('aiPrompt').value.trim();if(!prompt)return toast('Write a prompt first');
+  const result=await callAI(prompt,document.getElementById('aiRunBtn'));
+  if(result){document.getElementById('aiResult').textContent=result;document.getElementById('aiResultCard').style.display='block';}
+}
+
+async function makeViral(){
+  const draft=document.getElementById('viralInput').value.trim();if(!draft)return toast('Paste a draft post first');
+  const prompt='Take this LinkedIn post draft and make it go viral. Rewrite with:\n1. A much stronger hook (first line that stops scrolling)\n2. Break into short 1-2 sentence paragraphs\n3. Add curiosity and tension\n4. End with a strong CTA that drives comments\n5. Keep the core message but make it 10x more engaging\n\nDraft:\n'+draft;
+  const result=await callAI(prompt,document.getElementById('viralBtn'));
+  if(result){document.getElementById('aiResult').textContent=result;document.getElementById('aiResultCard').style.display='block';toast('Viral version ready');}
+}
+
+/* ======================== CONTENT LIBRARY ======================== */
+function getLibrary(){try{return JSON.parse(localStorage.getItem('li_studio_library'))||[];}catch(e){return[];}}
+function setLibrary(lib){localStorage.setItem('li_studio_library',JSON.stringify(lib));}
+function saveToLibrary(type,content){if(!content||!content.trim())return toast('Nothing to save');const lib=getLibrary();lib.unshift({type,content:content.trim(),date:new Date().toISOString().split('T')[0],id:Date.now()});setLibrary(lib);loadLibrary();toast('Saved to library');}
+function quickSave(){const type=document.getElementById('libType').value;const content=document.getElementById('libContent').value;if(!content.trim())return;saveToLibrary(type,content);document.getElementById('libContent').value='';}
+function deleteFromLibrary(id){const lib=getLibrary().filter(i=>i.id!==id);setLibrary(lib);loadLibrary();toast('Deleted');}
+function loadLibrary(){
+  const lib=getLibrary();const el=document.getElementById('libraryList');
+  if(!lib.length){el.innerHTML='<p style="color:var(--muted);font-size:13px">No saved content yet.</p>';return;}
+  el.innerHTML='';
+  lib.forEach(item=>{
+    const safeId=parseInt(item.id)||0;
+    const div=document.createElement('div');div.style.cssText='background:var(--bg3);border:1px solid var(--border);border-radius:8px;padding:12px;margin-bottom:8px';
+    const header=document.createElement('div');header.className='row';header.style.marginBottom='6px';
+    const badge=document.createElement('span');badge.className='pill active';badge.style.cssText='font-size:10px;padding:3px 10px;cursor:default';badge.textContent=item.type||'note';
+    const dateEl=document.createElement('span');dateEl.style.cssText='font-size:11px;color:var(--muted);margin-left:auto';dateEl.textContent=item.date||'';
+    header.appendChild(badge);header.appendChild(dateEl);
+    const preview=document.createElement('p');preview.style.cssText='font-size:13px;white-space:pre-wrap;max-height:80px;overflow:hidden;color:var(--muted)';
+    preview.textContent=(item.content||'').substring(0,200)+((item.content||'').length>200?'...':'');
+    const actions=document.createElement('div');actions.className='row';actions.style.marginTop='8px';
+    const copyBtn=document.createElement('button');copyBtn.className='btn btn-outline btn-sm';copyBtn.textContent='Copy';
+    copyBtn.addEventListener('click',()=>{const found=getLibrary().find(i=>parseInt(i.id)===safeId);if(found)copyText(found.content);});
+    const delBtn=document.createElement('button');delBtn.className='btn btn-outline btn-sm';delBtn.textContent='Delete';
+    delBtn.addEventListener('click',()=>deleteFromLibrary(safeId));
+    actions.appendChild(copyBtn);actions.appendChild(delBtn);
+    div.appendChild(header);div.appendChild(preview);div.appendChild(actions);el.appendChild(div);
+  });
+}
+function exportLibrary(){const lib=getLibrary();if(!lib.length)return toast('Library is empty');const blob=new Blob([JSON.stringify(lib,null,2)],{type:'application/json'});const link=document.createElement('a');link.download='linkedin-library.json';link.href=URL.createObjectURL(blob);link.click();toast('Library exported');}
+function importLibrary(input){if(!input.files.length)return;const reader=new FileReader();reader.onload=e=>{try{const data=JSON.parse(e.target.result);const lib=getLibrary();data.forEach(item=>lib.push(item));setLibrary(lib);loadLibrary();toast(data.length+' items imported');}catch(er){toast('Invalid JSON file');}};reader.readAsText(input.files[0]);}
+
+/* ======================== KEYBOARD SHORTCUTS ======================== */
+document.addEventListener('keydown',e=>{
+  if(e.ctrlKey||e.metaKey){
+    if(e.key==='1'){e.preventDefault();go('resize');}
+    if(e.key==='2'){e.preventDefault();go('carousel');}
+    if(e.key==='3'){e.preventDefault();go('post');}
+    if(e.key==='4'){e.preventDefault();go('article');}
+    if(e.key==='5'){e.preventDefault();go('analyzer');}
+  }
+});
+
+/* ======================== INIT ======================== */
+updateDlInfo();
+initTemplates();
+loadLibrary();
+</script>
+</body>
+</html>

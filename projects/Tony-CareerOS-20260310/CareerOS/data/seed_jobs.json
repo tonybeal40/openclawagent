@@ -1,0 +1,30 @@
+[
+  {
+    "title": "Revenue Operations Manager",
+    "company": "Rubric AI",
+    "location": "Remote",
+    "industry": "AI Software",
+    "salary_base": 130000,
+    "url": "https://example.com/rubric-revops",
+    "source": "seed",
+    "signals": [
+      "RevOps role",
+      "AI software",
+      "Remote"
+    ]
+  },
+  {
+    "title": "Business Development Director",
+    "company": "Origami Robotics",
+    "location": "St. Louis",
+    "industry": "Robotics",
+    "salary_base": 120000,
+    "url": "https://example.com/origami-bd",
+    "source": "seed",
+    "signals": [
+      "Industrial fit",
+      "Robotics",
+      "Director role"
+    ]
+  }
+]

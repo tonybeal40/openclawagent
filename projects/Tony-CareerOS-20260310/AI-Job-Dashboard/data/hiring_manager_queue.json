@@ -1,0 +1,212 @@
+[
+  {
+    "company": "HubSpot",
+    "target_title": "VP Sales",
+    "probable_hiring_manager": "VP Revenue Operations",
+    "manual_search_url": "https://www.linkedin.com/search/results/people/?keywords=VP+Sales+HubSpot",
+    "review_mode": "manual_review_only",
+    "allowed_sources": [
+      "company leadership page",
+      "team page",
+      "press release",
+      "investor relations page",
+      "LinkedIn public profile URL provided manually"
+    ],
+    "status": "ready_for_manual_research"
+  },
+  {
+    "company": "Apollo.io",
+    "target_title": "VP Sales",
+    "probable_hiring_manager": "VP Revenue Operations",
+    "manual_search_url": "https://www.linkedin.com/search/results/people/?keywords=VP+Sales+Apollo.io",
+    "review_mode": "manual_review_only",
+    "allowed_sources": [
+      "company leadership page",
+      "team page",
+      "press release",
+      "investor relations page",
+      "LinkedIn public profile URL provided manually"
+    ],
+    "status": "ready_for_manual_research"
+  },
+  {
+    "company": "Danaher",
+    "target_title": "VP Sales",
+    "probable_hiring_manager": "VP Revenue Operations",
+    "manual_search_url": "https://www.linkedin.com/search/results/people/?keywords=VP+Sales+Danaher",
+    "review_mode": "manual_review_only",
+    "allowed_sources": [
+      "company leadership page",
+      "team page",
+      "press release",
+      "investor relations page",
+      "LinkedIn public profile URL provided manually"
+    ],
+    "status": "ready_for_manual_research"
+  },
+  {
+    "company": "3M",
+    "target_title": "VP Sales",
+    "probable_hiring_manager": "VP Revenue Operations",
+    "manual_search_url": "https://www.linkedin.com/search/results/people/?keywords=VP+Sales+3M",
+    "review_mode": "manual_review_only",
+    "allowed_sources": [
+      "company leadership page",
+      "team page",
+      "press release",
+      "investor relations page",
+      "LinkedIn public profile URL provided manually"
+    ],
+    "status": "ready_for_manual_research"
+  },
+  {
+    "company": "Siemens",
+    "target_title": "VP Sales",
+    "probable_hiring_manager": "VP Revenue Operations",
+    "manual_search_url": "https://www.linkedin.com/search/results/people/?keywords=VP+Sales+Siemens",
+    "review_mode": "manual_review_only",
+    "allowed_sources": [
+      "company leadership page",
+      "team page",
+      "press release",
+      "investor relations page",
+      "LinkedIn public profile URL provided manually"
+    ],
+    "status": "ready_for_manual_research"
+  },
+  {
+    "company": "Monday.com",
+    "target_title": "VP Sales",
+    "probable_hiring_manager": "VP Revenue Operations",
+    "manual_search_url": "https://www.linkedin.com/search/results/people/?keywords=VP+Sales+Monday.com",
+    "review_mode": "manual_review_only",
+    "allowed_sources": [
+      "company leadership page",
+      "team page",
+      "press release",
+      "investor relations page",
+      "LinkedIn public profile URL provided manually"
+    ],
+    "status": "ready_for_manual_research"
+  },
+  {
+    "company": "Thermo Fisher Scientific",
+    "target_title": "VP Sales",
+    "probable_hiring_manager": "VP Revenue Operations",
+    "manual_search_url": "https://www.linkedin.com/search/results/people/?keywords=VP+Sales+Thermo+Fisher+Scientific",
+    "review_mode": "manual_review_only",
+    "allowed_sources": [
+      "company leadership page",
+      "team page",
+      "press release",
+      "investor relations page",
+      "LinkedIn public profile URL provided manually"
+    ],
+    "status": "ready_for_manual_research"
+  },
+  {
+    "company": "Emerson Electric",
+    "target_title": "VP Sales",
+    "probable_hiring_manager": "VP Revenue Operations",
+    "manual_search_url": "https://www.linkedin.com/search/results/people/?keywords=VP+Sales+Emerson+Electric",
+    "review_mode": "manual_review_only",
+    "allowed_sources": [
+      "company leadership page",
+      "team page",
+      "press release",
+      "investor relations page",
+      "LinkedIn public profile URL provided manually"
+    ],
+    "status": "ready_for_manual_research"
+  },
+  {
+    "company": "Parker Hannifin",
+    "target_title": "VP Sales",
+    "probable_hiring_manager": "VP Revenue Operations",
+    "manual_search_url": "https://www.linkedin.com/search/results/people/?keywords=VP+Sales+Parker+Hannifin",
+    "review_mode": "manual_review_only",
+    "allowed_sources": [
+      "company leadership page",
+      "team page",
+      "press release",
+      "investor relations page",
+      "LinkedIn public profile URL provided manually"
+    ],
+    "status": "ready_for_manual_research"
+  },
+  {
+    "company": "Honeywell",
+    "target_title": "VP Sales",
+    "probable_hiring_manager": "VP Revenue Operations",
+    "manual_search_url": "https://www.linkedin.com/search/results/people/?keywords=VP+Sales+Honeywell",
+    "review_mode": "manual_review_only",
+    "allowed_sources": [
+      "company leadership page",
+      "team page",
+      "press release",
+      "investor relations page",
+      "LinkedIn public profile URL provided manually"
+    ],
+    "status": "ready_for_manual_research"
+  },
+  {
+    "company": "GE Healthcare",
+    "target_title": "VP Sales",
+    "probable_hiring_manager": "VP Revenue Operations",
+    "manual_search_url": "https://www.linkedin.com/search/results/people/?keywords=VP+Sales+GE+Healthcare",
+    "review_mode": "manual_review_only",
+    "allowed_sources": [
+      "company leadership page",
+      "team page",
+      "press release",
+      "investor relations page",
+      "LinkedIn public profile URL provided manually"
+    ],
+    "status": "ready_for_manual_research"
+  },
+  {
+    "company": "ZoomInfo",
+    "target_title": "VP Sales",
+    "probable_hiring_manager": "VP Revenue Operations",
+    "manual_search_url": "https://www.linkedin.com/search/results/people/?keywords=VP+Sales+ZoomInfo",
+    "review_mode": "manual_review_only",
+    "allowed_sources": [
+      "company leadership page",
+      "team page",
+      "press release",
+      "investor relations page",
+      "LinkedIn public profile URL provided manually"
+    ],
+    "status": "ready_for_manual_research"
+  },
+  {
+    "company": "Ramp",
+    "target_title": "VP Sales",
+    "probable_hiring_manager": "VP Revenue Operations",
+    "manual_search_url": "https://www.linkedin.com/search/results/people/?keywords=VP+Sales+Ramp",
+    "review_mode": "manual_review_only",
+    "allowed_sources": [
+      "company leadership page",
+      "team page",
+      "press release",
+      "investor relations page",
+      "LinkedIn public profile URL provided manually"
+    ],
+    "status": "ready_for_manual_research"
+  },
+  {
+    "company": "Rippling",
+    "target_title": "VP Sales",
+    "probable_hiring_manager": "VP Revenue Operations",
+    "manual_search_url": "https://www.linkedin.com/search/results/people/?keywords=VP+Sales+Rippling",
+    "review_mode": "manual_review_only",
+    "allowed_sources": [
+      "company leadership page",
+      "team page",
+      "press release",
+      "investor relations page",
+      "LinkedIn public profile URL provided manually"
+    ],
+    "status": "ready_for_manual_research"
+  }
+]

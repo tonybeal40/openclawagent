@@ -1,0 +1,14 @@
+[
+  {
+    "source": "placeholder",
+    "status": "ready_for_public_page_ingestion",
+    "allowed_sources": [
+      "company team pages",
+      "leadership pages",
+      "press releases",
+      "investor relations pages",
+      "public employee directories",
+      "LinkedIn public profiles (manual review)"
+    ]
+  }
+]

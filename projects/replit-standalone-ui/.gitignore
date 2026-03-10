@@ -1,0 +1,4 @@
+# Basic React project scaffold for Replit Studio UI
+node_modules
+build
+.DS_Store

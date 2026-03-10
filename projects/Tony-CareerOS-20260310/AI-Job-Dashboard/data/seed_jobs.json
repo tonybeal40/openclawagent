@@ -1,0 +1,46 @@
+[
+  {
+    "title": "Revenue Operations Manager",
+    "company": "HubSpot",
+    "location": "Remote",
+    "industry": "Sales Technology",
+    "salary_base": 135000,
+    "url": "https://example.com/hubspot-revops",
+    "source": "company-careers",
+    "signals": [
+      "RevOps role",
+      "Sales technology",
+      "Remote",
+      "Growing sales team"
+    ]
+  },
+  {
+    "title": "Business Development Director",
+    "company": "Danaher",
+    "location": "Chicago",
+    "industry": "Industrial Manufacturing",
+    "salary_base": 145000,
+    "url": "https://example.com/danaher-bd",
+    "source": "company-careers",
+    "signals": [
+      "Industrial fit",
+      "Director role",
+      "Enterprise B2B"
+    ]
+  },
+  {
+    "title": "Sales Operations Manager",
+    "company": "Apollo.io",
+    "location": "Remote",
+    "industry": "Sales Technology",
+    "salary_base": 140000,
+    "url": "https://example.com/apollo-sales-ops",
+    "source": "greenhouse.io",
+    "signals": [
+      "Sales ops role",
+      "Growing sales team",
+      "GTM systems",
+      "Remote"
+    ]
+  }
+]

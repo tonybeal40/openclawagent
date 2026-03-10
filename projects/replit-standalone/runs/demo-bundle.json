@@ -1,0 +1,12 @@
+{
+  "executionId": "demo",
+  "rootDir": "runs/out-demo",
+  "files": [
+    {
+      "path": "README.md",
+      "bytes": 12,
+      "content": "hello world\n"
+    }
+  ],
+  "commands": []
+}

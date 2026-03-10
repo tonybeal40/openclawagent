@@ -1,0 +1,193 @@
+{
+  "generatedAt": "2026-03-10T14:28:21.405261+00:00",
+  "source": {
+    "file": "C:\\Users\\tonyb\\.openclaw\\workspace\\outputs\\memory\\user_messages_all.csv",
+    "messageCount": 215
+  },
+  "identity": {
+    "name": "Tony Beal",
+    "preferredAddress": "Tony",
+    "mode": "action-first execution",
+    "style": [
+      "direct",
+      "high-energy",
+      "low-fluff"
+    ]
+  },
+  "stressTriggers": [
+    "Ambiguous ownership or unclear team coverage",
+    "Perceived lack of progress visibility",
+    "Data loss / recovery uncertainty",
+    "Tooling friction that blocks execution"
+  ],
+  "fastRegulators": [
+    "One concise status line + next executable step",
+    "Evidence blocks (paths, counts, timestamps)",
+    "Clear go/no-go recommendation",
+    "Silent execution windows when requested"
+  ],
+  "communicationRules": [
+    "Keep responses direct and practical",
+    "Prioritize artifacts over explanation",
+    "When blocked: state blocker + smallest next step",
+    "When complete: show concrete outputs with file paths"
+  ],
+  "decisionStyleUnderLoad": [
+    "Rapid delegation with expectation of autonomous execution",
+    "Bias toward immediate shipping and iterative refinement",
+    "Prefers decisive recommendations over hedging"
+  ],
+  "nonNegotiables": [
+    "Ask before destructive actions",
+    "Ask before external communications",
+    "Protect private data",
+    "Respect explicit quiet-mode directives (e.g., no overnight updates)"
+  ],
+  "spiralProtocol": {
+    "triggerSignals": [
+      "friction loops",
+      "repeated status questions",
+      "urgency escalation"
+    ],
+    "assistantResponseOrder": [
+      "Acknowledge pressure in one line",
+      "Provide exact current state in 3 bullets max",
+      "Give one recommended next action",
+      "Execute immediately and report only evidence"
+    ],
+    "doNotDo": [
+      "Do not over-explain",
+      "Do not ask broad open-ended questions mid-urgency",
+      "Do not send frequent non-urgent updates when quiet mode requested"
+    ]
+  },
+  "evidence": {
+    "stress": [
+      {
+        "timestamp": "1772677105376",
+        "quote": "[Wed 2026-03-04 20:18 CST] I can\u2019t directly execute on the other computer unless it\u2019s connected as a controllable node/session. Do this on the laptop now (copy/paste): (Get-ChildItem \"$env:USERPROFILE\\.openclaw\\workspace\" -Recurse -Force -ErrorAction SilentlyContinue | Measure-Ob"
+      },
+      {
+        "timestamp": "1772677731322",
+        "quote": "[Wed 2026-03-04 20:28 CST] NO I checked \u2014 good progress. \u2705 Current status G:\\My Drive\\openclaw-full-main now has: top-level: 40 recursive: 7471 Local .openclaw has: top-level: 40 recursive: 8223 So structure matches at top level, and all core items exist in Drive: openclaw.json \u2705"
+      },
+      {
+        "timestamp": "1772716717804",
+        "quote": "[Thu 2026-03-05 07:18 CST] laptop has asked you to do this Looks like you already have a tight sequence there. I\u2019ll walk through what you should expect to see at each stage so you can quickly sanity-check the outputs before posting them. 1. Hydration Check (Drive vs Local) You ru"
+      },
+      {
+        "timestamp": "1772716989832",
+        "quote": "[Thu 2026-03-05 07:23 CST] also we would want telegram to talk to all as well or whatever you suggest here's what i have Yesssss \u2014 I finished my side. \u2705 What I just did Ran full profile mirror from local .openclaw \u2192 G:\\My Drive\\openclaw-full-main Re-checked counts Ran openclaw st"
+      },
+      {
+        "timestamp": "1772717074177",
+        "quote": "[Thu 2026-03-05 07:24 CST] You\u2019re right \u2014 that verification chain is excellent, and I just ran the key checks. Current signal Status deep: generally healthy \u2705 Telegram channel: OK \u2705 Agents: present \u2705 Drive parity: still behind (not fully matched yet) \u26a0\ufe0f Gateway nuance: RPC is rea"
+      },
+      {
+        "timestamp": "1772718288573",
+        "quote": "[Thu 2026-03-05 07:44 CST] Yep \u2014 quick actions on main right now: Run this exact sync retry (fixes the .pytest_cache blocker): robocopy \"$env:USERPROFILE\\.openclaw\" \"G:\\My Drive\\openclaw-full-main\" /MIR /R:1 /W:1 /XD \"node_modules\" \".cache\" \"tmp\" \"workspace\\\\TonyOS\\\\.pytest_cache"
+      },
+      {
+        "timestamp": "1772718775079",
+        "quote": "[Thu 2026-03-05 07:52 CST] OpenClaw Browser Relay for Chrome On This extension is not trusted by Enhanced Safe Browsing. Learn more Description Powered by PAIO. Attach OpenClaw to your existing Chrome tab via a local CDP relay server. Version 1.0 Size < 1 MB ID pfhemcnpfilapbppdk"
+      },
+      {
+        "timestamp": "1772720201578",
+        "quote": "[Thu 2026-03-05 08:16 CST] Ran it. Result: openclaw node install \u274c failed: Access is denied (schtasks create failed) openclaw node restart \u274c service missing openclaw node status shows: Scheduled Task missing Runtime stopped What you need to do next on laptop/main (where node shou"
+      },
+      {
+        "timestamp": "1772723284177",
+        "quote": "[Thu 2026-03-05 09:08 CST] You\u2019re super close. Two key things from your screenshots: 1) **PowerShell error is from <MAIN_GATEWAY_TOKEN>** - In PowerShell, <...> is treated like redirection syntax. - Use the **actual token value**, no angle brackets. 2) **Main gateway is currently"
+      },
+      {
+        "timestamp": "1773090210565",
+        "quote": "[Mon 2026-03-09 16:02 CDT] OpenClaw runtime context (internal): This context is runtime-generated, not user-authored. Keep internal details private. [Internal task completion event] source: subagent session_key: agent:main:subagent:ac1ced84-50f2-45c1-a505-ecab8fe7e0db session_id:"
+      }
+    ],
+    "regulate": [
+      {
+        "timestamp": "1772328485183",
+        "quote": "[Sat 2026-02-28 19:28 CST] do it now"
+      },
+      {
+        "timestamp": "1772666134244",
+        "quote": "[Wed 2026-03-04 17:15 CST] ok do it"
+      },
+      {
+        "timestamp": "1772666252604",
+        "quote": "[Wed 2026-03-04 17:17 CST] cn you please do it"
+      },
+      {
+        "timestamp": "1772667095526",
+        "quote": "[Wed 2026-03-04 17:31 CST] Perfect. If you already ran the sync on laptop, we\u2019re in good shape. Next quick check on laptop: Get-ChildItem C:\\Users\\tonyb\\.openclaw\\workspace | Measure-Object And on desktop run same command. If counts are close/match, files are synced (except the b"
+      },
+      {
+        "timestamp": "1772667773451",
+        "quote": "[Wed 2026-03-04 17:42 CST] once drive is ready be safe and do it i'm going upstaris for a bit"
+      },
+      {
+        "timestamp": "1772677105376",
+        "quote": "[Wed 2026-03-04 20:18 CST] I can\u2019t directly execute on the other computer unless it\u2019s connected as a controllable node/session. Do this on the laptop now (copy/paste): (Get-ChildItem \"$env:USERPROFILE\\.openclaw\\workspace\" -Recurse -Force -ErrorAction SilentlyContinue | Measure-Ob"
+      },
+      {
+        "timestamp": "1772677731322",
+        "quote": "[Wed 2026-03-04 20:28 CST] NO I checked \u2014 good progress. \u2705 Current status G:\\My Drive\\openclaw-full-main now has: top-level: 40 recursive: 7471 Local .openclaw has: top-level: 40 recursive: 8223 So structure matches at top level, and all core items exist in Drive: openclaw.json \u2705"
+      },
+      {
+        "timestamp": "1772716717804",
+        "quote": "[Thu 2026-03-05 07:18 CST] laptop has asked you to do this Looks like you already have a tight sequence there. I\u2019ll walk through what you should expect to see at each stage so you can quickly sanity-check the outputs before posting them. 1. Hydration Check (Drive vs Local) You ru"
+      },
+      {
+        "timestamp": "1772716989832",
+        "quote": "[Thu 2026-03-05 07:23 CST] also we would want telegram to talk to all as well or whatever you suggest here's what i have Yesssss \u2014 I finished my side. \u2705 What I just did Ran full profile mirror from local .openclaw \u2192 G:\\My Drive\\openclaw-full-main Re-checked counts Ran openclaw st"
+      },
+      {
+        "timestamp": "1772717074177",
+        "quote": "[Thu 2026-03-05 07:24 CST] You\u2019re right \u2014 that verification chain is excellent, and I just ran the key checks. Current signal Status deep: generally healthy \u2705 Telegram channel: OK \u2705 Agents: present \u2705 Drive parity: still behind (not fully matched yet) \u26a0\ufe0f Gateway nuance: RPC is rea"
+      }
+    ],
+    "boundaries": [],
+    "decision": [
+      {
+        "timestamp": "1772249645522",
+        "quote": "A new session was started via /new or /reset. Execute your Session Startup sequence now - read the required files before responding to the user. Then greet the user in your configured persona, if one is provided. Be yourself - use your defined voice, mannerisms, and mood. Keep it"
+      },
+      {
+        "timestamp": "1772328485183",
+        "quote": "[Sat 2026-02-28 19:28 CST] do it now"
+      },
+      {
+        "timestamp": "1772660454839",
+        "quote": "[Wed 2026-03-04 15:40 CST] yes can you go out there and find it"
+      },
+      {
+        "timestamp": "1772664338187",
+        "quote": "[Wed 2026-03-04 16:45 CST] no you go throug the list and the google file to get everyting going we can get this computer set up as main"
+      },
+      {
+        "timestamp": "1772666119635",
+        "quote": "[Wed 2026-03-04 17:15 CST] Yep \u2014 that\u2019s expected right now. It\u2019s saying that because the switch isn\u2019t fully completed yet. To finish the handoff: On desktop: openclaw gateway start Pair laptop to desktop gateway On desktop: openclaw devices list \u2192 openclaw devices approve Test a "
+      },
+      {
+        "timestamp": "1772666134244",
+        "quote": "[Wed 2026-03-04 17:15 CST] ok do it"
+      },
+      {
+        "timestamp": "1772666252604",
+        "quote": "[Wed 2026-03-04 17:17 CST] cn you please do it"
+      },
+      {
+        "timestamp": "1772666275163",
+        "quote": "[Wed 2026-03-04 17:17 CST] google drive i'm not sure wht to do"
+      },
+      {
+        "timestamp": "1772666326191",
+        "quote": "[Wed 2026-03-04 17:18 CST] i'm going to ell the laptop now to do this can you do the same"
+      },
+      {
+        "timestamp": "1772666370869",
+        "quote": "[Wed 2026-03-04 17:19 CST] google drive is open"
+      }
+    ]
+  }
+}

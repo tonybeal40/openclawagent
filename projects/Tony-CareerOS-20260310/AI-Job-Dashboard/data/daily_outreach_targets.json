@@ -1,0 +1,170 @@
+[
+  {
+    "company": "Danaher",
+    "website": "https://jobs.danaher.com/global/en",
+    "industry": "Industrial Manufacturing",
+    "outreach_priority": "high",
+    "score": 65,
+    "reasons": [
+      "Large commercial organization and recurring hiring activity",
+      "Complex revenue motion likely benefits from pipeline visibility and sales systems support"
+    ],
+    "suggested_action": "Research leadership and draft tailored outreach even if no job is posted."
+  },
+  {
+    "company": "HubSpot",
+    "website": "https://www.hubspot.com/careers",
+    "industry": "Sales Technology",
+    "outreach_priority": "high",
+    "score": 65,
+    "reasons": [
+      "Strong GTM and sales operations footprint",
+      "Good fit for systems, CRM, and sales visibility language"
+    ],
+    "suggested_action": "Research leadership and draft tailored outreach even if no job is posted."
+  },
+  {
+    "company": "Apollo.io",
+    "website": "https://www.apollo.io/careers",
+    "industry": "Sales Technology",
+    "outreach_priority": "high",
+    "score": 65,
+    "reasons": [
+      "Prospecting, outbound, and sales hiring relevance",
+      "High relevance for prospecting systems and outbound intelligence"
+    ],
+    "suggested_action": "Research leadership and draft tailored outreach even if no job is posted."
+  },
+  {
+    "company": "3M",
+    "website": "https://www.3m.com/3M/en_US/careers-us/",
+    "industry": "Industrial Manufacturing",
+    "outreach_priority": "high",
+    "score": 65,
+    "reasons": [
+      "Large commercial and technical organization",
+      "Good fit for sales systems and account strategy narrative"
+    ],
+    "suggested_action": "Research leadership and draft tailored outreach even if no job is posted."
+  },
+  {
+    "company": "Siemens",
+    "website": "https://www.siemens.com/global/en/home/company/jobs.html",
+    "industry": "Industrial Manufacturing",
+    "outreach_priority": "high",
+    "score": 65,
+    "reasons": [
+      "Scaled global sales and technical teams",
+      "Commercial systems maturity opportunity"
+    ],
+    "suggested_action": "Research leadership and draft tailored outreach even if no job is posted."
+  },
+  {
+    "company": "Monday.com",
+    "website": "https://monday.com/careers",
+    "industry": "Sales Technology",
+    "outreach_priority": "high",
+    "score": 65,
+    "reasons": [
+      "Sales and platform growth",
+      "Good fit for workflow and systems story"
+    ],
+    "suggested_action": "Research leadership and draft tailored outreach even if no job is posted."
+  },
+  {
+    "company": "Thermo Fisher Scientific",
+    "website": "https://jobs.thermofisher.com",
+    "industry": "Pharmaceutical Manufacturing",
+    "outreach_priority": "high",
+    "score": 50,
+    "reasons": [
+      "Large technical and commercial hiring footprint",
+      "Cross-functional complexity creates strong systems need"
+    ],
+    "suggested_action": "Research leadership and draft tailored outreach even if no job is posted."
+  },
+  {
+    "company": "Emerson Electric",
+    "website": "https://www.emerson.com/en-us/careers",
+    "industry": "Industrial Manufacturing",
+    "outreach_priority": "high",
+    "score": 50,
+    "reasons": [
+      "Enterprise industrial sales motion",
+      "Strong need for commercial visibility in complex B2B motions"
+    ],
+    "suggested_action": "Research leadership and draft tailored outreach even if no job is posted."
+  },
+  {
+    "company": "Parker Hannifin",
+    "website": "https://www.parker.com/us/en/careers.html",
+    "industry": "Industrial Equipment",
+    "outreach_priority": "high",
+    "score": 50,
+    "reasons": [
+      "Large industrial field and account teams",
+      "Potential whitespace for strategic account and systems execution"
+    ],
+    "suggested_action": "Research leadership and draft tailored outreach even if no job is posted."
+  },
+  {
+    "company": "Honeywell",
+    "website": "https://careers.honeywell.com",
+    "industry": "Industrial Manufacturing",
+    "outreach_priority": "high",
+    "score": 50,
+    "reasons": [
+      "Scaled commercial organization",
+      "Strong enterprise systems context"
+    ],
+    "suggested_action": "Research leadership and draft tailored outreach even if no job is posted."
+  },
+  {
+    "company": "GE Healthcare",
+    "website": "https://careers.gehealthcare.com",
+    "industry": "Pharmaceutical Manufacturing",
+    "outreach_priority": "high",
+    "score": 50,
+    "reasons": [
+      "Healthcare and enterprise sales hiring",
+      "Good fit for process and visibility narrative"
+    ],
+    "suggested_action": "Research leadership and draft tailored outreach even if no job is posted."
+  },
+  {
+    "company": "ZoomInfo",
+    "website": "https://www.zoominfo.com/company/careers",
+    "industry": "Sales Technology",
+    "outreach_priority": "high",
+    "score": 50,
+    "reasons": [
+      "Large GTM and sales intelligence footprint",
+      "Strong fit for prospect intelligence positioning"
+    ],
+    "suggested_action": "Research leadership and draft tailored outreach even if no job is posted."
+  },
+  {
+    "company": "Ramp",
+    "website": "https://ramp.com/careers",
+    "industry": "AI Software",
+    "outreach_priority": "high",
+    "score": 50,
+    "reasons": [
+      "Rapid GTM scaling signals",
+      "Likely strong systems and process demand"
+    ],
+    "suggested_action": "Research leadership and draft tailored outreach even if no job is posted."
+  },
+  {
+    "company": "Rippling",
+    "website": "https://www.rippling.com/careers",
+    "industry": "AI Software",
+    "outreach_priority": "high",
+    "score": 50,
+    "reasons": [
+      "Growing GTM organization",
+      "Potential strong fit for systems-builder story"
+    ],
+    "suggested_action": "Research leadership and draft tailored outreach even if no job is posted."
+  }
+]

@@ -1,0 +1,18 @@
+{
+  "jobs": [
+    {
+      "name": "Local Seed Jobs",
+      "type": "file",
+      "path": ".\\data\\seed_jobs.json",
+      "enabled": true
+    }
+  ],
+  "companies": [
+    {
+      "name": "Local Seed Companies",
+      "type": "file",
+      "path": ".\\data\\seed_companies.json",
+      "enabled": true
+    }
+  ]
+}

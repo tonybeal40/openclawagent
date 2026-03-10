@@ -1,0 +1,63 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Interview Trigger Queue Output",
+  "type": "object",
+  "required": ["run_date", "counts", "packets", "warnings"],
+  "properties": {
+    "run_date": { "type": "string", "pattern": "^\\d{4}-\\d{2}-\\d{2}$" },
+    "counts": {
+      "type": "object",
+      "required": ["input_records", "packets_created", "packets_skipped_dedupe", "packets_below_threshold"],
+      "properties": {
+        "input_records": { "type": "integer", "minimum": 0 },
+        "packets_created": { "type": "integer", "minimum": 0 },
+        "packets_skipped_dedupe": { "type": "integer", "minimum": 0 },
+        "packets_below_threshold": { "type": "integer", "minimum": 0 }
+      },
+      "additionalProperties": false
+    },
+    "packets": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "company",
+          "contact",
+          "title",
+          "priority",
+          "relevance_score",
+          "why_now_signal",
+          "value_hypothesis",
+          "primary_message",
+          "follow_up_48h",
+          "cta",
+          "value_artifact_suggestion",
+          "dedupe_key"
+        ],
+        "properties": {
+          "company": { "type": "string", "minLength": 1 },
+          "contact": { "type": "string", "minLength": 1 },
+          "title": { "type": "string", "minLength": 1 },
+          "priority": { "type": "string", "enum": ["p1", "p2", "p3"] },
+          "relevance_score": { "type": "integer", "minimum": 0, "maximum": 100 },
+          "why_now_signal": { "type": "string", "minLength": 12 },
+          "value_hypothesis": { "type": "string", "minLength": 12 },
+          "primary_message": { "type": "string", "minLength": 60 },
+          "follow_up_48h": { "type": "string", "minLength": 40 },
+          "cta": { "type": "string", "minLength": 8 },
+          "value_artifact_suggestion": { "type": "string", "minLength": 8 },
+          "job_role": { "type": ["string", "null"] },
+          "job_url": { "type": ["string", "null"] },
+          "source": { "type": ["string", "null"] },
+          "dedupe_key": { "type": "string", "minLength": 1 }
+        },
+        "additionalProperties": false
+      }
+    },
+    "warnings": {
+      "type": "array",
+      "items": { "type": "string" }
+    }
+  },
+  "additionalProperties": false
+}

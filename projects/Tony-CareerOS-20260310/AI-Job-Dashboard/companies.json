@@ -1,0 +1,248 @@
+[
+  {
+    "name": "Origami Robotics",
+    "description": "Robotics automation company building technical systems for industrial teams.",
+    "fit": "Manufacturing background plus AI pipeline expertise makes you credible with technical buyers.",
+    "fitBadge": "Strong Fit",
+    "website": "https://origami-robotics.com",
+    "linkedin": "https://linkedin.com",
+    "jobs": "https://origami-robotics.com/careers",
+    "score": 8,
+    "status": "researching",
+    "approach": "Lead with industrial GTM credibility, outreach discipline, and technical commercialization.",
+    "resumeAngle": "Frame yourself as an AI-enabled operator for industrial automation growth.",
+    "pros": [
+      "Industrial language fit",
+      "Clear value in commercialization",
+      "Strong founder outreach angle"
+    ],
+    "cons": [
+      "Could want robotics domain depth",
+      "Smaller process may be informal"
+    ],
+    "tags": [
+      "robotics",
+      "industrial",
+      "founder-led"
+    ],
+    "tasks": [
+      { "label": "Research founder", "done": true },
+      { "label": "Map buyer personas", "done": false },
+      { "label": "Draft outreach", "done": false }
+    ],
+    "notes": "",
+    "updatedAt": "2026-03-10T09:00:00-06:00",
+    "source": "Current scrape"
+  },
+  {
+    "name": "Carrot Labs",
+    "description": "AI product lab with startup-style execution and GTM ambiguity.",
+    "fit": "You can connect product positioning, outbound systems, and practical demand generation.",
+    "fitBadge": "Good Fit",
+    "website": "",
+    "linkedin": "",
+    "jobs": "",
+    "score": 7,
+    "status": "not-started",
+    "approach": "Pitch yourself as an operator who can connect product insight to pipeline growth.",
+    "resumeAngle": "Highlight startup execution, AI workflow building, and demand generation systems.",
+    "pros": [
+      "Startup speed",
+      "Operator mindset may land well"
+    ],
+    "cons": [
+      "Role could be undefined",
+      "Few public signals"
+    ],
+    "tags": [
+      "startup",
+      "gtm",
+      "ai"
+    ],
+    "tasks": [
+      { "label": "Find team page", "done": false },
+      { "label": "Check founder posts", "done": false }
+    ],
+    "notes": "",
+    "updatedAt": "2026-03-10T09:00:00-06:00",
+    "source": "Current scrape"
+  },
+  {
+    "name": "Arga Labs",
+    "description": "Deep tech AI research company with commercialization upside.",
+    "fit": "You bring outreach, commercialization, and early-market messaging where research teams often need help.",
+    "fitBadge": "Selective Fit",
+    "website": "",
+    "linkedin": "",
+    "jobs": "",
+    "score": 6,
+    "status": "not-started",
+    "approach": "Focus on translating technical value into pipeline and partner conversations.",
+    "resumeAngle": "Show AI commercialization, partnerships, and technical market development.",
+    "pros": [
+      "Deep tech positioning",
+      "Partnership angle possible"
+    ],
+    "cons": [
+      "May prefer research-heavy operators"
+    ],
+    "tags": [
+      "research",
+      "deep-tech"
+    ],
+    "tasks": [
+      { "label": "Validate market category", "done": false }
+    ],
+    "notes": "",
+    "updatedAt": "2026-03-10T09:00:00-06:00",
+    "source": "Current scrape"
+  },
+  {
+    "name": "Unifold",
+    "description": "AI developer tooling startup with product adoption and ecosystem motion.",
+    "fit": "You can support product adoption, positioning, and workflow-driven GTM for technical users.",
+    "fitBadge": "Good Fit",
+    "website": "",
+    "linkedin": "",
+    "jobs": "",
+    "score": 6,
+    "status": "not-started",
+    "approach": "Speak to user adoption, technical audiences, and demand capture.",
+    "resumeAngle": "Emphasize developer-tool adoption strategy and AI go-to-market execution.",
+    "pros": [
+      "Good for technical GTM narrative"
+    ],
+    "cons": [
+      "May want stronger developer credibility"
+    ],
+    "tags": [
+      "developer-tools",
+      "adoption"
+    ],
+    "tasks": [
+      { "label": "Review product docs", "done": false }
+    ],
+    "notes": "",
+    "updatedAt": "2026-03-10T09:00:00-06:00",
+    "source": "Current scrape"
+  },
+  {
+    "name": "Rubric AI",
+    "description": "AI model evaluation platform with clear sales and partnership potential.",
+    "fit": "You can sell measurement, evaluation, and operational clarity to technical buyers.",
+    "fitBadge": "High Priority",
+    "website": "",
+    "linkedin": "",
+    "jobs": "",
+    "score": 9,
+    "status": "applied",
+    "approach": "Position yourself around trust, evaluation workflows, and commercialization.",
+    "resumeAngle": "Lean on AI sales, partnerships, and category education.",
+    "pros": [
+      "Strong category relevance",
+      "Clear business case"
+    ],
+    "cons": [
+      "Likely strong applicant pool"
+    ],
+    "tags": [
+      "evaluation",
+      "enterprise-ai"
+    ],
+    "tasks": [
+      { "label": "Send follow-up email", "done": false }
+    ],
+    "notes": "Applied. Need a sharper follow-up around model governance value.",
+    "updatedAt": "2026-03-10T09:00:00-06:00",
+    "source": "Current scrape"
+  },
+  {
+    "name": "GrazeMate",
+    "description": "AgTech AI startup focused on automation and field operations.",
+    "fit": "Your industrial and operations experience can map to practical automation narratives.",
+    "fitBadge": "Niche Fit",
+    "website": "",
+    "linkedin": "",
+    "jobs": "",
+    "score": 5,
+    "status": "not-started",
+    "approach": "Lead with operational outcomes, not AI buzzwords.",
+    "resumeAngle": "Show process improvement, automation, and real-world adoption.",
+    "pros": [
+      "Operational value story"
+    ],
+    "cons": [
+      "Agriculture domain gap"
+    ],
+    "tags": [
+      "agtech",
+      "automation"
+    ],
+    "tasks": [
+      { "label": "Research market segment", "done": false }
+    ],
+    "notes": "",
+    "updatedAt": "2026-03-10T09:00:00-06:00",
+    "source": "Current scrape"
+  },
+  {
+    "name": "Aurorin CAD",
+    "description": "AI-powered CAD design software with engineering workflow relevance.",
+    "fit": "You can speak workflow adoption and commercialization for technical software teams.",
+    "fitBadge": "Selective Fit",
+    "website": "",
+    "linkedin": "",
+    "jobs": "",
+    "score": 6,
+    "status": "outreach",
+    "approach": "Frame value around engineering workflow adoption and commercial clarity.",
+    "resumeAngle": "Position yourself as a GTM builder for technical design software.",
+    "pros": [
+      "Clear software workflow story"
+    ],
+    "cons": [
+      "Could want domain-specific CAD background"
+    ],
+    "tags": [
+      "cad",
+      "engineering-software"
+    ],
+    "tasks": [
+      { "label": "Track founder reply", "done": false }
+    ],
+    "notes": "Reached out on LinkedIn. Waiting on response.",
+    "updatedAt": "2026-03-10T09:00:00-06:00",
+    "source": "Current scrape"
+  },
+  {
+    "name": "Librar Labs",
+    "description": "AI knowledge infrastructure company with systems and information workflow themes.",
+    "fit": "You can translate systems strategy and adoption into a commercial narrative.",
+    "fitBadge": "Good Fit",
+    "website": "",
+    "linkedin": "",
+    "jobs": "",
+    "score": 7,
+    "status": "interview",
+    "approach": "Speak to structured knowledge workflows, systems thinking, and buyer enablement.",
+    "resumeAngle": "Emphasize AI systems strategy, adoption, and narrative clarity.",
+    "pros": [
+      "Clear systems narrative",
+      "Interview already moving"
+    ],
+    "cons": [
+      "Need sharper technical credibility"
+    ],
+    "tags": [
+      "knowledge",
+      "infrastructure"
+    ],
+    "tasks": [
+      { "label": "Prepare interview stories", "done": false },
+      { "label": "Review company materials", "done": true }
+    ],
+    "notes": "Need stronger examples around AI workflow implementation.",
+    "updatedAt": "2026-03-10T09:00:00-06:00",
+    "source": "Current scrape"
+  }
+]

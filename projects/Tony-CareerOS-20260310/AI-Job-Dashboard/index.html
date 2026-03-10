@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CareerOS Command Center</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="app-header">
+  <div>
+    <p class="eyebrow">Tony Beal CareerOS</p>
+    <h1>CareerOS Command Center</h1>
+    <p class="subtitle">Daily hiring intelligence, best-fit roles, outreach targets, and resume angles in one place.</p>
+  </div>
+  <div class="header-actions">
+    <button id="refreshBtn" class="secondary-btn" type="button">Reload Data</button>
+    <button id="saveBtn" class="primary-btn" type="button">Save Notes</button>
+    <button id="exportBtn" class="secondary-btn" type="button">Export Snapshot</button>
+    <button id="importBtn" class="secondary-btn" type="button">Import Snapshot</button>
+    <input id="importFile" type="file" accept=".json,application/json" hidden>
+  </div>
+</header>
+
+<section class="summary-strip">
+  <div class="summary-card">
+    <span class="summary-label">Top Jobs</span>
+    <span id="topJobsCount" class="summary-value">0</span>
+  </div>
+  <div class="summary-card">
+    <span class="summary-label">Signal Companies</span>
+    <span id="signalCompaniesCount" class="summary-value">0</span>
+  </div>
+  <div class="summary-card">
+    <span class="summary-label">Outreach Targets</span>
+    <span id="outreachTargetsCount" class="summary-value">0</span>
+  </div>
+  <div class="summary-card">
+    <span class="summary-label">Applied</span>
+    <span id="appliedCount" class="summary-value">0</span>
+  </div>
+  <div class="summary-card">
+    <span class="summary-label">Interviews</span>
+    <span id="interviewCount" class="summary-value">0</span>
+  </div>
+</section>
+
+<section class="summary-strip">
+  <div class="summary-card">
+    <span class="summary-label">Manual Review Queue</span>
+    <span id="manualQueueCount" class="summary-value">0</span>
+  </div>
+  <div class="summary-card">
+    <span class="summary-label">Source Health Entries</span>
+    <span id="sourceHealthCount" class="summary-value">0</span>
+  </div>
+</section>
+
+<section class="toolbar">
+  <div class="control-group">
+    <label class="label" for="searchBox">Search Companies</label>
+    <input id="searchBox" type="search" placeholder="Search companies, notes, fit, tags...">
+  </div>
+  <div class="control-group">
+    <label class="label" for="statusFilter">Status</label>
+    <select id="statusFilter">
+      <option value="all">All</option>
+      <option value="not-started">Not Started</option>
+      <option value="researching">Researching</option>
+      <option value="applied">Applied</option>
+      <option value="outreach">Outreach Sent</option>
+      <option value="interview">Interview</option>
+    </select>
+  </div>
+  <div class="control-group">
+    <label class="label" for="sortBy">Sort</label>
+    <select id="sortBy">
+      <option value="score-desc">Highest Score</option>
+      <option value="name-asc">Name A-Z</option>
+      <option value="status">Status</option>
+      <option value="updated">Recently Updated</option>
+    </select>
+  </div>
+</section>
+
+<main class="dashboard-grid">
+  <section class="panel">
+    <h2>Early Hiring Signals</h2>
+    <div id="signalsTable" class="table-wrap"></div>
+  </section>
+
+  <section class="panel">
+    <h2>Outreach Targets</h2>
+    <div id="outreachTable" class="table-wrap"></div>
+  </section>
+
+  <section class="panel">
+    <h2>Hiring Manager Queue</h2>
+    <div id="managerQueueTable" class="table-wrap"></div>
+  </section>
+
+  <section class="panel">
+    <h2>Source Health</h2>
+    <div id="sourceHealthTable" class="table-wrap"></div>
+  </section>
+
+  <section class="panel">
+    <h2>Top Target Companies</h2>
+    <div id="companiesTable" class="table-wrap"></div>
+  </section>
+
+  <section class="panel">
+    <h2>Best Job Matches</h2>
+    <div id="jobsTable" class="table-wrap"></div>
+  </section>
+
+  <section class="panel">
+    <h2>Resume Angle Suggestions</h2>
+    <div id="resumeAngles" class="stack-list"></div>
+  </section>
+
+  <section class="panel">
+    <h2>Pipeline Status</h2>
+    <div id="pipelineStatus" class="stack-list"></div>
+  </section>
+</main>
+
+<section class="panel notes-panel">
+  <h2>Notes / Follow Ups</h2>
+  <div id="notes" class="notes-grid"></div>
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>

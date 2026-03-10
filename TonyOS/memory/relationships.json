@@ -1,0 +1,17 @@
+[
+  {
+    "from": "person_jane_smith",
+    "relationship": "works_at",
+    "to": "company_atlas_robotics"
+  },
+  {
+    "from": "company_atlas_robotics",
+    "relationship": "hiring_for",
+    "to": "job_revops_mgr_atlas"
+  },
+  {
+    "from": "company_atlas_robotics",
+    "relationship": "has_signal",
+    "to": "signal_atlas_hiring_post"
+  }
+]

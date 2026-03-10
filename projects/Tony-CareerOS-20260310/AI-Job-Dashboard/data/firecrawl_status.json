@@ -1,0 +1,114 @@
+[
+  {
+    "company": "Danaher",
+    "url": "https://jobs.danaher.com/global/en",
+    "output": "C:\\Users\\tonyb\\CareerOS\\.firecrawl\\danaher-careers.md",
+    "status": "ok",
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "company": "Thermo Fisher Scientific",
+    "url": "https://jobs.thermofisher.com",
+    "output": "C:\\Users\\tonyb\\CareerOS\\.firecrawl\\thermo_fisher_scientific-careers.md",
+    "status": "ok",
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "company": "Emerson Electric",
+    "url": "https://www.emerson.com/en-us/careers",
+    "output": "C:\\Users\\tonyb\\CareerOS\\.firecrawl\\emerson_electric-careers.md",
+    "status": "ok",
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "company": "Parker Hannifin",
+    "url": "https://www.parker.com/us/en/careers.html",
+    "output": "C:\\Users\\tonyb\\CareerOS\\.firecrawl\\parker_hannifin-careers.md",
+    "status": "ok",
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "company": "Honeywell",
+    "url": "https://careers.honeywell.com",
+    "output": "C:\\Users\\tonyb\\CareerOS\\.firecrawl\\honeywell-careers.md",
+    "status": "ok",
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "company": "GE Healthcare",
+    "url": "https://careers.gehealthcare.com",
+    "output": "C:\\Users\\tonyb\\CareerOS\\.firecrawl\\ge_healthcare-careers.md",
+    "status": "ok",
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "company": "3M",
+    "url": "https://www.3m.com/3M/en_US/careers-us/",
+    "output": "C:\\Users\\tonyb\\CareerOS\\.firecrawl\\3m-careers.md",
+    "status": "ok",
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "company": "Siemens",
+    "url": "https://www.siemens.com/global/en/home/company/jobs.html",
+    "output": "C:\\Users\\tonyb\\CareerOS\\.firecrawl\\siemens-careers.md",
+    "status": "ok",
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "company": "HubSpot",
+    "url": "https://www.hubspot.com/careers",
+    "output": "C:\\Users\\tonyb\\CareerOS\\.firecrawl\\hubspot-careers.md",
+    "status": "ok",
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "company": "Apollo.io",
+    "url": "https://www.apollo.io/careers",
+    "output": "C:\\Users\\tonyb\\CareerOS\\.firecrawl\\apollo_io-careers.md",
+    "status": "ok",
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "company": "ZoomInfo",
+    "url": "https://www.zoominfo.com/company/careers",
+    "output": "C:\\Users\\tonyb\\CareerOS\\.firecrawl\\zoominfo-careers.md",
+    "status": "ok",
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "company": "Ramp",
+    "url": "https://ramp.com/careers",
+    "output": "C:\\Users\\tonyb\\CareerOS\\.firecrawl\\ramp-careers.md",
+    "status": "ok",
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "company": "Rippling",
+    "url": "https://www.rippling.com/careers",
+    "output": "C:\\Users\\tonyb\\CareerOS\\.firecrawl\\rippling-careers.md",
+    "status": "ok",
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "company": "Monday.com",
+    "url": "https://monday.com/careers",
+    "output": "C:\\Users\\tonyb\\CareerOS\\.firecrawl\\monday_com-careers.md",
+    "status": "ok",
+    "stdout": "",
+    "stderr": ""
+  }
+]

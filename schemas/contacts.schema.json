@@ -1,0 +1,18 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "contacts",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "required": ["company", "contact_name", "title", "profile_url", "confidence", "source"],
+    "properties": {
+      "company": {"type": "string", "minLength": 1},
+      "contact_name": {"type": "string", "minLength": 1},
+      "title": {"type": "string", "minLength": 1},
+      "profile_url": {"type": "string", "minLength": 1},
+      "confidence": {"type": "integer", "minimum": 0, "maximum": 100},
+      "source": {"type": "string", "minLength": 1}
+    },
+    "additionalProperties": false
+  }
+}

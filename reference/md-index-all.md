@@ -1,0 +1,61 @@
+﻿# Markdown File Index (.openclaw)
+
+Generated: 2026-03-09 12:37:19
+Total .md files: 56
+
+- C:\Users\tonyb\.openclaw\browser\chrome-extension\README.md
+- C:\Users\tonyb\.openclaw\workspace\AGENTS.md
+- C:\Users\tonyb\.openclaw\workspace\archive\tonyos-clean-20260309-123653\.local\secondary_skills\test-secondary-skill\SKILL.md
+- C:\Users\tonyb\.openclaw\workspace\archive\tonyos-clean-20260309-123653\.local\skills\agent-inbox\SKILL.md
+- C:\Users\tonyb\.openclaw\workspace\archive\tonyos-clean-20260309-123653\.local\skills\code_review\SKILL.md
+- C:\Users\tonyb\.openclaw\workspace\archive\tonyos-clean-20260309-123653\.local\skills\database\SKILL.md
+- C:\Users\tonyb\.openclaw\workspace\archive\tonyos-clean-20260309-123653\.local\skills\delegation\SKILL.md
+- C:\Users\tonyb\.openclaw\workspace\archive\tonyos-clean-20260309-123653\.local\skills\deployment\SKILL.md
+- C:\Users\tonyb\.openclaw\workspace\archive\tonyos-clean-20260309-123653\.local\skills\diagnostics\SKILL.md
+- C:\Users\tonyb\.openclaw\workspace\archive\tonyos-clean-20260309-123653\.local\skills\environment-secrets\SKILL.md
+- C:\Users\tonyb\.openclaw\workspace\archive\tonyos-clean-20260309-123653\.local\skills\fetch-deployment-logs\SKILL.md
+- C:\Users\tonyb\.openclaw\workspace\archive\tonyos-clean-20260309-123653\.local\skills\integrations\SKILL.md
+- C:\Users\tonyb\.openclaw\workspace\archive\tonyos-clean-20260309-123653\.local\skills\media-generation\SKILL.md
+- C:\Users\tonyb\.openclaw\workspace\archive\tonyos-clean-20260309-123653\.local\skills\package-management\SKILL.md
+- C:\Users\tonyb\.openclaw\workspace\archive\tonyos-clean-20260309-123653\.local\skills\remove-image-background\SKILL.md
+- C:\Users\tonyb\.openclaw\workspace\archive\tonyos-clean-20260309-123653\.local\skills\repl_setup\references\angular.md
+- C:\Users\tonyb\.openclaw\workspace\archive\tonyos-clean-20260309-123653\.local\skills\repl_setup\references\react_vite.md
+- C:\Users\tonyb\.openclaw\workspace\archive\tonyos-clean-20260309-123653\.local\skills\repl_setup\references\vue.md
+- C:\Users\tonyb\.openclaw\workspace\archive\tonyos-clean-20260309-123653\.local\skills\repl_setup\SKILL.md
+- C:\Users\tonyb\.openclaw\workspace\archive\tonyos-clean-20260309-123653\.local\skills\replit-docs\SKILL.md
+- C:\Users\tonyb\.openclaw\workspace\archive\tonyos-clean-20260309-123653\.local\skills\revenuecat\references\initial-setup.md
+- C:\Users\tonyb\.openclaw\workspace\archive\tonyos-clean-20260309-123653\.local\skills\revenuecat\references\replit-revenuecat-v2-docs.md
+- C:\Users\tonyb\.openclaw\workspace\archive\tonyos-clean-20260309-123653\.local\skills\revenuecat\references\subsequent-management.md
+- C:\Users\tonyb\.openclaw\workspace\archive\tonyos-clean-20260309-123653\.local\skills\revenuecat\SKILL.md
+- C:\Users\tonyb\.openclaw\workspace\archive\tonyos-clean-20260309-123653\.local\skills\skill-authoring\SKILL.md
+- C:\Users\tonyb\.openclaw\workspace\archive\tonyos-clean-20260309-123653\.local\skills\web-search\SKILL.md
+- C:\Users\tonyb\.openclaw\workspace\archive\tonyos-clean-20260309-123653\.local\skills\workflows\SKILL.md
+- C:\Users\tonyb\.openclaw\workspace\BOOTSTRAP.md
+- C:\Users\tonyb\.openclaw\workspace\HEARTBEAT.md
+- C:\Users\tonyb\.openclaw\workspace\IDENTITY.md
+- C:\Users\tonyb\.openclaw\workspace\inbox\README.md
+- C:\Users\tonyb\.openclaw\workspace\MEMORY.md
+- C:\Users\tonyb\.openclaw\workspace\memory\2026-03-05.md
+- C:\Users\tonyb\.openclaw\workspace\memory\2026-03-09.md
+- C:\Users\tonyb\.openclaw\workspace\memory\full-history-dump.md
+- C:\Users\tonyb\.openclaw\workspace\memory\recovered-timeline.md
+- C:\Users\tonyb\.openclaw\workspace\memory\tonight-state-summary.md
+- C:\Users\tonyb\.openclaw\workspace\ops\RUNBOOK.md
+- C:\Users\tonyb\.openclaw\workspace\projects\TonyOS\attached_assets\README_1765692647259.md
+- C:\Users\tonyb\.openclaw\workspace\projects\TonyOS\attached_assets\README_1765693519099.md
+- C:\Users\tonyb\.openclaw\workspace\projects\TonyOS\attached_assets\README_1765699551157.md
+- C:\Users\tonyb\.openclaw\workspace\projects\TonyOS\replit.md
+- C:\Users\tonyb\.openclaw\workspace\projects\TonyOS\TonyOS\COMPLETE-SETUP-GUIDE.md
+- C:\Users\tonyb\.openclaw\workspace\projects\TonyOS\TonyOS\DESKTOP-APP-README.md
+- C:\Users\tonyb\.openclaw\workspace\projects\TonyOS\TonyOS\docs\GOOGLE_SHEETS_SYNC.md
+- C:\Users\tonyb\.openclaw\workspace\projects\TonyOS\TonyOS\natoli-truth-engine\README.md
+- C:\Users\tonyb\.openclaw\workspace\projects\TonyOS\TonyOS\README.md
+- C:\Users\tonyb\.openclaw\workspace\projects\TonyOS\TonyOS\SECURITY-CHECKLIST.md
+- C:\Users\tonyb\.openclaw\workspace\projects\TonyOS\TonyOS\static\internal\natoli-engineering-app\README.md
+- C:\Users\tonyb\.openclaw\workspace\projects\TonyOS\TonyOS\static\internal\natoli-handover\natoli-engineering-app\README.md
+- C:\Users\tonyb\.openclaw\workspace\projects\TonyOS\TonyOS\static\internal\natoli-handover\natoli-truth-engine\README.md
+- C:\Users\tonyb\.openclaw\workspace\projects\TonyOS\TonyOS\static\netlify-message-generator\README.md
+- C:\Users\tonyb\.openclaw\workspace\SOUL.md
+- C:\Users\tonyb\.openclaw\workspace\TOOLS.md
+- C:\Users\tonyb\.openclaw\workspace\USER.md
+- C:\Users\tonyb\.openclaw\workspace\WORKFLOW.md

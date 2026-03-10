@@ -1,0 +1,38 @@
+[
+  {
+    "company": "Danaher",
+    "website": "https://www.danaher.com/careers",
+    "industry": "Industrial Manufacturing",
+    "hiring_signal": "Large commercial organization with ongoing hiring",
+    "revops_maturity_gap": "Complex enterprise environment where visibility and pipeline discipline matter",
+    "notes": "Strong industrial and leadership fit",
+    "source": "company-careers"
+  },
+  {
+    "company": "Thermo Fisher Scientific",
+    "website": "https://jobs.thermofisher.com",
+    "industry": "Pharmaceutical Manufacturing",
+    "hiring_signal": "Large technical and commercial hiring footprint",
+    "revops_maturity_gap": "Cross-functional complexity creates strong systems need",
+    "notes": "Good fit for regulated-market operations and process discipline",
+    "source": "company-careers"
+  },
+  {
+    "company": "HubSpot",
+    "website": "https://www.hubspot.com/careers",
+    "industry": "Sales Technology",
+    "hiring_signal": "Strong GTM and sales operations footprint",
+    "revops_maturity_gap": "Good fit for systems, CRM, and sales visibility language",
+    "notes": "Strong software and systems fit",
+    "source": "company-careers"
+  },
+  {
+    "company": "Apollo.io",
+    "website": "https://www.apollo.io/careers",
+    "industry": "Sales Technology",
+    "hiring_signal": "Sales hiring and prospecting category fit",
+    "revops_maturity_gap": "High relevance for prospecting systems and outbound intelligence",
+    "notes": "Very high fit for Sales Navigator and Apollo positioning",
+    "source": "company-careers"
+  }
+]

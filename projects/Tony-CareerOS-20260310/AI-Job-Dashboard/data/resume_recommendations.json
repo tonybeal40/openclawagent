@@ -1,0 +1,56 @@
+{
+  "candidate": "Tony Beal",
+  "base_summary": "Revenue operations and business development leader with 15+ years building pipeline, sales visibility, and commercial systems across B2B manufacturing, industrial, pharma, and enterprise environments.",
+  "top_wins": [
+    {
+      "category": "pipeline",
+      "statement": "Built more than $6M in outbound pipeline through targeted prospecting and outbound systems design."
+    },
+    {
+      "category": "growth",
+      "statement": "Generated 3,700+ new accounts through territory planning, targeted outreach, and commercial execution."
+    },
+    {
+      "category": "acquisition",
+      "statement": "Acquired 1,000+ new customers across industrial, healthcare, and B2B markets."
+    },
+    {
+      "category": "retention",
+      "statement": "Exceeded retention targets above 93 percent while expanding account relationships."
+    }
+  ],
+  "tool_stack": [
+    "LinkedIn Sales Navigator",
+    "Apollo.io",
+    "Salesforce",
+    "HubSpot",
+    "Monday.com",
+    "Excel analytics",
+    "CRM dashboards",
+    "AI workflow automation"
+  ],
+  "resume_angles": {
+    "industrial_manufacturing": [
+      "Lead with industrial credibility, complex sales-cycle experience, and alignment with operations and engineering teams.",
+      "Emphasize pipeline visibility, quoting alignment, and account development in technical markets."
+    ],
+    "pharma_nutraceutical": [
+      "Highlight structured outreach, regulated-market credibility, and experience supporting commercial growth across pharma-adjacent markets.",
+      "Stress precision, process discipline, and cross-functional coordination."
+    ],
+    "revops_salesops": [
+      "Frame yourself as the operator who installs visibility, targeting logic, funnel discipline, and workflow clarity.",
+      "Use wins tied to pipeline creation, dashboards, forecasting support, and CRM process design."
+    ],
+    "ai_software": [
+      "Position around AI-assisted research, targeting, and pipeline acceleration rather than generic software selling.",
+      "Connect modern tooling to practical execution gains for commercial teams."
+    ]
+  },
+  "positioning": [
+    "Builds the system that runs sales, not just sales activity itself",
+    "Combines revenue operations, outbound pipeline design, and AI-assisted workflows",
+    "Strongest fit in B2B manufacturing, industrial, pharma, and nutraceutical environments"
+  ],
+  "next_step": "Use fit_scorer.py output to select the best resume angle for each role."
+}

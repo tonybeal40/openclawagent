@@ -1,0 +1,18 @@
+[
+  {
+    "company": "Origami Robotics",
+    "website": "https://origami-robotics.com",
+    "industry": "Robotics",
+    "hiring_signal": "Public careers page",
+    "revops_maturity_gap": "Growing commercial motion with likely need for pipeline structure",
+    "notes": "Strong fit for industrial + systems story"
+  },
+  {
+    "company": "Rubric AI",
+    "website": "https://example.com/rubric",
+    "industry": "AI Software",
+    "hiring_signal": "Sales and RevOps role patterns",
+    "revops_maturity_gap": "Likely need for structured metrics and outbound systems",
+    "notes": "High-priority fit"
+  }
+]

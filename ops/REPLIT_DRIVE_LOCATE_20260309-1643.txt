@@ -1,0 +1,10 @@
+# Replit locate scan
+
+## ROOT: G:\My Drive\openclaw-workspace-main
+True,G:\My Drive\openclaw-workspace-main\replit-standalone-ui
+True,G:\My Drive\openclaw-workspace-main\replit-standalone
+False,G:\My Drive\openclaw-workspace-main\REPLIT_STANDALONE_SPRINT_2026-03-03_AM.md
+True,G:\My Drive\openclaw-workspace-main\projects\replit-standalone
+True,G:\My Drive\openclaw-workspace-main\projects\replit-standalone-ui
+
+## ROOT: G:\My Drive\openclaw-full-main

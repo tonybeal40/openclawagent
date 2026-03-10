@@ -1,0 +1,142 @@
+[
+  {
+    "company": "Danaher",
+    "website": "https://jobs.danaher.com/global/en",
+    "industry": "Industrial Manufacturing",
+    "hiring_signal": "Large commercial organization and recurring hiring activity",
+    "revops_maturity_gap": "Complex revenue motion likely benefits from pipeline visibility and sales systems support",
+    "notes": "Strong industrial and leadership fit",
+    "source": "Local Seed Companies | Approved Company Targets",
+    "score": 65
+  },
+  {
+    "company": "HubSpot",
+    "website": "https://www.hubspot.com/careers",
+    "industry": "Sales Technology",
+    "hiring_signal": "Strong GTM and sales operations footprint",
+    "revops_maturity_gap": "Good fit for systems, CRM, and sales visibility language",
+    "notes": "Strong software and systems fit",
+    "source": "Local Seed Companies | Approved Company Targets",
+    "score": 65
+  },
+  {
+    "company": "Apollo.io",
+    "website": "https://www.apollo.io/careers",
+    "industry": "Sales Technology",
+    "hiring_signal": "Prospecting, outbound, and sales hiring relevance",
+    "revops_maturity_gap": "High relevance for prospecting systems and outbound intelligence",
+    "notes": "Very high fit for Sales Navigator and Apollo positioning",
+    "source": "Local Seed Companies | Approved Company Targets",
+    "score": 65
+  },
+  {
+    "company": "3M",
+    "website": "https://www.3m.com/3M/en_US/careers-us/",
+    "industry": "Industrial Manufacturing",
+    "hiring_signal": "Large commercial and technical organization",
+    "revops_maturity_gap": "Good fit for sales systems and account strategy narrative",
+    "notes": "Tier-1 industrial target",
+    "source": "Approved Company Targets",
+    "score": 65
+  },
+  {
+    "company": "Siemens",
+    "website": "https://www.siemens.com/global/en/home/company/jobs.html",
+    "industry": "Industrial Manufacturing",
+    "hiring_signal": "Scaled global sales and technical teams",
+    "revops_maturity_gap": "Commercial systems maturity opportunity",
+    "notes": "Tier-1 industrial target",
+    "source": "Approved Company Targets",
+    "score": 65
+  },
+  {
+    "company": "Monday.com",
+    "website": "https://monday.com/careers",
+    "industry": "Sales Technology",
+    "hiring_signal": "Sales and platform growth",
+    "revops_maturity_gap": "Good fit for workflow and systems story",
+    "notes": "Tier-1 SaaS target",
+    "source": "Approved Company Targets",
+    "score": 65
+  },
+  {
+    "company": "Thermo Fisher Scientific",
+    "website": "https://jobs.thermofisher.com",
+    "industry": "Pharmaceutical Manufacturing",
+    "hiring_signal": "Large technical and commercial hiring footprint",
+    "revops_maturity_gap": "Cross-functional complexity creates strong systems need",
+    "notes": "Good fit for regulated-market operations and process discipline",
+    "source": "Local Seed Companies | Approved Company Targets",
+    "score": 50
+  },
+  {
+    "company": "Emerson Electric",
+    "website": "https://www.emerson.com/en-us/careers",
+    "industry": "Industrial Manufacturing",
+    "hiring_signal": "Enterprise industrial sales motion",
+    "revops_maturity_gap": "Strong need for commercial visibility in complex B2B motions",
+    "notes": "St. Louis-region relevance",
+    "source": "Approved Company Targets",
+    "score": 50
+  },
+  {
+    "company": "Parker Hannifin",
+    "website": "https://www.parker.com/us/en/careers.html",
+    "industry": "Industrial Equipment",
+    "hiring_signal": "Large industrial field and account teams",
+    "revops_maturity_gap": "Potential whitespace for strategic account and systems execution",
+    "notes": "Tier-1 industrial target",
+    "source": "Approved Company Targets",
+    "score": 50
+  },
+  {
+    "company": "Honeywell",
+    "website": "https://careers.honeywell.com",
+    "industry": "Industrial Manufacturing",
+    "hiring_signal": "Scaled commercial organization",
+    "revops_maturity_gap": "Strong enterprise systems context",
+    "notes": "Tier-1 industrial target",
+    "source": "Approved Company Targets",
+    "score": 50
+  },
+  {
+    "company": "GE Healthcare",
+    "website": "https://careers.gehealthcare.com",
+    "industry": "Pharmaceutical Manufacturing",
+    "hiring_signal": "Healthcare and enterprise sales hiring",
+    "revops_maturity_gap": "Good fit for process and visibility narrative",
+    "notes": "Tier-1 regulated-market target",
+    "source": "Approved Company Targets",
+    "score": 50
+  },
+  {
+    "company": "ZoomInfo",
+    "website": "https://www.zoominfo.com/company/careers",
+    "industry": "Sales Technology",
+    "hiring_signal": "Large GTM and sales intelligence footprint",
+    "revops_maturity_gap": "Strong fit for prospect intelligence positioning",
+    "notes": "Tier-1 SaaS target",
+    "source": "Approved Company Targets",
+    "score": 50
+  },
+  {
+    "company": "Ramp",
+    "website": "https://ramp.com/careers",
+    "industry": "AI Software",
+    "hiring_signal": "Rapid GTM scaling signals",
+    "revops_maturity_gap": "Likely strong systems and process demand",
+    "notes": "Tier-1 growth SaaS target",
+    "source": "Approved Company Targets",
+    "score": 50
+  },
+  {
+    "company": "Rippling",
+    "website": "https://www.rippling.com/careers",
+    "industry": "AI Software",
+    "hiring_signal": "Growing GTM organization",
+    "revops_maturity_gap": "Potential strong fit for systems-builder story",
+    "notes": "Tier-1 growth SaaS target",
+    "source": "Approved Company Targets",
+    "score": 50
+  }
+]

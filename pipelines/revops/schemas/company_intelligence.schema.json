@@ -1,0 +1,86 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Company Intelligence Output",
+  "type": "object",
+  "required": ["run_date", "window", "counts", "companies", "notes"],
+  "properties": {
+    "run_date": { "type": "string", "pattern": "^\\d{4}-\\d{2}-\\d{2}$" },
+    "window": {
+      "type": "object",
+      "required": ["start_local", "end_local", "timezone"],
+      "properties": {
+        "start_local": { "type": "string" },
+        "end_local": { "type": "string" },
+        "timezone": { "type": "string" }
+      },
+      "additionalProperties": false
+    },
+    "counts": {
+      "type": "object",
+      "required": ["input_candidates", "qualified_companies", "excluded_companies"],
+      "properties": {
+        "input_candidates": { "type": "integer", "minimum": 0 },
+        "qualified_companies": { "type": "integer", "minimum": 0 },
+        "excluded_companies": { "type": "integer", "minimum": 0 }
+      },
+      "additionalProperties": false
+    },
+    "companies": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "company",
+          "website",
+          "industry",
+          "employee_estimate",
+          "revops_need_score",
+          "likely_revops_need",
+          "signals",
+          "exclusion_flags",
+          "reason"
+        ],
+        "properties": {
+          "company": { "type": "string", "minLength": 1 },
+          "website": { "type": "string", "minLength": 1 },
+          "industry": { "type": "string", "minLength": 1 },
+          "employee_estimate": { "type": ["integer", "null"], "minimum": 0 },
+          "revenue_estimate": { "type": ["string", "null"] },
+          "sales_team_size_estimate": { "type": ["integer", "null"], "minimum": 0 },
+          "revops_need_score": { "type": "integer", "minimum": 0, "maximum": 100 },
+          "likely_revops_need": { "type": "string", "enum": ["high", "medium", "low"] },
+          "signals": {
+            "type": "array",
+            "items": { "type": "string" },
+            "minItems": 1
+          },
+          "exclusion_flags": {
+            "type": "array",
+            "items": { "type": "string" }
+          },
+          "decision_maker_hints": {
+            "type": "array",
+            "items": { "type": "string" }
+          },
+          "reason": { "type": "string", "minLength": 10 },
+          "sources": {
+            "type": "array",
+            "items": { "type": "string" },
+            "minItems": 1
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "notes": {
+      "type": "object",
+      "required": ["blockers", "quality_flags"],
+      "properties": {
+        "blockers": { "type": "array", "items": { "type": "string" } },
+        "quality_flags": { "type": "array", "items": { "type": "string" } }
+      },
+      "additionalProperties": false
+    }
+  },
+  "additionalProperties": false
+}

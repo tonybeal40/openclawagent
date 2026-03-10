@@ -1,0 +1,15 @@
+DAILY OPPORTUNITY REPORT
+
+Jobs Found
+- [count]
+
+Companies Hiring
+- [count]
+
+Funding Announcements
+- [count]
+
+Top Opportunities
+1) [company / role / why]
+2) [company / role / why]
+3) [company / role / why]

@@ -1,0 +1,62 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>TonyOS Mission Control</title>
+  <style>
+    body{background:#0b0f14;color:#fff;font-family:Arial;margin:0}
+    header{background:#111827;padding:18px 20px;font-size:24px;font-weight:700}
+    .grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:16px;padding:16px}
+    .panel{background:#1f2937;padding:14px;border-radius:10px;border:1px solid #2f3d52}
+    .panel h2{margin:0 0 8px 0;font-size:18px}
+    .muted{color:#b8c7e0;font-size:12px}
+    .timeline{grid-column:span 3}
+  </style>
+</head>
+<body>
+  <header>TonyOS Mission Control</header>
+  <div class="grid">
+    <div class="panel">
+      <h2>System Health</h2>
+      <p>Gateway: Running</p>
+      <p>Agents: 3 Active</p>
+      <p>Sessions: Active</p>
+      <p class="muted">Infra heartbeat / token-safe mode</p>
+    </div>
+
+    <div class="panel">
+      <h2>Agent Fleet</h2>
+      <p>Discovery Agent — scanning jobs/signals</p>
+      <p>Intelligence Agent — ranking opportunities</p>
+      <p>Action Agent — generating outreach</p>
+    </div>
+
+    <div class="panel">
+      <h2>Opportunity Feed</h2>
+      <p>Top Role: AI Internet Rater (Welo Data)</p>
+      <p>Signal: AI/infra hiring activity</p>
+      <p>Target: Origami Robotics</p>
+    </div>
+
+    <div class="panel">
+      <h2>Action Queue</h2>
+      <p>Apply top 5 roles</p>
+      <p>Send 8 outreach messages</p>
+      <p>Set 48h follow-ups</p>
+    </div>
+
+    <div class="panel">
+      <h2>Knowledge Graph</h2>
+      <p>People → Companies → Jobs</p>
+      <p>Signals → Companies → Outreach priority</p>
+    </div>
+
+    <div class="panel timeline">
+      <h2>Activity Timeline</h2>
+      <p>16:00 pipeline run triggered</p>
+      <p>16:10 role shortlist refreshed</p>
+      <p>16:13 priorities overridden: LinkedIn + Replit first</p>
+    </div>
+  </div>
+</body>
+</html>

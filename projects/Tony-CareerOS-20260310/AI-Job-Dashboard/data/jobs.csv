@@ -1,0 +1,29 @@
+title,company,location,industry,salary_base,score,url,source,signals
+Revenue Operations Manager,HubSpot,Remote,Sales Technology,135000,105,https://example.com/hubspot-revops,company-careers,RevOps role | Sales technology | Remote | Growing sales team
+Sales Operations Manager,Apollo.io,Remote,Sales Technology,140000,105,https://example.com/apollo-sales-ops,greenhouse.io,Sales ops role | Growing sales team | GTM systems | Remote
+Revenue Operations Manager (Sales & Customer Experience),Madison Logic,United States (Remote),Sales Technology,130000,95,,linkedin-manual-review,Imported from Tony Beal LinkedIn top picks | Remote role | Manual review only
+Revenue Operations Manager,Mediafly,United States (Remote),Sales Technology,100000,95,,linkedin-manual-review,Imported from Tony Beal LinkedIn top picks | Remote role | Manual review only
+Senior Post-Sales Operations Manager,PandaDoc,United States (Remote),Sales Technology,120000,95,,linkedin-manual-review,Imported from Tony Beal LinkedIn top picks | Remote role | Manual review only
+Revenue Operations Manager,Medallion,United States (Remote),AI Software,0,85,,linkedin-manual-review,Imported from Tony Beal LinkedIn top picks | Remote role | Manual review only
+Business Development Director,Danaher,Chicago,Industrial Manufacturing,145000,80,https://example.com/danaher-bd,company-careers,Industrial fit | Director role | Enterprise B2B
+"Sales Operations, Senior Partner",SimplePractice,United States (Remote),AI Software,118000,65,,linkedin-manual-review,Imported from Tony Beal LinkedIn top picks | You'd be a top applicant | Manual review only
+Sales Operations and Strategy Manager,Samsara,"Chicago, IL (Remote)",AI Software,106800,65,,linkedin-manual-review,Imported from Tony Beal LinkedIn top picks | Remote role | Manual review only
+Sales Operations Manager,HALO Branded Solutions,United States (Remote),B2B Services,0,60,,linkedin-manual-review,Imported from Tony Beal LinkedIn top picks | Remote role | Manual review only
+"Manager, Industry Solution (Machine Tool)","Mitsubishi Electric Automation, Inc.","Chicago, IL (Remote)",Industrial Manufacturing,125000,50,,linkedin-manual-review,Imported from Tony Beal LinkedIn top picks | Industrial manufacturing fit | Manual review only
+Sales Strategy Manager,Viega LLC,United States (Remote),Industrial Manufacturing,112000,50,,linkedin-manual-review,Imported from Tony Beal LinkedIn top picks | Remote role | Manual review only
+"Regional Manager, Sales Enablement",Nolan Transportation Group (NTG),"Chicago, IL (On-site)",B2B Logistics,80000,45,,linkedin-manual-review,Imported from Tony Beal LinkedIn top picks | Sales enablement signal | Manual review only
+Director of Revenue Operations,Encore Talent Solutions,Greater St. Louis (On-site),Professional Services,140000,40,,linkedin-manual-review,Imported from Tony Beal LinkedIn top picks | Actively reviewing applicants | Manual review only
+Sales Analytics,Apollo.io,,,0,30,https://www.apollo.io/product/analytics,company-page-hint,Public company careers page match
+Revenue Operations Revenue Operations,Apollo.io,,,0,15,https://www.apollo.io/personas/revops,company-page-hint,Public company careers page match
+Revenue Operations,Apollo.io,,,0,15,https://www.apollo.io/personas/revops,company-page-hint,Public company careers page match
+RevOps Solutions,ZoomInfo,,,0,15,https://www.zoominfo.com/products/gtm-studio,company-page-hint,Public company careers page match
+Business Development,Honeywell,,,0,0,https://careers.honeywell.com/en/sites/HoneywellCareerSite/pages/business-development,company-page-hint,Public company careers page match
+Build pipeline,HubSpot,,,0,0,https://www.hubspot.com/use-case/build-sales-pipeline,company-page-hint,Public company careers page match
+GTM Workspace New AI workspace for smarter GTM,ZoomInfo,,,0,0,https://www.zoominfo.com/gtm-workspace,company-page-hint,Public company careers page match
+GTM Studio New Build and run GTM workflows triggered by buying signals,ZoomInfo,,,0,0,https://www.zoominfo.com/products/gtm-studio,company-page-hint,Public company careers page match
+Data as a Service ZoomInfo data for your GTM systems,ZoomInfo,,,0,0,https://www.zoominfo.com/products/data-as-a-service,company-page-hint,Public company careers page match
+Lead generation Convert contacts into pipeline,ZoomInfo,,,0,0,https://www.zoominfo.com/solutions/lead-generation,company-page-hint,Public company careers page match
+Website visitor tracking Turn page views into pipeline,ZoomInfo,,,0,0,https://www.zoominfo.com/features/identify-website-visitors,company-page-hint,Public company careers page match
+GTM plays,ZoomInfo,,,0,0,https://www.zoominfo.com/plays,company-page-hint,Public company careers page match
+GTM AI,ZoomInfo,,,0,0,https://www.zoominfo.com/solutions/gtm-ai,company-page-hint,Public company careers page match
+GTM Community,ZoomInfo,,,0,0,https://www.zoominfo.com/offers/join-gtm-community,company-page-hint,Public company careers page match

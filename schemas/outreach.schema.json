@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "outreach",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "required": ["company", "contact_name", "channel", "message", "angle", "confidence"],
+    "properties": {
+      "company": {"type": "string", "minLength": 1},
+      "contact_name": {"type": "string", "minLength": 1},
+      "channel": {"type": "string", "enum": ["linkedin", "email"]},
+      "subject": {"type": "string"},
+      "message": {"type": "string", "minLength": 1},
+      "angle": {"type": "string", "minLength": 1},
+      "confidence": {"type": "integer", "minimum": 0, "maximum": 100}
+    },
+    "allOf": [
+      {
+        "if": {"properties": {"channel": {"const": "email"}}},
+        "then": {"required": ["subject"]}
+      }
+    ],
+    "additionalProperties": false
+  }
+}

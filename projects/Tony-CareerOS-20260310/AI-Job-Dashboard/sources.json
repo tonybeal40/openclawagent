@@ -1,0 +1,83 @@
+{
+  "requestTimeoutSeconds": 20,
+  "delayMilliseconds": 1200,
+  "outputPath": ".\\scrape-output.json",
+  "userAgent": "AI-Job-Command-Center/1.0 (+local research workflow)",
+  "sources": [
+    {
+      "company": "Origami Robotics",
+      "enabled": true,
+      "kind": "homepage",
+      "url": "https://origami-robotics.com",
+      "allowedHosts": [
+        "origami-robotics.com",
+        "www.origami-robotics.com"
+      ],
+      "jobsUrl": "https://origami-robotics.com/careers",
+      "notes": "Public company homepage and careers page only."
+    },
+    {
+      "company": "Carrot Labs",
+      "enabled": false,
+      "kind": "homepage",
+      "url": "",
+      "allowedHosts": [],
+      "jobsUrl": "",
+      "notes": "Fill in when the correct public company site is identified."
+    },
+    {
+      "company": "Arga Labs",
+      "enabled": false,
+      "kind": "homepage",
+      "url": "",
+      "allowedHosts": [],
+      "jobsUrl": "",
+      "notes": "Fill in once public target URLs are confirmed."
+    },
+    {
+      "company": "Unifold",
+      "enabled": false,
+      "kind": "homepage",
+      "url": "",
+      "allowedHosts": [],
+      "jobsUrl": "",
+      "notes": "Public pages only."
+    },
+    {
+      "company": "Rubric AI",
+      "enabled": false,
+      "kind": "homepage",
+      "url": "",
+      "allowedHosts": [],
+      "jobsUrl": "",
+      "notes": "Public pages only."
+    },
+    {
+      "company": "GrazeMate",
+      "enabled": false,
+      "kind": "homepage",
+      "url": "",
+      "allowedHosts": [],
+      "jobsUrl": "",
+      "notes": "Public pages only."
+    },
+    {
+      "company": "Aurorin CAD",
+      "enabled": false,
+      "kind": "homepage",
+      "url": "",
+      "allowedHosts": [],
+      "jobsUrl": "",
+      "notes": "Public pages only."
+    },
+    {
+      "company": "Librar Labs",
+      "enabled": false,
+      "kind": "homepage",
+      "url": "",
+      "allowedHosts": [],
+      "jobsUrl": "",
+      "notes": "Public pages only."
+    }
+  ]
+}

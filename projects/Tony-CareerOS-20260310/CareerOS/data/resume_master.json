@@ -1,0 +1,33 @@
+{
+  "candidate": "Tony Beal",
+  "resume_sources": [
+    {
+      "label": "Business Development & Revenue Systems",
+      "path": "C:\\Users\\tonyb\\OneDrive\\Desktop\\Tony Beal _ Business Development & Revenue Systems.pdf",
+      "status": "identified"
+    },
+    {
+      "label": "Granicus SalesOps Resume",
+      "path": "C:\\Users\\tonyb\\Downloads\\Tony_Beal_Granicus_SalesOps_Resume.pdf",
+      "status": "identified"
+    }
+  ],
+  "base_summary": "Revenue operations and business development leader with 15+ years building pipeline, sales visibility, and commercial systems across B2B manufacturing, industrial, pharma, and enterprise environments.",
+  "tool_stack": [
+    "LinkedIn Sales Navigator",
+    "Apollo.io",
+    "Salesforce",
+    "HubSpot",
+    "Monday.com",
+    "Excel analytics",
+    "CRM dashboards",
+    "AI workflow automation"
+  ],
+  "priority_variants": [
+    "Revenue Operations Manager",
+    "Sales Operations Manager",
+    "Business Development Director",
+    "GTM Strategy",
+    "AI-Enabled Sales Systems Builder"
+  ]
+}

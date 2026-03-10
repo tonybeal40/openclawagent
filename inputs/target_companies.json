@@ -1,0 +1,22 @@
+[
+  {"company":"Danaher","tier":"industrial_manufacturing"},
+  {"company":"Thermo Fisher Scientific","tier":"industrial_manufacturing"},
+  {"company":"Emerson Electric","tier":"industrial_manufacturing"},
+  {"company":"Parker Hannifin","tier":"industrial_manufacturing"},
+  {"company":"Honeywell","tier":"industrial_manufacturing"},
+  {"company":"Siemens","tier":"industrial_manufacturing"},
+  {"company":"GE Healthcare","tier":"industrial_manufacturing"},
+  {"company":"3M","tier":"industrial_manufacturing"},
+  {"company":"HubSpot","tier":"growth_saas_gtm"},
+  {"company":"Apollo.io","tier":"growth_saas_gtm"},
+  {"company":"ZoomInfo","tier":"growth_saas_gtm"},
+  {"company":"Rippling","tier":"growth_saas_gtm"},
+  {"company":"Ramp","tier":"growth_saas_gtm"},
+  {"company":"Monday.com","tier":"growth_saas_gtm"},
+  {"company":"Snowflake","tier":"growth_saas_gtm"},
+  {"company":"Databricks","tier":"growth_saas_gtm"},
+  {"company":"Anthropic","tier":"ai_data"},
+  {"company":"Perplexity","tier":"ai_data"},
+  {"company":"Scale AI","tier":"ai_data"},
+  {"company":"OpenAI ecosystem startups","tier":"ai_data"}
+]

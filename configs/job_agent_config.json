@@ -1,0 +1,209 @@
+﻿{
+    "owner":  "Tony Beal",
+    "priority":  {
+                     "objective":  "Job acquisition pipeline for RevOps/Sales Ops/GTM systems roles"
+                 },
+    "sources":  {
+                    "tier1":  [
+                                  "linkedin.com/jobs",
+                                  "indeed.com",
+                                  "greenhouse.io",
+                                  "lever.co",
+                                  "wellfound.com",
+                                  "builtin.com",
+                                  "ycombinator.com/jobs",
+                                  "company_career_pages"
+                              ],
+                    "tier2":  [
+                                  "ziprecruiter.com",
+                                  "workable.com",
+                                  "ashbyhq.com",
+                                  "jobvite.com"
+                              ],
+                    "priority_order":  [
+                                           "company_career_pages",
+                                           "linkedin_jobs",
+                                           "indeed",
+                                           "ats_greenhouse_lever"
+                                       ],
+                    "include_public_job_boards":  true
+                },
+    "companies":  {
+                      "tier1_industrial_manufacturing":  [
+                                                             "Danaher",
+                                                             "Thermo Fisher Scientific",
+                                                             "Emerson Electric",
+                                                             "Parker Hannifin",
+                                                             "Honeywell",
+                                                             "Siemens",
+                                                             "GE Healthcare",
+                                                             "3M"
+                                                         ],
+                      "tier1_growth_saas_gtm":  [
+                                                    "HubSpot",
+                                                    "Apollo.io",
+                                                    "ZoomInfo",
+                                                    "Rippling",
+                                                    "Ramp",
+                                                    "Monday.com",
+                                                    "Snowflake",
+                                                    "Databricks"
+                                                ],
+                      "tier1_ai_data":  [
+                                            "Anthropic",
+                                            "Perplexity",
+                                            "Scale AI",
+                                            "OpenAI ecosystem startups"
+                                        ],
+                      "fast_path_companies":  [
+                                                  "Danaher",
+                                                  "Thermo Fisher",
+                                                  "Emerson Electric",
+                                                  "Parker Hannifin",
+                                                  "Honeywell",
+                                                  "HubSpot",
+                                                  "Apollo.io",
+                                                  "ZoomInfo"
+                                              ]
+                  },
+    "keywords":  {
+                     "include":  [
+                                     "revenue operations",
+                                     "revops",
+                                     "sales operations",
+                                     "sales ops manager",
+                                     "revenue operations manager",
+                                     "sales operations manager",
+                                     "go to market",
+                                     "gtm strategy",
+                                     "pipeline strategy",
+                                     "sales strategy",
+                                     "sales enablement",
+                                     "growth operations",
+                                     "business development director",
+                                     "business development manager",
+                                     "sales analytics",
+                                     "sales systems",
+                                     "crm operations",
+                                     "sales automation"
+                                 ],
+                     "exclude":  [
+                                     "sdr",
+                                     "bdr",
+                                     "inside sales",
+                                     "account executive",
+                                     "retail",
+                                     "consumer sales",
+                                     "insurance",
+                                     "solar",
+                                     "real estate",
+                                     "car sales",
+                                     "call center",
+                                     "commission only",
+                                     "door to door"
+                                 ],
+                     "fast_path_include":  [
+                                               "revenue operations",
+                                               "sales operations",
+                                               "revops",
+                                               "gtm strategy",
+                                               "pipeline strategy",
+                                               "sales enablement",
+                                               "business development director"
+                                           ],
+                     "fast_path_exclude":  [
+                                               "sdr",
+                                               "bdr",
+                                               "account executive",
+                                               "retail",
+                                               "insurance",
+                                               "solar",
+                                               "commission only"
+                                           ]
+                 },
+    "contact_scraping":  {
+                             "allowed":  [
+                                             "company_team_pages",
+                                             "company_leadership_pages",
+                                             "press_releases",
+                                             "investor_relations_pages",
+                                             "public_employee_directories",
+                                             "linkedin_public_profiles"
+                                         ],
+                             "disallowed":  [
+                                                "paywalled_databases",
+                                                "private_contact_lists"
+                                            ],
+                             "store_raw_html_snapshots":  true,
+                             "snapshot_purpose":  [
+                                                      "debugging",
+                                                      "parser_improvements",
+                                                      "audit_trail"
+                                                  ]
+                         },
+    "outputs":  {
+                    "daily_digest_plus_dashboard":  true,
+                    "files":  [
+                                  "daily_jobs.json",
+                                  "daily_companies.json",
+                                  "daily_outreach_targets.json",
+                                  "daily_contacts.json"
+                              ],
+                    "email_digest":  true,
+                    "email_to":  "tonybeal40@gmail.com"
+                },
+    "ranking":  {
+                    "outreach_targets_without_open_jobs_can_rank_higher":  true,
+                    "signals":  [
+                                    "hiring SDRs",
+                                    "hiring AEs",
+                                    "hiring marketing ops",
+                                    "new funding",
+                                    "expanding sales team"
+                                ]
+                },
+    "constraints":  {
+                        "max_travel_percent":  30,
+                        "compensation":  {
+                                             "excellent_fit":  "$120K-$200K+",
+                                             "acceptable_fit":  "$95K-$120K",
+                                             "exclude_below":  "$90K"
+                                         }
+                    },
+    "resume":  {
+                   "base_resume":  "Tony Beal â€“ Business Development \u0026 Revenue Systems.pdf",
+                   "create_variants":  true,
+                   "variants":  [
+                                    "RevOps / Sales Ops",
+                                    "Business Development Director",
+                                    "GTM Systems / AI-enabled growth"
+                                ],
+                   "de_emphasize":  [
+                                        "Retail or consumer sales",
+                                        "Early career tactical sales roles"
+                                    ],
+                   "emphasize":  [
+                                     "AI-driven prospecting",
+                                     "RevOps systems",
+                                     "Pipeline analytics",
+                                     "CRM workflow design",
+                                     "Strategic outbound"
+                                 ]
+               },
+    "operations":  {
+                       "scraping_aggression":  "low_rate_compliant_public_only",
+                       "schedule":  {
+                                        "time":  "06:30",
+                                        "timezone":  "America/Chicago"
+                                    },
+                       "domain_control_lists":  true,
+                       "lists":  [
+                                     "approved_domains",
+                                     "blocked_domains"
+                                 ]
+                   },
+    "prompt":  {
+                   "wrapperPath":  "workspace-prompts/DEFAULT_PROMPT_WRAPPER.md",
+                   "defaultStyle":  "albert-solid-output"
+               }
+}

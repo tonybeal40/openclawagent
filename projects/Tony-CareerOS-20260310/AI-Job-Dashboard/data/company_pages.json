@@ -1,0 +1,114 @@
+[
+  {
+    "company": "Danaher",
+    "url": "https://jobs.danaher.com/global/en",
+    "snapshot": "",
+    "title": "",
+    "metaDescription": "",
+    "error": "<urlopen error [WinError 10013] An attempt was made to access a socket in a way forbidden by its access permissions>"
+  },
+  {
+    "company": "Thermo Fisher Scientific",
+    "url": "https://jobs.thermofisher.com",
+    "snapshot": "",
+    "title": "",
+    "metaDescription": "",
+    "error": "<urlopen error [WinError 10013] An attempt was made to access a socket in a way forbidden by its access permissions>"
+  },
+  {
+    "company": "Emerson Electric",
+    "url": "https://www.emerson.com/en-us/careers",
+    "snapshot": "",
+    "title": "",
+    "metaDescription": "",
+    "error": "<urlopen error [WinError 10013] An attempt was made to access a socket in a way forbidden by its access permissions>"
+  },
+  {
+    "company": "Parker Hannifin",
+    "url": "https://www.parker.com/us/en/careers.html",
+    "snapshot": "",
+    "title": "",
+    "metaDescription": "",
+    "error": "<urlopen error [WinError 10013] An attempt was made to access a socket in a way forbidden by its access permissions>"
+  },
+  {
+    "company": "Honeywell",
+    "url": "https://careers.honeywell.com",
+    "snapshot": "",
+    "title": "",
+    "metaDescription": "",
+    "error": "<urlopen error [WinError 10013] An attempt was made to access a socket in a way forbidden by its access permissions>"
+  },
+  {
+    "company": "GE Healthcare",
+    "url": "https://careers.gehealthcare.com",
+    "snapshot": "",
+    "title": "",
+    "metaDescription": "",
+    "error": "<urlopen error [WinError 10013] An attempt was made to access a socket in a way forbidden by its access permissions>"
+  },
+  {
+    "company": "3M",
+    "url": "https://www.3m.com/3M/en_US/careers-us/",
+    "snapshot": "",
+    "title": "",
+    "metaDescription": "",
+    "error": "<urlopen error [WinError 10013] An attempt was made to access a socket in a way forbidden by its access permissions>"
+  },
+  {
+    "company": "Siemens",
+    "url": "https://www.siemens.com/global/en/home/company/jobs.html",
+    "snapshot": "",
+    "title": "",
+    "metaDescription": "",
+    "error": "<urlopen error [WinError 10013] An attempt was made to access a socket in a way forbidden by its access permissions>"
+  },
+  {
+    "company": "HubSpot",
+    "url": "https://www.hubspot.com/careers",
+    "snapshot": "",
+    "title": "",
+    "metaDescription": "",
+    "error": "<urlopen error [WinError 10013] An attempt was made to access a socket in a way forbidden by its access permissions>"
+  },
+  {
+    "company": "Apollo.io",
+    "url": "https://www.apollo.io/careers",
+    "snapshot": "",
+    "title": "",
+    "metaDescription": "",
+    "error": "<urlopen error [WinError 10013] An attempt was made to access a socket in a way forbidden by its access permissions>"
+  },
+  {
+    "company": "ZoomInfo",
+    "url": "https://www.zoominfo.com/company/careers",
+    "snapshot": "",
+    "title": "",
+    "metaDescription": "",
+    "error": "<urlopen error [WinError 10013] An attempt was made to access a socket in a way forbidden by its access permissions>"
+  },
+  {
+    "company": "Ramp",
+    "url": "https://ramp.com/careers",
+    "snapshot": "",
+    "title": "",
+    "metaDescription": "",
+    "error": "<urlopen error [WinError 10013] An attempt was made to access a socket in a way forbidden by its access permissions>"
+  },
+  {
+    "company": "Rippling",
+    "url": "https://www.rippling.com/careers",
+    "snapshot": "",
+    "title": "",
+    "metaDescription": "",
+    "error": "<urlopen error [WinError 10013] An attempt was made to access a socket in a way forbidden by its access permissions>"
+  },
+  {
+    "company": "Monday.com",
+    "url": "https://monday.com/careers",
+    "snapshot": "",
+    "title": "",
+    "metaDescription": "",
+    "error": "<urlopen error [WinError 10013] An attempt was made to access a socket in a way forbidden by its access permissions>"
+  }
+]

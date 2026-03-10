@@ -1,0 +1,119 @@
+{
+  "candidate": {
+    "name": "Tony Beal",
+    "headline": "Sales and RevOps leader focused on B2B pipeline strategy, AI-assisted lead generation, and revenue systems",
+    "location_preferences": [
+      "Remote",
+      "Hybrid",
+      "St. Louis",
+      "Chicago"
+    ],
+    "travel_tolerance_percent": 30,
+    "minimum_base_salary": 90000,
+    "target_base_salary_min": 100000,
+    "target_base_salary_max": 140000,
+    "open_to": [
+      "Remote US",
+      "Greater St. Louis",
+      "Chicago"
+    ]
+  },
+  "summary": {
+    "years_experience": 15,
+    "pipeline_value_created": 6000000,
+    "accounts_generated": 3700,
+    "customers_acquired": 1000,
+    "linkedin_followers": 11000,
+    "core_advantage": "Builds the system that runs sales: outbound design, CRM visibility, targeting, analytics, and AI-assisted workflows."
+  },
+  "priority_roles": [
+    "Revenue Operations Manager",
+    "Sales Operations Manager",
+    "GTM Strategy",
+    "Pipeline Strategy",
+    "Business Development Director",
+    "AI-Enabled Sales Systems Builder",
+    "Technical Business Development",
+    "Growth Systems Architect"
+  ],
+  "secondary_roles": [
+    "Partnerships Manager",
+    "Founder Associate",
+    "Marketing Operations",
+    "Product Marketing",
+    "Sales Enablement Manager",
+    "Sales Strategy Consultant"
+  ],
+  "excluded_roles": [
+    "SDR",
+    "BDR",
+    "Junior",
+    "Entry Level",
+    "Pure Account Executive",
+    "Commission Only"
+  ],
+  "preferred_industries": [
+    "Industrial Manufacturing",
+    "Pharmaceutical Manufacturing",
+    "Nutraceutical Manufacturing",
+    "Industrial Equipment",
+    "B2B Industrial Supply Chains",
+    "Sales Technology",
+    "AI Software",
+    "CRM Platforms",
+    "Industrial SaaS",
+    "Robotics",
+    "Automation",
+    "AI Infrastructure",
+    "Developer Tools",
+    "Data Platforms"
+  ],
+  "core_skills": [
+    "Sales Pipeline Management",
+    "Pipeline Analytics",
+    "CRM Workflow Design",
+    "Salesforce",
+    "HubSpot",
+    "Monday.com",
+    "Lead Generation",
+    "Multi-Channel Prospecting",
+    "LinkedIn Sales Navigator",
+    "Apollo.io",
+    "AI Workflow Automation",
+    "Messaging and Positioning",
+    "StoryBrand",
+    "Sales Reporting",
+    "KPI Tracking",
+    "Territory Segmentation",
+    "Whitespace Analysis",
+    "Team Coaching"
+  ],
+  "hard_nos": [
+    "Commission-only",
+    "Relocation required",
+    "Onsite-only",
+    "Pre-revenue startup",
+    "Consumer-only",
+    "Low compensation"
+  ],
+  "approved_sources": [
+    "Company career pages",
+    "Company leadership pages",
+    "LinkedIn Jobs",
+    "Indeed",
+    "Glassdoor",
+    "ZipRecruiter",
+    "Wellfound",
+    "Greenhouse",
+    "Lever"
+  ],
+  "score_signals": {
+    "role_match": 30,
+    "industry_match": 25,
+    "location_match": 15,
+    "revops_maturity_gap": 15,
+    "hiring_signal": 10,
+    "systems_fit": 15,
+    "salary_match": 10
+  }
+}

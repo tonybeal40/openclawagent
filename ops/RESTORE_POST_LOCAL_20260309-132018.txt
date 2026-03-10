@@ -1,0 +1,13 @@
+
+Name                 FullName                                                        
+----                 --------                                                        
+dinner-app           C:\Users\tonyb\.openclaw\workspace\projects\dinner-app          
+marketing-genius     C:\Users\tonyb\.openclaw\workspace\projects\marketing-genius    
+replit-standalone    C:\Users\tonyb\.openclaw\workspace\projects\replit-standalone   
+replit-standalone-ui C:\Users\tonyb\.openclaw\workspace\projects\replit-standalone-ui
+swing-analysis       C:\Users\tonyb\.openclaw\workspace\projects\swing-analysis      
+swing-analyzer       C:\Users\tonyb\.openclaw\workspace\projects\swing-analyzer      
+TonyOS               C:\Users\tonyb\.openclaw\workspace\projects\TonyOS              
+
+
+

@@ -1,0 +1,16 @@
+{
+  "version": 1,
+  "executionId": "demo-inline",
+  "rootDir": "./runs/demo-inline-project",
+  "files": [
+    {
+      "path": "README.md",
+      "content": "# Demo inline bundle\nGenerated via sidecar bridge inline payload.\n",
+      "bytes": 61
+    }
+  ],
+  "commands": [
+    "npm install",
+    "npm run dev"
+  ]
+}

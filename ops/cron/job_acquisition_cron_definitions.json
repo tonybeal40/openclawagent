@@ -1,0 +1,37 @@
+{
+  "jobs": [
+    {
+      "name": "morning-job-acquisition-0630",
+      "schedule": { "kind": "cron", "expr": "30 6 * * *", "tz": "America/Chicago" },
+      "sessionTarget": "main",
+      "payload": {
+        "kind": "systemEvent",
+        "text": "Reminder: Run job acquisition production pipeline now. Generate roles/companies/contacts/outreach artifacts, enforce schema validation, and publish morning_job_pipeline report."
+      },
+      "delivery": { "mode": "none" },
+      "enabled": true
+    },
+    {
+      "name": "midday-followup-1230",
+      "schedule": { "kind": "cron", "expr": "30 12 * * *", "tz": "America/Chicago" },
+      "sessionTarget": "main",
+      "payload": {
+        "kind": "systemEvent",
+        "text": "Reminder: Run follow-up cycle now (3/7/14 day contacts), update outreach history, and publish followups_today artifact."
+      },
+      "delivery": { "mode": "none" },
+      "enabled": true
+    },
+    {
+      "name": "evening-qa-ledger-1830",
+      "schedule": { "kind": "cron", "expr": "30 18 * * *", "tz": "America/Chicago" },
+      "sessionTarget": "main",
+      "payload": {
+        "kind": "systemEvent",
+        "text": "Reminder: Run mission-control QA check. Verify artifact existence + schema evidence, append artifact_ledger entry, and flag NO_ARTIFACTS_CREATED or STAGNATION_ALERT when required."
+      },
+      "delivery": { "mode": "none" },
+      "enabled": true
+    }
+  ]
+}

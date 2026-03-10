@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "self_audit",
+  "type": "object",
+  "required": ["agent", "input_evidence", "output_evidence", "schema_validation", "thresholds", "skips", "largest_constraint", "next_step"],
+  "properties": {
+    "agent": {"type": "string"},
+    "input_evidence": {"type": "array"},
+    "output_evidence": {"type": "array"},
+    "schema_validation": {"type": "array"},
+    "thresholds": {"type": "array"},
+    "skips": {"type": "array"},
+    "largest_constraint": {"type": "string"},
+    "next_step": {
+      "type": "object",
+      "required": ["action", "expected_artifact"],
+      "properties": {
+        "action": {"type": "string"},
+        "expected_artifact": {"type": "string"}
+      },
+      "additionalProperties": false
+    }
+  },
+  "additionalProperties": true
+}

@@ -1,0 +1,54 @@
+{
+  "name": "Tony Beal",
+  "profileUrl": "https://www.linkedin.com/in/tony-beal40/",
+  "headlineScore": 8.9,
+  "followerCount": 10767,
+  "connectionCount": 500,
+  "profileViews": 1367,
+  "postImpressions": 3356,
+  "searchAppearances": 228,
+  "followersLabel": "10,767 followers",
+  "connectionsLabel": "500+ connections",
+  "rolesOpenTo": [
+    "Director of Business Development",
+    "Business Development Manager",
+    "Revenue Operations Specialist",
+    "Strategic Account Executive",
+    "Enterprise Account Executive"
+  ],
+  "strengths": [
+    "Credible industrial and manufacturing positioning",
+    "Strong systems-thinking narrative around pipeline and RevOps",
+    "Visible proof of recent AI and revenue operations content",
+    "High follower base for a niche B2B operator profile"
+  ],
+  "gaps": [
+    "Headline still underplays Sales Navigator and systems-builder edge",
+    "Profile should bias more toward RevOps/GTM systems over generic sales language",
+    "Featured section needs stronger case-study and quantified systems wins"
+  ],
+  "headlineRewrite": "Revenue Operations Manager | Sales Ops & Pipeline Systems | AI-Enabled GTM Builder | Sales Navigator & Apollo Expert | B2B Manufacturing",
+  "aboutRewrite": "Revenue operations and business development leader with 15+ years building pipeline, commercial visibility, and strategic account growth across B2B manufacturing, industrial markets, and enterprise sales environments. I do my best work where companies need more than another seller. I build the system that helps sales work: targeting, territory logic, CRM workflow, outbound structure, reporting, and pipeline discipline. My background includes 3,700+ accounts generated, 1,000+ customers acquired, and $6M in outbound pipeline creation. I bring a practical operating mix of Sales Navigator targeting, Apollo prospect intelligence, CRM process design, and AI-assisted research workflows. I’m focused on Revenue Operations Manager, Sales Operations Manager, GTM Strategy, Pipeline Strategy, Business Development Director, and AI-enabled sales systems roles, with strongest fit in industrial manufacturing, pharma and nutraceutical manufacturing, industrial equipment, industrial SaaS, and sales technology.",
+  "recommendations": [
+    {
+      "label": "Authority",
+      "value": "Strong",
+      "detail": "Your follower base, recommendations, and posts create clear credibility in your niche."
+    },
+    {
+      "label": "Positioning",
+      "value": "Needs tightening",
+      "detail": "Lead harder with systems, RevOps, and GTM infrastructure instead of broad sales framing."
+    },
+    {
+      "label": "Content",
+      "value": "Working",
+      "detail": "Your posts align with manufacturing, pipeline, and commercial systems. Keep that lane."
+    },
+    {
+      "label": "Conversion",
+      "value": "Under-optimized",
+      "detail": "The profile is attracting attention, but it can convert better into recruiter and founder conversations."
+    }
+  ]
+}

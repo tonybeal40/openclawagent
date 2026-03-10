@@ -1,0 +1,46 @@
+name: OpenClaw Maintenance
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '30 12 * * *' # 7:30 AM America/Chicago (approx, adjust for DST manually)
+
+jobs:
+  maintenance:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Run memory extraction if script exists
+        run: |
+          if [ -f scripts/pull_chat_memory.py ]; then
+            python scripts/pull_chat_memory.py || true
+          else
+            echo "scripts/pull_chat_memory.py not found; skipping"
+          fi
+
+      - name: Build profile if script exists
+        run: |
+          if [ -f scripts/build_tony_profile.py ]; then
+            python scripts/build_tony_profile.py || true
+          else
+            echo "scripts/build_tony_profile.py not found; skipping"
+          fi
+
+      - name: Commit generated artifacts
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "chore: automated maintenance refresh"
+            git push
+          fi

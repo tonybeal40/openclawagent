@@ -1,0 +1,148 @@
+[
+  {
+    "company": "HubSpot",
+    "signal_score": 5,
+    "signals": [
+      "sales team",
+      "growing sales team"
+    ],
+    "predicted_need": "Revenue Operations",
+    "probable_hiring_manager": "VP Revenue Operations",
+    "recommended_outreach_target": "VP Sales",
+    "confidence": "medium",
+    "recommended_action": "outreach"
+  },
+  {
+    "company": "Apollo.io",
+    "signal_score": 5,
+    "signals": [
+      "sales team",
+      "growing sales team"
+    ],
+    "predicted_need": "Revenue Operations",
+    "probable_hiring_manager": "VP Revenue Operations",
+    "recommended_outreach_target": "VP Sales",
+    "confidence": "medium",
+    "recommended_action": "outreach"
+  },
+  {
+    "company": "Danaher",
+    "signal_score": 1,
+    "signals": [],
+    "predicted_need": "Revenue Operations",
+    "probable_hiring_manager": "VP Revenue Operations",
+    "recommended_outreach_target": "VP Sales",
+    "confidence": "low",
+    "recommended_action": "monitor"
+  },
+  {
+    "company": "3M",
+    "signal_score": 1,
+    "signals": [],
+    "predicted_need": "Revenue Operations",
+    "probable_hiring_manager": "VP Revenue Operations",
+    "recommended_outreach_target": "VP Sales",
+    "confidence": "low",
+    "recommended_action": "monitor"
+  },
+  {
+    "company": "Siemens",
+    "signal_score": 1,
+    "signals": [],
+    "predicted_need": "Revenue Operations",
+    "probable_hiring_manager": "VP Revenue Operations",
+    "recommended_outreach_target": "VP Sales",
+    "confidence": "low",
+    "recommended_action": "monitor"
+  },
+  {
+    "company": "Monday.com",
+    "signal_score": 1,
+    "signals": [],
+    "predicted_need": "Revenue Operations",
+    "probable_hiring_manager": "VP Revenue Operations",
+    "recommended_outreach_target": "VP Sales",
+    "confidence": "low",
+    "recommended_action": "monitor"
+  },
+  {
+    "company": "Thermo Fisher Scientific",
+    "signal_score": 1,
+    "signals": [],
+    "predicted_need": "Revenue Operations",
+    "probable_hiring_manager": "VP Revenue Operations",
+    "recommended_outreach_target": "VP Sales",
+    "confidence": "low",
+    "recommended_action": "monitor"
+  },
+  {
+    "company": "Emerson Electric",
+    "signal_score": 1,
+    "signals": [],
+    "predicted_need": "Revenue Operations",
+    "probable_hiring_manager": "VP Revenue Operations",
+    "recommended_outreach_target": "VP Sales",
+    "confidence": "low",
+    "recommended_action": "monitor"
+  },
+  {
+    "company": "Parker Hannifin",
+    "signal_score": 1,
+    "signals": [],
+    "predicted_need": "Revenue Operations",
+    "probable_hiring_manager": "VP Revenue Operations",
+    "recommended_outreach_target": "VP Sales",
+    "confidence": "low",
+    "recommended_action": "monitor"
+  },
+  {
+    "company": "Honeywell",
+    "signal_score": 1,
+    "signals": [],
+    "predicted_need": "Revenue Operations",
+    "probable_hiring_manager": "VP Revenue Operations",
+    "recommended_outreach_target": "VP Sales",
+    "confidence": "low",
+    "recommended_action": "monitor"
+  },
+  {
+    "company": "GE Healthcare",
+    "signal_score": 1,
+    "signals": [],
+    "predicted_need": "Revenue Operations",
+    "probable_hiring_manager": "VP Revenue Operations",
+    "recommended_outreach_target": "VP Sales",
+    "confidence": "low",
+    "recommended_action": "monitor"
+  },
+  {
+    "company": "ZoomInfo",
+    "signal_score": 1,
+    "signals": [],
+    "predicted_need": "Revenue Operations",
+    "probable_hiring_manager": "VP Revenue Operations",
+    "recommended_outreach_target": "VP Sales",
+    "confidence": "low",
+    "recommended_action": "monitor"
+  },
+  {
+    "company": "Ramp",
+    "signal_score": 1,
+    "signals": [],
+    "predicted_need": "Revenue Operations",
+    "probable_hiring_manager": "VP Revenue Operations",
+    "recommended_outreach_target": "VP Sales",
+    "confidence": "low",
+    "recommended_action": "monitor"
+  },
+  {
+    "company": "Rippling",
+    "signal_score": 1,
+    "signals": [],
+    "predicted_need": "Revenue Operations",
+    "probable_hiring_manager": "VP Revenue Operations",
+    "recommended_outreach_target": "VP Sales",
+    "confidence": "low",
+    "recommended_action": "monitor"
+  }
+]

@@ -1,0 +1,7 @@
+{
+  "company": "memory/companies.json",
+  "person": "memory/people.json",
+  "job": "memory/jobs.json",
+  "signal": "memory/signals.json",
+  "relationship": "memory/relationships.json"
+}

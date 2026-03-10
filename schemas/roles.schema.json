@@ -1,0 +1,17 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "roles",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "required": ["company", "job_title", "location", "job_url", "relevance_score"],
+    "properties": {
+      "company": {"type": "string", "minLength": 1},
+      "job_title": {"type": "string", "minLength": 1},
+      "location": {"type": "string", "minLength": 1},
+      "job_url": {"type": "string", "minLength": 1},
+      "relevance_score": {"type": "integer", "minimum": 0, "maximum": 100}
+    },
+    "additionalProperties": false
+  }
+}

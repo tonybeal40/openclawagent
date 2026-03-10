@@ -1,0 +1,41 @@
+
+Name                  FullName                                                 
+----                  --------                                                 
+.openclaw             G:\My Drive\openclaw-workspace-main\.openclaw            
+.pi                   G:\My Drive\openclaw-workspace-main\.pi                  
+archive               G:\My Drive\openclaw-workspace-main\archive              
+deliverables          G:\My Drive\openclaw-workspace-main\deliverables         
+inbox                 G:\My Drive\openclaw-workspace-main\inbox                
+logs                  G:\My Drive\openclaw-workspace-main\logs                 
+memory                G:\My Drive\openclaw-workspace-main\memory               
+ops                   G:\My Drive\openclaw-workspace-main\ops                  
+projects              G:\My Drive\openclaw-workspace-main\projects             
+reference             G:\My Drive\openclaw-workspace-main\reference            
+scripts               G:\My Drive\openclaw-workspace-main\scripts              
+.git                  G:\My Drive\openclaw-workspace-main\.git                 
+swing-analyzer-update G:\My Drive\openclaw-workspace-main\swing-analyzer-update
+swing-analyzer        G:\My Drive\openclaw-workspace-main\swing-analyzer       
+tonybeal-site         G:\My Drive\openclaw-workspace-main\tonybeal-site        
+TonyOS                G:\My Drive\openclaw-workspace-main\TonyOS               
+trends                G:\My Drive\openclaw-workspace-main\trends               
+tony-os               G:\My Drive\openclaw-workspace-main\tony-os              
+replit-standalone-ui  G:\My Drive\openclaw-workspace-main\replit-standalone-ui 
+_ARCHIVE              G:\My Drive\openclaw-workspace-main\_ARCHIVE             
+tonyos-extracted      G:\My Drive\openclaw-workspace-main\tonyos-extracted     
+swing-analysis        G:\My Drive\openclaw-workspace-main\swing-analysis       
+linkedin-background   G:\My Drive\openclaw-workspace-main\linkedin-background  
+auto-scanner          G:\My Drive\openclaw-workspace-main\auto-scanner         
+mcp-web-local         G:\My Drive\openclaw-workspace-main\mcp-web-local        
+extracted_memory      G:\My Drive\openclaw-workspace-main\extracted_memory     
+dinner-app            G:\My Drive\openclaw-workspace-main\dinner-app           
+reflections           G:\My Drive\openclaw-workspace-main\reflections          
+docs                  G:\My Drive\openclaw-workspace-main\docs                 
+chat-archive-book     G:\My Drive\openclaw-workspace-main\chat-archive-book    
+interview-kit-factur  G:\My Drive\openclaw-workspace-main\interview-kit-factur 
+marketing-genius      G:\My Drive\openclaw-workspace-main\marketing-genius     
+mcp-site-intelligence G:\My Drive\openclaw-workspace-main\mcp-site-intelligence
+replit-standalone     G:\My Drive\openclaw-workspace-main\replit-standalone    
+integrations          G:\My Drive\openclaw-workspace-main\integrations         
+
+
+

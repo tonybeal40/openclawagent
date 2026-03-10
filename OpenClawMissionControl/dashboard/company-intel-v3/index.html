@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Company Intel Dashboard V3</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div>
+      <h1>Company Intel Dashboard V3</h1>
+      <p>Evaluate fit, risk, reviews, and outreach plan in one view.</p>
+    </div>
+    <div class="controls">
+      <input id="q" placeholder="Search company or role..." />
+      <select id="verdictFilter">
+        <option value="all">All Verdicts</option>
+        <option value="GO">GO</option>
+        <option value="MAYBE">MAYBE</option>
+        <option value="SKIP">SKIP</option>
+      </select>
+      <button id="saveBtn">Save Local Notes</button>
+    </div>
+  </header>
+
+  <section class="stats" id="stats"></section>
+  <main id="grid" class="grid"></main>
+
+  <script src="app.js"></script>
+</body>
+</html>

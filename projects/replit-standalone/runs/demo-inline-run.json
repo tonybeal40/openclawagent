@@ -1,0 +1,6 @@
+{
+  "bundleJson": "{\n  \"version\": 1,\n  \"executionId\": \"demo-inline\",\n  \"rootDir\": \"./runs/demo-inline-project\",\n  \"files\": [\n    {\n      \"path\": \"README.md\",\n      \"content\": \"# Demo inline bundle\\nGenerated via sidecar bridge inline payload.\\n\",\n      \"bytes\": 61\n    }\n  ],\n  \"commands\": [\"npm install\", \"npm run dev\"]\n}",
+  "out": "runs/latest-events.jsonl",
+  "dryRun": true,
+  "timeoutMs": 5000
+}

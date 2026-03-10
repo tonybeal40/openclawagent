@@ -1,0 +1,19 @@
+# OpenClaw big/volatile artifacts
+archive/
+ops/deep-recovery-*/
+**/extracted/**
+*.zip
+*.jsonl
+*.jsonl.*
+recovery-memory-export.json
+
+# Large generated outputs
+outputs/
+_tmp_*/
+**/*.log
+
+# Keep memory/docs/scripts tracked
+!MEMORY.md
+!memory/
+!runbooks/
+!scripts/

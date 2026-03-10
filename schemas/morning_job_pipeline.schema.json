@@ -1,0 +1,47 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "morning_job_pipeline",
+  "type": "object",
+  "required": ["run_id", "generated_at", "summary", "top_targets", "required_actions", "status_token"],
+  "properties": {
+    "run_id": {"type": "string", "minLength": 1},
+    "generated_at": {"type": "string", "minLength": 1},
+    "summary": {
+      "type": "object",
+      "required": ["roles_found", "companies_found", "contacts_found", "outreach_drafts"],
+      "properties": {
+        "roles_found": {"type": "integer", "minimum": 0},
+        "companies_found": {"type": "integer", "minimum": 0},
+        "contacts_found": {"type": "integer", "minimum": 0},
+        "outreach_drafts": {"type": "integer", "minimum": 0}
+      },
+      "additionalProperties": false
+    },
+    "top_targets": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["company", "contact", "reason", "action"],
+        "properties": {
+          "company": {"type": "string"},
+          "contact": {"type": "string"},
+          "reason": {"type": "string"},
+          "action": {"type": "string"}
+        },
+        "additionalProperties": false
+      }
+    },
+    "required_actions": {
+      "type": "object",
+      "required": ["send_messages", "apply_roles", "followups"],
+      "properties": {
+        "send_messages": {"type": "integer", "minimum": 0},
+        "apply_roles": {"type": "integer", "minimum": 0},
+        "followups": {"type": "integer", "minimum": 0}
+      },
+      "additionalProperties": false
+    },
+    "status_token": {"type": "string", "enum": ["OK", "STAGNATION_ALERT", "NO_ARTIFACTS_CREATED"]}
+  },
+  "additionalProperties": false
+}

@@ -1,0 +1,79 @@
+{
+  "candidate": "Tony Beal",
+  "core_positioning": [
+    "Builds the system that runs sales, not just sales activity itself",
+    "Combines revenue operations, outbound pipeline design, and AI-assisted workflows",
+    "Strongest fit in B2B manufacturing, industrial, pharma, and nutraceutical environments"
+  ],
+  "quantified_wins": [
+    {
+      "category": "pipeline",
+      "statement": "Built more than $6M in outbound pipeline through targeted prospecting and outbound systems design."
+    },
+    {
+      "category": "growth",
+      "statement": "Generated 3,700+ new accounts through territory planning, targeted outreach, and commercial execution."
+    },
+    {
+      "category": "acquisition",
+      "statement": "Acquired 1,000+ new customers across industrial, healthcare, and B2B markets."
+    },
+    {
+      "category": "retention",
+      "statement": "Exceeded retention targets above 93 percent while expanding account relationships."
+    },
+    {
+      "category": "leadership",
+      "statement": "Recruited, trained, and managed a 5-person sales team that exceeded goals year over year."
+    },
+    {
+      "category": "revenue_growth",
+      "statement": "Contributed to a 20 percent sales increase through cross-sell, training, and account development initiatives."
+    }
+  ],
+  "systems_strengths": [
+    "CRM workflow design",
+    "Pipeline analytics dashboards",
+    "LinkedIn Sales Navigator targeting",
+    "Apollo prospect intelligence",
+    "Territory segmentation",
+    "Whitespace analysis",
+    "AI-assisted research workflows",
+    "Multi-channel outreach systems"
+  ],
+  "industry_variants": {
+    "industrial": [
+      "Industrial GTM operator",
+      "Manufacturing pipeline strategist",
+      "Commercial systems builder for technical markets"
+    ],
+    "revops": [
+      "Revenue operations manager",
+      "Sales operations and pipeline systems leader",
+      "CRM and reporting workflow strategist"
+    ],
+    "ai_gtm": [
+      "AI-enabled sales systems builder",
+      "AI workflow operator for commercial teams",
+      "Prospecting and pipeline automation strategist"
+    ]
+  },
+  "resume_angles": {
+    "industrial_manufacturing": [
+      "Lead with industrial credibility, complex sales-cycle experience, and alignment with operations and engineering teams.",
+      "Emphasize pipeline visibility, quoting alignment, and account development in technical markets."
+    ],
+    "pharma_nutraceutical": [
+      "Highlight structured outreach, regulated-market credibility, and experience supporting commercial growth across pharma-adjacent markets.",
+      "Stress precision, process discipline, and cross-functional coordination."
+    ],
+    "revops_salesops": [
+      "Frame yourself as the operator who installs visibility, targeting logic, funnel discipline, and workflow clarity.",
+      "Use wins tied to pipeline creation, dashboards, forecasting support, and CRM process design."
+    ],
+    "ai_software": [
+      "Position around AI-assisted research, targeting, and pipeline acceleration rather than generic software selling.",
+      "Connect modern tooling to practical execution gains for commercial teams."
+    ]
+  }
+}

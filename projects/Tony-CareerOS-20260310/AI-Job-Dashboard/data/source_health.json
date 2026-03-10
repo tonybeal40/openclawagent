@@ -1,0 +1,62 @@
+[
+  {
+    "group": "jobs",
+    "name": "Local Seed Jobs",
+    "type": "file",
+    "enabled": true,
+    "mode": "seed",
+    "priority": 1,
+    "status": "ok",
+    "details": "3 records"
+  },
+  {
+    "group": "jobs",
+    "name": "LinkedIn Top Picks Manual Review",
+    "type": "file",
+    "enabled": true,
+    "mode": "manual_review",
+    "priority": 1,
+    "status": "ok",
+    "details": "11 records"
+  },
+  {
+    "group": "jobs",
+    "name": "Greenhouse Public Jobs",
+    "type": "greenhouse_public",
+    "enabled": false,
+    "mode": "automated",
+    "priority": 1,
+    "status": "needs_configuration",
+    "details": "0 board(s)"
+  },
+  {
+    "group": "jobs",
+    "name": "Lever Public Jobs",
+    "type": "lever_public",
+    "enabled": false,
+    "mode": "automated",
+    "priority": 1,
+    "status": "needs_configuration",
+    "details": "0 board(s)"
+  },
+  {
+    "group": "companies",
+    "name": "Local Seed Companies",
+    "type": "file",
+    "enabled": true,
+    "mode": "seed",
+    "priority": 1,
+    "status": "ok",
+    "details": "4 records"
+  },
+  {
+    "group": "companies",
+    "name": "Approved Company Targets",
+    "type": "file",
+    "enabled": true,
+    "mode": "automated",
+    "priority": 1,
+    "status": "ok",
+    "details": "14 records"
+  }
+]

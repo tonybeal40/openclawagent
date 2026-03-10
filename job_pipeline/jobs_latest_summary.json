@@ -1,0 +1,92 @@
+{
+  "generated_at": "2026-03-10T12:00:06.551642Z",
+  "count": 70,
+  "top_10": [
+    {
+      "source": "Greenhouse",
+      "title": "Account Executive, AI Sales",
+      "company": "Greenhouse",
+      "url": "https://stripe.com/jobs/search?gh_jid=7546284",
+      "score": 1,
+      "date_found": "2026-03-10T12:00:04.977521Z"
+    },
+    {
+      "source": "Greenhouse",
+      "title": "Account Executive, AI Sales",
+      "company": "Greenhouse",
+      "url": "https://stripe.com/jobs/search?gh_jid=7532733",
+      "score": 1,
+      "date_found": "2026-03-10T12:00:04.977521Z"
+    },
+    {
+      "source": "Greenhouse",
+      "title": "Account Executive, Bridge",
+      "company": "Greenhouse",
+      "url": "https://stripe.com/jobs/search?gh_jid=7547809",
+      "score": 1,
+      "date_found": "2026-03-10T12:00:04.977521Z"
+    },
+    {
+      "source": "Greenhouse",
+      "title": "Account Executive, Enterprise AUNZ",
+      "company": "Greenhouse",
+      "url": "https://stripe.com/jobs/search?gh_jid=7317016",
+      "score": 1,
+      "date_found": "2026-03-10T12:00:04.977521Z"
+    },
+    {
+      "source": "Greenhouse",
+      "title": "Account Executive, Enterprise - Billing (Existing Business)",
+      "company": "Greenhouse",
+      "url": "https://stripe.com/jobs/search?gh_jid=7490597",
+      "score": 1,
+      "date_found": "2026-03-10T12:00:04.977521Z"
+    },
+    {
+      "source": "Greenhouse",
+      "title": "Account Executive, Enterprise & Digital Native (Japan)",
+      "company": "Greenhouse",
+      "url": "https://stripe.com/jobs/search?gh_jid=5539411",
+      "score": 1,
+      "date_found": "2026-03-10T12:00:04.977521Z"
+    },
+    {
+      "source": "Greenhouse",
+      "title": "Account Executive, Enterprise (Existing Business)",
+      "company": "Greenhouse",
+      "url": "https://stripe.com/jobs/search?gh_jid=6755272",
+      "score": 1,
+      "date_found": "2026-03-10T12:00:04.977521Z"
+    },
+    {
+      "source": "Greenhouse",
+      "title": "Account Executive - Enterprise Germany",
+      "company": "Greenhouse",
+      "url": "https://stripe.com/jobs/search?gh_jid=7539429",
+      "score": 1,
+      "date_found": "2026-03-10T12:00:04.977521Z"
+    },
+    {
+      "source": "Greenhouse",
+      "title": "Account Executive, Enterprise (Hunter)",
+      "company": "Greenhouse",
+      "url": "https://stripe.com/jobs/search?gh_jid=7458833",
+      "score": 1,
+      "date_found": "2026-03-10T12:00:04.977521Z"
+    },
+    {
+      "source": "Greenhouse",
+      "title": "Account Executive, Enterprise (Hunter), Japan",
+      "company": "Greenhouse",
+      "url": "https://stripe.com/jobs/search?gh_jid=7528816",
+      "score": 1,
+      "date_found": "2026-03-10T12:00:04.977521Z"
+    }
+  ],
+  "errors": [
+    {
+      "source": "Lever Postings API (sample)",
+      "error": "HTTP Error 404: Not Found"
+    }
+  ]
+}
