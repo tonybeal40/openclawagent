@@ -48,14 +48,24 @@ document.getElementById('mission').textContent = state.mission;
 document.querySelectorAll('.side-nav button').forEach(btn=>{
   btn.onclick=()=>{
     document.querySelectorAll('.view').forEach(v=>v.classList.add('hidden'));
+    document.querySelectorAll('.side-nav button').forEach(b=>b.classList.remove('active'));
     document.getElementById(btn.dataset.view).classList.remove('hidden');
+    btn.classList.add('active');
   }
 });
+document.querySelector('.side-nav button[data-view="task"]')?.classList.add('active');
 
+function avatar(owner='Unassigned'){
+  const initials = owner.split(/\s+/).filter(Boolean).slice(0,2).map(p=>p[0]?.toUpperCase()||'').join('') || '??';
+  return `<span class='avatar' title='${owner}'>${initials}</span>`;
+}
+function statusClass(status='Backlog'){
+  return `status-${String(status).toLowerCase()}`;
+}
 function renderTask(){
   const el = document.getElementById('task');
   const cols=['Backlog','Doing','Review','Done'];
-  el.innerHTML=`<h2>Task Board</h2><div class='grid kanban'>${cols.map(c=>`<div class='card'><h3>${c}</h3>${state.tasks.filter(t=>t.status===c).map(t=>`<div class='card'><b>${t.title}</b><div class='muted'>${t.owner}</div></div>`).join('')||'<div class="muted">None</div>'}</div>`).join('')}</div>`;
+  el.innerHTML=`<h2>Task Board</h2><div class='grid kanban'>${cols.map(c=>`<div class='card lane ${statusClass(c)}'><h3>${c}</h3>${state.tasks.filter(t=>t.status===c).map(t=>`<div class='card task-card ${statusClass(t.status)}'><b>${t.title}</b><div class='assignee-row'>${avatar(t.owner)}<span class='muted'>${t.owner || 'Unassigned'}</span><span class='pill ${statusClass(t.status)}'>${t.status}</span></div></div>`).join('')||'<div class="muted">None</div>'}</div>`).join('')}</div>`;
 }
 function renderCalendar(){
   document.getElementById('calendar').innerHTML = `<h2>Calendar / Cron</h2><ul class='list'>${(state.jobs||[]).map(j=>`<li><span class='pill'>${j.enabled?'enabled':'disabled'}</span> ${j.name} — ${j.when}</li>`).join('') || '<li class="muted">No jobs loaded yet. Run scripts/export-data.ps1</li>'}</ul>`;
@@ -73,7 +83,20 @@ function renderTeam(){
   document.getElementById('team').innerHTML = `<h2>Team</h2><ul class='list'>${(state.team||[]).map(t=>`<li><b>${t.name}</b> — ${t.role||'Worker'}</li>`).join('') || '<li class="muted">No team loaded yet.</li>'}</ul>`;
 }
 function renderOffice(){
-  document.getElementById('office').innerHTML = `<h2>Office</h2><div class='card'>${state.activity.map(a=>`<div>🟢 ${a}</div>`).join('')}</div><p class='muted'>Fun mode on. Keep shipping.</p>`;
+  const workers = (state.team || []).slice(0,6);
+  document.getElementById('office').innerHTML = `
+    <h2>Pixel Office</h2>
+    <div class='office-grid'>
+      <div class='card office-panel'>
+        <h3>Floor Activity</h3>
+        ${state.activity.map(a=>`<div class='office-line'>🟢 ${a}</div>`).join('') || '<div class="muted">No activity yet.</div>'}
+      </div>
+      <div class='card office-panel'>
+        <h3>Desks Online</h3>
+        ${(workers.length?workers:[{name:'Calvin',role:'Ops Lead'},{name:'Albert',role:'Prompt Architect'},{name:'Jared',role:'Recovery Ops'}]).map(w=>`<div class='desk-row'>${avatar(w.name)}<span><b>${w.name}</b> <span class='muted'>${w.role||'Worker'}</span></span></div>`).join('')}
+      </div>
+    </div>
+    <p class='muted'>Pixel-office mode: tight, visible, shipping-focused.</p>`;
 }
 function renderActivityFeed(){
   const el = document.getElementById('activity-feed');

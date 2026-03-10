@@ -8,10 +8,20 @@ body{font-family:Inter,Segoe UI,Arial,sans-serif;margin:0;background:#0b1020;col
 .activity-rail h3{margin-top:0}
 button{background:#121a30;color:#e2e8f0;border:1px solid #2e3b61;padding:9px 12px;border-radius:10px;cursor:pointer;text-align:left}
 button:hover{background:#1b2645}
+.side-nav button.active{background:#25355f;border-color:#4f6fb3;box-shadow:inset 0 0 0 1px #6f94e4}
 .view{padding:4px 0}.hidden{display:none}
 .grid{display:grid;gap:12px}.kanban{grid-template-columns:repeat(4,minmax(0,1fr))}
 .card{background:#0f172a;border:1px solid #253250;border-radius:10px;padding:10px}
-.muted{color:#9aa7c7}.pill{display:inline-block;border:1px solid #40507a;border-radius:999px;padding:2px 8px;margin-right:6px;font-size:12px}
+.task-card{margin-top:8px}
+.lane{border-top:3px solid #334155}
+.avatar{display:inline-flex;align-items:center;justify-content:center;width:26px;height:26px;border-radius:999px;background:#1e293b;border:1px solid #475569;font-size:11px;font-weight:700;margin-right:8px}
+.assignee-row,.desk-row{display:flex;align-items:center;gap:8px;margin-top:8px}
+.muted{color:#9aa7c7}.pill{display:inline-block;border:1px solid #40507a;border-radius:999px;padding:2px 8px;margin-left:auto;font-size:12px}
+.status-backlog{border-color:#64748b}.status-doing{border-color:#3b82f6}.status-review{border-color:#a855f7}.status-done{border-color:#22c55e}
+.pill.status-backlog{color:#cbd5e1}.pill.status-doing{color:#93c5fd}.pill.status-review{color:#d8b4fe}.pill.status-done{color:#86efac}
+.office-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.office-panel{background:linear-gradient(180deg,#111a31,#0f172a)}
+.office-line{margin:6px 0}
 .list li{margin:6px 0}
 @media (max-width:1200px){.app-shell{grid-template-columns:220px 1fr}.activity-rail{display:none}}
 @media (max-width:800px){.app-shell{grid-template-columns:1fr}.sidebar{border-right:none;border-bottom:1px solid #1e293b}.side-nav{flex-direction:row;flex-wrap:wrap}.content{padding:12px}.kanban{grid-template-columns:1fr 1fr}}
