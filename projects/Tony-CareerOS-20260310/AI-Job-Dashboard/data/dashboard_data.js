@@ -142,7 +142,7 @@
   }
 ],
   "topTargets": {
-  "generatedAt": "2026-03-10T10:44:58.328038",
+  "generatedAt": "2026-03-10T11:01:43.905625",
   "topJobs": [
     {
       "company": "HubSpot",
@@ -318,7 +318,7 @@
   "outreachTargets": [
     {
       "company": "Danaher",
-      "website": "https://www.danaher.com/careers",
+      "website": "https://jobs.danaher.com/global/en",
       "industry": "Industrial Manufacturing",
       "outreach_priority": "high",
       "score": 65,
@@ -354,7 +354,7 @@
     },
     {
       "company": "3M",
-      "website": "https://careers.3m.com",
+      "website": "https://www.3m.com/3M/en_US/careers-us/",
       "industry": "Industrial Manufacturing",
       "outreach_priority": "high",
       "score": 65,
@@ -366,7 +366,7 @@
     },
     {
       "company": "Siemens",
-      "website": "https://jobs.siemens.com",
+      "website": "https://www.siemens.com/global/en/home/company/jobs.html",
       "industry": "Industrial Manufacturing",
       "outreach_priority": "high",
       "score": 65,
@@ -1446,6 +1446,12 @@
     "headline": "Message angle: ZoomInfo",
     "details": "Lead with systems thinking: show how you turn complex GTM motions into a visible operating plan.",
     "url": "https://www.zoominfo.com/company/careers"
+  },
+  {
+    "type": "draft",
+    "headline": "Draft ready: Danaher",
+    "details": "Danaher: commercial systems and GTM visibility",
+    "url": ""
   }
 ]
 };
