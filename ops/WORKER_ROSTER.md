@@ -17,7 +17,7 @@ Status: Rebuilt from local inventory + remembered worker names (2026-03-09)
 - **William**
   - Role: Outreach drafting + messaging variants
   - Project: `projects/job-hunt`
-- **Bryer**
+- **Breyer** (aka Bryer in older notes)
   - Role: Marketing systems builder
   - Project: `projects/marketing-genius`
 - **Beckham**
