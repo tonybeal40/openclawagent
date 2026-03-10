@@ -31,9 +31,15 @@
 - Large raw export: `recovery-memory-export.json`
 - Session transcripts: `C:\Users\tonyb\.openclaw\agents\main\sessions\*.jsonl`
 
+## 2026-02-12 to 2026-02-22 (newly verified evidence)
+- Verified presence of pre-2026-02-23 records in local session archive:
+  - `C:\Users\tonyb\.openclaw\agents\main\sessions\bd744386-6688-4943-bda5-94ee286ce883.jsonl`
+- Day-level date hits found for each day from `2026-02-12` through `2026-02-22`.
+- Reconciliation subset exported to:
+  - `outputs/memory/session_bd744386_feb12_22.jsonl`
+  - `outputs/memory/reconciliation_feb12_22.md`
+- Named target recovery in this window is confirmed (Calvin, Jared, Azeem, Breyer, Saylor, Beckham, Albert).
+
 ## Remaining gap
-- `recovery-memory-export.json` is very large and not yet fully normalized into smaller topical files.
-- Next optional pass: split the export into:
-  - `memory/recovered-conversations.md`
-  - `memory/recovered-decisions.md`
-  - `memory/recovered-open-items.md`
+- The primary generated pull file `outputs/memory/user_messages_all.csv` still starts at ~`2026-02-23T01:00:05Z`, so pre-2/23 records are not yet fully merged into that consolidated CSV pipeline.
+- Next pass should merge `session_bd744386_feb12_22.jsonl` into canonical extraction outputs and regenerate rollup stats.
