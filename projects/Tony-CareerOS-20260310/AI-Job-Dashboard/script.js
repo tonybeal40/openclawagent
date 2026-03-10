@@ -6,6 +6,7 @@ let hiringSignals = [];
 let outreachTargets = [];
 let managerQueue = [];
 let sourceHealth = [];
+let linkedinQueue = [];
 
 function safeText(value) {
   const text = value ?? "";
@@ -78,6 +79,7 @@ function updateSummary() {
   document.getElementById("interviewCount").textContent = String(interviews);
   document.getElementById("manualQueueCount").textContent = String(managerQueue.length);
   document.getElementById("sourceHealthCount").textContent = String(sourceHealth.length);
+  document.getElementById("linkedinQueueCount").textContent = String(linkedinQueue.length);
 }
 
 function getVisibleCompanies() {
@@ -194,6 +196,14 @@ function renderAll() {
     { label: "Manual Search", render: (row) => row.manual_search_url ? `<a class="inline-link" href="${safeText(row.manual_search_url)}" target="_blank" rel="noreferrer">Open Search</a>` : "" }
   ]);
 
+  formatTable("linkedinQueueTable", linkedinQueue, [
+    { label: "Person", render: (row) => `<strong>${safeText(row.person || "")}</strong><div class="muted">${safeText(row.title || "")}</div>` },
+    { label: "Company", render: (row) => safeText(row.company || "") },
+    { label: "Priority", render: (row) => `<span class="status-pill priority-${safeText((row.priority || "").toLowerCase())}">${safeText(row.priority || "")}</span>` },
+    { label: "LinkedIn", render: (row) => row.linkedin_url ? `<a class="inline-link" href="${safeText(row.linkedin_url)}" target="_blank" rel="noreferrer">Open</a>` : "" },
+    { label: "Suggested Note", render: (row) => `<span class="muted">${safeText(row.note || "")}</span>` }
+  ]);
+
   formatTable("sourceHealthTable", sourceHealth, [
     { label: "Source", render: (row) => `<strong>${safeText(row.name || "")}</strong>` },
     { label: "Type", render: (row) => safeText(row.type || "") },
@@ -232,7 +242,8 @@ async function loadData() {
     fetch("data/hiring_signals.json", { cache: "no-store" }).catch(() => null),
     fetch("data/daily_outreach_targets.json", { cache: "no-store" }).catch(() => null),
     fetch("data/hiring_manager_queue.json", { cache: "no-store" }).catch(() => null),
-    fetch("data/source_health.json", { cache: "no-store" }).catch(() => null)
+    fetch("data/source_health.json", { cache: "no-store" }).catch(() => null),
+    fetch("data/linkedin_creator_queue.json", { cache: "no-store" }).catch(() => null)
   ]);
 
   companies = await responses[0].json();
@@ -241,6 +252,8 @@ async function loadData() {
   outreachTargets = responses[3] && responses[3].ok ? await responses[3].json() : [];
   managerQueue = responses[4] && responses[4].ok ? await responses[4].json() : [];
   sourceHealth = responses[5] && responses[5].ok ? await responses[5].json() : [];
+  const linkedinPayload = responses[6] && responses[6].ok ? await responses[6].json() : { items: [] };
+  linkedinQueue = Array.isArray(linkedinPayload) ? linkedinPayload : (linkedinPayload.items || []);
 
   applySavedNotes();
   renderAll();

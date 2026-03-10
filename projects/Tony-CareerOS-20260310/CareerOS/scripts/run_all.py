@@ -10,6 +10,7 @@ SCRIPTS = [
     "lead_tracker.py",
     "resume_engine.py",
     "fit_scorer.py",
+    "linkedin_creator_queue.py",
     "daily_digest.py",
 ]
 

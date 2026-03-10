@@ -1,0 +1,28 @@
+{
+  "generated_at": "2026-03-10",
+  "count": 2,
+  "items": [
+    {
+      "person": "Hiring Leader",
+      "company": "Origami Robotics",
+      "title": "RevOps / Business Development",
+      "linkedin_url": "",
+      "priority": "Low",
+      "priority_score": 65,
+      "status": "Not Sent",
+      "note": "Hi there, I\u2019m impressed by Origami Robotics. I help teams scale Growing commercial motion with likely need for pipeline structure. Open to connecting?",
+      "reason": "Public careers page"
+    },
+    {
+      "person": "Hiring Leader",
+      "company": "Rubric AI",
+      "title": "RevOps / Business Development",
+      "linkedin_url": "",
+      "priority": "Low",
+      "priority_score": 65,
+      "status": "Not Sent",
+      "note": "Hi there, I\u2019m impressed by Rubric AI. I help teams scale Likely need for structured metrics and outbound systems. Open to connecting?",
+      "reason": "Sales and RevOps role patterns"
+    }
+  ]
+}

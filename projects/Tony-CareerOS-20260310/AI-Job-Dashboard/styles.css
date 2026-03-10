@@ -223,6 +223,10 @@ textarea {
   color: #dcecff;
 }
 
+.priority-high { background: rgba(34,197,94,0.2); color: #bbf7d0; }
+.priority-medium { background: rgba(250,204,21,0.2); color: #fde68a; }
+.priority-low { background: rgba(148,163,184,0.2); color: #cbd5e1; }
+
 .stack-list {
   display: grid;
   gap: 12px;
