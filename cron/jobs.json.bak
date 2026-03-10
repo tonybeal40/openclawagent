@@ -14,8 +14,7 @@
         "lastRunAtMs": 1773077735578,
         "lastRunStatus": "error",
         "lastStatus": "error",
-        "lastDurationMs": 39,
-        "runningAtMs": 1773151204103
+        "lastDurationMs": 39
       },
       "name": "Cron: 0 7 * * *",
       "enabled": true,
@@ -31,8 +30,7 @@
       "agent": "main",
       "prompt": "Search for new sales, RevOps, business development, and AI operations roles in the United States. Prioritize companies hiring in manufacturing, industrial technology, SaaS, or automation. Extract hiring companies, role titles, and potential hiring leaders. Summarize results.",
       "state": {
-        "nextRunAtMs": 1773232200000,
-        "runningAtMs": 1773153004427
+        "nextRunAtMs": 1773232200000
       },
       "name": "Cron: 30 7 * * *",
       "enabled": true,
@@ -64,8 +62,7 @@
         "mode": "announce"
       },
       "state": {
-        "nextRunAtMs": 1773230400000,
-        "runningAtMs": 1773151204103
+        "nextRunAtMs": 1773230400000
       }
     },
     {
@@ -338,7 +335,8 @@
         "mode": "announce"
       },
       "state": {
-        "nextRunAtMs": 1773156600000
+        "nextRunAtMs": 1773156600000,
+        "runningAtMs": 1773156600019
       }
     },
     {

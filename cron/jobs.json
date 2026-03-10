@@ -317,7 +317,7 @@
       "name": "mission-watchdog-15m",
       "enabled": true,
       "createdAtMs": 1773156068271,
-      "updatedAtMs": 1773156068271,
+      "updatedAtMs": 1773156605005,
       "schedule": {
         "kind": "cron",
         "expr": "*/15 * * * *",
@@ -335,7 +335,14 @@
         "mode": "announce"
       },
       "state": {
-        "nextRunAtMs": 1773156600000
+        "nextRunAtMs": 1773157500000,
+        "lastRunAtMs": 1773156600191,
+        "lastRunStatus": "error",
+        "lastStatus": "error",
+        "lastDurationMs": 4814,
+        "lastError": "Channel is required (no configured channels detected). Set delivery.channel explicitly or use a main session with a previous channel.",
+        "lastDeliveryStatus": "unknown",
+        "consecutiveErrors": 1
       }
     },
     {
