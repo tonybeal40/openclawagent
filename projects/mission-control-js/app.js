@@ -45,7 +45,7 @@ async function loadData(){
 }
 
 document.getElementById('mission').textContent = state.mission;
-document.querySelectorAll('nav button').forEach(btn=>{
+document.querySelectorAll('.side-nav button').forEach(btn=>{
   btn.onclick=()=>{
     document.querySelectorAll('.view').forEach(v=>v.classList.add('hidden'));
     document.getElementById(btn.dataset.view).classList.remove('hidden');
@@ -75,9 +75,14 @@ function renderTeam(){
 function renderOffice(){
   document.getElementById('office').innerHTML = `<h2>Office</h2><div class='card'>${state.activity.map(a=>`<div>🟢 ${a}</div>`).join('')}</div><p class='muted'>Fun mode on. Keep shipping.</p>`;
 }
+function renderActivityFeed(){
+  const el = document.getElementById('activity-feed');
+  if (!el) return;
+  el.innerHTML = state.activity.map(a=>`<div>• ${a}</div>`).join('') || '<div class="muted">No activity yet.</div>';
+}
 
 (async ()=>{
   await loadData();
-  [renderTask,renderCalendar,renderProjects,renderMemories,renderDocs,renderTeam,renderOffice].forEach(fn=>fn());
+  [renderTask,renderCalendar,renderProjects,renderMemories,renderDocs,renderTeam,renderOffice,renderActivityFeed].forEach(fn=>fn());
   save();
 })();

@@ -1,1 +1,17 @@
-body{font-family:Inter,Segoe UI,Arial,sans-serif;margin:0;background:#0f172a;color:#e2e8f0}header{padding:16px 20px;border-bottom:1px solid #1e293b}h1{margin:0}nav{display:flex;gap:8px;padding:12px 20px;border-bottom:1px solid #1e293b;flex-wrap:wrap}button{background:#1e293b;color:#e2e8f0;border:1px solid #334155;padding:8px 12px;border-radius:8px;cursor:pointer}button:hover{background:#334155}.view{padding:20px}.hidden{display:none}.grid{display:grid;gap:12px}.kanban{grid-template-columns:repeat(4,1fr)}.card{background:#111827;border:1px solid #334155;border-radius:10px;padding:10px}.muted{color:#94a3b8}.pill{display:inline-block;border:1px solid #475569;border-radius:999px;padding:2px 8px;margin-right:6px;font-size:12px}.list li{margin:6px 0}input,textarea{width:100%;background:#0b1220;color:#e2e8f0;border:1px solid #334155;border-radius:8px;padding:8px}
+body{font-family:Inter,Segoe UI,Arial,sans-serif;margin:0;background:#0b1020;color:#e2e8f0}
+.app-shell{display:grid;grid-template-columns:260px 1fr 300px;min-height:100vh}
+.sidebar{border-right:1px solid #1e293b;padding:16px;background:#0a0f1d}
+.sidebar h1{margin:0 0 8px 0;font-size:22px}
+.side-nav{display:flex;flex-direction:column;gap:8px;margin-top:12px}
+.content{padding:20px}
+.activity-rail{border-left:1px solid #1e293b;padding:16px;background:#0a0f1d}
+.activity-rail h3{margin-top:0}
+button{background:#121a30;color:#e2e8f0;border:1px solid #2e3b61;padding:9px 12px;border-radius:10px;cursor:pointer;text-align:left}
+button:hover{background:#1b2645}
+.view{padding:4px 0}.hidden{display:none}
+.grid{display:grid;gap:12px}.kanban{grid-template-columns:repeat(4,minmax(0,1fr))}
+.card{background:#0f172a;border:1px solid #253250;border-radius:10px;padding:10px}
+.muted{color:#9aa7c7}.pill{display:inline-block;border:1px solid #40507a;border-radius:999px;padding:2px 8px;margin-right:6px;font-size:12px}
+.list li{margin:6px 0}
+@media (max-width:1200px){.app-shell{grid-template-columns:220px 1fr}.activity-rail{display:none}}
+@media (max-width:800px){.app-shell{grid-template-columns:1fr}.sidebar{border-right:none;border-bottom:1px solid #1e293b}.side-nav{flex-direction:row;flex-wrap:wrap}.content{padding:12px}.kanban{grid-template-columns:1fr 1fr}}
