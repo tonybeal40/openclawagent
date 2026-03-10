@@ -1,0 +1,458 @@
+{
+  "version": 1,
+  "jobs": [
+    {
+      "id": "daily-company-research",
+      "schedule": {
+        "kind": "cron",
+        "expr": "0 7 * * *"
+      },
+      "agent": "main",
+      "prompt": "Search the internet for new manufacturing, pharmaceutical, nutraceutical, and industrial companies. Identify decision makers such as VP Operations, Manufacturing Directors, Engineering Leaders, or R&D heads. Summarize company name, industry, leadership contact, and why they may need tooling, automation, or manufacturing optimization. Output a structured research report.",
+      "state": {
+        "nextRunAtMs": 1773230400000,
+        "lastRunAtMs": 1773077735578,
+        "lastRunStatus": "error",
+        "lastStatus": "error",
+        "lastDurationMs": 39,
+        "runningAtMs": 1773151204103
+      },
+      "name": "Cron: 0 7 * * *",
+      "enabled": true,
+      "wakeMode": "now",
+      "sessionTarget": "main"
+    },
+    {
+      "id": "daily-job-hunt",
+      "schedule": {
+        "kind": "cron",
+        "expr": "30 7 * * *"
+      },
+      "agent": "main",
+      "prompt": "Search for new sales, RevOps, business development, and AI operations roles in the United States. Prioritize companies hiring in manufacturing, industrial technology, SaaS, or automation. Extract hiring companies, role titles, and potential hiring leaders. Summarize results.",
+      "state": {
+        "nextRunAtMs": 1773232200000,
+        "runningAtMs": 1773153004427
+      },
+      "name": "Cron: 30 7 * * *",
+      "enabled": true,
+      "wakeMode": "now",
+      "sessionTarget": "main"
+    },
+    {
+      "id": "0bf2c19d-7e4b-4ab1-8cd3-ace733ee3408",
+      "agentId": "main",
+      "sessionKey": "agent:main:main",
+      "name": "morning-mission-control-loop-0700",
+      "enabled": true,
+      "createdAtMs": 1773090109146,
+      "updatedAtMs": 1773090109146,
+      "schedule": {
+        "kind": "cron",
+        "expr": "0 7 * * *",
+        "tz": "America/Chicago"
+      },
+      "sessionTarget": "isolated",
+      "wakeMode": "now",
+      "payload": {
+        "kind": "agentTurn",
+        "message": "Reminder: morning Mission Control run. Execute job scanner/company research/trend scan/lead builder, refresh mission control and top opportunities, then update OpenClawMissionControl/reports/daily_opportunity_report.txt with today summary and top actions.",
+        "thinking": "low",
+        "timeoutSeconds": 1200
+      },
+      "delivery": {
+        "mode": "announce"
+      },
+      "state": {
+        "nextRunAtMs": 1773230400000,
+        "runningAtMs": 1773151204103
+      }
+    },
+    {
+      "id": "9738a0c9-54e7-4fd8-acc8-e2aacdd7bc13",
+      "agentId": "main",
+      "sessionKey": "agent:main:main",
+      "name": "nightly-artifact-verified-pipeline-2300",
+      "enabled": true,
+      "createdAtMs": 1773141170964,
+      "updatedAtMs": 1773141170964,
+      "schedule": {
+        "kind": "cron",
+        "expr": "0 23 * * *",
+        "tz": "America/Chicago"
+      },
+      "sessionTarget": "isolated",
+      "wakeMode": "now",
+      "payload": {
+        "kind": "agentTurn",
+        "thinking": "low",
+        "timeoutSeconds": 1800,
+        "message": "Nightly pipeline reminder: run the full overnight pipeline with artifact verification.\n\nRequired execution targets:\n- Run/refresh mission control, job pipeline, company research, trend scan, and lead outputs.\n- Prioritize writing real artifacts under: outputs/, deliverables/, OpenClawMissionControl/.\n\nRequired proof (must include all):\n1) Enumerate changed files with exact path + last write time + file size.\n2) Count total changed files in this run window.\n3) If fewer than 5 changed files in target dirs, explicitly mark status PARTIAL and explain why.\n4) Append/update a ledger file at ops/overnight-artifact-ledger-YYYY-MM-DD.md using ops/ARTIFACT_LEDGER_TEMPLATE.md structure.\n5) Provide top blockers and first 3 actions for morning.\n\nIf no artifacts were created, output exactly: NO_ARTIFACTS_CREATED and explain blockers."
+      },
+      "delivery": {
+        "mode": "announce",
+        "channel": "webchat",
+        "to": "openclaw-control-ui"
+      },
+      "state": {
+        "nextRunAtMs": 1773201600000
+      }
+    },
+    {
+      "id": "2de68b1b-677c-48d6-ad18-a4ac8a3ab475",
+      "agentId": "main",
+      "sessionKey": "agent:main:main",
+      "name": "morning-artifact-watchdog-0605",
+      "enabled": true,
+      "createdAtMs": 1773141177176,
+      "updatedAtMs": 1773141177176,
+      "schedule": {
+        "kind": "cron",
+        "expr": "5 6 * * *",
+        "tz": "America/Chicago"
+      },
+      "sessionTarget": "isolated",
+      "wakeMode": "now",
+      "payload": {
+        "kind": "agentTurn",
+        "thinking": "low",
+        "timeoutSeconds": 900,
+        "message": "Morning watchdog reminder: verify overnight artifact movement before standup.\n\nChecklist:\n- Check files modified from 10:00 PM to now in outputs/, deliverables/, OpenClawMissionControl/, and ops/overnight-artifact-ledger-*.md.\n- Report exact changed file count + top changed paths.\n- If changed file count in key target dirs is < 5, mark STAGNATION_ALERT.\n- If STAGNATION_ALERT, output a 3-step recovery plan for the morning sprint.\n- Confirm whether ledger file exists for today and includes blockers + first actions.\n\nReturn concise, evidence-based summary only (no generic status text)."
+      },
+      "delivery": {
+        "mode": "announce",
+        "channel": "webchat",
+        "to": "openclaw-control-ui"
+      },
+      "state": {
+        "nextRunAtMs": 1773227100000
+      }
+    },
+    {
+      "id": "4091e4cf-7615-480c-9255-b0ed67f9baeb",
+      "agentId": "main",
+      "sessionKey": "agent:main:main",
+      "name": "agent-4-interview-trigger-0635",
+      "enabled": true,
+      "createdAtMs": 1773141910502,
+      "updatedAtMs": 1773154392737,
+      "schedule": {
+        "kind": "cron",
+        "expr": "35 6 * * *",
+        "tz": "America/Chicago"
+      },
+      "sessionTarget": "isolated",
+      "wakeMode": "now",
+      "payload": {
+        "kind": "agentTurn",
+        "thinking": "low",
+        "timeoutSeconds": 1200,
+        "message": "Reminder: run Agent #4 Interview Trigger pipeline.\n\nRead instructions from:\n- pipelines/revops/prompts/interview_trigger_agent.prompt.md\n\nRequired:\n- Read input report(s)\n- Generate interview trigger packets\n- Write reports/interview_trigger_queue.json and reports/interview_trigger_queue.md\n- Validate JSON structure against pipelines/revops/schemas/interview_trigger_agent.schema.json\n- Enforce quality floor and failure conditions in the prompt\n- Return evidence block only\n\nIf artifacts are not created, return token NO_ARTIFACTS_CREATED."
+      },
+      "delivery": {
+        "mode": "announce",
+        "channel": "webchat",
+        "to": "openclaw-control-ui"
+      },
+      "state": {
+        "nextRunAtMs": 1773228900000,
+        "lastRunAtMs": 1773153192721,
+        "lastRunStatus": "error",
+        "lastStatus": "error",
+        "lastDurationMs": 1200016,
+        "lastDeliveryStatus": "unknown",
+        "consecutiveErrors": 2,
+        "lastError": "Error: cron: job execution timed out"
+      }
+    },
+    {
+      "id": "9bb54fd9-7113-41a4-8db6-dd0b256956eb",
+      "agentId": "main",
+      "sessionKey": "agent:main:main",
+      "name": "agent-1-company-intelligence-0610",
+      "enabled": true,
+      "createdAtMs": 1773142075533,
+      "updatedAtMs": 1773150792281,
+      "schedule": {
+        "kind": "cron",
+        "expr": "10 6 * * *",
+        "tz": "America/Chicago"
+      },
+      "sessionTarget": "isolated",
+      "wakeMode": "now",
+      "payload": {
+        "kind": "agentTurn",
+        "thinking": "low",
+        "timeoutSeconds": 1200,
+        "message": "Reminder: run Agent #1 Company Intelligence.\n\nRead and execute:\n- pipelines/revops/prompts/company_intelligence.prompt.md\n\nRequired:\n- Produce outputs/revops/company_intelligence.json\n- Validate against pipelines/revops/schemas/company_intelligence.schema.json\n- Enforce quality floor + exclusions + evidence contract\n- If no artifact, return NO_ARTIFACTS_CREATED"
+      },
+      "delivery": {
+        "mode": "announce",
+        "channel": "webchat",
+        "to": "openclaw-control-ui"
+      },
+      "state": {
+        "nextRunAtMs": 1773227400000,
+        "lastRunAtMs": 1773149592176,
+        "lastRunStatus": "error",
+        "lastStatus": "error",
+        "lastDurationMs": 1200105,
+        "lastDeliveryStatus": "unknown",
+        "consecutiveErrors": 2,
+        "lastError": "Error: cron: job execution timed out"
+      }
+    },
+    {
+      "id": "544757c3-8801-4657-8092-affed8fc2df7",
+      "agentId": "main",
+      "sessionKey": "agent:main:main",
+      "name": "agent-2-decision-maker-0618",
+      "enabled": true,
+      "createdAtMs": 1773142075586,
+      "updatedAtMs": 1773151992407,
+      "schedule": {
+        "kind": "cron",
+        "expr": "18 6 * * *",
+        "tz": "America/Chicago"
+      },
+      "sessionTarget": "isolated",
+      "wakeMode": "now",
+      "payload": {
+        "kind": "agentTurn",
+        "thinking": "low",
+        "timeoutSeconds": 1200,
+        "message": "Reminder: run Agent #2 Decision Maker discovery.\n\nRead and execute:\n- pipelines/revops/prompts/decision_maker.prompt.md\n\nRequired:\n- Read outputs/revops/company_intelligence.json\n- Produce outputs/revops/decision_makers.json\n- Validate against pipelines/revops/schemas/decision_maker.schema.json\n- Enforce quality floor + dedupe + evidence contract\n- If no artifact, return NO_ARTIFACTS_CREATED"
+      },
+      "delivery": {
+        "mode": "announce",
+        "channel": "webchat",
+        "to": "openclaw-control-ui"
+      },
+      "state": {
+        "nextRunAtMs": 1773227880000,
+        "lastRunAtMs": 1773150792368,
+        "lastRunStatus": "error",
+        "lastStatus": "error",
+        "lastDurationMs": 1200039,
+        "lastError": "Error: cron: job execution timed out",
+        "lastDeliveryStatus": "unknown",
+        "consecutiveErrors": 1
+      }
+    },
+    {
+      "id": "fd73f4f3-7a79-4ef8-bf29-7fa3c2ceef01",
+      "agentId": "main",
+      "sessionKey": "agent:main:main",
+      "name": "agent-3-outreach-builder-0626",
+      "enabled": true,
+      "createdAtMs": 1773142075618,
+      "updatedAtMs": 1773153192660,
+      "schedule": {
+        "kind": "cron",
+        "expr": "26 6 * * *",
+        "tz": "America/Chicago"
+      },
+      "sessionTarget": "isolated",
+      "wakeMode": "now",
+      "payload": {
+        "kind": "agentTurn",
+        "thinking": "low",
+        "timeoutSeconds": 1200,
+        "message": "Reminder: run Agent #3 Outreach Builder.\n\nRead and execute:\n- pipelines/revops/prompts/outreach_builder.prompt.md\n\nRequired:\n- Read outputs/revops/decision_makers.json\n- Produce outputs/revops/outreach_drafts.json\n- Validate against pipelines/revops/schemas/outreach_builder.schema.json\n- Enforce quality floor + dedupe + evidence contract\n- If no artifact, return NO_ARTIFACTS_CREATED"
+      },
+      "delivery": {
+        "mode": "announce",
+        "channel": "webchat",
+        "to": "openclaw-control-ui"
+      },
+      "state": {
+        "nextRunAtMs": 1773228360000,
+        "lastRunAtMs": 1773151992614,
+        "lastRunStatus": "error",
+        "lastStatus": "error",
+        "lastDurationMs": 1200046,
+        "lastError": "Error: cron: job execution timed out",
+        "lastDeliveryStatus": "unknown",
+        "consecutiveErrors": 1
+      }
+    },
+    {
+      "id": "05e15469-ec7e-408f-91ac-8ac863b548d8",
+      "agentId": "main",
+      "sessionKey": "agent:main:main",
+      "name": "agent-5-morning-pipeline-report-0645",
+      "enabled": true,
+      "createdAtMs": 1773142082981,
+      "updatedAtMs": 1773155292848,
+      "schedule": {
+        "kind": "cron",
+        "expr": "45 6 * * *",
+        "tz": "America/Chicago"
+      },
+      "sessionTarget": "isolated",
+      "wakeMode": "now",
+      "payload": {
+        "kind": "agentTurn",
+        "thinking": "low",
+        "timeoutSeconds": 900,
+        "message": "Reminder: compile the daily job acquisition report.\n\nInput files:\n- outputs/revops/company_intelligence.json\n- outputs/revops/decision_makers.json\n- outputs/revops/outreach_drafts.json\n- reports/interview_trigger_queue.json\n\nRequired outputs:\n- reports/morning_job_pipeline.json\n- reports/morning_job_pipeline.md\n\nRequired fields in JSON:\n- companies_discovered\n- decision_makers_identified\n- job_roles_identified\n- outreach_drafts_generated\n- confidence_scores\n- warnings (include STAGNATION_ALERT if thresholds missed)\n- evidence block (path, size, timestamp, artifact counts)\n\nQuality floor:\n- >=5 relevant companies\n- >=10 decision makers\n- >=5 outreach drafts\n- min relevance score 60\n\nIf outputs missing/invalid, return NO_ARTIFACTS_CREATED."
+      },
+      "delivery": {
+        "mode": "announce",
+        "channel": "webchat",
+        "to": "openclaw-control-ui"
+      },
+      "state": {
+        "nextRunAtMs": 1773229500000,
+        "lastRunAtMs": 1773154392828,
+        "lastRunStatus": "error",
+        "lastStatus": "error",
+        "lastDurationMs": 900020,
+        "lastDeliveryStatus": "unknown",
+        "consecutiveErrors": 2,
+        "lastError": "Error: cron: job execution timed out"
+      }
+    },
+    {
+      "id": "35bf6f0f-88c6-4935-b563-566fc9faa71e",
+      "agentId": "main",
+      "sessionKey": "agent:main:main",
+      "name": "mission-watchdog-15m",
+      "enabled": true,
+      "createdAtMs": 1773156068271,
+      "updatedAtMs": 1773156068271,
+      "schedule": {
+        "kind": "cron",
+        "expr": "*/15 * * * *",
+        "tz": "America/Chicago"
+      },
+      "sessionTarget": "isolated",
+      "wakeMode": "now",
+      "payload": {
+        "kind": "agentTurn",
+        "message": "Run a lightweight watchdog pass for OpenClaw mission control. Check for failed runs, stuck processes, and recent critical errors in current workspace/runtime context. Return only: status (green/yellow/red), top blocker (if any), and next smallest fix step.",
+        "thinking": "low",
+        "timeoutSeconds": 180
+      },
+      "delivery": {
+        "mode": "announce"
+      },
+      "state": {
+        "nextRunAtMs": 1773156600000
+      }
+    },
+    {
+      "id": "07fff722-004c-4e16-9672-ca6b95b870b6",
+      "agentId": "main",
+      "sessionKey": "agent:main:main",
+      "name": "mission-refresh-2h-day",
+      "enabled": true,
+      "createdAtMs": 1773156068311,
+      "updatedAtMs": 1773156068311,
+      "schedule": {
+        "kind": "cron",
+        "expr": "0 6-22/2 * * *",
+        "tz": "America/Chicago"
+      },
+      "sessionTarget": "isolated",
+      "wakeMode": "now",
+      "payload": {
+        "kind": "agentTurn",
+        "message": "Run mission-control refresh for active job-flow work. Rebuild/update priority outputs, summarize deltas since last run, and report top 3 execution actions for the next block. Keep concise and action-first.",
+        "thinking": "low",
+        "timeoutSeconds": 420
+      },
+      "delivery": {
+        "mode": "announce"
+      },
+      "state": {
+        "nextRunAtMs": 1773162000000
+      }
+    },
+    {
+      "id": "a35f2305-49be-4f14-a8ad-80393f7997e2",
+      "agentId": "main",
+      "sessionKey": "agent:main:main",
+      "name": "replit-sync-4h",
+      "enabled": true,
+      "createdAtMs": 1773156068357,
+      "updatedAtMs": 1773156068357,
+      "schedule": {
+        "kind": "cron",
+        "expr": "0 */4 * * *",
+        "tz": "America/Chicago",
+        "staggerMs": 300000
+      },
+      "sessionTarget": "isolated",
+      "wakeMode": "now",
+      "payload": {
+        "kind": "agentTurn",
+        "message": "Run replit/project sync integrity pass. Validate key artifacts, missing files, and any drift in recovery-related outputs. Return: verified items, missing items, and one remediation command block.",
+        "thinking": "low",
+        "timeoutSeconds": 420
+      },
+      "delivery": {
+        "mode": "announce"
+      },
+      "state": {
+        "nextRunAtMs": 1773162192521
+      }
+    },
+    {
+      "id": "5f9f11f9-1ecb-4140-95b4-e3a3ad6a3f85",
+      "agentId": "main",
+      "sessionKey": "agent:main:main",
+      "name": "daily-heavy-intake-0700",
+      "enabled": true,
+      "createdAtMs": 1773156068397,
+      "updatedAtMs": 1773156068397,
+      "schedule": {
+        "kind": "cron",
+        "expr": "0 7 * * *",
+        "tz": "America/Chicago"
+      },
+      "sessionTarget": "isolated",
+      "wakeMode": "now",
+      "payload": {
+        "kind": "agentTurn",
+        "message": "Run daily heavy intake workflow for OpenClaw recovery pipeline: execute run-folder scope, refresh extraction/profile outputs, and produce a compact summary with counts and gaps.",
+        "thinking": "low",
+        "timeoutSeconds": 900
+      },
+      "delivery": {
+        "mode": "announce"
+      },
+      "state": {
+        "nextRunAtMs": 1773230400000
+      }
+    },
+    {
+      "id": "7a2e1aec-f82a-4788-8b85-72f3538e1dc3",
+      "agentId": "main",
+      "sessionKey": "agent:main:main",
+      "name": "daily-reconcile-backup-2330",
+      "enabled": true,
+      "createdAtMs": 1773156068433,
+      "updatedAtMs": 1773156068433,
+      "schedule": {
+        "kind": "cron",
+        "expr": "30 23 * * *",
+        "tz": "America/Chicago"
+      },
+      "sessionTarget": "isolated",
+      "wakeMode": "now",
+      "payload": {
+        "kind": "agentTurn",
+        "message": "Run end-of-day reconciliation and backup check. Validate backup manifest freshness, report unresolved gaps, and output a next-morning kickoff checklist.",
+        "thinking": "low",
+        "timeoutSeconds": 600
+      },
+      "delivery": {
+        "mode": "announce"
+      },
+      "state": {
+        "nextRunAtMs": 1773203400000
+      }
+    }
+  ]
+}

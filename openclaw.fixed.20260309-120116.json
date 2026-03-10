@@ -1,0 +1,7 @@
+﻿{
+    "providers":  {
+                      "openai":  true,
+                      "nvidia-nim":  false,
+                      "ollama":  false
+                  }
+}

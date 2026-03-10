@@ -1,0 +1,65 @@
+{
+  "meta": {
+    "lastTouchedVersion": "2026.3.8",
+    "lastTouchedAt": "2026-03-10T15:20:48.177Z"
+  },
+  "wizard": {
+    "lastRunAt": "2026-03-09T17:06:31.230Z",
+    "lastRunVersion": "2026.3.8",
+    "lastRunCommand": "doctor",
+    "lastRunMode": "local"
+  },
+  "agents": {
+    "defaults": {
+      "model": {
+        "primary": "openai-codex/gpt-5.3-codex"
+      },
+      "contextTokens": 32000,
+      "memorySearch": {
+        "enabled": true,
+        "sources": [
+          "memory",
+          "sessions"
+        ],
+        "provider": "openai",
+        "model": "text-embedding-3-small"
+      },
+      "compaction": {
+        "model": "openai/gpt-4.1-mini",
+        "memoryFlush": {
+          "enabled": true,
+          "softThresholdTokens": 4000
+        }
+      },
+      "heartbeat": {
+        "every": "30m"
+      },
+      "subagents": {
+        "model": "openai/gpt-4.1-mini"
+      }
+    }
+  },
+  "commands": {
+    "native": "auto",
+    "nativeSkills": "auto",
+    "restart": true,
+    "ownerDisplay": "raw"
+  },
+  "channels": {
+    "telegram": {
+      "enabled": false,
+      "dmPolicy": "pairing",
+      "groupPolicy": "allowlist",
+      "streaming": "partial"
+    }
+  },
+  "gateway": {
+    "port": 18789,
+    "mode": "local",
+    "bind": "loopback",
+    "auth": {
+      "mode": "token",
+      "token": "d885a21888d50b31b203c5ca23c19b998e2446e6276e333e"
+    }
+  }
+}

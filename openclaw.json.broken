@@ -1,0 +1,54 @@
+{
+  "agents": {
+    "defaults": {
+      "model": {
+        "primary": "openai-codex/gpt-5.3-codex"
+      },
+      "workspace": "C:\\Users\\tonyb\\.openclaw\\workspace"
+    },
+    "list": [
+      { "id": "main" }
+    ]
+  },
+
+  "commands": {
+    "native": "auto",
+    "nativeSkills": "auto",
+    "restart": true,
+    "ownerDisplay": "raw"
+  },
+
+  "channels": {
+    "telegram": {
+      "enabled": false,
+      "dmPolicy": "pairing",
+      "botToken": "",
+      "groupPolicy": "allowlist",
+      "streaming": false
+    }
+  },
+
+  "gateway": {
+  "mode": "local",
+  "bind": "lan",
+  "port": 18789,
+  "auth": {
+    "mode": "token",
+    "token": "d885a21888d50b31b203c5ca23c19b998e2446e6276e333e",
+    "rateLimit": {
+      "maxAttempts": 10,
+      "windowMs": 60000,
+      "lockoutMs": 300000
+    }
+  },
+  "controlUi": {
+    "allowedOrigins": [
+      "http://192.168.1.144:18789"
+    ]
+  }
+}
+}
+
+
+
+

@@ -1,0 +1,150 @@
+{
+  "7d221c9f92bc226e75711224895a10799e017773e1d59fe62ed7d755a77f31d8": {
+    "deviceId": "7d221c9f92bc226e75711224895a10799e017773e1d59fe62ed7d755a77f31d8",
+    "publicKey": "dOU7StCxyFNA9OMqBR4dPaJQrv3qRsaVKAop8Kmoxpc",
+    "platform": "Win32",
+    "clientId": "openclaw-control-ui",
+    "clientMode": "webchat",
+    "role": "operator",
+    "roles": [
+      "operator"
+    ],
+    "scopes": [
+      "operator.admin",
+      "operator.approvals",
+      "operator.pairing"
+    ],
+    "approvedScopes": [
+      "operator.admin",
+      "operator.approvals",
+      "operator.pairing"
+    ],
+    "tokens": {
+      "operator": {
+        "token": "-wUcAJRi4s_RXdcthIGzf57jdxJeSUPk59VXhQkAFYA",
+        "role": "operator",
+        "scopes": [
+          "operator.admin",
+          "operator.approvals",
+          "operator.pairing"
+        ],
+        "createdAtMs": 1771807176200,
+        "lastUsedAtMs": 1773153506496
+      }
+    },
+    "createdAtMs": 1771807176199,
+    "approvedAtMs": 1771807176199
+  },
+  "0baa6457963578cf66c41d828c4e2e9d31464cfc8e10a88df08ccc32a556ff92": {
+    "deviceId": "0baa6457963578cf66c41d828c4e2e9d31464cfc8e10a88df08ccc32a556ff92",
+    "publicKey": "tzBdWc2g0OEiCTfC80qALE5X5F45mHVSv-EQPzJ8pBI",
+    "platform": "win32",
+    "clientId": "cli",
+    "clientMode": "cli",
+    "role": "operator",
+    "roles": [
+      "operator"
+    ],
+    "scopes": [
+      "operator.read",
+      "operator.admin",
+      "operator.approvals",
+      "operator.pairing",
+      "operator.write"
+    ],
+    "approvedScopes": [
+      "operator.read",
+      "operator.admin",
+      "operator.approvals",
+      "operator.pairing"
+    ],
+    "tokens": {
+      "operator": {
+        "token": "Rw4z93wyMB739zIo9wvax_O-6RUbFBGxvAPmJh2kp7I",
+        "role": "operator",
+        "scopes": [
+          "operator.admin",
+          "operator.approvals",
+          "operator.pairing"
+        ],
+        "createdAtMs": 1772230228494,
+        "rotatedAtMs": 1772231324374,
+        "lastUsedAtMs": 1772801859086
+      }
+    },
+    "createdAtMs": 1772230228493,
+    "approvedAtMs": 1772231324374
+  },
+  "e75353188eb232806a4b645dd592e7af73877fa326e51aadf4719de5de872642": {
+    "deviceId": "e75353188eb232806a4b645dd592e7af73877fa326e51aadf4719de5de872642",
+    "publicKey": "djzOd60Mgv4I17JXg18DjtsmrlbVh4ckgBQTDSW2-rY",
+    "platform": "Win32",
+    "clientId": "openclaw-control-ui",
+    "clientMode": "webchat",
+    "role": "operator",
+    "roles": [
+      "operator"
+    ],
+    "scopes": [
+      "operator.admin",
+      "operator.approvals",
+      "operator.pairing"
+    ],
+    "approvedScopes": [
+      "operator.admin",
+      "operator.approvals",
+      "operator.pairing"
+    ],
+    "tokens": {
+      "operator": {
+        "token": "ilvHZy2BCQVq3mUVeX6VhqGTjurrBmaTxrk_HQ4euY8",
+        "role": "operator",
+        "scopes": [
+          "operator.admin",
+          "operator.approvals",
+          "operator.pairing"
+        ],
+        "createdAtMs": 1772798244347,
+        "lastUsedAtMs": 1772800800790
+      }
+    },
+    "createdAtMs": 1772798244347,
+    "approvedAtMs": 1772798244347
+  },
+  "4aa0a738487e8e7b25fc8287bdbd7b29c8a6cb122fc1446c4dbaca71a78113a9": {
+    "deviceId": "4aa0a738487e8e7b25fc8287bdbd7b29c8a6cb122fc1446c4dbaca71a78113a9",
+    "publicKey": "njP6I5tbeF0OnbBK_VTjBm46NidG9V2VUeh_Er7m58U",
+    "platform": "Win32",
+    "clientId": "openclaw-control-ui",
+    "clientMode": "webchat",
+    "role": "operator",
+    "roles": [
+      "operator"
+    ],
+    "scopes": [
+      "operator.admin",
+      "operator.approvals",
+      "operator.pairing"
+    ],
+    "approvedScopes": [
+      "operator.admin",
+      "operator.approvals",
+      "operator.pairing"
+    ],
+    "tokens": {
+      "operator": {
+        "token": "Te9qktcw0jow8Mo5lBJusO1tlIrT2pLLv_LUqCTsv0k",
+        "role": "operator",
+        "scopes": [
+          "operator.admin",
+          "operator.approvals",
+          "operator.pairing"
+        ],
+        "createdAtMs": 1773144979729,
+        "lastUsedAtMs": 1773155969163
+      }
+    },
+    "createdAtMs": 1773144979729,
+    "approvedAtMs": 1773144979729
+  }
+}

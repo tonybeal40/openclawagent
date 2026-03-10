@@ -1,0 +1,28 @@
+{
+  "id": "d46fa958-0569-411c-8f44-8bafb26293b5",
+  "enqueuedAt": 1772742386196,
+  "channel": "telegram",
+  "to": "telegram:7939934885",
+  "accountId": "default",
+  "payloads": [
+    {
+      "text": "You’re super close — screenshot confirms exactly what happened:\n\n- You set `allowedOrigins` as a **string**, not an array.\n- That’s why it says: `expected array, received string`.\n\n### Fastest unblock (do this)\nUse fallback mode instead of array typing:\n\n```powershell\nopenclaw config set gateway.controlUi.dangerouslyAllowHostHeaderOriginFallback true\nopenclaw gateway restart\nopenclaw status --deep\n```\n\nThat should let non-loopback LAN bind work without wrestling JSON array syntax.\n\n---\n\n### If you want strict mode (proper array), do it via file edit:\n```powershell\nnotepad $env:USERPROFILE\\.openclaw\\openclaw.json\n```\nSet this exactly:\n```json\n\"gateway\": {\n\"controlUi\": {\n\"allowedOrigins\": [\n\"http://192.168.1.144:18790\",\n\"http://localhost:18790\",\n\"http://127.0.0.1:18790\"\n]\n}\n}\n```\nSave, then:\n```powershell\nopenclaw gateway restart\n```\n\nIf you want, do the first 3-command fallback now and paste output — I’ll verify immediately.",
+      "replyToId": "499d45a1-0042-4585-8ee5-d144b83be6ef",
+      "replyToTag": true,
+      "replyToCurrent": true,
+      "audioAsVoice": false
+    }
+  ],
+  "threadId": null,
+  "replyToId": "499d45a1-0042-4585-8ee5-d144b83be6ef",
+  "mirror": {
+    "sessionKey": "agent:main:main",
+    "agentId": "main",
+    "text": "You’re super close — screenshot confirms exactly what happened:\n\n- You set `allowedOrigins` as a **string**, not an array.\n- That’s why it says: `expected array, received string`.\n\n### Fastest unblock (do this)\nUse fallback mode instead of array typing:\n\n```powershell\nopenclaw config set gateway.controlUi.dangerouslyAllowHostHeaderOriginFallback true\nopenclaw gateway restart\nopenclaw status --deep\n```\n\nThat should let non-loopback LAN bind work without wrestling JSON array syntax.\n\n---\n\n### If you want strict mode (proper array), do it via file edit:\n```powershell\nnotepad $env:USERPROFILE\\.openclaw\\openclaw.json\n```\nSet this exactly:\n```json\n\"gateway\": {\n\"controlUi\": {\n\"allowedOrigins\": [\n\"http://192.168.1.144:18790\",\n\"http://localhost:18790\",\n\"http://127.0.0.1:18790\"\n]\n}\n}\n```\nSave, then:\n```powershell\nopenclaw gateway restart\n```\n\nIf you want, do the first 3-command fallback now and paste output — I’ll verify immediately.",
+    "mediaUrls": [],
+    "isGroup": false
+  },
+  "retryCount": 5,
+  "lastAttemptAt": 1772745045065,
+  "lastError": "Call to 'sendMessage' failed! (400: Bad Request: message to be replied not found)"
+}

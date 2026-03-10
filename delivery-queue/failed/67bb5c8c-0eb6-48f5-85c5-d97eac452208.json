@@ -1,0 +1,28 @@
+{
+  "id": "67bb5c8c-0eb6-48f5-85c5-d97eac452208",
+  "enqueuedAt": 1772741631865,
+  "channel": "telegram",
+  "to": "telegram:7939934885",
+  "accountId": "default",
+  "payloads": [
+    {
+      "text": "Perfect. ✅ File exists.\n\nNow run this exact repair block:\n\n```powershell\n$cfg = Join-Path $env:USERPROFILE \".openclaw\\openclaw.json\"\nCopy-Item $cfg \"$cfg.bak-$(Get-Date -Format yyyyMMdd-HHmmss)\"\n$raw = Get-Content $cfg -Raw\n$obj = $raw | ConvertFrom-Json\n$obj | ConvertTo-Json -Depth 100 | Set-Content $cfg -Encoding UTF8\n\"JSON_REPAIR_OK\"\n```\n\nIf it errors, paste the full error text exactly.\nIf it prints `JSON_REPAIR_OK`, next we’ll run `openclaw status --deep`.",
+      "replyToId": "0412abe6-bf91-4e92-9944-8dc955f44df9",
+      "replyToTag": true,
+      "replyToCurrent": true,
+      "audioAsVoice": false
+    }
+  ],
+  "threadId": null,
+  "replyToId": "0412abe6-bf91-4e92-9944-8dc955f44df9",
+  "mirror": {
+    "sessionKey": "agent:main:main",
+    "agentId": "main",
+    "text": "Perfect. ✅ File exists.\n\nNow run this exact repair block:\n\n```powershell\n$cfg = Join-Path $env:USERPROFILE \".openclaw\\openclaw.json\"\nCopy-Item $cfg \"$cfg.bak-$(Get-Date -Format yyyyMMdd-HHmmss)\"\n$raw = Get-Content $cfg -Raw\n$obj = $raw | ConvertFrom-Json\n$obj | ConvertTo-Json -Depth 100 | Set-Content $cfg -Encoding UTF8\n\"JSON_REPAIR_OK\"\n```\n\nIf it errors, paste the full error text exactly.\nIf it prints `JSON_REPAIR_OK`, next we’ll run `openclaw status --deep`.",
+    "mediaUrls": [],
+    "isGroup": false
+  },
+  "retryCount": 5,
+  "lastAttemptAt": 1772743849065,
+  "lastError": "Call to 'sendMessage' failed! (400: Bad Request: message to be replied not found)"
+}

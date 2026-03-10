@@ -1,0 +1,32 @@
+{
+  "wizard": {
+    "lastRunAt": "2026-03-09T17:01:46.675Z",
+    "lastRunVersion": "2026.3.8",
+    "lastRunCommand": "doctor",
+    "lastRunMode": "local"
+  },
+  "commands": {
+    "native": "auto",
+    "nativeSkills": "auto",
+    "restart": true,
+    "ownerDisplay": "raw"
+  },
+  "channels": {
+    "telegram": {
+      "enabled": true,
+      "dmPolicy": "pairing",
+      "groupPolicy": "allowlist",
+      "streaming": "partial"
+    }
+  },
+  "gateway": {
+    "auth": {
+      "mode": "token",
+      "token": "f1fad055b3be84e6c6e2bd73123413a22df1988241308943"
+    }
+  },
+  "meta": {
+    "lastTouchedVersion": "2026.3.8",
+    "lastTouchedAt": "2026-03-09T17:01:46.683Z"
+  }
+}

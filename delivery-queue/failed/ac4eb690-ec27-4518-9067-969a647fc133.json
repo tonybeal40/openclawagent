@@ -1,0 +1,28 @@
+{
+  "id": "ac4eb690-ec27-4518-9067-969a647fc133",
+  "enqueuedAt": 1772741543006,
+  "channel": "telegram",
+  "to": "telegram:7939934885",
+  "accountId": "default",
+  "payloads": [
+    {
+      "text": "That error means Windows is trying to open a file in the **wrong folder** (or missing `.json` extension handling).\n\nUse this exact PowerShell to locate it safely:\n\n```powershell\n$cfg = Join-Path $env:USERPROFILE \".openclaw\\openclaw.json\"\n$cfg\nTest-Path $cfg\n```\n\nIf `Test-Path` returns `True`, open it with:\n\n```powershell\nnotepad $cfg\n```\n\nIf it returns `False`, find any OpenClaw config file:\n\n```powershell\nGet-ChildItem \"$env:USERPROFILE\\.openclaw\" -Force\nGet-ChildItem \"$env:USERPROFILE\\.openclaw\" -Recurse -Filter \"*.json\" -Force\n```\n\nThen send me that output and I’ll point to the exact file to fix.",
+      "replyToId": "8521c9d7-485c-4f0d-a3ea-9cea08387fc3",
+      "replyToTag": true,
+      "replyToCurrent": true,
+      "audioAsVoice": false
+    }
+  ],
+  "threadId": null,
+  "replyToId": "8521c9d7-485c-4f0d-a3ea-9cea08387fc3",
+  "mirror": {
+    "sessionKey": "agent:main:main",
+    "agentId": "main",
+    "text": "That error means Windows is trying to open a file in the **wrong folder** (or missing `.json` extension handling).\n\nUse this exact PowerShell to locate it safely:\n\n```powershell\n$cfg = Join-Path $env:USERPROFILE \".openclaw\\openclaw.json\"\n$cfg\nTest-Path $cfg\n```\n\nIf `Test-Path` returns `True`, open it with:\n\n```powershell\nnotepad $cfg\n```\n\nIf it returns `False`, find any OpenClaw config file:\n\n```powershell\nGet-ChildItem \"$env:USERPROFILE\\.openclaw\" -Force\nGet-ChildItem \"$env:USERPROFILE\\.openclaw\" -Recurse -Filter \"*.json\" -Force\n```\n\nThen send me that output and I’ll point to the exact file to fix.",
+    "mediaUrls": [],
+    "isGroup": false
+  },
+  "retryCount": 5,
+  "lastAttemptAt": 1772743848755,
+  "lastError": "Call to 'sendMessage' failed! (400: Bad Request: message to be replied not found)"
+}

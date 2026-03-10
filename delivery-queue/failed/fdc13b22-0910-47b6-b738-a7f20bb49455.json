@@ -1,0 +1,28 @@
+{
+  "id": "fdc13b22-0910-47b6-b738-a7f20bb49455",
+  "enqueuedAt": 1772741716641,
+  "channel": "telegram",
+  "to": "telegram:7939934885",
+  "accountId": "default",
+  "payloads": [
+    {
+      "text": "Beautiful — this tells us exactly what’s broken now:\n\n## Current state\n- ✅ Gateway: reachable/running\n- ✅ JSON: repaired\n- ⚠️ Telegram: `failed (401) Unauthorized`\n\nSo the remaining issue is **Telegram auth token mismatch/invalid token** (not gateway).\n\n---\n\n## Fix Telegram 401 (on main)\n\nRun these:\n\n```powershell\nopenclaw channels telegram status\nopenclaw channels telegram set-token \"<YOUR_BOT_TOKEN_FROM_BOTFATHER>\"\nopenclaw channels telegram start\nopenclaw status --deep\n```\n\nIf `set-token` command name differs in your build, run:\n```powershell\nopenclaw channels telegram --help\n```\nand paste output; I’ll give exact syntax.\n\n---\n\n## Also (for laptop pairing later)\nYour gateway is still loopback-bound (`127.0.0.1`), so laptop won’t connect until we run LAN bind.\nBut first let’s clear Telegram auth since that’s the immediate red flag.\n\nSend me the output of `openclaw channels telegram status` right after token set, and I’ll confirm when it’s clean.",
+      "replyToId": "87314dc7-36a9-44ef-b9ec-c8dcd1e03ee2",
+      "replyToTag": true,
+      "replyToCurrent": true,
+      "audioAsVoice": false
+    }
+  ],
+  "threadId": null,
+  "replyToId": "87314dc7-36a9-44ef-b9ec-c8dcd1e03ee2",
+  "mirror": {
+    "sessionKey": "agent:main:main",
+    "agentId": "main",
+    "text": "Beautiful — this tells us exactly what’s broken now:\n\n## Current state\n- ✅ Gateway: reachable/running\n- ✅ JSON: repaired\n- ⚠️ Telegram: `failed (401) Unauthorized`\n\nSo the remaining issue is **Telegram auth token mismatch/invalid token** (not gateway).\n\n---\n\n## Fix Telegram 401 (on main)\n\nRun these:\n\n```powershell\nopenclaw channels telegram status\nopenclaw channels telegram set-token \"<YOUR_BOT_TOKEN_FROM_BOTFATHER>\"\nopenclaw channels telegram start\nopenclaw status --deep\n```\n\nIf `set-token` command name differs in your build, run:\n```powershell\nopenclaw channels telegram --help\n```\nand paste output; I’ll give exact syntax.\n\n---\n\n## Also (for laptop pairing later)\nYour gateway is still loopback-bound (`127.0.0.1`), so laptop won’t connect until we run LAN bind.\nBut first let’s clear Telegram auth since that’s the immediate red flag.\n\nSend me the output of `openclaw channels telegram status` right after token set, and I’ll confirm when it’s clean.",
+    "mediaUrls": [],
+    "isGroup": false
+  },
+  "retryCount": 5,
+  "lastAttemptAt": 1772743849769,
+  "lastError": "Call to 'sendMessage' failed! (400: Bad Request: message to be replied not found)"
+}

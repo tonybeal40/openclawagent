@@ -1,0 +1,28 @@
+{
+  "id": "a435124e-4d88-415f-95cc-b0197dccad4a",
+  "enqueuedAt": 1772742952931,
+  "channel": "telegram",
+  "to": "telegram:7939934885",
+  "accountId": "default",
+  "payloads": [
+    {
+      "text": "Easy fix path for Telegram:\n\n### If your current error is:\n`400 Bad Request: message to be replied not found`\n\nThat is usually **stale queued replies**, not a broken bot token.\n\nDo this on main:\n\n```powershell\nopenclaw gateway stop\nopenclaw gateway start --force\nopenclaw status --deep\n```\n\nThen send a **fresh new message** (not replying to an old thread).\nIf it sends/receives, Telegram is healthy.\n\n---\n\n### If you see:\n`401 Unauthorized`\n\nThen token is wrong. Reset it:\n\n1) Get new bot token from BotFather\n2) Put it in `~\\.openclaw\\openclaw.json` under Telegram bot token key\n3) Restart gateway:\n```powershell\nopenclaw gateway restart\nopenclaw status --deep\n```\n\n---\n\n### Extra cleanup (recommended)\nBecause token appeared in screenshots, rotate token after stable:\n- create/regenerate in BotFather\n- update config\n- restart gateway\n\nIf you paste your **exact Telegram error line**, I’ll tell you which branch (400 vs 401) you’re in immediately.",
+      "replyToId": "27587ca7-cbaf-4ac0-b50f-f1b025ca81cf",
+      "replyToTag": true,
+      "replyToCurrent": true,
+      "audioAsVoice": false
+    }
+  ],
+  "threadId": null,
+  "replyToId": "27587ca7-cbaf-4ac0-b50f-f1b025ca81cf",
+  "mirror": {
+    "sessionKey": "agent:main:main",
+    "agentId": "main",
+    "text": "Easy fix path for Telegram:\n\n### If your current error is:\n`400 Bad Request: message to be replied not found`\n\nThat is usually **stale queued replies**, not a broken bot token.\n\nDo this on main:\n\n```powershell\nopenclaw gateway stop\nopenclaw gateway start --force\nopenclaw status --deep\n```\n\nThen send a **fresh new message** (not replying to an old thread).\nIf it sends/receives, Telegram is healthy.\n\n---\n\n### If you see:\n`401 Unauthorized`\n\nThen token is wrong. Reset it:\n\n1) Get new bot token from BotFather\n2) Put it in `~\\.openclaw\\openclaw.json` under Telegram bot token key\n3) Restart gateway:\n```powershell\nopenclaw gateway restart\nopenclaw status --deep\n```\n\n---\n\n### Extra cleanup (recommended)\nBecause token appeared in screenshots, rotate token after stable:\n- create/regenerate in BotFather\n- update config\n- restart gateway\n\nIf you paste your **exact Telegram error line**, I’ll tell you which branch (400 vs 401) you’re in immediately.",
+    "mediaUrls": [],
+    "isGroup": false
+  },
+  "retryCount": 5,
+  "lastAttemptAt": 1772745808084,
+  "lastError": "Call to 'sendMessage' failed! (400: Bad Request: message to be replied not found)"
+}

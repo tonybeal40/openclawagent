@@ -1,0 +1,10 @@
+{
+  "version": 1,
+  "nodeId": "613b66e4-3760-4403-9b98-08459c08dad1",
+  "displayName": "Tony",
+  "gateway": {
+    "host": "127.0.0.1",
+    "port": 18789,
+    "tls": false
+  }
+}
