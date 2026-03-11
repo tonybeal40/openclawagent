@@ -6,8 +6,9 @@ param(
 
 $ErrorActionPreference = 'Stop'
 $ts = Get-Date -Format 'yyyyMMdd-HHmmss'
-$logDir = "C:\Users\tonyb\.openclaw\workspace\ops"
-New-Item -ItemType Directory -Force -Path $logDir | Out-Null
+$opsRoot = "C:\Users\tonyb\.openclaw\workspace\ops"
+$logDir = Join-Path $opsRoot "checkpoints"
+New-Item -ItemType Directory -Force -Path $opsRoot,$logDir | Out-Null
 
 $mode = if($Mirror){"/MIR"} else {"/E"}
 $exclude = @('/XD','node_modules','.git','archive','logs')

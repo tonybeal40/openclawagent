@@ -2,10 +2,12 @@ $ErrorActionPreference='Stop'
 $driveRoot='G:\My Drive\openclaw-workspace-main'
 $localRoot='C:\Users\tonyb\.openclaw\workspace\inbox\drive-recent'
 $ops='C:\Users\tonyb\.openclaw\workspace\ops'
-$stateFile=Join-Path $ops 'DRIVE_RECENT_LASTRUN.txt'
-$logFile=Join-Path $ops ('DRIVE_RECENT_PULL_' + (Get-Date -Format 'yyyyMMdd') + '.log')
+$checkpoints=Join-Path $ops 'checkpoints'
+$stateFile=Join-Path $checkpoints 'DRIVE_RECENT_LASTRUN.txt'
+$logFile=Join-Path $checkpoints ('DRIVE_RECENT_PULL_' + (Get-Date -Format 'yyyyMMdd') + '.log')
+$legacyStateFile=Join-Path $ops 'DRIVE_RECENT_LASTRUN.txt'
 
-New-Item -ItemType Directory -Force -Path $localRoot,$ops | Out-Null
+New-Item -ItemType Directory -Force -Path $localRoot,$ops,$checkpoints | Out-Null
 if(!(Test-Path $stateFile)){ '2026-03-09T14:00:00' | Set-Content $stateFile }
 $lastRun=[datetime](Get-Content $stateFile -Raw)
 
@@ -22,5 +24,8 @@ foreach($f in $recent){
   "COPIED: $($f.FullName) -> $dest" | Add-Content $logFile
 }
 
-(Get-Date).ToString('o') | Set-Content $stateFile
+$nowIso=(Get-Date).ToString('o')
+$nowIso | Set-Content $stateFile
+# Back-compat mirror for existing dashboards/checks that still read ops root
+$nowIso | Set-Content $legacyStateFile
 Write-Host "Pulled $($recent.Count) files from recent Drive updates."
