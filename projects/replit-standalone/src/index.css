@@ -1,24 +1,33 @@
 :root {
-  font-family: 'IBM Plex Sans', 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
-  color: #07080a;
-  background-color: #ebeced;
+  color: #eff5ff;
+  background: #07111f;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  font-feature-settings: 'ss01' 1, 'cv02' 1;
 }
 
 * {
   box-sizing: border-box;
 }
 
+html {
+  background: #07111f;
+}
+
 body {
   margin: 0;
+  min-width: 1024px;
   min-height: 100vh;
-  background-color: #ebeced;
-  color: #07080a;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
 }
 
 #root {
@@ -27,14 +36,15 @@ body {
 
 a {
   color: inherit;
+  text-decoration: none;
 }
 
-a:focus-visible,
-button:focus-visible {
-  outline: 2px solid #0f87ff;
+button:focus-visible,
+a:focus-visible {
+  outline: 2px solid #7ca8ff;
   outline-offset: 2px;
 }
 
 ::selection {
-  background: rgba(15, 135, 255, 0.18);
+  background: rgba(124, 168, 255, 0.35);
 }
