@@ -1,158 +1,109 @@
-import { useEffect, useState } from 'react'
-
 import './App.css'
-import { DashboardCard, type MissionCard, type PriorityLevel } from './components/DashboardCard'
-import { DashboardLane, type LaneDefinition } from './components/DashboardLane'
-import { OfficeSidebar, type AvailabilityItem, type QuickStat } from './components/OfficeSidebar'
+import { ContactSection } from './components/ContactSection'
+import { ExperienceTimeline, type ExperienceItem } from './components/ExperienceTimeline'
+import { ExpertiseGrid, type ExpertiseItem } from './components/ExpertiseGrid'
+import { Footer } from './components/Footer'
+import { Header } from './components/Header'
+import { HeroSection } from './components/HeroSection'
+import { ResultsSection, type ResultItem } from './components/ResultsSection'
+import { Section } from './components/Section'
 
-const lanes: LaneDefinition[] = [
+const expertise: ExpertiseItem[] = [
   {
-    id: 'backlog',
-    title: 'Backlog',
-    accent: 'lane-backlog',
-    cards: [
-      { id: 'b1', title: 'Refine launch checklist', owner: 'AL', priority: 'Med', dueDate: 'Mar 14' },
-      { id: 'b2', title: 'Capture user interview clips', owner: 'JT', priority: 'Low', dueDate: 'Mar 16' },
-      { id: 'b3', title: 'Review onboarding copy', owner: 'RK', priority: 'High', dueDate: 'Mar 18' },
-    ],
+    title: 'RevOps',
+    description: 'Align revenue teams around one operating cadence, one source of truth, and one accountable funnel.',
   },
   {
-    id: 'progress',
-    title: 'In Progress',
-    accent: 'lane-progress',
-    cards: [
-      { id: 'p1', title: 'Ship telemetry dashboard', owner: 'MN', priority: 'High', dueDate: 'Mar 12' },
-      { id: 'p2', title: 'Tune deploy rollback flow', owner: 'DS', priority: 'Med', dueDate: 'Mar 13' },
-      { id: 'p3', title: 'QA mobile command center', owner: 'EV', priority: 'Med', dueDate: 'Mar 15' },
-    ],
+    title: 'Sales Ops',
+    description: 'Build disciplined process, territory planning, reporting, and pipeline management that sales teams actually use.',
   },
   {
-    id: 'blocked',
-    title: 'Blocked',
-    accent: 'lane-blocked',
-    cards: [
-      { id: 'x1', title: 'Procurement approval for GPUs', owner: 'KP', priority: 'High', dueDate: 'Mar 11' },
-      { id: 'x2', title: 'Vendor API rate limit waiver', owner: 'LM', priority: 'Med', dueDate: 'Mar 17' },
-      { id: 'x3', title: 'Legal sign-off for pilot', owner: 'SC', priority: 'Low', dueDate: 'Mar 19' },
-    ],
+    title: 'GTM Systems',
+    description: 'Translate go-to-market strategy into clean CRM architecture, integrations, and workflows that scale.',
   },
   {
-    id: 'done',
-    title: 'Done',
-    accent: 'lane-done',
-    cards: [
-      { id: 'd1', title: 'Alert routing migration', owner: 'TW', priority: 'High', dueDate: 'Mar 10' },
-      { id: 'd2', title: 'Sprint notes published', owner: 'HB', priority: 'Low', dueDate: 'Mar 09' },
-      { id: 'd3', title: 'Incident template updated', owner: 'CF', priority: 'Med', dueDate: 'Mar 08' },
-    ],
+    title: 'Forecasting',
+    description: 'Improve forecast accuracy with better stage definitions, inspection rhythms, and data hygiene.',
+  },
+  {
+    title: 'Enablement',
+    description: 'Equip reps and managers with playbooks, tooling, and feedback loops that shorten time to productivity.',
   },
 ]
 
-const teamAvailability: AvailabilityItem[] = [
-  { name: 'Avery Lane', role: 'Ops Lead', status: 'Online', detail: 'Warp room' },
-  { name: 'Mina Noor', role: 'Frontend', status: 'Focus', detail: 'Heads-down on charts' },
-  { name: 'Diego Soto', role: 'Platform', status: 'In Review', detail: 'Rollback audit' },
-  { name: 'Lina Moore', role: 'Partnerships', status: 'Away', detail: 'Vendor call until 4:30' },
+const experience: ExperienceItem[] = [
+  {
+    company: 'Wicks',
+    role: 'Revenue Operations and Business Development Leader',
+    period: '2023 - Present',
+    summary: 'Driving operating rigor across pipeline management, GTM execution, and strategic growth initiatives.',
+  },
+  {
+    company: 'BioGaia',
+    role: 'Sales Operations and Commercial Strategy',
+    period: '2020 - 2023',
+    summary: 'Built commercial reporting, process discipline, and cross-functional decision support for growth-stage expansion.',
+  },
+  {
+    company: 'ProForm',
+    role: 'Business Development and Sales Operations',
+    period: '2017 - 2020',
+    summary: 'Improved sales execution through cleaner systems, tighter planning, and operational support for revenue teams.',
+  },
+  {
+    company: 'Natoli',
+    role: 'Business Development',
+    period: '2013 - 2017',
+    summary: 'Led relationship-driven growth efforts while strengthening the commercial foundation behind new business.',
+  },
 ]
 
-const quickStats: QuickStat[] = [
-  { label: 'Open Missions', value: '12' },
-  { label: 'At Risk', value: '3' },
-  { label: 'Velocity', value: '84%' },
-  { label: 'Deploys Today', value: '7' },
+const results: ResultItem[] = [
+  'Built forecasting and inspection rhythms that gave leadership a more reliable view of pipeline health and risk.',
+  'Improved CRM structure and reporting so commercial teams could act on data instead of debating it.',
+  'Created scalable operating processes that reduced manual work and increased accountability across GTM teams.',
+  'Supported business development initiatives with clearer qualification, handoff, and follow-through mechanisms.',
 ]
-
-function formatCurrentTime(date: Date) {
-  return new Intl.DateTimeFormat('en-US', {
-    hour: 'numeric',
-    minute: '2-digit',
-  }).format(date)
-}
-
-function countPriority(cards: MissionCard[], priority: PriorityLevel) {
-  return cards.filter((card) => card.priority === priority).length
-}
 
 function App() {
-  const [currentTime, setCurrentTime] = useState(() => formatCurrentTime(new Date()))
-
-  useEffect(() => {
-    let intervalId: number
-
-    const syncClock = () => {
-      setCurrentTime(formatCurrentTime(new Date()))
-      intervalId = window.setInterval(() => {
-        setCurrentTime(formatCurrentTime(new Date()))
-      }, 60_000)
-    }
-
-    const now = new Date()
-    const delay = (60 - now.getSeconds()) * 1000 - now.getMilliseconds()
-    const timeoutId = window.setTimeout(syncClock, delay)
-
-    setCurrentTime(formatCurrentTime(now))
-
-    return () => {
-      window.clearTimeout(timeoutId)
-      if (intervalId) {
-        window.clearInterval(intervalId)
-      }
-    }
-  }, [])
-
-  const totalCards = lanes.reduce((sum, lane) => sum + lane.cards.length, 0)
-  const highPriorityCount = lanes.reduce((sum, lane) => sum + countPriority(lane.cards, 'High'), 0)
-
   return (
-    <div className="mission-control">
-      <div className="mission-control__backdrop" />
-      <div className="app-shell">
-        <main className="dashboard">
-          <header className="dashboard-header">
-            <div>
-              <p className="eyebrow">Orbital Command Grid</p>
-              <h1>Mission Control</h1>
-            </div>
-            <div className="dashboard-header__meta">
-              <div className="clock-panel">
-                <span className="clock-panel__label">Current Time</span>
-                <strong>{currentTime}</strong>
-              </div>
-              <div className="status-pill">
-                <span className="status-pill__dot" />
-                Systems nominal
-              </div>
-            </div>
-          </header>
+    <div className="site-shell">
+      <Header />
 
-          <section className="board-overview" aria-label="Board overview">
-            <div>
-              <span className="overview-label">Active board</span>
-              <strong>{totalCards} tracked items</strong>
-            </div>
-            <div>
-              <span className="overview-label">High priority</span>
-              <strong>{highPriorityCount} missions</strong>
-            </div>
-            <div>
-              <span className="overview-label">Blocked lane</span>
-              <strong>{lanes.find((lane) => lane.id === 'blocked')?.cards.length ?? 0} waiting</strong>
-            </div>
-          </section>
+      <main>
+        <HeroSection />
 
-          <section className="lanes-grid" aria-label="Mission lanes">
-            {lanes.map((lane) => (
-              <DashboardLane key={lane.id} lane={lane}>
-                {lane.cards.map((card) => (
-                  <DashboardCard key={card.id} card={card} />
-                ))}
-              </DashboardLane>
-            ))}
-          </section>
-        </main>
+        <Section
+          id="expertise"
+          eyebrow="Expertise"
+          title="Operational depth across the full revenue engine."
+          intro="Tony Beal brings a systems-first view to growth: connecting leadership priorities, field execution, and the operating model underneath both."
+        >
+          <ExpertiseGrid items={expertise} />
+        </Section>
 
-        <OfficeSidebar availability={teamAvailability} stats={quickStats} />
-      </div>
+        <Section
+          id="experience"
+          eyebrow="Experience"
+          title="A track record built across operations, sales, and business development."
+          intro="From mid-market execution to strategic growth support, each role sharpened the ability to build process without slowing momentum."
+        >
+          <ExperienceTimeline items={experience} />
+        </Section>
+
+        <Section
+          id="results"
+          eyebrow="Results"
+          title="Proof that operational clarity drives commercial performance."
+          intro="The work centers on making revenue teams easier to manage, easier to forecast, and easier to scale."
+        >
+          <ResultsSection items={results} />
+        </Section>
+
+        <ContactSection />
+      </main>
+
+      <Footer />
     </div>
   )
 }
