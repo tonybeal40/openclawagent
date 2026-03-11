@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Client Portal - PythonJobs V1</title>
+    <style>
+      body { font-family: Arial, sans-serif; margin: 2rem; max-width: 760px; }
+      .card { border: 1px solid #ddd; border-radius: 10px; padding: 1rem; margin-bottom: 1rem; }
+      input, textarea, button { width: 100%; padding: 0.6rem; margin-top: 0.5rem; }
+      button { background: #111; color: #fff; border: none; cursor: pointer; }
+      .muted { color: #666; font-size: 0.9rem; }
+      .hidden { display: none; }
+      pre { background: #f7f7f7; padding: 0.75rem; border-radius: 8px; }
+    </style>
+  </head>
+  <body>
+    <h1>Paid Client Portal</h1>
+    <p class="muted">Login with your paid email + code, then complete onboarding.</p>
+
+    <div class="card" id="loginCard">
+      <h3>Login</h3>
+      <label>Email</label>
+      <input id="email" type="email" placeholder="you@company.com" />
+      <label>Access Code</label>
+      <input id="code" type="text" placeholder="ABC123" />
+      <button id="loginBtn">Login</button>
+      <p id="loginMsg" class="muted"></p>
+    </div>
+
+    <div class="card hidden" id="onboardingCard">
+      <h3>First Paid Client Onboarding</h3>
+      <label>Target role</label>
+      <input id="target_role" placeholder="RevOps Director" />
+      <label>Current monthly income</label>
+      <input id="current_income" type="number" placeholder="0" />
+      <label>Target monthly income</label>
+      <input id="target_income" type="number" placeholder="5000" />
+      <label>Desired start timeline (days)</label>
+      <input id="start_timeline_days" type="number" placeholder="14" />
+      <label>Notes</label>
+      <textarea id="notes" rows="4" placeholder="Anything we should know"></textarea>
+      <button id="submitOnboarding">Submit onboarding</button>
+      <p id="onboardingMsg" class="muted"></p>
+    </div>
+
+    <div class="card">
+      <h3>Mission Control Revenue Status</h3>
+      <button id="refreshStatus">Refresh status</button>
+      <pre id="statusOut">(loading...)</pre>
+    </div>
+
+    <script>
+      let token = '';
+
+      async function refreshStatus() {
+        const res = await fetch('/api/mission-control/status');
+        const data = await res.json();
+        document.getElementById('statusOut').textContent = JSON.stringify(data, null, 2);
+      }
+
+      document.getElementById('refreshStatus').addEventListener('click', refreshStatus);
+
+      document.getElementById('loginBtn').addEventListener('click', async () => {
+        const email = document.getElementById('email').value;
+        const code = document.getElementById('code').value;
+        const res = await fetch('/api/auth/login', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ email, code })
+        });
+        const data = await res.json();
+
+        if (res.ok) {
+          token = data.token;
+          document.getElementById('loginMsg').textContent = 'Login successful.';
+          document.getElementById('onboardingCard').classList.remove('hidden');
+        } else {
+          document.getElementById('loginMsg').textContent = data.detail || 'Login failed';
+        }
+      });
+
+      document.getElementById('submitOnboarding').addEventListener('click', async () => {
+        const payload = {
+          token,
+          target_role: document.getElementById('target_role').value,
+          current_income: Number(document.getElementById('current_income').value || 0),
+          target_income: Number(document.getElementById('target_income').value || 0),
+          start_timeline_days: Number(document.getElementById('start_timeline_days').value || 0),
+          notes: document.getElementById('notes').value,
+        };
+
+        const res = await fetch('/api/onboarding', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(payload)
+        });
+        const data = await res.json();
+        document.getElementById('onboardingMsg').textContent = res.ok ? 'Onboarding submitted.' : (data.detail || 'Failed');
+      });
+
+      refreshStatus();
+    </script>
+  </body>
+</html>

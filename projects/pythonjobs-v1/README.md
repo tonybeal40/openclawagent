@@ -4,7 +4,9 @@
 A cheap first version of your "AI Pipeline Finder" product:
 - Simple website (landing + Stripe checkout)
 - FastAPI backend
-- Stripe subscription endpoint + webhook stub
+- Stripe subscription endpoint + webhook persistence
+- Customer table + simple paid-user login
+- First-client onboarding form + mission-control revenue status card
 - Designed for local-first + GitHub source of truth
 
 ## Do you need a website?
