@@ -14,6 +14,7 @@
 ## Operational preferences
 - User prefers direct, high-energy, action-first help.
 - User wants complete file/memory recovery after outages, with clear inventory and missing-items checks.
+- User prefers agent/cron naming to match his named roster (not generic numbered labels) for clearer ops readability.
 
 ## Recovery artifacts present in workspace
 - `memory/tonight-state-summary.md`
