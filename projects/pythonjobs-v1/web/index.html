@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PythonJobs V1</title>
+    <style>
+      body { font-family: Arial, sans-serif; margin: 2rem; max-width: 800px; }
+      .card { border: 1px solid #ddd; border-radius: 10px; padding: 1rem; margin-top: 1rem; }
+      input, button { padding: 0.6rem; margin-top: 0.6rem; width: 100%; }
+      button { background: #111; color: #fff; border: 0; cursor: pointer; }
+      .small { color: #666; font-size: 0.9rem; }
+    </style>
+  </head>
+  <body>
+    <h1>AI Pipeline Finder — V1</h1>
+    <p>Revenue-first MVP. Deterministic pipeline + optional AI assist only where needed.</p>
+
+    <div class="card">
+      <h3>Starter Plan</h3>
+      <p>$499/month — daily target companies + decision-maker packet.</p>
+      <label>Email</label>
+      <input id="email" type="email" placeholder="you@company.com" />
+      <button id="checkoutBtn">Start subscription</button>
+      <p class="small">Powered by Stripe Checkout.</p>
+    </div>
+
+    <script>
+      const btn = document.getElementById('checkoutBtn');
+      btn.addEventListener('click', async () => {
+        const email = document.getElementById('email').value;
+        const res = await fetch('/api/create-checkout-session', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ email })
+        });
+        const data = await res.json();
+        if (data.url) window.location.href = data.url;
+        else alert(data.detail || 'Checkout failed');
+      });
+    </script>
+  </body>
+</html>
