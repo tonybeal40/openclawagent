@@ -226,7 +226,7 @@
   }
 ],
   "topTargets": {
-  "generatedAt": "2026-03-10T15:39:52.610917",
+  "generatedAt": "2026-03-11T06:39:36.130833",
   "topJobs": [
     {
       "company": "HubSpot",
