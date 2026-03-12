@@ -271,6 +271,13 @@ h3 {
   font-size: 1.04rem;
 }
 
+.cta-microcopy {
+  margin-top: -0.25rem;
+  color: var(--text-soft);
+  font-size: 0.92rem;
+  font-weight: 600;
+}
+
 .hero-actions,
 .actions {
   display: flex;
@@ -296,6 +303,11 @@ h3 {
     background-color 160ms ease,
     border-color 160ms ease,
     color 160ms ease;
+}
+
+button.btn {
+  font: inherit;
+  cursor: pointer;
 }
 
 .button:hover,
