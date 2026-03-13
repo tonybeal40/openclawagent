@@ -28,7 +28,7 @@
 
     <!-- background image layer -->
     <div class="cin-hero-bg">
-      <img src="assets/linkedin-article-cover.png" alt="" aria-hidden="true" />
+      <img src="assets/linkedin-background-banner.png" alt="" aria-hidden="true" />
       <div class="cin-hero-vignette"></div>
     </div>
 
@@ -78,23 +78,23 @@
   <section class="cin-band reveal">
     <div class="cin-band-inner">
       <article>
-        <h3 class="count" data-target="15" data-suffix="+">15+</h3>
+        <h3 class="count" data-target="15" data-suffix="+">0</h3>
         <p>Years in B2B sales</p>
       </article>
       <article>
-        <h3 class="count" data-target="3750" data-suffix="+">3,750+</h3>
+        <h3 class="count" data-target="3750" data-suffix="+">0</h3>
         <p>Accounts developed</p>
       </article>
       <article>
-        <h3 class="count" data-target="1000" data-suffix="+">1,000+</h3>
+        <h3 class="count" data-target="1000" data-suffix="+">0</h3>
         <p>Customers acquired</p>
       </article>
       <article>
-        <h3 class="count" data-prefix="$" data-target="6" data-suffix="M+">$6M+</h3>
+        <h3 class="count" data-prefix="$" data-target="6" data-suffix="M+">0</h3>
         <p>Pipeline generated</p>
       </article>
       <article>
-        <h3 class="count" data-target="37000" data-suffix="+">37,000+</h3>
+        <h3 class="count" data-target="37000" data-suffix="+">0</h3>
         <p>AI prompts executed</p>
       </article>
     </div>
@@ -127,35 +127,6 @@
           <span class="cin-role-num">04</span>
           <span class="cin-role-name">Strategic / Enterprise Account Growth</span>
           <span class="cin-role-arrow">→</span>
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <!-- ══════════════════════════════════
-       JOB ACQUISITION COMMAND CENTER
-  ══════════════════════════════════ -->
-  <section class="cin-section reveal cin-command-center">
-    <div class="cin-section-inner">
-      <div class="cin-section-label">Execution stack</div>
-      <h2 class="cin-section-title">Job Acquisition Command Center</h2>
-      <p class="cin-command-sub">Everything in one place: resumes by role, cover letter templates, and active company targets.</p>
-
-      <div class="cin-command-grid">
-        <a class="cin-command-card" href="resume.html">
-          <h3>Resume Hub</h3>
-          <p>Role-specific resumes for RevOps, Sales Ops, and Business Development opportunities.</p>
-          <span>Open Resume Hub →</span>
-        </a>
-        <a class="cin-command-card" href="cover-letters.html">
-          <h3>Cover Letter Kit</h3>
-          <p>Fast templates tuned for enterprise industrial, SaaS GTM, and strategic account growth roles.</p>
-          <span>Build Cover Letters →</span>
-        </a>
-        <a class="cin-command-card" href="job-targets.html">
-          <h3>Active Job Targets</h3>
-          <p>Prioritized company list with direct careers links to keep outbound and applications moving.</p>
-          <span>View Target Companies →</span>
         </a>
       </div>
     </div>
@@ -242,25 +213,15 @@
   // ── Particle canvas ──
   (function(){
     const canvas = document.getElementById('bgCanvas');
-    const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    if (!canvas || reduceMotion) {
-      if (canvas) canvas.style.display = 'none';
-      return;
-    }
-
     const ctx = canvas.getContext('2d');
     let W, H, pts = [];
-    const pointCount = window.innerWidth < 900 ? 28 : 55;
-
     function resize(){ W = canvas.width = innerWidth; H = canvas.height = innerHeight; }
     resize(); addEventListener('resize', resize);
-
-    for(let i=0;i<pointCount;i++) pts.push({
+    for(let i=0;i<55;i++) pts.push({
       x:Math.random(), y:Math.random(),
       vx:(Math.random()-.5)*.3, vy:(Math.random()-.5)*.2,
       r:Math.random()*1.6+.5, a:Math.random()*.35+.1
     });
-
     function tick(){
       ctx.clearRect(0,0,W,H);
       pts.forEach(p=>{
