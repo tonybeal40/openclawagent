@@ -10,136 +10,265 @@
   <meta property="og:description" content="Operator-led revenue systems, business development, and measurable pipeline outcomes." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://tonybeal.net/" />
-  <meta property="og:image" content="https://tonybeal.net/headshot-final.png" />
+  <meta property="og:image" content="https://tonybeal.net/assets/linkedin-article-cover.png" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Tony Beal | Revenue Operations & Business Development" />
-  <meta name="twitter:description" content="Operator-led revenue systems, business development, and measurable pipeline outcomes." />
-  <meta name="twitter:image" content="https://tonybeal.net/headshot-final.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css?v=20260313-sprint5" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,300;0,400;0,600;0,700;0,800;0,900;1,300&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css?v=20260313-cinema" />
 </head>
 <body>
-  <main class="site">
-    <section class="hero reveal">
-      <div class="hero-copy">
-        <p class="eyebrow">Revenue Systems • Business Development • Sales Operations</p>
-        <h1>RevOps + BizDev Leadership<br/>That Turns Strategy Into<br/>Pipeline and Interviews</h1>
-        <p class="lede">15+ years turning commercial strategy into measurable pipeline. Recruiter-ready, operator-led, execution-first.</p>
-        <div class="proof-strip" aria-label="Career proof points">
-          <span>$6M+ Pipeline Generated</span>
-          <span>3,750+ Accounts Developed</span>
-          <span>1,000+ Customers Acquired</span>
+
+  <canvas id="bgCanvas" aria-hidden="true"></canvas>
+
+  <!-- ══════════════════════════════════
+       HERO — full viewport, cinematic
+  ══════════════════════════════════ -->
+  <section class="cin-hero">
+
+    <!-- background image layer -->
+    <div class="cin-hero-bg">
+      <img src="assets/linkedin-article-cover.png" alt="" aria-hidden="true" />
+      <div class="cin-hero-vignette"></div>
+    </div>
+
+    <!-- main content -->
+    <div class="cin-hero-inner">
+      <div class="cin-hero-text">
+        <p class="cin-overline">Revenue Operations · Business Development · Sales Leadership</p>
+        <h1 class="cin-name">Tony<br/><em>Beal</em></h1>
+        <p class="cin-tagline">Turning strategy into pipeline<br/>for 15+ years.</p>
+        <div class="cin-proof">
+          <div class="cin-proof-item">
+            <strong>$6M+</strong><span>Pipeline Built</span>
+          </div>
+          <div class="cin-proof-sep"></div>
+          <div class="cin-proof-item">
+            <strong>3,750+</strong><span>Accounts</span>
+          </div>
+          <div class="cin-proof-sep"></div>
+          <div class="cin-proof-item">
+            <strong>1,000+</strong><span>Customers</span>
+          </div>
+          <div class="cin-proof-sep"></div>
+          <div class="cin-proof-item">
+            <strong>15+</strong><span>Years B2B</span>
+          </div>
         </div>
-        <div class="cta-row">
-          <a class="btn btn-primary" href="mailto:tonybeal40@gmail.com?subject=Interview%20Request%20-%20Tony%20Beal">Book Interview Call</a>
-          <a class="btn" href="TonyBeal_Resume.pdf">Download Resume PDF</a>
-          <a class="btn" href="https://www.linkedin.com/in/tony-beal40/" target="_blank" rel="noopener">LinkedIn</a>
+        <div class="cin-cta">
+          <a class="cin-btn cin-btn-primary" href="mailto:tonybeal40@gmail.com?subject=Interview%20Request%20-%20Tony%20Beal">Book Interview Call</a>
+          <a class="cin-btn" href="resume.html">View Resumes</a>
+        </div>
+        <div class="cin-links">
+          <a href="https://www.linkedin.com/in/tony-beal40/" target="_blank" rel="noopener">LinkedIn Profile ↗</a>
+          <a href="https://www.linkedin.com/services/page/195844335b985238a0/" target="_blank" rel="noopener">LinkedIn Services ↗</a>
+          <a href="https://www.linkedin.com/newsletters/7297852613121712128/" target="_blank" rel="noopener">Newsletter ↗</a>
         </div>
       </div>
-      <div class="hero-visual">
-        <div id="photoCard" class="photo-card">
-          <img id="heroPhoto" src="headshot-final.png" alt="Tony Beal headshot" />
-          <div class="photo-fallback" aria-hidden="true">TB</div>
+    </div>
+
+    <div class="cin-scroll-hint" aria-hidden="true">
+      <span></span>Scroll
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════
+       COUNTERS BAND
+  ══════════════════════════════════ -->
+  <section class="cin-band reveal">
+    <div class="cin-band-inner">
+      <article>
+        <h3 class="count" data-target="15" data-suffix="+">0</h3>
+        <p>Years in B2B sales</p>
+      </article>
+      <article>
+        <h3 class="count" data-target="3750" data-suffix="+">0</h3>
+        <p>Accounts developed</p>
+      </article>
+      <article>
+        <h3 class="count" data-target="1000" data-suffix="+">0</h3>
+        <p>Customers acquired</p>
+      </article>
+      <article>
+        <h3 class="count" data-prefix="$" data-target="6" data-suffix="M+">0</h3>
+        <p>Pipeline generated</p>
+      </article>
+      <article>
+        <h3 class="count" data-target="37000" data-suffix="+">0</h3>
+        <p>AI prompts executed</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════
+       TARGET ROLES
+  ══════════════════════════════════ -->
+  <section class="cin-section reveal">
+    <div class="cin-section-inner">
+      <div class="cin-section-label">Open to</div>
+      <h2 class="cin-section-title">Target Roles</h2>
+      <div class="cin-role-list">
+        <a class="cin-role-row" href="resume-revops.html">
+          <span class="cin-role-num">01</span>
+          <span class="cin-role-name">Director of Revenue Operations</span>
+          <span class="cin-role-arrow">→</span>
+        </a>
+        <a class="cin-role-row" href="resume-business-development.html">
+          <span class="cin-role-num">02</span>
+          <span class="cin-role-name">Director of Business Development</span>
+          <span class="cin-role-arrow">→</span>
+        </a>
+        <a class="cin-role-row" href="resume-sales-operations.html">
+          <span class="cin-role-num">03</span>
+          <span class="cin-role-name">Sales Operations Leadership</span>
+          <span class="cin-role-arrow">→</span>
+        </a>
+        <a class="cin-role-row" href="resume-business-development.html">
+          <span class="cin-role-num">04</span>
+          <span class="cin-role-name">Strategic / Enterprise Account Growth</span>
+          <span class="cin-role-arrow">→</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════
+       LINKEDIN AUTHORITY
+  ══════════════════════════════════ -->
+  <section class="cin-section cin-li-section reveal">
+    <div class="cin-section-inner">
+      <div class="cin-section-label">Social proof</div>
+      <h2 class="cin-section-title">LinkedIn Authority</h2>
+
+      <div class="cin-li-stats">
+        <div class="cin-li-stat">
+          <strong>10,790</strong>
+          <span>Followers</span>
+          <em>+109.4% YoY</em>
+        </div>
+        <div class="cin-li-stat">
+          <strong>281K</strong>
+          <span>Impressions</span>
+          <em>54,832 reached</em>
+        </div>
+        <div class="cin-li-stat">
+          <strong>22,899</strong>
+          <span>Article views</span>
+          <em>+219.2% YoY</em>
+        </div>
+        <div class="cin-li-stat">
+          <strong>1,478</strong>
+          <span>Newsletter subs</span>
+          <em>The Results Pipeline</em>
         </div>
       </div>
-    </section>
 
-    <section class="kpis reveal delay-1">
-      <article><h3 class="count" data-target="15" data-suffix="+">0</h3><p>Years in B2B sales</p></article>
-      <article><h3 class="count" data-target="3750" data-suffix="+">0</h3><p>Accounts developed</p></article>
-      <article><h3 class="count" data-target="1000" data-suffix="+">0</h3><p>Customers acquired</p></article>
-      <article><h3 class="count" data-prefix="$" data-target="6" data-suffix="M+">0</h3><p>Pipeline generated</p></article>
-    </section>
-
-    <section class="panel reveal delay-2">
-      <h2>Target Roles</h2>
-      <ul>
-        <li>Director of Business Development</li>
-        <li>RevOps Manager / Director</li>
-        <li>Sales Operations Leadership</li>
-        <li>Strategic / Enterprise Account Growth</li>
-      </ul>
-    </section>
-
-    <section class="panel linkedin-panel reveal delay-2">
-      <div class="linkedin-head">
-        <h2>LinkedIn Authority Snapshot</h2>
-        <a class="linkedin-pill" href="https://www.linkedin.com/in/tony-beal40/" target="_blank" rel="noopener">View Profile ↗</a>
-      </div>
-
-      <div class="linkedin-grid">
-        <article class="li-metric-card">
-          <p class="metric-label">Followers</p>
-          <p class="metric-value">10,790 <span>+109.4% YoY</span></p>
-        </article>
-        <article class="li-metric-card">
-          <p class="metric-label">Impressions</p>
-          <p class="metric-value">281,419 <span>54,832 reached</span></p>
-        </article>
-        <article class="li-metric-card">
-          <p class="metric-label">Article Views</p>
-          <p class="metric-value">22,899 <span>+219.2% YoY</span></p>
-        </article>
-        <article class="li-metric-card">
-          <p class="metric-label">Newsletter</p>
-          <p class="metric-value">1,478 <span>The Results Pipeline</span></p>
-        </article>
-      </div>
-
-      <div class="linkedin-media-row">
-        <figure class="li-shot">
-          <img src="assets/linkedin-background-banner.png" alt="LinkedIn profile background banner" />
-          <figcaption>Brand profile banner</figcaption>
+      <div class="cin-li-media">
+        <figure class="cin-li-fig cin-li-wide">
+          <img src="assets/linkedin-background-banner.png" alt="Tony Beal — LinkedIn profile banner" loading="lazy" />
+          <figcaption>LinkedIn Profile Banner</figcaption>
         </figure>
-        <figure class="li-shot featured-post">
-          <img src="assets/linkedin-article-cover.png" alt="LinkedIn article cover visual" />
+        <figure class="cin-li-fig">
+          <img src="assets/linkedin-article-cover.png" alt="Building Pipeline, Revenue Systems, and Modern B2B Growth — LinkedIn article" loading="lazy" />
           <figcaption>
-            Featured article creative
+            Featured Article
             <a href="https://www.linkedin.com/in/tony-beal40/" target="_blank" rel="noopener">Read on LinkedIn ↗</a>
           </figcaption>
         </figure>
       </div>
-    </section>
 
-    <section class="panel reveal delay-2">
-      <h2>Contact</h2>
-      <p><strong>Email:</strong> <a href="mailto:tonybeal40@gmail.com">tonybeal40@gmail.com</a></p>
-      <p><strong>Location:</strong> Greater St. Louis • Open to Remote/Hybrid</p>
-    </section>
-  </main>
+      <div class="cin-li-actions">
+        <a class="cin-btn cin-btn-outline" href="https://www.linkedin.com/in/tony-beal40/" target="_blank" rel="noopener">View LinkedIn Profile ↗</a>
+        <a class="cin-btn cin-btn-outline" href="https://www.linkedin.com/services/page/195844335b985238a0/" target="_blank" rel="noopener">LinkedIn Services ↗</a>
+        <a class="cin-btn cin-btn-outline" href="https://www.linkedin.com/newsletters/7297852613121712128/" target="_blank" rel="noopener">The Results Pipeline Newsletter ↗</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════
+       CONTACT — cinematic minimal
+  ══════════════════════════════════ -->
+  <section class="cin-contact reveal">
+    <div class="cin-contact-inner">
+      <div class="cin-contact-text">
+        <p class="cin-section-label">Let's connect</p>
+        <h2 class="cin-contact-title">Ready for<br/><em>your next hire?</em></h2>
+        <p class="cin-contact-sub">Available for interviews and introductory conversations — Greater St. Louis, open to remote/hybrid.</p>
+      </div>
+      <div class="cin-contact-actions">
+        <a class="cin-btn cin-btn-primary cin-btn-xl" href="mailto:tonybeal40@gmail.com?subject=Interview%20Request%20-%20Tony%20Beal">
+          Send Interview Request
+        </a>
+        <a class="cin-btn cin-btn-outline" href="https://www.linkedin.com/in/tony-beal40/" target="_blank" rel="noopener">LinkedIn ↗</a>
+        <p class="cin-email-plain"><a href="mailto:tonybeal40@gmail.com">tonybeal40@gmail.com</a></p>
+      </div>
+    </div>
+  </section>
+
+  <footer class="cin-footer">
+    <p>© 2026 Tony Beal · Greater St. Louis · <a href="resume.html">Resume Hub</a></p>
+  </footer>
 
   <script>
-    const revealObserver = new IntersectionObserver((entries)=>{
-      entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); revealObserver.unobserve(e.target);} });
-    },{threshold:0.15});
-    document.querySelectorAll('.reveal').forEach(el=>revealObserver.observe(el));
-
-    const countObserver = new IntersectionObserver((entries)=>{
-      entries.forEach(entry=>{
-        if(!entry.isIntersecting) return;
-        const el = entry.target;
-        const t = Number(el.dataset.target||0);
-        const p = el.dataset.prefix||'';
-        const s = el.dataset.suffix||'';
-        const start = performance.now();
-        const dur = 1200;
-        const run=(now)=>{
-          const x=Math.min((now-start)/dur,1);
-          const v=Math.floor(t*(1-Math.pow(1-x,3)));
-          el.textContent = p + v.toLocaleString() + s;
-          if(x<1) requestAnimationFrame(run);
-        };
-        requestAnimationFrame(run);
-        countObserver.unobserve(el);
+  // ── Particle canvas ──
+  (function(){
+    const canvas = document.getElementById('bgCanvas');
+    const ctx = canvas.getContext('2d');
+    let W, H, pts = [];
+    function resize(){ W = canvas.width = innerWidth; H = canvas.height = innerHeight; }
+    resize(); addEventListener('resize', resize);
+    for(let i=0;i<55;i++) pts.push({
+      x:Math.random(), y:Math.random(),
+      vx:(Math.random()-.5)*.3, vy:(Math.random()-.5)*.2,
+      r:Math.random()*1.6+.5, a:Math.random()*.35+.1
+    });
+    function tick(){
+      ctx.clearRect(0,0,W,H);
+      pts.forEach(p=>{
+        p.x+=p.vx/W*8; p.y+=p.vy/H*8;
+        if(p.x<0)p.x=1; if(p.x>1)p.x=0;
+        if(p.y<0)p.y=1; if(p.y>1)p.y=0;
+        ctx.beginPath(); ctx.arc(p.x*W,p.y*H,p.r,0,Math.PI*2);
+        ctx.fillStyle=`rgba(200,168,100,${p.a})`; ctx.fill();
       });
-    },{threshold:0.5});
-    document.querySelectorAll('.count').forEach(el=>countObserver.observe(el));
+      for(let i=0;i<pts.length;i++) for(let j=i+1;j<pts.length;j++){
+        const dx=(pts[i].x-pts[j].x)*W, dy=(pts[i].y-pts[j].y)*H;
+        const d=Math.sqrt(dx*dx+dy*dy);
+        if(d<130){ ctx.beginPath(); ctx.moveTo(pts[i].x*W,pts[i].y*H); ctx.lineTo(pts[j].x*W,pts[j].y*H);
+          ctx.strokeStyle=`rgba(200,168,100,${.08*(1-d/130)})`; ctx.lineWidth=.5; ctx.stroke(); }
+      }
+      requestAnimationFrame(tick);
+    }
+    tick();
+  })();
 
-    const heroPhoto = document.getElementById('heroPhoto');
-    const card = document.getElementById('photoCard');
-    heroPhoto.addEventListener('error',()=>card.classList.add('no-photo'));
+  // ── Scroll reveal ──
+  const ro = new IntersectionObserver(es=>es.forEach(e=>{ if(e.isIntersecting){e.target.classList.add('in');ro.unobserve(e.target);} }),{threshold:.1});
+  document.querySelectorAll('.reveal').forEach(el=>ro.observe(el));
+
+  // ── Counters ──
+  const co = new IntersectionObserver(es=>es.forEach(entry=>{
+    if(!entry.isIntersecting) return;
+    const el=entry.target, t=+el.dataset.target||0, pre=el.dataset.prefix||'', suf=el.dataset.suffix||'';
+    const s=performance.now();
+    (function run(now){ const x=Math.min((now-s)/1800,1), ease=1-Math.pow(1-x,4);
+      el.textContent=pre+Math.floor(t*ease).toLocaleString()+suf;
+      if(x<1) requestAnimationFrame(run); })(s);
+    co.unobserve(el);
+  }),{threshold:.4});
+  document.querySelectorAll('.count').forEach(el=>co.observe(el));
+
+  // ── Hero parallax ──
+  const heroBg = document.querySelector('.cin-hero-bg img');
+  addEventListener('scroll', ()=>{
+    const y = scrollY;
+    if(heroBg) heroBg.style.transform = `translateY(${y*.3}px) scale(1.08)`;
+  });
+
+  // ── Headshot fallback ──
+  const hp=document.getElementById('heroPhoto');
+  const pc=document.getElementById('photoCard');
+  if(hp) hp.addEventListener('error',()=>pc&&pc.classList.add('no-photo'));
   </script>
 </body>
 </html>
