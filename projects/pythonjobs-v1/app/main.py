@@ -1,8 +1,12 @@
+import json
 import os
+import re
 import secrets
 import sqlite3
 from datetime import datetime, timezone
 from pathlib import Path
+from urllib.parse import urlencode, urlparse
+from urllib.request import Request, urlopen
 
 import stripe
 from dotenv import load_dotenv
@@ -22,6 +26,8 @@ PRICE_ID = os.getenv("STRIPE_PRICE_ID", "")
 SUCCESS_URL = os.getenv("SUCCESS_URL", "http://localhost:8000/success")
 CANCEL_URL = os.getenv("CANCEL_URL", "http://localhost:8000/cancel")
 WEBHOOK_SECRET = os.getenv("STRIPE_WEBHOOK_SECRET", "")
+AZURE_BING_ENDPOINT = os.getenv("AZURE_BING_ENDPOINT", "").rstrip("/")
+AZURE_BING_API_KEY = os.getenv("AZURE_BING_API_KEY", "")
 
 SESSION_TOKENS: dict[str, str] = {}
 
