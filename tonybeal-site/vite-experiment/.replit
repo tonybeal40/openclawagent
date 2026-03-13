@@ -1,4 +1,0 @@
-run = "npm install && npm run dev"
-
-[nix]
-channel = "stable-24_05"
