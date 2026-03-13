@@ -77,6 +77,54 @@ def init_db() -> None:
     conn.close()
 
 
+def bing_search_jobs(query: str, location: str, count: int = 25, freshness: str = "Week") -> list[dict]:
+    if not AZURE_BING_ENDPOINT or not AZURE_BING_API_KEY:
+        raise HTTPException(status_code=500, detail="Azure Bing not configured")
+
+    endpoint = f"{AZURE_BING_ENDPOINT}/bing/v7.0/search"
+    params = {
+        "q": f"{query} jobs {location}",
+        "count": max(1, min(50, count)),
+        "freshness": freshness,
+        "textDecorations": False,
+        "textFormat": "Raw",
+    }
+    req = Request(
+        f"{endpoint}?{urlencode(params)}",
+        headers={"Ocp-Apim-Subscription-Key": AZURE_BING_API_KEY},
+    )
+
+    try:
+        with urlopen(req, timeout=20) as resp:
+            payload = json.loads(resp.read().decode("utf-8"))
+    except Exception as e:
+        raise HTTPException(status_code=502, detail=f"Bing request failed: {e}")
+
+    return (payload.get("webPages") or {}).get("value", [])
+
+
+def fit_score(title: str, snippet: str, url: str) -> int:
+    txt = f"{title} {snippet}".lower()
+    score = 0
+    for kw in ["revenue operations", "revops", "sales operations", "business development", "gtm", "enablement"]:
+        if kw in txt:
+            score += 15
+    for kw in ["manager", "director", "lead"]:
+        if re.search(rf"\b{kw}\b", txt):
+            score += 8
+
+    host = (urlparse(url).netloc or "").lower()
+    if any(board in host for board in ["indeed.", "linkedin.", "ziprecruiter.", "glassdoor."]):
+        score -= 10  # keep board results, but prefer canonical company career links
+
+    return max(0, min(100, score))
+
+
+def is_job_like(title: str, snippet: str, url: str) -> bool:
+    txt = f"{title} {snippet} {url}".lower()
+    return any(k in txt for k in ["job", "career", "careers", "apply", "position", "opening"])
+
+
 @app.on_event("startup")
 def startup_event() -> None:
     init_db()
@@ -95,6 +143,51 @@ def portal() -> FileResponse:
 @app.get("/health")
 def health() -> dict:
     return {"ok": True, "service": "pythonjobs-v1"}
+
+
+@app.get("/api/jobs/sweep")
+def jobs_sweep(
+    q: str = '"revenue operations" OR "sales operations" OR "business development manager"',
+    l: str = "St. Louis, MO",
+    count: int = 25,
+    freshness: str = "Week",
+):
+    raw = bing_search_jobs(query=q, location=l, count=count, freshness=freshness)
+
+    items = []
+    for r in raw:
+        title = r.get("name", "")
+        snippet = r.get("snippet", "")
+        url = r.get("url", "")
+        if not url or not is_job_like(title, snippet, url):
+            continue
+        items.append(
+            {
+                "title": title,
+                "snippet": snippet,
+                "url": url,
+                "source": urlparse(url).netloc,
+                "fit_score": fit_score(title, snippet, url),
+                "rank": len(items) + 1,
+            }
+        )
+
+    items.sort(key=lambda x: x["fit_score"], reverse=True)
+    for i, item in enumerate(items, start=1):
+        item["rank"] = i
+
+    return {
+        "ok": True,
+        "mode": "legal-safe",
+        "query": q,
+        "location": l,
+        "count": len(items),
+        "results": items,
+        "notes": [
+            "Public web search only; no auth bypass or anti-bot evasion.",
+            "Job-board links are allowed but penalized; prefer direct company careers for apply.",
+        ],
+    }
 
 
 @app.post("/api/create-checkout-session")

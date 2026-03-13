@@ -50,6 +50,20 @@ Open: http://localhost:8000
 5. Copy webhook signing secret to `STRIPE_WEBHOOK_SECRET`.
 6. Test checkout from homepage.
 
+## Azure Bing jobs sweep (legal-safe)
+Set in `.env`:
+- `AZURE_BING_ENDPOINT`
+- `AZURE_BING_API_KEY`
+
+Run API and hit:
+- `GET /api/jobs/sweep`
+- Optional params: `q`, `l`, `count`, `freshness`
+
+Example:
+`/api/jobs/sweep?q=%22revenue%20operations%22%20OR%20%22sales%20operations%22&l=St.%20Louis,%20MO&freshness=Day`
+
+Returns ranked job-like results with `fit_score` and legal-safe notes.
+
 ## Next build steps
 1. Add lead table + customer table (Supabase/Postgres)
 2. Add auth + customer portal link
