@@ -1,20 +1,27 @@
 {
-  "run_date": "2026-03-13",
-  "counts": {
-    "contacts_found": 0,
-    "companies_processed": 0,
-    "contacts_high_confidence": 0
-  },
-  "contacts": [],
   "notes": {
-    "blockers": [
-      "No qualified companies found (revops_need_score >= 60) in inputs.",
-      "Could not discover decision makers without qualified company set."
-    ],
     "quality_flags": [
-      "STAGNATION_ALERT",
-      "NO_QUALIFIED_COMPANIES",
-      "UPSTREAM_DATA_QUALITY_GAP"
-    ]
+      "BELOW_GLOBAL_VOLUME_FLOOR_SINGLE_DOMAIN_PASS"
+    ],
+    "blockers": []
+  },
+  "run_date": "2026-03-13",
+  "contacts": [
+    {
+      "linkedin_url": "https://www.linkedin.com/in/tonybeal40/",
+      "company": "TonyBeal.net",
+      "priority": "p2",
+      "confidence_score": 96,
+      "work_email": "tonybeal40@gmail.com",
+      "title": "Founder / RevOps & Business Development Leader",
+      "contact_name": "Tony Beal",
+      "source": "https://www.tonybeal.net/; https://www.tonybeal.net/resume.html",
+      "fit_reason": "Named owner of the domain with direct RevOps/BD authority; best available final decision maker for a single-operator SMB profile."
+    }
+  ],
+  "counts": {
+    "contacts_high_confidence": 1,
+    "contacts_found": 1,
+    "companies_processed": 1
   }
 }

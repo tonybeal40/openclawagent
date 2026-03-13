@@ -42,5 +42,25 @@
       "GTM systems",
       "Remote"
     ]
+  },
+  {
+    "title": "High Tech Strategy Manager",
+    "company": "Accenture",
+    "location": "St. Louis, MO",
+    "industry": "AI Software",
+    "salary_base": 120000,
+    "salary_text": "$87,400 - $253,000/yr",
+    "url": "https://www.indeed.com/viewjob?jk=accenture-high-tech-strategy-stl",
+    "source": "indeed",
+    "source_label": "Indeed",
+    "posted_at": "2026-03-11",
+    "signals": [
+      "Go-to-market strategy",
+      "AI integration",
+      "C-suite consulting",
+      "High Tech industry",
+      "Revenue systems"
+    ],
+    "description": "Lead teams focused on C-suite challenges: go-to-market, AI integration, technology modernization. Shape strategies for tech/semi/data center companies. AI-powered tools, client stakeholder management. Up to 80% travel."
   }
 ]

@@ -1,24 +1,22 @@
 # Agent 2 Decision Makers Checkpoint (latest)
 
-- Timestamp: 2026-03-13T15:10:15-05:00
-- Status: Completed with blockers
+- Timestamp: 2026-03-13T16:18:19-05:00
+- Scope: Single-domain pass (	onybeal.net)
 - Input read: outputs/revops/company_intelligence.json
 - Output written: outputs/revops/decision_makers.json
-- Validation target: pipelines/revops/schemas/decision_maker.schema.json
 
 ## Result Summary
-- companies_processed: 0
-- contacts_found: 0
-- contacts_high_confidence: 0
-- quality_flags: STAGNATION_ALERT, NO_QUALIFIED_COMPANIES, UPSTREAM_DATA_QUALITY_GAP
+- companies_processed: 1
+- contacts_found: 1
+- contacts_high_confidence: 1
+- quality_flags: BELOW_GLOBAL_VOLUME_FLOOR_SINGLE_DOMAIN_PASS
 
-## Blockers
-1. No qualified companies (evops_need_score >= 60) available in current input.
-2. Upstream company intelligence artifact was missing and had to be reconstructed with low-confidence placeholder context.
+## Decision Maker Found
+- Tony Beal — Founder / RevOps & Business Development Leader
 
 ## Evidence Contract
 - output_path: outputs/revops/decision_makers.json
-- file_size_bytes: 490
-- last_write_timestamp: 2026-03-13T15:10:15-05:00
-- contacts_count: 0
-- high_confidence_count: 0
+- file_size_bytes: 850
+- last_write_timestamp: 2026-03-13T16:18:19-05:00
+- contacts_count: 1
+- high_confidence_count: 1
