@@ -41,4 +41,5 @@
 ## Remaining gap
 - Confirmed unresolved true-timestamp gap: `2026-02-12` -> `2026-02-22`.
 - Existing extracted subset files (`outputs/memory/session_bd744386_feb12_22.jsonl`, `outputs/memory/reconciliation_feb12_22.md`) are text-date match artifacts and should not be treated as canonical timestamp evidence.
-- Next pass must target alternate historical sources (older backups/zips/offline laptop snapshots) to close the gap.
+- 2026-03-12 19:38 CDT re-audit: local main sessions + workspace memory outputs still show no canonical user-event timestamps in this window.
+- Closure requirement: ingest alternate historical sources (older backups/zips/offline laptop snapshots) and re-run timestamp-first reconciliation.

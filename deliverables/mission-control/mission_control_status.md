@@ -1,5 +1,5 @@
 ﻿# Mission Control Status
-Generated: 2026-03-12T10:00:46.9805274-05:00
+Generated: 2026-03-12T19:38:32.9328639-05:00
 
 ## Projects
 - _merged_staging
@@ -18,19 +18,19 @@ Generated: 2026-03-12T10:00:46.9805274-05:00
 - OpenClawTrendScanner_0700 | Ready | next: 3/13/2026 7:00:00 AM
 - OpenClawJobHunter_0800 | Ready | next: 3/13/2026 8:00:00 AM
 - OpenClawLeadBuilder_0900 | Ready | next: 3/13/2026 9:00:00 AM
-- OpenClawJobHunter_1400 | Ready | next: 3/12/2026 2:00:00 PM
+- OpenClawJobHunter_1400 | Ready | next: 3/13/2026 2:00:00 PM
 - OpenClawJobHunter_2000 | Ready | next: 3/12/2026 8:00:00 PM
 - OpenClawTopOpportunities_2045 | Ready | next: 3/12/2026 8:45:00 PM
-- OpenClawWorkspaceBackupMidday | Ready | next: 3/12/2026 12:30:00 PM
+- OpenClawWorkspaceBackupMidday | Ready | next: 3/13/2026 12:30:00 PM
 - OpenClawWorkspaceBackupDaily | Ready | next: 3/12/2026 9:30:00 PM
 
 ## Output files snapshot
+- C:\Users\tonyb\.openclaw\workspace\outputs\jobs\daily_job_pipeline_summary.json | 03/12/2026 14:00:09
+- C:\Users\tonyb\.openclaw\workspace\outputs\jobs\daily_job_pipeline.csv | 03/12/2026 14:00:09
+- C:\Users\tonyb\.openclaw\workspace\outputs\jobs\daily_job_pipeline_2026_03_12.csv | 03/12/2026 14:00:09
 - C:\Users\tonyb\.openclaw\workspace\outputs\leads\high_value_targets_summary.json | 03/12/2026 09:00:14
 - C:\Users\tonyb\.openclaw\workspace\outputs\leads\high_value_targets.csv | 03/12/2026 09:00:14
 - C:\Users\tonyb\.openclaw\workspace\outputs\leads\high_value_targets_2026_03_12.csv | 03/12/2026 09:00:14
-- C:\Users\tonyb\.openclaw\workspace\outputs\jobs\daily_job_pipeline_summary.json | 03/12/2026 08:00:07
-- C:\Users\tonyb\.openclaw\workspace\outputs\jobs\daily_job_pipeline.csv | 03/12/2026 08:00:07
-- C:\Users\tonyb\.openclaw\workspace\outputs\jobs\daily_job_pipeline_2026_03_12.csv | 03/12/2026 08:00:07
 - C:\Users\tonyb\.openclaw\workspace\outputs\research\ai_money_trends.md | 03/12/2026 07:00:05
 - C:\Users\tonyb\.openclaw\workspace\outputs\jobs\daily_job_pipeline_2026_03_11.csv | 03/11/2026 20:00:04
 - C:\Users\tonyb\.openclaw\workspace\outputs\leads\high_value_targets_2026_03_11.csv | 03/11/2026 09:00:04
