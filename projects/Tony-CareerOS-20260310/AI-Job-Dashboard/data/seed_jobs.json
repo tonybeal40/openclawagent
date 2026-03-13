@@ -62,5 +62,47 @@
       "Revenue systems"
     ],
     "description": "Lead teams focused on C-suite challenges: go-to-market, AI integration, technology modernization. Shape strategies for tech/semi/data center companies. AI-powered tools, client stakeholder management. Up to 80% travel."
+  },
+  {
+    "title": "Virtual Small Business Territory Manager",
+    "company": "The Hartford",
+    "location": "Creve Coeur, MO (Virtual)",
+    "industry": "Insurance / B2B Sales",
+    "salary_base": 110000,
+    "salary_text": "$88,000 - $132,000 + bonus",
+    "url": "https://www.indeed.com/viewjob?jk=hartford-territory-mgr-central",
+    "source": "indeed",
+    "source_label": "Indeed",
+    "posted_at": "2026-03-13",
+    "signals": [
+      "Territory management",
+      "Agency sales",
+      "Small commercial",
+      "Central States MO/KS/NE/IA",
+      "Salesforce",
+      "Virtual role"
+    ],
+    "description": "Manage independent agencies in MO/KS/NE/IA/Southern IL. Build agency sales plans, drive small commercial growth, retention and profit. 5+ yrs P&C sales required."
+  },
+  {
+    "title": "Senior Manager Business Development",
+    "company": "Leonardo DRS",
+    "location": "Bridgeton, MO",
+    "industry": "Defense / Industrial Manufacturing",
+    "salary_base": 153000,
+    "salary_text": "$130,828 - $176,618/yr",
+    "url": "https://www.indeed.com/viewjob?jk=leonardo-drs-sr-mgr-bd-bridgeton",
+    "source": "indeed",
+    "source_label": "Indeed",
+    "posted_at": "2026-03-13",
+    "signals": [
+      "Business development",
+      "Defense contractor",
+      "Industrial",
+      "Bridgeton MO",
+      "Senior Manager",
+      "Enterprise BD"
+    ],
+    "description": "Senior Manager Business Development at defense/industrial company in Bridgeton MO. Strategic account growth, BD leadership."
   }
 ]
