@@ -1,0 +1,51 @@
+{
+  "run_date": "2026-03-13",
+  "counts": {
+    "input_candidates": 25,
+    "excluded_companies": 25,
+    "qualified_companies": 0
+  },
+  "companies": [
+    {
+      "revops_need_score": 1,
+      "exclusion_flags": [
+        "INSUFFICIENT_INTEL",
+        "SCORE_BELOW_60"
+      ],
+      "employee_estimate": null,
+      "website": "https://ix.dev",
+      "decision_maker_hints": [
+        "VP Sales",
+        "RevOps",
+        "Sales Ops"
+      ],
+      "signals": [
+        "Lead list candidate present"
+      ],
+      "revenue_estimate": null,
+      "sales_team_size_estimate": null,
+      "sources": [
+        "outputs/leads/high_value_targets_summary.json"
+      ],
+      "industry": "Unknown",
+      "reason": "Insufficient verified company intelligence to support qualification at score >= 60.",
+      "company": "Indexable",
+      "likely_revops_need": "low"
+    }
+  ],
+  "window": {
+    "timezone": "America/Chicago",
+    "start_local": "2026-03-13T00:00:00-05:00",
+    "end_local": "2026-03-13T23:59:59-05:00"
+  },
+  "notes": {
+    "blockers": [
+      "Upstream company intelligence artifact missing at run start.",
+      "Available lead list had unqualified score values and insufficient enrichment."
+    ],
+    "quality_flags": [
+      "UPSTREAM_GAP",
+      "LOW_CONFIDENCE_SOURCE"
+    ]
+  }
+}

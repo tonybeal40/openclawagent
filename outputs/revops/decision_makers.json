@@ -1,0 +1,20 @@
+{
+  "run_date": "2026-03-13",
+  "counts": {
+    "contacts_found": 0,
+    "companies_processed": 0,
+    "contacts_high_confidence": 0
+  },
+  "contacts": [],
+  "notes": {
+    "blockers": [
+      "No qualified companies found (revops_need_score >= 60) in inputs.",
+      "Could not discover decision makers without qualified company set."
+    ],
+    "quality_flags": [
+      "STAGNATION_ALERT",
+      "NO_QUALIFIED_COMPANIES",
+      "UPSTREAM_DATA_QUALITY_GAP"
+    ]
+  }
+}
