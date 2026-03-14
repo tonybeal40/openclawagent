@@ -1,22 +1,24 @@
-# Agent 2 Decision Makers Checkpoint (latest)
+# Agent 2 Decision Makers Checkpoint
 
-- Timestamp: 2026-03-13T16:18:19-05:00
-- Scope: Single-domain pass (	onybeal.net)
-- Input read: outputs/revops/company_intelligence.json
-- Output written: outputs/revops/decision_makers.json
+## Run Date
+2026-03-13
 
-## Result Summary
-- companies_processed: 1
-- contacts_found: 1
-- contacts_high_confidence: 1
-- quality_flags: BELOW_GLOBAL_VOLUME_FLOOR_SINGLE_DOMAIN_PASS
+## Summary
+Processed 1 qualified company from input company intelligence.
 
-## Decision Maker Found
-- Tony Beal — Founder / RevOps & Business Development Leader
+## Contacts Found
+- Total contacts found: 1
+- High-confidence contacts (>=80): 1 (100%)
 
-## Evidence Contract
-- output_path: outputs/revops/decision_makers.json
-- file_size_bytes: 850
-- last_write_timestamp: 2026-03-13T16:18:19-05:00
-- contacts_count: 1
-- high_confidence_count: 1
+## Quality Flags
+- SMB_SINGLE_OPERATOR_CONTEXT
+- STAGNATION_ALERT (due to only 1 contact, below minimum desired 15 total contacts)
+
+## Blockers
+- None
+
+## Notes
+- Single SMB company with CEO as decision maker identified.
+- No duplicate contacts found from prior runs.
+
+Checkpoint complete.
