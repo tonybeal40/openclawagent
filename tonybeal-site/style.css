@@ -1060,7 +1060,20 @@ a { text-decoration: none; color: inherit; }
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  gap: 16px;
+  gap: 20px;
+}
+.resume-header-photo {
+  flex-shrink: 0;
+  order: 2;
+}
+.resume-header-photo img {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center top;
+  border: 3px solid #2563EB;
+  display: block;
 }
 .resume-name {
   font-size: 32px;
